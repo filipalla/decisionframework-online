@@ -36,7 +36,14 @@
       scroll-behavior: smooth;
     }
 
-    body {
+    body
+     <nav class="language-switcher" aria-label="Language selection">
+    <a href="/" class="active">EN</a>
+    <span>|</span>
+    <a href="/nl/">NL</a>
+  </nav>
+    
+    {
       margin: 0;
       background:
         radial-gradient(circle at 50% 0%, #49391c
@@ -201,6 +208,38 @@
         padding: 65px 0;
       }
     }
+
+Voeg deze CSS daarin toe:
+
+.language-switcher {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  display: flex;
+  gap: 9px;
+  z-index: 10;
+  font-family: Arial, sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+}
+
+.language-switcher a {
+  color: #b8b0a1
+;
+  text-decoration: none;
+}
+
+.language-switcher a:hover,
+.language-switcher a.active {
+  color: #e2c887
+;
+}
+
+.language-switcher span {
+  color: #b8b0a1
+;
+}
+    
   </style>
 </head>
 
