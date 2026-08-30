@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="nl">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>De Gouden Gids | The Gold Decision Framework</title>
+  <title>The Gold Investor | The Gold Decision Framework</title>
 
   <meta
     name="description"
-    content="De Gouden Gids helpt lezers een eigen, onderbouwde goud-thesis te bouwen."
+    content="The Gold Investor helps readers build their own evidence-based gold thesis."
   >
 
   <style>
@@ -36,18 +36,15 @@
       scroll-behavior: smooth;
     }
 
-    body
-     <nav class="language-switcher" aria-label="Language selection">
-    <a href="/" class="active">EN</a>
-    <span>|</span>
-    <a href="/nl/">NL</a>
-  </nav>
-    
-    {
+    body {
       margin: 0;
       background:
-        radial-gradient(circle at 50% 0%, #49391c
- 0%, var(--background) 38%);
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+ 0%,
+          var(--background) 38%
+        );
       color: var(--text);
       font-family: Georgia, "Times New Roman", serif;
       line-height: 1.7;
@@ -56,6 +53,34 @@
     .container {
       width: min(1100px, calc(100% - 40px));
       margin: 0 auto;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      z-index: 10;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+    }
+
+    .language-switcher a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .language-switcher a:hover,
+    .language-switcher a.active {
+      color: var(--gold-light);
+    }
+
+    .language-switcher span {
+      color: var(--muted);
     }
 
     header {
@@ -196,8 +221,14 @@
     }
 
     @media (max-width: 760px) {
+      .language-switcher {
+        top: 18px;
+        right: 20px;
+      }
+
       header {
         min-height: 82vh;
+        padding-top: 100px;
       }
 
       .chapters {
@@ -208,101 +239,76 @@
         padding: 65px 0;
       }
     }
-
-Voeg deze CSS daarin toe:
-
-.language-switcher {
-  position: absolute;
-  top: 24px;
-  right: 28px;
-  display: flex;
-  gap: 9px;
-  z-index: 10;
-  font-family: Arial, sans-serif;
-  font-size: 0.8rem;
-  letter-spacing: 0.12em;
-}
-
-.language-switcher a {
-  color: #b8b0a1
-;
-  text-decoration: none;
-}
-
-.language-switcher a:hover,
-.language-switcher a.active {
-  color: #e2c887
-;
-}
-
-.language-switcher span {
-  color: #b8b0a1
-;
-}
-    
   </style>
 </head>
 
 <body>
+  <nav class="language-switcher" aria-label="Language selection">
+    <a href="/" class="active">EN</a>
+    <span>|</span>
+    <a href="/nl/">NL</a>
+  </nav>
+
   <header>
     <div class="container">
-      <div class="eyebrow">The Gold Decision Framework — Boek 1</div>
+      <div class="eyebrow">The Gold Decision Framework — Book 1</div>
 
-      <h1>De Gouden Gids</h1>
+      <h1>The Gold Investor</h1>
 
-      <p class="subtitle">Een eigen goud-thesis bouwen</p>
+      <p class="subtitle">Building your own gold thesis</p>
 
       <div class="ornament"></div>
 
-      <p class="intro" style="margin-left:auto; margin-right:auto;">
-        Een praktisch kader om goud en andere edelmetalen te begrijpen
-        vanuit marktstructuur, macro-economie, geopolitiek en risicobeheer.
+      <p class="intro" style="margin-left: auto; margin-right: auto;">
+        A practical framework for understanding gold and other precious metals
+        through market structure, macroeconomics, geopolitics and risk
+        management.
       </p>
 
       <div class="button-row">
-        <a class="button" href="#inhoud">Bekijk de inhoud</a>
+        <a class="button" href="#content">Explore the framework</a>
         <a class="button secondary" href="#contact">Contact</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="inhoud">
+    <section id="content">
       <div class="container">
-        <h2>Een eigen onderbouwde thesis</h2>
+        <h2>Build your own evidence-based thesis</h2>
 
         <p class="intro">
-          De Gouden Gids is niet bedoeld om lezers te vertellen wat ze moeten
-          kopen of wanneer ze moeten kopen. De gids helpt hen betere vragen te
-          stellen, eigen onderzoek te doen en verantwoordelijkheid te nemen
-          voor hun beslissingen.
+          The Gold Investor is not intended to tell readers what they should
+          buy or when they should buy it. It helps them ask better questions,
+          conduct their own research and take responsibility for their
+          decisions.
         </p>
 
         <div class="chapters">
           <article class="chapter">
             <div class="chapter-number">01</div>
-            <h3>Reële rente</h3>
+            <h3>Real interest rates</h3>
             <p>
-              Begrijp waarom reële rente en de dollar belangrijke kompassen
-              voor de goudprijs zijn.
+              Understand why real interest rates and the dollar are important
+              indicators for the price of gold.
             </p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">02</div>
-            <h3>Geopolitiek</h3>
+            <h3>Geopolitics</h3>
             <p>
-              Onderzoek veiligehaven-vraag, geopolitieke schokken en
-              structurele aankopen door centrale banken.
+              Examine safe-haven demand, geopolitical shocks and structural
+              purchases by central banks.
             </p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">03</div>
-            <h3>Vraag en aanbod</h3>
+            <h3>Supply and demand</h3>
             <p>
-              Kijk naar beleggingsvraag, industriële vraag en de
-              fundamentele balans per metaal.
+              Look at investment demand, industrial demand and the fundamental
+              balance of each metal.
             </p>
           </article>
 
@@ -310,39 +316,39 @@ Voeg deze CSS daarin toe:
             <div class="chapter-number">04</div>
             <h3>Mining supply</h3>
             <p>
-              Leer hoe productiekosten, AISC en trage mijnbouwprojecten het
-              aanbod beïnvloeden.
+              Learn how production costs, AISC and slow-moving mining projects
+              influence supply.
             </p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">05</div>
-            <h3>Instrumentkeuze</h3>
+            <h3>Choosing an instrument</h3>
             <p>
-              Vergelijk fysiek bezit, ETF’s, mining stocks en futures.
+              Compare physical ownership, ETFs, mining stocks and futures.
             </p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">06–09</div>
-            <h3>Van timing tot aankoop</h3>
+            <h3>From timing to purchase</h3>
             <p>
-              Combineer technische timing, risicobeheer, thesisvorming en een
-              eerlijke fysieke aankoop.
+              Combine technical timing, risk management, thesis formation and
+              an honest physical purchase.
             </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="over">
+    <section id="about">
       <div class="container">
-        <h2>Over de auteur</h2>
+        <h2>About the author</h2>
 
         <p class="intro">
-          Met een achtergrond in WTI-ruwe olie en valutahandel benadert Filip
-          Allaert goud vanuit een perspectief van marktstructuur, macro-economie
-          en risicobeheer.
+          With a background in WTI crude oil and currency trading, Filip Allaert
+          approaches gold through the perspective of market structure,
+          macroeconomics and risk management.
         </p>
       </div>
     </section>
@@ -352,7 +358,7 @@ Voeg deze CSS daarin toe:
         <h2>Contact</h2>
 
         <p>
-          Vragen over De Gouden Gids of The Gold Decision Framework?
+          Questions about The Gold Investor or The Gold Decision Framework?
         </p>
 
         <p>
@@ -371,7 +377,7 @@ Voeg deze CSS daarin toe:
   </main>
 
   <footer>
-    © 2026 Filip Allaert. Alle rechten voorbehouden.
+    © 2026 Filip Allaert. All rights reserved.
   </footer>
 </body>
 </html>
