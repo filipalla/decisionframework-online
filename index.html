@@ -155,6 +155,17 @@
       color: var(--muted);
     }
 
+  .button.store {
+  background: rgba(198, 161, 91, 0.12);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+.button.store:hover {
+  background: var(--gold-light);
+  color: #17120a
+;
+}
     section {
       padding: 90px 0;
       border-top: 1px solid var(--line);
@@ -265,11 +276,23 @@
         management.
       </p>
 
-      <div class="button-row">
-        <a class="button" href="#content">Explore the framework</a>
-        <a class="button secondary" href="#contact">Contact</a>
-      </div>
-    </div>
+      <div class="button-row" aria-label="Main navigation">
+  <a class="button" href="#content">
+    Explore the framework
+  </a>
+
+  <a class="button secondary" href="/article/">
+    Article
+  </a>
+
+  <a class="button store" href="/store/">
+    Store
+  </a>
+
+  <a class="button secondary" href="#contact">
+    Contact
+  </a>
+</div>
   </header>
 
   <main>
