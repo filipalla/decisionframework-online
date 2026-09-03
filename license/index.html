@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>License Activation | The Gold Decision Framework</title>
+
+<meta
+name="description"
+content="Activate your license for The Gold Decision Framework."
+
+>
+
+  <style>
+    :root {
+      --bg: #11100e;
+      --surface: #191714;
+      --surface-light: #211f1b;
+      --text: #eee9df;
+      --muted: #a9a296;
+      --gold: #c6a15b;
+      --gold-light: #e0c27d;
+      --line: rgba(198, 161, 91, 0.25);
+      --success: #b8d8b8;
+      --error: #d9a4a4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      border-bottom: 1px solid var(--line);
+      padding: 22px 24px;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      color: var(--gold-light);
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .language-switcher {
+      display: flex;
+      gap: 8px;
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+    }
+
+    .language-switcher a {
+      padding: 6px 9px;
+      border: 1px solid transparent;
+      color: var(--muted);
+    }
+
+    .language-switcher a:hover,
+    .language-switcher a.active {
+      border-color: var(--line);
+      color: var(--gold-light);
+    }
+
+    main {
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 80px 24px 100px;
+      flex: 1;
+    }
+
+    .eyebrow {
+      margin-bottom: 12px;
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--gold-light);
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      margin: 18px 0 0;
+      color: var(--muted);
+      font-size: 1.15rem;
+    }
+
+    .activation-card {
+      margin-top: 50px;
+      padding: 34px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .activation-card h2 {
+      margin: 0 0 10px;
+      color: var(--gold-light);
+      font-size: 1.5rem;
+      font-weight: 400;
+    }
+
+    .intro {
+      margin: 0 0 28px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    .code-input {
+      width: 100%;
+      padding: 15px 16px;
+      border: 1px solid var(--line);
+      background: var(--surface-light);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .code-input::placeholder {
+      color: #777168;
+      text-transform: none;
+      letter-spacing: normal;
+    }
+
+    .code-input:focus {
+      outline: none;
+      border-color: var(--gold-light);
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 13px 22px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+    .button:hover:not(:disabled) {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    .button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .status {
+      display: none;
+      margin-top: 26px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: var(--surface-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.88rem;
+    }
+
+    .status.visible {
+      display: block;
+    }
+
+    .status.success {
+      border-color: rgba(184, 216, 184, 0.4);
+      color: var(--success);
+    }
+
+    .status.error {
+      border-color: rgba(217, 164, 164, 0.4);
+      color: var(--error);
+    }
+
+    .license-details {
+      display: none;
+      margin-top: 22px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .license-details.visible {
+      display: block;
+    }
+
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 9px 0;
+      border-bottom: 1px solid rgba(198, 161, 91, 0.12);
+      font-size: 0.88rem;
+    }
+
+    .detail-label {
+      color: var(--muted);
+    }
+
+    .detail-value {
+      color: var(--text);
+      font-weight: 600;
+      text-align: right;
+    }
+
+    .next-step {
+      display: none;
+      margin-top: 25px;
+      padding: 20px;
+      border-left: 2px solid var(--gold);
+      background: rgba(198, 161, 91, 0.05);
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+    }
+
+    .next-step.visible {
+      display: block;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .info-card {
+      padding: 22px;
+      border: 1px solid rgba(198, 161, 91, 0.16);
+      background: rgba(255, 255, 255, 0.015);
+    }
+
+    .info-card h3 {
+      margin: 0 0 8px;
+      color: var(--gold-light);
+      font-size: 1rem;
+      font-weight: 400;
+    }
+
+    .info-card p {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      line-height: 1.6;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 38px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 25px 24px;
+      border-top: 1px solid var(--line);
+      color: #756f67;
+      font-family: Arial, sans-serif;
+      font-size: 0.72rem;
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      main {
+        padding-top: 55px;
+      }
+
+      .activation-card {
+        padding: 24px;
+      }
+
+      .info-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .header-inner {
+        align-items: flex-start;
+      }
+
+      .detail-row {
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .detail-value {
+        text-align: left;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+<div class="page">
+
+  <header>
+    <div class="header-inner">
+
+```
+  <a class="brand" href="/">
+    The Gold Decision Framework
+  </a>
+
+  <nav class="language-switcher" aria-label="Language">
+    <a href="/license/" class="active">EN</a>
+    <a href="/nl/license/">NL</a>
+  </nav>
+
+</div>
+```
+
+  </header>
+
+  <main>
+
+```
+<div class="eyebrow">
+  License Activation
+</div>
+
+<h1>
+  Activate your license
+</h1>
+
+<p class="subtitle">
+  Enter your license code to activate your copy of
+  The Gold Decision Framework.
+</p>
+
+<section class="activation-card">
+
+  <h2>
+    License code
+  </h2>
+
+  <p class="intro">
+    Enter the unique code you received with your licensed copy.
+    Each license code can be redeemed only once.
+  </p>
+
+  <form id="activationForm">
+
+    <label for="licenseCode">
+      License code
+    </label>
+
+    <input
+      id="licenseCode"
+      class="code-input"
+      type="text"
+      name="code"
+      placeholder="e.g. ABCD-EFGH-1234"
+      autocomplete="off"
+      autocapitalize="characters"
+      spellcheck="false"
+      required
+    >
+
+    <button
+      id="activateButton"
+      class="button"
+      type="submit"
+    >
+      Activate License
+    </button>
+
+  </form>
+
+  <div
+    id="status"
+    class="status"
+    role="status"
+    aria-live="polite"
+  ></div>
+
+  <div
+    id="licenseDetails"
+    class="license-details"
+  >
+
+    <div class="detail-row">
+      <span class="detail-label">
+        Package
+      </span>
+
+      <span
+        id="packageValue"
+        class="detail-value"
+      >
+      </span>
+    </div>
+
+    <div class="detail-row">
+      <span class="detail-label">
+        Language
+      </span>
+
+      <span
+        id="languageValue"
+        class="detail-value"
+      >
+      </span>
+    </div>
+
+  </div>
+
+  <div
+    id="nextStep"
+    class="next-step"
+  >
+    Your license has been successfully activated.
+    Secure document delivery will be available here once
+    the PDF delivery system is connected.
+  </div>
+
+</section>
+
+<div class="info-grid">
+
+  <div class="info-card">
+
+    <h3>
+      One-time activation
+    </h3>
+
+    <p>
+      Each license code is unique and can only be redeemed once.
+    </p>
+
+  </div>
+
+  <div class="info-card">
+
+    <h3>
+      Language-specific
+    </h3>
+
+    <p>
+      Your license is linked to the language allocated to your copy.
+    </p>
+
+  </div>
+
+</div>
+
+<a class="back-link" href="/">
+  ← Back to The Gold Investor
+</a>
+```
+
+  </main>
+
+  <footer>
+    © 2026 The Gold Decision Framework
+  </footer>
+
+</div>
+
+<script>
+
+  const WORKER_URL =
+    "https://gold-decision-license-rapid-frog-c915.filipallaert.workers.dev";
+
+  const activationForm =
+    document.getElementById("activationForm");
+
+  const licenseCode =
+    document.getElementById("licenseCode");
+
+  const activateButton =
+    document.getElementById("activateButton");
+
+  const status =
+    document.getElementById("status");
+
+  const licenseDetails =
+    document.getElementById("licenseDetails");
+
+  const packageValue =
+    document.getElementById("packageValue");
+
+  const languageValue =
+    document.getElementById("languageValue");
+
+  const nextStep =
+    document.getElementById("nextStep");
+
+
+  const languageNames = {
+    en: "English",
+    nl: "Nederlands",
+    de: "Deutsch",
+    fr: "Français",
+    es: "Español",
+    it: "Italiano"
+  };
+
+
+  const packageNames = {
+    iron: "Iron",
+    copper: "Copper",
+    bronze: "Bronze",
+    silver: "Silver",
+    gold: "Gold",
+    platinum: "Platinum",
+    diamond: "Diamond"
+  };
+
+
+  function showStatus(message, type) {
+
+    status.textContent = message;
+
+    status.className =
+      "status visible " + type;
+  }
+
+
+  function resetResult() {
+
+    status.className = "status";
+
+    licenseDetails.classList.remove("visible");
+
+    nextStep.classList.remove("visible");
+
+    packageValue.textContent = "";
+
+    languageValue.textContent = "";
+  }
+
+
+  activationForm.addEventListener(
+    "submit",
+    async function(event) {
+
+      event.preventDefault();
+
+      resetResult();
+
+      const code =
+        licenseCode.value.trim().toUpperCase();
+
+      if (!code) {
+
+        showStatus(
+          "Please enter your license code.",
+          "error"
+        );
+
+        return;
+      }
+
+
+      activateButton.disabled = true;
+
+      activateButton.textContent =
+        "Activating…";
+
+
+      showStatus(
+        "Checking your license…",
+        "success"
+      );
+
+
+      try {
+
+        const response =
+          await fetch(WORKER_URL, {
+            method: "POST",
+
+            headers: {
+              "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+              code: code
+            })
+          });
+
+
+        const data =
+          await response.json();
+
+
+        if (!response.ok || !data.success) {
+
+          throw new Error(
+            data.error ||
+            "Unable to activate this license."
+          );
+        }
+
+
+        const packageName =
+          packageNames[data.package] ||
+          data.package;
+
+
+        const languageName =
+          languageNames[data.language] ||
+          data.language;
+
+
+        showStatus(
+          "✓ License activated successfully.",
+          "success"
+        );
+
+
+        packageValue.textContent =
+          packageName;
+
+
+        languageValue.textContent =
+          languageName;
+
+
+        licenseDetails.classList.add(
+          "visible"
+        );
+
+
+        nextStep.classList.add(
+          "visible"
+        );
+
+
+      } catch (error) {
+
+        console.error(error);
+
+
+        showStatus(
+          error.message ||
+          "Something went wrong. Please try again.",
+          "error"
+        );
+
+      } finally {
+
+        activateButton.disabled = false;
+
+        activateButton.textContent =
+          "Activate License";
+
+      }
+
+    }
+  );
+
+
+  licenseCode.addEventListener(
+    "input",
+    function() {
+
+      licenseCode.value =
+        licenseCode.value.toUpperCase();
+
+    }
+  );
+
+</script>
+
+</body>
+</html>
