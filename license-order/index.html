@@ -778,6 +778,38 @@
               €0.00
             </div>
 
+          <div
+  class="language-allocation"
+  id="languageAllocation"
+  hidden
+>
+  <h4>Language allocation</h4>
+
+  <p class="language-allocation-intro">
+    Choose how many copies you want in each available language.
+    The total must equal your selected package quantity.
+  </p>
+
+  <div id="languageRows"></div>
+
+  <div class="allocation-total">
+    Allocated:
+    <strong>
+      <span id="allocatedCopies">0</span>
+      /
+      <span id="requiredCopies">0</span>
+    </strong>
+    copies
+  </div>
+
+  <div
+    class="allocation-status"
+    id="allocationStatus"
+  >
+    Please allocate all copies before continuing.
+  </div>
+</div>  
+            
           </div>
 
           <button
@@ -849,103 +881,330 @@
 
 
   <script>
-    const packages = document.querySelectorAll(".package");
+   const packages = document.querySelectorAll(".package");
 
-    const selectedPackage = document.getElementById("selectedPackage");
-    const selectedCopies = document.getElementById("selectedCopies");
-    const selectedPrice = document.getElementById("selectedPrice");
-    const selectedTotal = document.getElementById("selectedTotal");
-    const continueButton = document.getElementById("continueButton");
+const selectedPackage = document.getElementById("selectedPackage");
+const selectedCopies = document.getElementById("selectedCopies");
+const selectedPrice = document.getElementById("selectedPrice");
+const selectedTotal = document.getElementById("selectedTotal");
+const continueButton = document.getElementById("continueButton");
 
-    let currentSelection = null;
+const languageAllocation =
+  document.getElementById("languageAllocation");
 
-    packages.forEach((packageCard) => {
+const languageRows =
+  document.getElementById("languageRows");
 
-      packageCard.addEventListener("click", () => {
+const allocatedCopies =
+  document.getElementById("allocatedCopies");
 
-        packages.forEach((card) => {
-          card.classList.remove("selected");
-        });
+const requiredCopies =
+  document.getElementById("requiredCopies");
 
-        packageCard.classList.add("selected");
+const allocationStatus =
+  document.getElementById("allocationStatus");
 
-        const name = packageCard.dataset.name;
-        const copies = Number(packageCard.dataset.copies);
-        const price = Number(packageCard.dataset.price);
 
-        const total = copies * price;
+/*
+ * AVAILABLE BOOK LANGUAGES
+ *
+ * Add future languages here.
+ *
+ * Example later:
+ *
+ * { code: "de", name: "Deutsch" },
+ * { code: "fr", name: "Français" },
+ * { code: "es", name: "Español" }
+ */
 
-        currentSelection = {
-          package: packageCard.dataset.package,
-          name: name,
-          copies: copies,
-          price: price,
-          total: total
-        };
+const languages = [
+  {
+    code: "en",
+    name: "English"
+  },
+  {
+    code: "nl",
+    name: "Nederlands"
+  }
+];
 
-        selectedPackage.textContent = name;
 
-        selectedCopies.textContent =
-          `${copies.toLocaleString()} copies`;
+let currentSelection = null;
 
-        selectedPrice.textContent =
-          `€${price.toFixed(2)} per copy`;
 
-        selectedTotal.textContent =
-          `€${total.toLocaleString("en-IE", {
-            minimumFractionDigits: 2,
-            maximumFractionDigits: 2
-          })}`;
+/*
+ * Create the language input fields
+ */
 
-        continueButton.disabled = false;
+function renderLanguageAllocation(copies) {
 
-      });
+  languageRows.innerHTML = "";
+
+  languages.forEach((language) => {
+
+    const row = document.createElement("div");
+
+    row.className = "language-row";
+
+    row.innerHTML = `
+      <label
+        class="language-name"
+        for="language-${language.code}"
+      >
+        ${language.name}
+      </label>
+
+      <input
+        class="language-input"
+        id="language-${language.code}"
+        data-language="${language.code}"
+        type="number"
+        min="0"
+        max="${copies}"
+        value="0"
+        inputmode="numeric"
+        aria-label="${language.name} copies"
+      >
+    `;
+
+    languageRows.appendChild(row);
+
+  });
+
+
+  document
+    .querySelectorAll(".language-input")
+    .forEach((input) => {
+
+      input.addEventListener("input", updateAllocation);
 
     });
 
 
-    continueButton.addEventListener("click", () => {
+  requiredCopies.textContent =
+    copies.toLocaleString();
 
-      if (!currentSelection) {
-        return;
-      }
+  updateAllocation();
+}
 
-      /*
-       * PAYHIP CONNECTION
-       *
-       * We will replace these placeholders with the actual
-       * Payhip product/checkout URLs once the seven Payhip
-       * bulk products have been created.
-       */
 
-      const payhipLinks = {
+/*
+ * Check the language allocation
+ */
 
-    iron: "https://payhip.com/b/6dasT",
-    copper: "https://payhip.com/b/OlPbm",
-    bronze: "https://payhip.com/b/ab9xK",
-    silver: "https://payhip.com/b/mHC29",
-    gold: "https://payhip.com/b/oTIf6",
-    platinum: "https://payhip.com/b/6g3PE",
-    diamond: "https://payhip.com/b/dm2j3"
+function updateAllocation() {
 
-      };
+  if (!currentSelection) {
+    return;
+  }
 
-      const checkoutUrl =
-        payhipLinks[currentSelection.package];
+  let totalAllocated = 0;
 
-      if (!checkoutUrl) {
+  const allocation = {};
 
-        alert(
-          "This package is ready, but its Payhip checkout has not been connected yet."
-        );
+  document
+    .querySelectorAll(".language-input")
+    .forEach((input) => {
 
-        return;
-      }
+      const quantity =
+        Math.max(0, Number(input.value) || 0);
 
-      window.location.href = checkoutUrl;
+      allocation[input.dataset.language] =
+        quantity;
+
+      totalAllocated += quantity;
 
     });
-  </script>
+
+
+  currentSelection.languages = allocation;
+
+  allocatedCopies.textContent =
+    totalAllocated.toLocaleString();
+
+
+  if (totalAllocated === currentSelection.copies) {
+
+    allocationStatus.textContent =
+      "✓ Allocation complete.";
+
+    allocationStatus.classList.remove("error");
+    allocationStatus.classList.add("success");
+
+    continueButton.disabled = false;
+
+  } else if (totalAllocated > currentSelection.copies) {
+
+    allocationStatus.textContent =
+      `Too many copies allocated. Maximum is ${currentSelection.copies.toLocaleString()}.`;
+
+    allocationStatus.classList.remove("success");
+    allocationStatus.classList.add("error");
+
+    continueButton.disabled = true;
+
+  } else {
+
+    const remaining =
+      currentSelection.copies - totalAllocated;
+
+    allocationStatus.textContent =
+      `${remaining.toLocaleString()} copy${remaining === 1 ? "" : "ies"} remaining to allocate.`;
+
+    allocationStatus.classList.remove("success");
+    allocationStatus.classList.add("error");
+
+    continueButton.disabled = true;
+
+  }
+
+}
+
+
+/*
+ * Package selection
+ */
+
+packages.forEach((packageCard) => {
+
+  packageCard.addEventListener("click", () => {
+
+    packages.forEach((card) => {
+      card.classList.remove("selected");
+    });
+
+    packageCard.classList.add("selected");
+
+    const name =
+      packageCard.dataset.name;
+
+    const copies =
+      Number(packageCard.dataset.copies);
+
+    const price =
+      Number(packageCard.dataset.price);
+
+    const total =
+      copies * price;
+
+
+    currentSelection = {
+      package: packageCard.dataset.package,
+      name: name,
+      copies: copies,
+      price: price,
+      total: total,
+      languages: {}
+    };
+
+
+    selectedPackage.textContent =
+      name;
+
+    selectedCopies.textContent =
+      `${copies.toLocaleString()} copies`;
+
+    selectedPrice.textContent =
+      `€${price.toFixed(2)} per copy`;
+
+    selectedTotal.textContent =
+      `€${total.toLocaleString("en-IE", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      })}`;
+
+
+    languageAllocation.hidden = false;
+
+    renderLanguageAllocation(copies);
+
+  });
+
+});
+
+
+/*
+ * PAYHIP CONNECTION
+ */
+
+const payhipLinks = {
+
+  iron: "https://payhip.com/b/6dasT",
+  copper: "https://payhip.com/b/OlPbm",
+  bronze: "https://payhip.com/b/ab9xK",
+  silver: "https://payhip.com/b/mHC29",
+  gold: "https://payhip.com/b/oTIf6",
+  platinum: "https://payhip.com/b/6g3PE",
+  diamond: "https://payhip.com/b/dm2j3"
+
+};
+
+
+/*
+ * Continue to Payhip
+ */
+
+continueButton.addEventListener("click", () => {
+
+  if (!currentSelection) {
+    return;
+  }
+
+
+  /*
+   * Safety check:
+   * language allocation must equal
+   * the purchased number of copies.
+   */
+
+  let totalAllocated = 0;
+
+  Object.values(currentSelection.languages)
+    .forEach((quantity) => {
+
+      totalAllocated += quantity;
+
+    });
+
+
+  if (totalAllocated !== currentSelection.copies) {
+
+    alert(
+      "Please allocate all copies between the available languages before continuing."
+    );
+
+    return;
+
+  }
+
+
+  const checkoutUrl =
+    payhipLinks[currentSelection.package];
+
+
+  if (!checkoutUrl) {
+
+    alert(
+      "This package is ready, but its Payhip checkout has not been connected yet."
+    );
+
+    return;
+
+  }
+
+
+  /*
+   * For now, Payhip only receives
+   * the package purchase.
+   *
+   * The language allocation will later
+   * be stored by our licensing system.
+   */
+
+  window.location.href =
+    checkoutUrl;
+
+});
 
 </body>
 </html>
