@@ -1,52 +1,475 @@
-[[[标签1]]]
-[[[标签2]]]
-[[[标签3]]]
-  [[[标签4]]]
-  [[[标签5]]]
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>黄金已经超越美国国债|决策框架</title>
+  <title>黄金已超过美国国债 | The Gold Decision Framework</title>
 
   <meta
     name="description"
-    content="Why central banks are buying gold, reducing Treasury exposure and what this shift may mean for individual savers and investors."
+    content="阅读完整指南，了解价格、溢价、买卖价差、储存和回购条件。"
   >
 
-  [[[块0]]]
+  <style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+      --dark-text: #17120a
+;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+  0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--gold-light);
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .site-name {
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .site-links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .article-header {
+      padding: 110px 0 80px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .article-meta {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-page {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 290px;
+      align-items: start;
+      gap: 60px;
+      padding: 70px 0 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      margin: 70px 0 18px;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: var(--gold-light);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .article-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0 0 42px;
+      padding: 24px;
+      background: rgba(8, 161, 91, 0.1);
+      border: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 34px 0;
+    }
+
+    .evidence-card {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      margin: 34px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .comparison-value {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .comparison-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .comparison-arrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+    }
+
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px;
+      background: rgba(8, 161, 91, 0.1);
+      border-left: 3px solid var(--gold);
+      color: var(--gold-light);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .article-cta {
+      position: sticky;
+      top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .article-cta h2 {
+      margin: 0 0 16px;
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .article-cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: var(--dark-text);
+    }
+
+    .button.store {
+      background: rgba(8, 161, 91, 0.14);
+      color: var(--gold-light);
+    }
+
+    .button.store:hover {
+      background: var(--gold-light);
+      color: var(--dark-text);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: #8f887b
+;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .article-page {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .article-cta {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 760px);
+      }
+
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-links {
+        justify-content: flex-start;
+      }
+
+      .article-header {
+        padding: 80px 0 60px;
+      }
+
+      .article-page {
+        padding: 55px 0 75px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .comparison-arrow {
+        transform: rotate(90deg);
+      }
+
+      .stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  
+    /* Responsive typography for every article language. */
+    .article-page { grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); }
+    .article-content, .article-cta, .site-links { min-width: 0; }
+    .site-nav { flex-wrap: wrap; }
+    .site-links { flex-wrap: wrap; row-gap: 12px; }
+    .article-header h1 { overflow-wrap: anywhere; text-wrap: balance; }
+    .article-content, .article-cta { overflow-wrap: anywhere; hyphens: auto; }
+    .comparison { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+    .comparison-value { font-size: clamp(1.35rem, 2.6vw, 2.15rem); }
+    .comparison-label { overflow-wrap: anywhere; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 5px; }
+    html:lang(ja) body { font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; line-height: 1.95; }
+    html:lang(zh) body { font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif; line-height: 1.9; }
+    html:lang(hi) body { font-family: 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; line-height: 1.9; }
+    html:lang(ja) .site-links, html:lang(zh) .site-links, html:lang(hi) .site-links { letter-spacing: normal; }
+    html:lang(ja) .subtitle, html:lang(zh) .subtitle, html:lang(hi) .subtitle { font-style: normal; }
+    html:lang(hi) h1, html:lang(hi) h2 { line-height: 1.4; }
+    html:lang(hi) .eyebrow, html:lang(hi) .article-meta { letter-spacing: normal; }
+    @media (max-width: 850px) {
+      .article-page { grid-template-columns: minmax(0, 1fr); }
+      .article-cta { position: static; }
+    }
+    @media (max-width: 600px) {
+      .comparison { grid-template-columns: minmax(0, 1fr); }
+      .site-links { gap: 12px 18px; }
+      .article-header h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    }
+
+  </style>
 </head>
 
-[[[标签10]]]
+<body>
 
-  [[[标签11]]]
-    [[[标签12]]]
-      决策框架.online
-    [[[标签13]]]
-
-    [[[标签14]]]
-      <a href="/">框架</a>
-      <a href="/article.html" aria-current="page">文章</a>
-      <a href="https://payhip.com/b/7GDAe" target="_blank"
-  rel="noopener noreferrer">存储</a>
-      <a href="/#contact">联系方式</a>
-      <a href="/nl/">NL</a>
-    [[[标签25]]]
+  <nav class="site-nav container" aria-label="主导航">
+    <a class="site-name" href="/ZH/">DecisionFramework.online</a>
+    <div class="site-links">
+      <a href="/ZH/">决策框架</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">商店</a>
+      <a href="/license-order/">订购</a>
+      <a href="/license/">激活</a>
+    </div>
   </nav>
 
   <header class="article-header">
     <div class="container">
-      <div class="eyebrow">黄金投资者·分析</div>
+      <div class="eyebrow">黄金投资者 · 分析</div>
 
       <h1>黄金已超过美国国债</h1>
 
-      <p class="subtitle">
-        您的储蓄账户支付 0.4%。世界各国央行正在购买
-        黄金。他们知道一些你不知道的事情。
-      </p>
+      <p class="subtitle">你的储蓄账户利率为0.4%，而全球央行正在购买黄金。它们掌握着你可能尚未注意到的信息。</p>
 
       <div class="ornament"></div>
 
-      <p class="article-meta">
-        黄金决策框架·循证分析
-      </p>
+      <p class="article-meta">The Gold Decision Framework · 基于数据的分析</p>
     </div>
   </header>
 
@@ -57,235 +480,118 @@
       <div class="stat-card">
         <div class="stat-number">0.39%</div>
 
-        <div class="stat-label">
-          美国全国平均储蓄率
-        </div>
+        <div class="stat-label">美国储蓄账户的全国平均利率</div>
       </div>
 
-      <p class="lead">
-        检查您的银行对账单。
-      [[[标签50]]]
+      <p class="lead">看看你的银行对账单。</p>
 
-      <p>
-        美国全国平均储蓄率为0.39%。即使是最好的
-        市场上高收益账户的收益率约为 4%——这就是
-        在税收和通货膨胀侵蚀它之前。
-      [[[标签52]]]
+      <p>美国储蓄账户的全国平均利率为0.39%。即使是高收益账户，利率通常也只在4%左右，这还没有扣除税收和通胀的影响。</p>
 
-      <p>
-        现在看看这些机构实际上管理着世界
-        储备金正在用他们的钱做事。
-      </p>
+      <p>再看看那些管理全球储备资产的机构，是如何安排资金的。</p>
 
-      [[[标签55]]]
-        他们不会把钱存入储蓄账户。他们正在购买黄金——
-        以十多年来未见的速度。
-      </p>
+      <p>它们没有把钱放进储蓄账户，而是以十多年来少见的速度购买黄金。</p>
 
-      <h2>有些事情发生了变化</h2>
+      <h2>变化已经发生</h2>
 
-      [[[标签59]]]
-        过去 30 年的大部分时间里，美国国债都是默认债券
-        世界各国央行的“安全”储备资产。无聊、液体、
-        可靠。
-      </p>
+      <p>在过去三十年的大部分时间里，美国国债一直是全球央行默认的“安全”储备资产：并不起眼，却具有流动性和可靠性。</p>
 
-      <p>
-        这正在转变。
-      </p>
+      <p>这种格局正在改变。</p>
 
-      <p>
-        根据欧洲央行自己的 2025 年审查，黄金已
-        超越欧元成为第二大储备资产
-        在全球范围内，仅次于美元。央行买了
-        过去几年每年生产 1,000 吨黄金 —
-        是前十年的两倍多。
-      </p>
+      <p>根据欧洲央行2025年的报告，黄金已超过欧元，成为仅次于美元的全球第二大储备资产。近年来，央行每年购买的黄金超过1,000吨，是此前十年购买速度的两倍多。</p>
 
-      <p>
-        其他追踪器走得更远：一些分析现在表明，对于
-        外国央行自1996年以来首次集体持有更多
-        黄金高于美国国债。
-      </p>
+      <p>另一些分析指出，自1996年以来，外国央行所持黄金的总价值首次超过其持有的美国国债价值。</p>
 
-      <p>
-        这不是一家银行在押注。这是一个广泛的、多年的模式
-        横跨数十个国家。
-      </p>
+      <p>这不是某一家银行的押注，而是持续多年、涉及数十个国家的广泛趋势。</p>
 
       <div class="evidence-grid">
         <div class="evidence-card">
-          <strong>信号 01</strong>
-          <p>
-            各国央行正在系统性地购买黄金并减少黄金储备
-            依赖美国国债作为默认的安全资产。
-          </p>
+          <strong>信号01</strong>
+          <p>央行持续购买黄金，降低对美国国债这一传统安全资产的依赖。</p>
         </div>
 
         <div class="evidence-card">
-          <strong>信号 02</strong>
-          <p>
-            主要机构正在分别减少对美国的敞口
-            政府债务。
-          </p>
+          <strong>信号02</strong>
+          <p>与此同时，其他大型机构也在减少对美国政府债务的投资。</p>
         </div>
       </div>
 
-      <h2>不仅仅是央行</h2>
+      <h2>不只是央行</h2>
 
-      <p>欧洲的养老基金正在悄然做类似的事情
-        自己持有的债券。
-      </p>
+      <p>欧洲养老基金也在悄然调整自己的债券组合。</p>
 
-      <p>
-        荷兰最大的养老基金 ABP — 管理退休金
-        为大约 300 万教师、警察和民事人员
-        仆人——将其持有的美国国债从约 290 亿欧元削减至
-        去年短短六个月内就达到了 190 亿欧元。
-      </p>
+      <p>荷兰最大的养老基金ABP管理着约三百万名教师、警察和公务员的退休资金。去年，它在短短六个月内，将美国国债持仓从约290亿欧元降至190亿欧元。</p>
 
       <div class="comparison">
         <div>
           <div class="comparison-value">290亿欧元</div>
-          <div class="comparison-label">早些时候持有的美国国债</div>
+          <div class="comparison-label">削减前的美国国债持仓</div>
         </div>
 
         <div class="comparison-arrow">→</div>
 
         <div>
-          <div class="comparison-value">190 亿欧元</div>
-          <div class="comparison-label">后来持有的美国国债</div>
-        [[[标签103]]]
+          <div class="comparison-value">190亿欧元</div>
+          <div class="comparison-label">削减后的美国国债持仓</div>
+        </div>
       </div>
 
-      [[[标签105]]]
-        这是美国政府真正的、公开的、一百亿欧元的撤退
-        彭博社 2026 年 1 月报道的债务情况。
-      [[[标签106]]]
+      <p>彭博社于2026年1月报道了这一已披露的调整：美国政府债务投资减少了100亿欧元。</p>
 
-      <p>
-        准确地说，我们实际知道的是：ABP 自己的报告
-        并没有说这些钱去了黄金。它可能已经进入
-        欧洲债券、其他固定收益或其他完全如此。
-      </p>
+      <p>必须准确区分已知事实：ABP的报告并未表示这些资金流向了黄金。它们可能投向欧洲债券、其他固定收益工具，或其他资产。</p>
 
-      <p>
-        我们可以肯定地说这是欧洲最
-        保守的、监管最严格的养老基金决定
-        持有较少的美国国债是更安全的举措。仅此一点就值得
-        坐在一起。
-      [[[标签110]]]
+      <p>可以确定的是，欧洲最审慎、监管最严格的养老基金之一，决定减少美国国债持仓。这一决定本身就值得关注。</p>
 
-      <h2>两个独立信号，一个方向</h2>
+      <h2>两个独立信号，同一个方向</h2>
 
-      <p>
-        所以这里有两个不同的故事，重要的是我们不这样做
-        模糊它们：
-      </p>
+      <p>这里有两种不同的现象，不应混为一谈：</p>
 
-      [[[标签115]]]
-        <li>
-          各国央行正在系统性地购买黄金，减少
-          依赖国债作为默认安全资产——已确认，
-          持续、多年并由欧洲央行和世界黄金记录
-          理事会。
-        </li>
+      <ol>
+        <li>央行持续购买黄金，减少对国债这一传统安全资产的依赖。欧洲央行和世界黄金协会的资料记录了这一延续多年的趋势。</li>
 
-        <li>
-          养老基金正在单独减少其美国国债风险敞口——
-          专门针对 ABP 进行了确认——原因尚不完全
-          公开，但这表明了同样的潜在不适：
-          太多的国家财富依赖于一国的债务和一国的债务
-          货币的稳定性。
-        </li>
-      [[[标签120]]]
+        <li>养老基金则独立地减少美国国债投资，ABP就是一个例子。其全部原因尚未公开，但可能反映出一种共同担忧：过度依赖一个国家的债务和一种货币的稳定性。</li>
+      </ol>
 
-      <p>
-        不同的机构，不同的机制，相同的行进方向。
-      </p>
+      <p>机构和机制不同，但变化方向相似。</p>
 
-      <h2>为什么这对你来说很重要</h2>
+      <h2>这与你有什么关系</h2>
 
-      [[[标签125]]]
-        中央银行一年可以转移一千吨黄金。你
-        不能，而且你也不需要。
-      </p>
+      <p>一家央行一年可以调动一千吨黄金。你做不到，也不需要这样做。</p>
 
-      <div class="pull-quote">
-        你存了多少完全取决于机构，
-        您对货币和政策的控制权为零？
-      </div>
+      <div class="pull-quote">你的储蓄中，有多少完全依赖于你无法控制的机构、货币和政策？</div>
 
-      <p>
-        这不是卖给你黄金的修辞技巧。黄金并非无风险
-        贸易——它不支付利息，它可能会下跌，而实物市场已经
-        悄悄地向你收取过多费用的方式比大多数人意识到的要多。
-      [[[标签130]]]
+      <p>这不是为了向你推销黄金而提出的问题。黄金并非没有风险：它不产生利息，价格可能下跌，实物市场上还存在许多买家不易察觉的额外费用。</p>
 
-      <p>
-        含金量相同的金币和金条的含金量可能大不相同
-        保费。现货价格、经销商保证金、库存、回购条款——都没有
-        在您知道要寻找什么之前，这是显而易见的。
-      </p>
+      <p>含金量相同的金币与金条，溢价可能相差很大。现货价格、经销商利润、储存和回购条件，都需要先知道该关注什么，才能作出判断。</p>
 
-      <p>这正是在要求您点击之前没有人解释的部分
-        “买。”
-      </p>
+      <p>这些恰恰是人们在催你点击“购买”之前很少解释清楚的部分。</p>
 
-      <h2>在购买任何东西之前 - 了解您要购买的东西</h2>
+      <h2>购买之前，先理解你买的是什么</h2>
 
-      <p>
-        上述机构并没有有一天醒来并把钱汇入
-        盲目黄金。他们的研究团队完全围绕
-        了解他们拥有什么、它的成本以及它的行为方式。
-      </p>
+      <p>上述机构并不是盲目投资黄金。它们的研究团队会分析所持资产、成本和表现。</p>
 
-      <p>
-        你可以在很短的时间内获得 90% 的理解——
-        但前提是有人真正引导你完成它，而不仅仅是
-        告诉你“黄金很好，买黄金”。
-      [[[标签140]]]
+      <p>只要有人真正解释相关原理，而不是简单地说“黄金好，买黄金”，你也能在较短时间内掌握其中的大部分知识。</p>
 
-      <p>
-        这就是教程的作用。不是伪装成的销售宣传
-        教育——贵金属市场运作方式的真实分解：
-        黄金价格的驱动力是什么，溢价和价差如何悄然决定
-        是否获得公平交易，合法金条的区别
-        从价格过高的收藏品中购买，以及如何实际购买
-        比较提供商而不是猜测。
-      </p>
+      <p>本指南的目的，是解释贵金属市场如何运作、哪些因素影响金价，以及溢价和买卖价差如何影响实际成本。它帮助你区分投资黄金与价格过高的收藏品，并根据具体标准比较卖家。</p>
 
-      <p>
-        各国央行已经采取行动。无论你自己做——
-        以及如何做——是一个值得睁大眼睛做出的决定。
-      </p>
+      <p>央行已经采取行动。你是否行动，以及如何行动，都值得在充分理解后再作决定。</p>
 
-      <a class="back-link" href="/">
-        ← 返回黄金投资者
-      </a>
+      <a class="back-link" href="/ZH/">← 返回黄金投资者</a>
 
     </article>
 
     <aside class="article-cta">
-      <h2>购买黄金前了解黄金</h2>
+      <h2>买黄金之前，先了解黄金</h2>
 
-      [[[标签151]]]
-        阅读完整的黄金投资者教程以获得实用的解释
-        定价、溢价、点差、存储和回购条款。
-      [[[标签152]]]
+      <p>阅读完整指南，了解价格、溢价、买卖价差、储存和回购条件。</p>
 
-      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">
-        获取 PDF — €38
-      </a>
-    [[[标签155]]]
+      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">购买PDF — 38欧元</a>
+    </aside>
 
-  [[[标签156]]]
+  </main>
 
-  [[[标签157]]]
-    <div class="container">
-      © 2026 菲利普·阿拉特。版权所有。
-    </div>
-  [[[标签160]]]
+  <footer>
+    <div class="container">© 2026 Filip Allaert. 保留所有权利。</div>
+  </footer>
 
 </body>
 </html>
