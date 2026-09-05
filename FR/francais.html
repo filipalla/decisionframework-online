@@ -1,288 +1,597 @@
-[[[ÉTIQUETTE1]]]
-[[[ÉTIQUETTE2]]]
-[[[ÉTIQUETTE3]]]
-  [[[ÉTIQUETTE4]]]
-  [[[ÉTIQUETTE5]]]
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>L'or a dépassé les bons du Trésor américain | Cadre décisionnel</title>
+  <title>L’or a dépassé les obligations du Trésor américain | The Gold Decision Framework</title>
 
-  [[[ÉTIQUETTE8]]]
+  <meta
+    name="description"
+    content="Consultez le guide complet pour comprendre les prix, les primes, les écarts entre achat et revente, le stockage et les conditions de rachat."
+  >
 
-  [[[BLOC0]]]
-[[[ÉTIQUETTE9]]]
+  <style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+      --dark-text: #17120a
+;
+    }
 
-[[[ÉTIQUETTE10]]]
+    * {
+      box-sizing: border-box;
+    }
 
-  [[[ÉTIQUETTE11]]]
-    [[[ÉTIQUETTE12]]]
-      DecisionFramework.online
-    [[[ÉTIQUETTE13]]]
+    html {
+      scroll-behavior: smooth;
+    }
 
-    [[[ÉTIQUETTE14]]]
-      <a href="/">Cadre</a>
-      <a href="/article.html" aria-current="page">Article</a>
-      <a href="https://payhip.com/b/7GDAe" target="_blank"
-  rel="noopener noreferrer">Magasin</a>
-      <a href="/#contact">Contact</a>
-      <a href="/nl/">NL</a>
-    [[[ÉTIQUETTE25]]]
-  [[[ÉTIQUETTE26]]]
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+  0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
 
-  [[[ÉTIQUETTE27]]]
-    [[[ÉTIQUETTE28]]]
-      <div class="eyebrow">L'investisseur en or · Analyse</div>
+    a {
+      color: var(--gold-light);
+    }
 
-      <h1>L'or a dépassé les bons du Trésor américain</h1>
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
 
-      [[[ÉTIQUETTE33]]]
-        Votre compte d'épargne rapporte 0,4 %. Les banques centrales du monde achètent
-        De l'or. Ils savent quelque chose que vous ignorez.
-      [[[ÉTIQUETTE34]]]
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .site-name {
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .site-links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .article-header {
+      padding: 110px 0 80px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .article-meta {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-page {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 290px;
+      align-items: start;
+      gap: 60px;
+      padding: 70px 0 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      margin: 70px 0 18px;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: var(--gold-light);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .article-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0 0 42px;
+      padding: 24px;
+      background: rgba(8, 161, 91, 0.1);
+      border: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 34px 0;
+    }
+
+    .evidence-card {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      margin: 34px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .comparison-value {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .comparison-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .comparison-arrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+    }
+
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px;
+      background: rgba(8, 161, 91, 0.1);
+      border-left: 3px solid var(--gold);
+      color: var(--gold-light);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .article-cta {
+      position: sticky;
+      top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .article-cta h2 {
+      margin: 0 0 16px;
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .article-cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: var(--dark-text);
+    }
+
+    .button.store {
+      background: rgba(8, 161, 91, 0.14);
+      color: var(--gold-light);
+    }
+
+    .button.store:hover {
+      background: var(--gold-light);
+      color: var(--dark-text);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: #8f887b
+;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .article-page {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .article-cta {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 760px);
+      }
+
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-links {
+        justify-content: flex-start;
+      }
+
+      .article-header {
+        padding: 80px 0 60px;
+      }
+
+      .article-page {
+        padding: 55px 0 75px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .comparison-arrow {
+        transform: rotate(90deg);
+      }
+
+      .stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  
+    /* Responsive typography for every article language. */
+    .article-page { grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); }
+    .article-content, .article-cta, .site-links { min-width: 0; }
+    .site-nav { flex-wrap: wrap; }
+    .site-links { flex-wrap: wrap; row-gap: 12px; }
+    .article-header h1 { overflow-wrap: anywhere; text-wrap: balance; }
+    .article-content, .article-cta { overflow-wrap: anywhere; hyphens: auto; }
+    .comparison { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+    .comparison-value { font-size: clamp(1.35rem, 2.6vw, 2.15rem); }
+    .comparison-label { overflow-wrap: anywhere; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 5px; }
+    html:lang(ja) body { font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; line-height: 1.95; }
+    html:lang(zh) body { font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif; line-height: 1.9; }
+    html:lang(hi) body { font-family: 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; line-height: 1.9; }
+    html:lang(ja) .site-links, html:lang(zh) .site-links, html:lang(hi) .site-links { letter-spacing: normal; }
+    html:lang(ja) .subtitle, html:lang(zh) .subtitle, html:lang(hi) .subtitle { font-style: normal; }
+    html:lang(hi) h1, html:lang(hi) h2 { line-height: 1.4; }
+    html:lang(hi) .eyebrow, html:lang(hi) .article-meta { letter-spacing: normal; }
+    @media (max-width: 850px) {
+      .article-page { grid-template-columns: minmax(0, 1fr); }
+      .article-cta { position: static; }
+    }
+    @media (max-width: 600px) {
+      .comparison { grid-template-columns: minmax(0, 1fr); }
+      .site-links { gap: 12px 18px; }
+      .article-header h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="site-nav container" aria-label="Navigation principale">
+    <a class="site-name" href="/FR/">DecisionFramework.online</a>
+    <div class="site-links">
+      <a href="/FR/">Cadre de décision</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Boutique</a>
+      <a href="/license-order/">Commander</a>
+      <a href="/license/">Activer</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="eyebrow">L’investisseur en or · Analyse</div>
+
+      <h1>L’or a dépassé les obligations du Trésor américain</h1>
+
+      <p class="subtitle">Votre compte d’épargne rapporte 0,4 %. Les banques centrales du monde achètent de l’or. Elles savent quelque chose que vous ignorez.</p>
 
       <div class="ornament"></div>
 
-      [[[ÉTIQUETTE37]]]
-        Le cadre décisionnel pour l'or · Analyse fondée sur des données probantes
-      [[[ÉTIQUETTE38]]]
+      <p class="article-meta">The Gold Decision Framework · Analyse fondée sur les faits</p>
     </div>
-  [[[ÉTIQUETTE40]]]
+  </header>
 
-  [[[ÉTIQUETTE41]]]
+  <main class="article-page container">
 
-    [[[ÉTIQUETTE42]]]
+    <article class="article-content">
 
-      [[[ÉTIQUETTE43]]]
-        <div class="stat-number">0,39 %</div>
+      <div class="stat-card">
+        <div class="stat-number">0,39 %</div>
 
-        [[[ÉTIQUETTE46]]]
-          Taux d’épargne moyen national aux États-Unis
-        [[[ÉTIQUETTE47]]]
-      [[[ÉTIQUETTE48]]]
+        <div class="stat-label">Taux d’intérêt moyen des comptes d’épargne aux États-Unis</div>
+      </div>
 
-      <p class="lead">
-        Vérifiez votre relevé bancaire.
-      [[[ÉTIQUETTE50]]]
+      <p class="lead">Consultez votre relevé bancaire.</p>
 
-      [[[ÉTIQUETTE51]]]
-        Le taux d'épargne moyen national aux États-Unis est de 0,39 %. Même le meilleur
-        les comptes à haut rendement sur le marché capitalisent autour de 4% – et c'est
-        avant que les impôts et l’inflation ne le rongent.
-      [[[ÉTIQUETTE52]]]
+      <p>Aux États-Unis, le taux d’intérêt moyen des comptes d’épargne est de 0,39 %. Même les comptes les mieux rémunérés du marché plafonnent autour de 4 %, avant que les impôts et l’inflation ne réduisent ce rendement.</p>
 
-      [[[ÉTIQUETTE53]]]
-        Examinons maintenant ce que font les institutions qui gèrent réellement l’économie mondiale.
-        les réserves font avec leur argent.
-      [[[ÉTIQUETTE54]]]
+      <p>Regardez maintenant ce que font de leur argent les institutions qui gèrent les réserves mondiales.</p>
 
-      [[[ÉTIQUETTE55]]]
-        Ils ne le mettent pas sur des comptes d’épargne. Ils achètent de l'or...
-        à un rythme jamais vu depuis plus d’une décennie.
-      [[[ÉTIQUETTE56]]]
+      <p>Elles ne le déposent pas sur des comptes d’épargne. Elles achètent de l’or, à un rythme inédit depuis plus de dix ans.</p>
 
       <h2>Quelque chose a changé</h2>
 
-      [[[ÉTIQUETTE59]]]
-        Pendant la majeure partie des 30 dernières années, les bons du Trésor américain ont été la valeur par défaut
-        actif de réserve « sûr » pour les banques centrales du monde entier. Ennuyeux, liquide,
-        fiable.
-      [[[ÉTIQUETTE60]]]
+      <p>Pendant la majeure partie des trente dernières années, les obligations du Trésor américain ont été l’actif de réserve « sûr » de référence des banques centrales : peu spectaculaire, liquide et fiable.</p>
 
-      [[[ÉTIQUETTE61]]]
-        Cela change.
-      </p>
+      <p>La situation évolue.</p>
 
-      [[[ÉTIQUETTE63]]]
-        Selon l’évaluation 2025 de la Banque centrale européenne, l’or a
-        a dépassé l’euro pour devenir le deuxième actif de réserve
-        à l'échelle mondiale, derrière le dollar américain. Les banques centrales ont racheté
-        1 000 tonnes d'or par an au cours de chacune des dernières années...
-        plus du double du rythme de la décennie précédente.
-      [[[ÉTIQUETTE64]]]
+      <p>Selon le rapport 2025 de la Banque centrale européenne, l’or a dépassé l’euro pour devenir le deuxième actif de réserve mondial, derrière le dollar américain. Les banques centrales ont acheté plus de 1 000 tonnes d’or par an au cours de chacune des dernières années, soit plus du double du rythme de la décennie précédente.</p>
 
-      [[[ÉTIQUETTE65]]]
-        D'autres trackers vont plus loin : plusieurs analyses montrent désormais que, pour le
-        pour la première fois depuis 1996, les banques centrales étrangères détiennent collectivement plus de
-        l’or que les bons du Trésor américain.
-      [[[ÉTIQUETTE66]]]
+      <p>D’autres analyses vont plus loin : elles indiquent que, pour la première fois depuis 1996, la valeur de l’or détenu collectivement par les banques centrales étrangères dépasse celle de leurs obligations du Trésor américain.</p>
 
-      <p>
-        Ce n’est pas une banque qui fait un pari. Il s’agit d’un modèle large et pluriannuel
-        dans des dizaines de pays.
-      </p>
+      <p>Il ne s’agit pas du pari d’une seule banque, mais d’une tendance qui se poursuit depuis plusieurs années dans des dizaines de pays.</p>
 
       <div class="evidence-grid">
-        [[[ÉTIQUETTE70]]]
+        <div class="evidence-card">
           <strong>Signal 01</strong>
-          [[[ÉTIQUETTE73]]]
-            Les banques centrales achètent systématiquement de l’or et réduisent leurs
-            le recours aux bons du Trésor américain comme actif sûr par défaut.
-          </p>
-        [[[ÉTIQUETTE75]]]
+          <p>Les banques centrales achètent régulièrement de l’or et réduisent leur dépendance aux obligations du Trésor américain comme actif de référence jugé sûr.</p>
+        </div>
 
-        [[[ÉTIQUETTE76]]]
+        <div class="evidence-card">
           <strong>Signal 02</strong>
-          <p>
-            Les grandes institutions réduisent séparément leur exposition aux États-Unis
-            dette publique.
-          [[[ÉTIQUETTE80]]]
+          <p>De grandes institutions réduisent, séparément, leur exposition à la dette publique américaine.</p>
         </div>
       </div>
 
-      <h2>Il n'y a pas que les banques centrales</h2>
+      <h2>Les banques centrales ne sont pas seules</h2>
 
-      <p>Les fonds de pension européens font discrètement quelque chose de similaire avec leurs
-        propres avoirs en obligations.
-      </p>
+      <p>Les fonds de pension européens réexaminent eux aussi, discrètement, leurs portefeuilles obligataires.</p>
 
-      <p>
-        ABP, le plus grand fonds de pension des Pays-Bas — gère l'argent de la retraite
-        pour environ trois millions d'enseignants, de policiers et de civils
-        fonctionnaires - a réduit ses avoirs du Trésor américain d'environ 29 milliards d'euros à
-        19 milliards d’euros en seulement six mois l’année dernière.
-      </p>
+      <p>ABP, le plus grand fonds de pension néerlandais, gère l’épargne retraite d’environ trois millions d’enseignants, de policiers et de fonctionnaires. L’an dernier, il a réduit ses obligations du Trésor américain d’environ 29 à 19 milliards d’euros en seulement six mois.</p>
 
       <div class="comparison">
-        [[[ÉTIQUETTE90]]]
+        <div>
           <div class="comparison-value">29 Md€</div>
-          <div class="comparison-label">Positions antérieures du Trésor américain</div>
+          <div class="comparison-label">Obligations du Trésor américain avant réduction</div>
         </div>
 
         <div class="comparison-arrow">→</div>
 
         <div>
           <div class="comparison-value">19 Md€</div>
-          <div class="comparison-label">Positions ultérieures du Trésor américain</div>
-        [[[ÉTIQUETTE103]]]
-      [[[ÉTIQUETTE104]]]
+          <div class="comparison-label">Obligations du Trésor américain après réduction</div>
+        </div>
+      </div>
 
-      [[[ÉTIQUETTE105]]]
-        Il s’agit d’un retrait réel et révélé de dix milliards d’euros du gouvernement américain.
-        dette, rapporté par Bloomberg en janvier 2026.
-      [[[ÉTIQUETTE106]]]
+      <p>Cette réduction déclarée de dix milliards d’euros de dette publique américaine a été rapportée par Bloomberg en janvier 2026.</p>
 
-      <p>
-        Pour être précis sur ce que nous savons réellement : le propre reporting d’ABP
-        ne dit pas que l’or est la destination de cet argent. Il est peut-être entré dans
-        Obligations européennes, autres titres à revenu fixe, ou ailleurs entièrement.
-      [[[ÉTIQUETTE108]]]
+      <p>Soyons précis : les informations publiées par ABP ne disent pas que cet argent a été investi dans l’or. Il a pu être réaffecté à des obligations européennes, à d’autres placements à revenu fixe ou à d’autres actifs.</p>
 
-      [[[ÉTIQUETTE109]]]
-        Ce que nous pouvons dire avec certitude, c’est que c’est l’un des plus grands
-        Les fonds de pension conservateurs et les plus fortement réglementés ont décidé que
-        détenir moins de bons du Trésor américain était la décision la plus sûre. Cela seul vaut
-        assis avec.
-      [[[ÉTIQUETTE110]]]
+      <p>Le constat est le suivant : l’un des fonds de pension les plus prudents et les plus réglementés d’Europe a choisi de détenir moins d’obligations du Trésor américain. Cette décision mérite à elle seule réflexion.</p>
 
-      <h2>Deux signaux séparés, une direction</h2>
+      <h2>Deux signaux distincts, une même direction</h2>
 
-      [[[ÉTIQUETTE113]]]
-        Il y a donc deux histoires distinctes ici, et il est important que nous ne le fassions pas.
-        les brouiller :
-      [[[ÉTIQUETTE114]]]
+      <p>Il faut donc distinguer deux phénomènes, sans les confondre :</p>
 
-      [[[ÉTIQUETTE115]]]
-        [[[ÉTIQUETTE116]]]
-          Les banques centrales achètent systématiquement de l’or, réduisant ainsi leur
-          le recours aux bons du Trésor comme actif sûr par défaut – confirmé,
-          soutenu, pluriannuel et documenté par la BCE et le World Gold
-          Conseil.
-        [[[ÉTIQUETTE117]]]
+      <ol>
+        <li>Les banques centrales achètent régulièrement de l’or et dépendent moins des obligations du Trésor comme actif de référence jugé sûr. Cette tendance durable est documentée sur plusieurs années par la BCE et le Conseil mondial de l’or.</li>
 
-        [[[ÉTIQUETTE118]]]
-          Les fonds de pension réduisent séparément leur exposition au Trésor américain —
-          confirmé pour l'ABP spécifiquement - pour des raisons qui ne sont pas entièrement
-          public, mais qui pointent vers le même malaise sous-jacent :
-          trop de richesse nationale repose sur la dette d’un pays et d’un autre
-          la stabilité de la monnaie.
-        [[[ÉTIQUETTE119]]]
-      [[[ÉTIQUETTE120]]]
+        <li>Les fonds de pension réduisent séparément leur exposition aux obligations du Trésor américain, comme dans le cas d’ABP. Leurs motivations ne sont pas entièrement publiques, mais peuvent refléter une préoccupation commune : une trop grande dépendance à la dette d’un seul pays et à la stabilité d’une seule monnaie.</li>
+      </ol>
 
-      [[[ÉTIQUETTE121]]]
-        Différentes institutions, différentes mécaniques, même sens de déplacement.
-      [[[ÉTIQUETTE122]]]
+      <p>Les institutions et les mécanismes diffèrent, mais le mouvement va dans le même sens.</p>
 
-      <h2>Pourquoi cela compte vraiment pour vous</h2>
+      <h2>Pourquoi cela vous concerne</h2>
 
-      [[[ÉTIQUETTE125]]]
-        Une banque centrale peut déplacer mille tonnes d’or en un an. Vous
-        vous ne pouvez pas, et vous n’en avez pas besoin.
-      [[[ÉTIQUETTE126]]]
+      <p>Une banque centrale peut déplacer mille tonnes d’or en un an. Vous n’en avez ni les moyens ni le besoin.</p>
 
-      [[[ÉTIQUETTE127]]]
-        La part de ce que vous avez économisé dépend entièrement des institutions,
-        des devises et des politiques sur lesquelles vous n’avez aucun contrôle ?
-      [[[ÉTIQUETTE128]]]
+      <div class="pull-quote">Quelle part de votre épargne dépend entièrement d’institutions, de monnaies et de politiques sur lesquelles vous n’avez aucun contrôle ?</div>
 
-      <p>
-        Ce n’est pas une astuce rhétorique pour vous vendre de l’or. L’or n’est pas sans risque
-        commerce - il ne rapporte aucun intérêt, il peut chuter et le marché physique a
-        plus de façons de vous surcharger tranquillement que la plupart des gens ne le pensent.
-      [[[ÉTIQUETTE130]]]
+      <p>Cette question n’est pas un artifice pour vous vendre de l’or. L’or comporte des risques : il ne verse pas d’intérêts, son prix peut baisser et le marché physique recèle des surcoûts que beaucoup d’acheteurs ne repèrent pas.</p>
 
-      [[[ÉTIQUETTE131]]]
-        Une pièce et un lingot ayant la même teneur en or peuvent contenir des valeurs très différentes.
-        primes. Prix ​​spot, marge du concessionnaire, stockage, conditions de rachat – aucun de ces éléments
-        c'est évident jusqu'à ce que vous sachiez quoi chercher.
-      [[[ÉTIQUETTE132]]]
+      <p>Une pièce et un lingot contenant la même quantité d’or peuvent présenter des primes très différentes. Prix au comptant, marge du négociant, stockage, conditions de rachat : rien de tout cela n’est évident avant de savoir quoi examiner.</p>
 
-      [[[ÉTIQUETTE133]]]C'est exactement la partie que personne n'explique avant de vous demander de cliquer
-        "acheter."
-      [[[ÉTIQUETTE134]]]
+      <p>Ce sont précisément les points que l’on explique rarement avant de vous inviter à cliquer sur « Acheter ».</p>
 
-      <h2>Avant d'acheter quoi que ce soit, comprenez ce que vous achetez</h2>
+      <h2>Avant d’acheter, comprenez ce que vous achetez</h2>
 
-      [[[ÉTIQUETTE137]]]
-        Les institutions ci-dessus ne se sont pas réveillées un jour et n’ont pas transféré de l’argent vers
-        l'or aveuglément. Ils ont des équipes de recherche entièrement construites autour
-        comprendre ce qu'ils possèdent, ce que cela coûte et comment cela se comporte.
-      [[[ÉTIQUETTE138]]]
+      <p>Les institutions citées n’ont pas investi dans l’or à l’aveugle. Leurs équipes de recherche étudient les actifs détenus, leur coût et leur comportement.</p>
 
-      [[[ÉTIQUETTE139]]]
-        Vous pouvez obtenir 90 % de cette compréhension en une fraction du temps...
-        mais seulement si quelqu'un vous guide réellement au lieu de simplement
-        en vous disant « l’or est bon, achetez de l’or ».
-      [[[ÉTIQUETTE140]]]
+      <p>Vous pouvez acquérir une grande partie de cette compréhension en bien moins de temps, à condition de recevoir des explications concrètes plutôt qu’un simple « l’or est bon, achetez-en ».</p>
 
-      [[[ÉTIQUETTE141]]]
-        C'est ce que fait le tutoriel. Pas un argumentaire de vente déguisé en
-        éducation – une véritable panne du fonctionnement du marché des métaux précieux :
-        ce qui détermine le prix de l’or, comment les primes et les spreads déterminent discrètement
-        si vous avez obtenu un accord équitable, qu'est-ce qui différencie un lingot légitime
-        acheter à partir d’un objet de collection hors de prix, et comment réellement
-        comparez les fournisseurs au lieu de deviner.
-      [[[ÉTIQUETTE142]]]
+      <p>C’est l’objectif du guide : expliquer le fonctionnement du marché des métaux précieux, les facteurs qui influencent le prix de l’or, les primes et les écarts entre achat et revente. Il aide à distinguer l’or d’investissement d’un objet de collection trop cher et à comparer les vendeurs sur des critères concrets.</p>
 
-      [[[ÉTIQUETTE143]]]
-        Les banques centrales ont déjà pris des mesures. Que vous fassiez le vôtre —
-        et comment – une décision vaut-elle la peine d’être prise les yeux ouverts.
-      [[[ÉTIQUETTE144]]]
+      <p>Les banques centrales ont déjà agi. Décider si vous souhaitez agir à votre tour, et comment, mérite de le faire en connaissance de cause.</p>
 
-      [[[ÉTIQUETTE145]]]
-        ← Retour sur L'investisseur en or
-      [[[ÉTIQUETTE146]]]
+      <a class="back-link" href="/FR/">← Retour à L’investisseur en or</a>
 
-    [[[ÉTIQUETTE147]]]
+    </article>
 
-    [[[ÉTIQUETTE148]]]
-      <h2>Comprenez l'or avant de l'acheter</h2>
+    <aside class="article-cta">
+      <h2>Comprendre l’or avant de l’acheter</h2>
 
-      [[[ÉTIQUETTE151]]]
-        Lisez le didacticiel complet Gold Investor pour une explication pratique.
-        des prix, des primes, des spreads, des conditions de stockage et de rachat.
-      [[[ÉTIQUETTE152]]]
+      <p>Consultez le guide complet pour comprendre les prix, les primes, les écarts entre achat et revente, le stockage et les conditions de rachat.</p>
 
-      [[[ÉTIQUETTE153]]]
-        Obtenez le PDF — 38 €
-      [[[ÉTIQUETTE154]]]
-    [[[ÉTIQUETTE155]]]
+      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Obtenir le PDF — 38 €</a>
+    </aside>
 
-  [[[ÉTIQUETTE156]]]
+  </main>
 
-  [[[ÉTIQUETTE157]]]
-    [[[ÉTIQUETTE158]]]
-      © 2026 Filip Allaert. Tous droits réservés.
-    [[[ÉTIQUETTE159]]]
-  [[[ÉTIQUETTE160]]]
+  <footer>
+    <div class="container">© 2026 Filip Allaert. Tous droits réservés.</div>
+  </footer>
 
-[[[ÉTIQUETTE161]]]
-[[[ÉTIQUETTE162]]]
+</body>
+</html>
