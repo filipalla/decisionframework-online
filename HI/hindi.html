@@ -4,49 +4,472 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>सोने ने अमेरिकी खजाने को पीछे छोड़ दिया है | निर्णय रूपरेखा</title>
+  <title>सोने ने अमेरिकी ट्रेज़री बॉन्ड को पीछे छोड़ा | The Gold Decision Framework</title>
 
   <meta
     name="description"
-    content="Why central banks are buying gold, reducing Treasury exposure and what this shift may mean for individual savers and investors."
+    content="कीमतों, अतिरिक्त शुल्क, खरीद-बिक्री के अंतर, भंडारण और वापस खरीदने की शर्तों को समझने के लिए पूरी मार्गदर्शिका पढ़ें।"
   >
 
-  [[[ब्लॉक0]]]
+  <style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+      --dark-text: #17120a
+;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+  0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--gold-light);
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .site-name {
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .site-links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .article-header {
+      padding: 110px 0 80px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .article-meta {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-page {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 290px;
+      align-items: start;
+      gap: 60px;
+      padding: 70px 0 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      margin: 70px 0 18px;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: var(--gold-light);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .article-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0 0 42px;
+      padding: 24px;
+      background: rgba(8, 161, 91, 0.1);
+      border: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 34px 0;
+    }
+
+    .evidence-card {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      margin: 34px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .comparison-value {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .comparison-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .comparison-arrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+    }
+
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px;
+      background: rgba(8, 161, 91, 0.1);
+      border-left: 3px solid var(--gold);
+      color: var(--gold-light);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .article-cta {
+      position: sticky;
+      top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .article-cta h2 {
+      margin: 0 0 16px;
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .article-cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: var(--dark-text);
+    }
+
+    .button.store {
+      background: rgba(8, 161, 91, 0.14);
+      color: var(--gold-light);
+    }
+
+    .button.store:hover {
+      background: var(--gold-light);
+      color: var(--dark-text);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: #8f887b
+;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .article-page {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .article-cta {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 760px);
+      }
+
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-links {
+        justify-content: flex-start;
+      }
+
+      .article-header {
+        padding: 80px 0 60px;
+      }
+
+      .article-page {
+        padding: 55px 0 75px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .comparison-arrow {
+        transform: rotate(90deg);
+      }
+
+      .stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  
+    /* Responsive typography for every article language. */
+    .article-page { grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); }
+    .article-content, .article-cta, .site-links { min-width: 0; }
+    .site-nav { flex-wrap: wrap; }
+    .site-links { flex-wrap: wrap; row-gap: 12px; }
+    .article-header h1 { overflow-wrap: anywhere; text-wrap: balance; }
+    .article-content, .article-cta { overflow-wrap: anywhere; hyphens: auto; }
+    .comparison { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+    .comparison-value { font-size: clamp(1.35rem, 2.6vw, 2.15rem); }
+    .comparison-label { overflow-wrap: anywhere; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 5px; }
+    html:lang(ja) body { font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; line-height: 1.95; }
+    html:lang(zh) body { font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif; line-height: 1.9; }
+    html:lang(hi) body { font-family: 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; line-height: 1.9; }
+    html:lang(ja) .site-links, html:lang(zh) .site-links, html:lang(hi) .site-links { letter-spacing: normal; }
+    html:lang(ja) .subtitle, html:lang(zh) .subtitle, html:lang(hi) .subtitle { font-style: normal; }
+    html:lang(hi) h1, html:lang(hi) h2 { line-height: 1.4; }
+    html:lang(hi) .eyebrow, html:lang(hi) .article-meta { letter-spacing: normal; }
+    @media (max-width: 850px) {
+      .article-page { grid-template-columns: minmax(0, 1fr); }
+      .article-cta { position: static; }
+    }
+    @media (max-width: 600px) {
+      .comparison { grid-template-columns: minmax(0, 1fr); }
+      .site-links { gap: 12px 18px; }
+      .article-header h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <nav class="site-nav container" aria-label="Main navigation">
-    <a class="site-name" href="/">
-      DecisionFramework.online
-    </a>
-
+  <nav class="site-nav container" aria-label="मुख्य नेविगेशन">
+    <a class="site-name" href="/HI/">DecisionFramework.online</a>
     <div class="site-links">
-      <a href="/">फ्रेमवर्क</a>
-      <a href="/article.html" aria-current="page">अनुच्छेद</a>
-      <a href="https://payhip.com/b/7GDAe" target="_blank"
-  rel="noopener noreferrer">स्टोर</a>
-      [[[TAG21]]संपर्क करें</a>
-      [[[TAG23]]एनएल</a>
+      <a href="/HI/">निर्णय ढाँचा</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">स्टोर</a>
+      <a href="/license-order/">ऑर्डर करें</a>
+      <a href="/license/">सक्रिय करें</a>
     </div>
   </nav>
 
   <header class="article-header">
     <div class="container">
-      <div class="eyebrow">गोल्ड इन्वेस्टर · विश्लेषण</div>
+      <div class="eyebrow">स्वर्ण निवेशक · विश्लेषण</div>
 
-      <h1>सोने ने अमेरिकी खजाने को पीछे छोड़ दिया है</h1>
+      <h1>सोने ने अमेरिकी ट्रेज़री बॉन्ड को पीछे छोड़ा</h1>
 
-      <p class="subtitle">
-        आपका बचत खाता 0.4% का भुगतान करता है। दुनिया के केंद्रीय बैंक खरीद रहे हैं
-        सोना. वे कुछ ऐसा जानते हैं जो आप नहीं जानते।
-      </p>
+      <p class="subtitle">आपके बचत खाते पर 0.4% ब्याज मिलता है। दुनिया के केंद्रीय बैंक सोना खरीद रहे हैं। वे कुछ ऐसा जानते हैं जो आप नहीं जानते।</p>
 
       <div class="ornament"></div>
 
-      <p class="article-meta">
-        स्वर्ण निर्णय ढांचा · साक्ष्य-आधारित विश्लेषण
-      </p>
+      <p class="article-meta">The Gold Decision Framework · तथ्यों पर आधारित विश्लेषण</p>
     </div>
   </header>
 
@@ -57,234 +480,117 @@
       <div class="stat-card">
         <div class="stat-number">0.39%</div>
 
-        <div class="stat-label">
-          अमेरिकी राष्ट्रीय औसत बचत दर
-        </div>
+        <div class="stat-label">अमेरिका में बचत खातों की राष्ट्रीय औसत ब्याज दर</div>
       </div>
 
-      <p class="lead">
-        अपना बैंक स्टेटमेंट जांचें.
-      </p>
+      <p class="lead">अपना बैंक विवरण देखें।</p>
 
-      <p>
-        अमेरिका की राष्ट्रीय औसत बचत दर 0.39% है। यहां तक कि सबसे अच्छा भी
-        बाजार पूंजीकरण पर उच्च-उपज खातों का लगभग 4% - और यही है
-        इससे पहले कि कर और मुद्रास्फीति इसमें खा जाएं।
-      </p>
+      <p>अमेरिका में बचत खातों की राष्ट्रीय औसत ब्याज दर 0.39% है। सबसे अधिक ब्याज देने वाले खाते भी लगभग 4% तक ही पहुँचते हैं। कर और महँगाई इसके बाद वास्तविक लाभ को और घटाते हैं।</p>
 
-      <p>
-        अब देखिए कि वास्तव में दुनिया का प्रबंधन करने वाली संस्थाएं क्या हैं
-        रिजर्व अपने पैसे से कर रहे हैं.
-      </p>
+      <p>अब देखें कि दुनिया के आरक्षित भंडार सँभालने वाली संस्थाएँ अपने धन का क्या कर रही हैं।</p>
 
-      <p>
-        वे इसे बचत खातों में नहीं डाल रहे हैं। वे सोना खरीद रहे हैं -
-        ऐसी गति जो एक दशक से अधिक समय में नहीं देखी गई।
-      </p>
+      <p>वे उसे बचत खातों में नहीं रख रही हैं। वे एक दशक से अधिक समय में न देखी गई गति से सोना खरीद रही हैं।</p>
 
       <h2>कुछ बदल गया है</h2>
 
-      <p>
-        पिछले 30 वर्षों में अधिकांश समय अमेरिकी राजकोष डिफ़ॉल्ट थे
-        दुनिया भर के केंद्रीय बैंकों के लिए "सुरक्षित" आरक्षित संपत्ति। उबाऊ, तरल,
-        भरोसेमंद.
-      </p>
+      <p>पिछले तीस वर्षों के अधिकांश समय में अमेरिकी ट्रेज़री बॉन्ड दुनिया के केंद्रीय बैंकों के लिए प्रमुख “सुरक्षित” आरक्षित परिसंपत्ति रहे हैं: साधारण, आसानी से खरीदे-बेचे जा सकने वाले और भरोसेमंद।</p>
 
-      <p>
-        वह बदल रहा है।
-      </p>
+      <p>अब यह स्थिति बदल रही है।</p>
 
-      <p>
-        यूरोपीय सेंट्रल बैंक की अपनी 2025 समीक्षा के अनुसार, सोना है
-        यूरो को पीछे छोड़कर दूसरी सबसे बड़ी आरक्षित संपत्ति बन गई
-        विश्व स्तर पर, केवल अमेरिकी डॉलर से पीछे। केंद्रीय बैंकों ने खरीद लिया
-        पिछले कई वर्षों में प्रत्येक वर्ष 1,000 टन सोना -
-        पिछले दशक की तुलना में दोगुनी से भी अधिक गति।
-      </p>
+      <p>यूरोपीय केंद्रीय बैंक की 2025 की समीक्षा के अनुसार, सोना यूरो को पीछे छोड़कर अमेरिकी डॉलर के बाद दुनिया की दूसरी सबसे बड़ी आरक्षित परिसंपत्ति बन गया है। हाल के वर्षों में केंद्रीय बैंकों ने हर साल 1,000 टन से अधिक सोना खरीदा, जो पिछले दशक की गति से दोगुने से भी अधिक है।</p>
 
-      <p>
-        अन्य ट्रैकर आगे बढ़ते हैं: कई विश्लेषण अब दिखाते हैं कि, के लिए
-        1996 के बाद पहली बार, विदेशी केंद्रीय बैंकों के पास सामूहिक रूप से अधिक हिस्सेदारी है
-        अमेरिकी खजाने से सोना।
-      </p>
+      <p>कुछ अन्य विश्लेषण बताते हैं कि 1996 के बाद पहली बार विदेशी केंद्रीय बैंकों के पास मौजूद सोने का संयुक्त मूल्य उनके अमेरिकी ट्रेज़री बॉन्ड के मूल्य से अधिक हो गया है।</p>
 
-      <p>
-        यह कोई एक बैंक नहीं है जो दांव लगा रहा है। यह एक व्यापक, बहु-वर्षीय पैटर्न है
-        दर्जनों देशों में।
-      </p>
+      <p>यह किसी एक बैंक का दाँव नहीं, बल्कि दर्जनों देशों में कई वर्षों से जारी रुझान है।</p>
 
       <div class="evidence-grid">
         <div class="evidence-card">
-          <strong>सिग्नल 01</strong>
-          <p>
-            केंद्रीय बैंक व्यवस्थित तरीके से सोना खरीद रहे हैं और कम कर रहे हैं
-            डिफ़ॉल्ट सुरक्षित संपत्ति के रूप में अमेरिकी ट्रेजरी पर निर्भरता।
-          </p>
+          <strong>संकेत 01</strong>
+          <p>केंद्रीय बैंक लगातार सोना खरीद रहे हैं और प्रमुख सुरक्षित परिसंपत्ति के रूप में अमेरिकी ट्रेज़री बॉन्ड पर अपनी निर्भरता घटा रहे हैं।</p>
         </div>
 
         <div class="evidence-card">
-          <strong>सिग्नल 02</strong>
-          <p>
-            प्रमुख संस्थान अलग से अमेरिका में अपना एक्सपोजर कम कर रहे हैं
-            सरकारी कर्ज.
-          </p>
+          <strong>संकेत 02</strong>
+          <p>अलग से, बड़ी संस्थाएँ अमेरिकी सरकारी ऋण में अपना निवेश कम कर रही हैं।</p>
         </div>
       </div>
 
-      <h2>यह सिर्फ केंद्रीय बैंक नहीं है</h2>
+      <h2>सिर्फ केंद्रीय बैंक ही नहीं</h2>
 
-      <p>यूरोप के पेंशन फंड चुपचाप उनके साथ कुछ ऐसा ही कर रहे हैं
-        स्वयं की बांड होल्डिंग्स।
-      </p>
+      <p>यूरोप के पेंशन कोष भी चुपचाप अपने बॉन्ड निवेश की समीक्षा कर रहे हैं।</p>
 
-      <p>
-        एबीपी, नीदरलैंड का सबसे बड़ा पेंशन फंड - सेवानिवृत्ति धन का प्रबंधन
-        लगभग तीन मिलियन शिक्षकों, पुलिस अधिकारियों और सिविल के लिए
-        नौकरों - ने अपनी अमेरिकी ट्रेजरी होल्डिंग्स को लगभग €29 बिलियन से कम कर दिया
-        पिछले वर्ष केवल छह महीनों में €19 बिलियन।
-      </p>
+      <p>नीदरलैंड का सबसे बड़ा पेंशन कोष ABP लगभग तीस लाख शिक्षकों, पुलिसकर्मियों और सरकारी कर्मचारियों की सेवानिवृत्ति बचत सँभालता है। पिछले वर्ष उसने केवल छह महीनों में अमेरिकी ट्रेज़री बॉन्ड में अपना निवेश लगभग 29 अरब यूरो से घटाकर 19 अरब यूरो कर दिया।</p>
 
       <div class="comparison">
         <div>
-          <div class="comparison-value">€29bn</div>
-          <div class="comparison-label">पहले अमेरिकी ट्रेजरी होल्डिंग्स</div>
+          <div class="comparison-value">29 अरब यूरो</div>
+          <div class="comparison-label">कटौती से पहले अमेरिकी ट्रेज़री बॉन्ड में निवेश</div>
         </div>
 
         <div class="comparison-arrow">→</div>
 
         <div>
-          <div class="comparison-value">€19bn</div>
-          <div class="comparison-label">बाद में अमेरिकी ट्रेजरी होल्डिंग्स</div>
+          <div class="comparison-value">19 अरब यूरो</div>
+          <div class="comparison-label">कटौती के बाद अमेरिकी ट्रेज़री बॉन्ड में निवेश</div>
         </div>
       </div>
 
-      <p>
-        यह अमेरिकी सरकार से वास्तविक, प्रकट, दस अरब यूरो की वापसी है
-        ऋण, जनवरी 2026 में ब्लूमबर्ग द्वारा रिपोर्ट किया गया।
-      </p>
+      <p>अमेरिकी सरकारी ऋण में दस अरब यूरो की इस घोषित कटौती की खबर ब्लूमबर्ग ने जनवरी 2026 में दी थी।</p>
 
-      <p>
-        हम वास्तव में क्या जानते हैं, इसके बारे में सटीक होने के लिए: एबीपी की अपनी रिपोर्टिंग
-        यह नहीं कहता कि सोना वह जगह है जहां वह पैसा गया। हो सकता है अंदर चला गया हो
-        यूरोपीय बांड, अन्य निश्चित आय, या कहीं और पूरी तरह से।
-      </p>
+      <p>यह स्पष्ट रखना ज़रूरी है कि ABP की रिपोर्ट यह नहीं कहती कि यह धन सोने में लगाया गया। यह यूरोपीय बॉन्ड, अन्य निश्चित आय वाले साधनों या दूसरी परिसंपत्तियों में भी लगाया गया हो सकता है।</p>
 
-      <p>
-        हम निश्चितता के साथ कह सकते हैं कि यह यूरोप के सबसे अधिक में से एक है
-        रूढ़िवादी, सबसे अधिक विनियमित पेंशन फंडों ने यह निर्णय लिया
-        कम अमेरिकी राजकोष रखना सुरक्षित कदम था। वह अकेला ही सार्थक है
-        साथ बैठे.
-      </p>
+      <p>हम इतना जानते हैं कि यूरोप के सबसे सतर्क और कड़े नियमन वाले पेंशन कोषों में से एक ने अमेरिकी ट्रेज़री बॉन्ड कम रखने का निर्णय लिया। यह निर्णय अपने आप में विचार करने योग्य है।</p>
 
-      <h2>दो अलग सिग्नल, एक दिशा</h2>
+      <h2>दो अलग संकेत, एक दिशा</h2>
 
-      <p>
-        तो यहां दो अलग-अलग कहानियां हैं, और यह मायने रखता है कि हम ऐसा नहीं करते हैं
-        उन्हें धुंधला करें:
-      </p>
+      <p>यहाँ दो अलग घटनाएँ हैं, जिन्हें आपस में मिलाना नहीं चाहिए:</p>
 
       <ol>
-        <li>
-          केंद्रीय बैंक व्यवस्थित रूप से सोना खरीद रहे हैं, कम कर रहे हैं
-          डिफ़ॉल्ट सुरक्षित संपत्ति के रूप में कोषागारों पर निर्भरता - पुष्टि की गई,
-          ईसीबी और वर्ल्ड गोल्ड द्वारा निरंतर, बहु-वर्षीय और प्रलेखित
-          परिषद.
-        </li>
+        <li>केंद्रीय बैंक लगातार सोना खरीदकर प्रमुख सुरक्षित परिसंपत्ति के रूप में ट्रेज़री बॉन्ड पर निर्भरता कम कर रहे हैं। यह कई वर्षों से जारी रुझान यूरोपीय केंद्रीय बैंक और विश्व स्वर्ण परिषद के दस्तावेज़ों में दर्ज है।</li>
 
-        <li>
-          पेंशन फंड अलग से अपने अमेरिकी ट्रेजरी एक्सपोज़र को कम कर रहे हैं -
-          एबीपी के लिए विशेष रूप से पुष्टि की गई - उन कारणों से जो पूरी तरह से नहीं हैं
-          सार्वजनिक, लेकिन यह उसी अंतर्निहित असुविधा की ओर इशारा करता है:
-          बहुत अधिक राष्ट्रीय संपत्ति एक देश के ऋण और दूसरे पर निर्भर है
-          मुद्रा की स्थिरता.
-        </li>
+        <li>पेंशन कोष अलग से अमेरिकी ट्रेज़री बॉन्ड में निवेश घटा रहे हैं, जैसा ABP के मामले में हुआ। उनके सभी कारण सार्वजनिक नहीं हैं, लेकिन वे एक साझा चिंता दिखा सकते हैं: किसी एक देश के ऋण और एक मुद्रा की स्थिरता पर अत्यधिक निर्भरता।</li>
       </ol>
 
-      <p>
-        अलग-अलग संस्थाएँ, अलग-अलग यांत्रिकी, यात्रा की एक ही दिशा।
-      </p>
+      <p>संस्थाएँ और तरीके अलग हैं, पर बदलाव की दिशा मिलती-जुलती है।</p>
 
-      <h2>यह वास्तव में आपके लिए क्यों मायने रखता है</h2>
+      <h2>यह आपके लिए क्यों महत्त्वपूर्ण है</h2>
 
-      <p>
-        एक केंद्रीय बैंक एक वर्ष में एक हजार टन सोना ले जा सकता है। आप
-        नहीं कर सकते, और आपको इसकी आवश्यकता नहीं है।
-      </p>
+      <p>एक केंद्रीय बैंक एक वर्ष में हज़ार टन सोना स्थानांतरित कर सकता है। आप ऐसा नहीं कर सकते, और आपको इसकी ज़रूरत भी नहीं है।</p>
 
-      <div class="pull-quote">
-        आपने कितना बचाया है यह पूरी तरह से संस्थानों पर निर्भर करता है,
-        मुद्राओं और नीतियों पर आपका कोई नियंत्रण नहीं है?
-      </div>
+      <div class="pull-quote">आपकी बचत का कितना हिस्सा पूरी तरह उन संस्थाओं, मुद्राओं और नीतियों पर निर्भर है जिन पर आपका कोई नियंत्रण नहीं है?</div>
 
-      <p>
-        यह आपको सोना बेचने की कोई दिखावटी चाल नहीं है। सोना जोखिम-मुक्त नहीं है
-        व्यापार - यह कोई ब्याज नहीं देता है, यह गिर सकता है, और भौतिक बाज़ार में है
-        चुपचाप आपसे अधिक शुल्क वसूलने के जितने तरीके अधिकांश लोग समझते हैं, उससे कहीं अधिक।
-      </p>
+      <p>यह आपको सोना बेचने की चाल नहीं है। सोने में जोखिम है: इससे ब्याज नहीं मिलता, इसकी कीमत गिर सकती है और भौतिक सोने के बाज़ार में ऐसे अतिरिक्त खर्च होते हैं जिन्हें कई खरीदार नहीं पहचान पाते।</p>
 
-      <p>
-        एक ही सोने की सामग्री वाले एक सिक्के और एक बार में बेतहाशा भिन्नता हो सकती है
-        प्रीमियम. हाजिर कीमत, डीलर मार्जिन, भंडारण, बायबैक शर्तें - इनमें से कुछ भी नहीं
-        यह तब तक स्पष्ट है जब तक आप नहीं जानते कि क्या देखना है।
-      </p>
+      <p>सोने की समान मात्रा वाले सिक्के और छड़ पर बहुत अलग अतिरिक्त कीमतें लग सकती हैं। हाज़िर भाव, विक्रेता का मार्जिन, भंडारण और वापस खरीदने की शर्तें समझने के लिए जानना ज़रूरी है कि किन बातों को देखना चाहिए।</p>
 
-      <p>यह बिल्कुल वही हिस्सा है जिसे क्लिक करने के लिए कहने से पहले कोई नहीं समझाता
-        "खरीदें।"
-      </p>
+      <p>“खरीदें” पर क्लिक करने को कहने से पहले इन्हीं बातों को शायद ही समझाया जाता है।</p>
 
-      <h2>कुछ भी खरीदने से पहले - समझें कि आप क्या खरीद रहे हैं</h2>
+      <h2>खरीदने से पहले समझें कि आप क्या खरीद रहे हैं</h2>
 
-      <p>
-        उपरोक्त संस्थाएँ एक दिन भी नहीं जागीं और पैसा जमा नहीं किया
-        आँख मूँद कर सोना। उनके पास पूरी तरह से अनुसंधान टीमें बनी हुई हैं
-        यह समझना कि उनके पास क्या है, इसकी कीमत क्या है और यह कैसे व्यवहार करता है।
-      </p>
+      <p>ऊपर बताई गई संस्थाओं ने आँख मूँदकर सोने में निवेश नहीं किया। उनकी शोध टीमें परिसंपत्तियों, उनकी लागत और उनके व्यवहार का अध्ययन करती हैं।</p>
 
-      <p>
-        आप उस समझ का 90% कुछ ही समय में प्राप्त कर सकते हैं -
-        लेकिन केवल तभी जब कोई वास्तव में आपको इसके माध्यम से ले जाता है न कि केवल
-        आपको बता रहा है "सोना अच्छा है, सोना खरीदो।"
-      </p>
+      <p>आप इन बातों की अच्छी समझ कम समय में प्राप्त कर सकते हैं, बशर्ते कोई उन्हें ठीक से समझाए, न कि केवल कहे: “सोना अच्छा है, सोना खरीदिए।”</p>
 
-      <p>
-        ट्यूटोरियल यही करता है। बिक्री की पिच के रूप में तैयार नहीं किया गया
-        शिक्षा - कीमती धातु बाजार कैसे काम करता है इसका वास्तविक विवरण:
-        सोने की कीमत क्या है, प्रीमियम और स्प्रेड चुपचाप कैसे निर्धारित करते हैं
-        क्या आपको उचित सौदा मिला है, एक वैध सर्राफा को क्या अलग करता है
-        अधिक कीमत वाले संग्राहक के आइटम से खरीदारी करें, और वास्तव में कैसे करें
-        अनुमान लगाने के बजाय प्रदाताओं की तुलना करें।
-      </p>
+      <p>इस मार्गदर्शिका का यही उद्देश्य है: कीमती धातुओं का बाज़ार, सोने की कीमत को प्रभावित करने वाले कारक और अतिरिक्त कीमत तथा खरीद-बिक्री के अंतर का वास्तविक लागत पर प्रभाव समझाना। यह निवेश योग्य सोने और अत्यधिक महँगी संग्रहणीय वस्तु में अंतर करने तथा ठोस मानदंडों पर विक्रेताओं की तुलना करने में मदद करती है।</p>
 
-      <p>
-        केंद्रीय बैंकों ने पहले ही अपना कदम उठा लिया है। चाहे आप अपना बनाएं -
-        और कैसे - क्या यह निर्णय खुली आँखों से लेने लायक है।
-      </p>
+      <p>केंद्रीय बैंक अपना कदम उठा चुके हैं। आपको कदम उठाना है या नहीं, और कैसे, यह निर्णय जानकारी के साथ लेना उचित है।</p>
 
-      <a class="back-link" href="/">
-        ← स्वर्ण निवेशक पर वापस
-      </a>
+      <a class="back-link" href="/HI/">← स्वर्ण निवेशक पर वापस जाएँ</a>
 
     </article>
 
     <aside class="article-cta">
       <h2>सोना खरीदने से पहले उसे समझें</h2>
 
-      <p>
-        व्यावहारिक स्पष्टीकरण के लिए संपूर्ण गोल्ड इन्वेस्टर ट्यूटोरियल पढ़ें
-        मूल्य निर्धारण, प्रीमियम, स्प्रेड, भंडारण और बायबैक शर्तें।
-      </p>
+      <p>कीमतों, अतिरिक्त शुल्क, खरीद-बिक्री के अंतर, भंडारण और वापस खरीदने की शर्तों को समझने के लिए पूरी मार्गदर्शिका पढ़ें।</p>
 
-      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">
-        पीडीएफ प्राप्त करें - €38
-      </a>
+      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">PDF खरीदें — 38 यूरो</a>
     </aside>
 
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 फ़िलिप अल्लार्ट। सर्वाधिकार सुरक्षित।
-    </div>
+    <div class="container">© 2026 Filip Allaert. सर्वाधिकार सुरक्षित।</div>
   </footer>
 
 </body>
