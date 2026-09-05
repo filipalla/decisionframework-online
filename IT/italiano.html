@@ -4,49 +4,472 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>L'oro ha superato i titoli del Tesoro USA | Quadro decisionale</title>
+  <title>L’oro ha superato i titoli del Tesoro statunitense | The Gold Decision Framework</title>
 
   <meta
     name="description"
-    content="Why central banks are buying gold, reducing Treasury exposure and what this shift may mean for individual savers and investors."
+    content="Leggi la guida completa per comprendere prezzi, premi, differenze tra acquisto e vendita, custodia e condizioni di riacquisto."
   >
 
-  [[[BLOCCO0]]]
+  <style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+      --dark-text: #17120a
+;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+  0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--gold-light);
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .site-name {
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .site-links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .article-header {
+      padding: 110px 0 80px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .article-meta {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-page {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 290px;
+      align-items: start;
+      gap: 60px;
+      padding: 70px 0 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      margin: 70px 0 18px;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: var(--gold-light);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .article-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0 0 42px;
+      padding: 24px;
+      background: rgba(8, 161, 91, 0.1);
+      border: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 34px 0;
+    }
+
+    .evidence-card {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      margin: 34px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .comparison-value {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .comparison-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .comparison-arrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+    }
+
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px;
+      background: rgba(8, 161, 91, 0.1);
+      border-left: 3px solid var(--gold);
+      color: var(--gold-light);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .article-cta {
+      position: sticky;
+      top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .article-cta h2 {
+      margin: 0 0 16px;
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .article-cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: var(--dark-text);
+    }
+
+    .button.store {
+      background: rgba(8, 161, 91, 0.14);
+      color: var(--gold-light);
+    }
+
+    .button.store:hover {
+      background: var(--gold-light);
+      color: var(--dark-text);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: #8f887b
+;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .article-page {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .article-cta {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 760px);
+      }
+
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-links {
+        justify-content: flex-start;
+      }
+
+      .article-header {
+        padding: 80px 0 60px;
+      }
+
+      .article-page {
+        padding: 55px 0 75px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .comparison-arrow {
+        transform: rotate(90deg);
+      }
+
+      .stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  
+    /* Responsive typography for every article language. */
+    .article-page { grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); }
+    .article-content, .article-cta, .site-links { min-width: 0; }
+    .site-nav { flex-wrap: wrap; }
+    .site-links { flex-wrap: wrap; row-gap: 12px; }
+    .article-header h1 { overflow-wrap: anywhere; text-wrap: balance; }
+    .article-content, .article-cta { overflow-wrap: anywhere; hyphens: auto; }
+    .comparison { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+    .comparison-value { font-size: clamp(1.35rem, 2.6vw, 2.15rem); }
+    .comparison-label { overflow-wrap: anywhere; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 5px; }
+    html:lang(ja) body { font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; line-height: 1.95; }
+    html:lang(zh) body { font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif; line-height: 1.9; }
+    html:lang(hi) body { font-family: 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; line-height: 1.9; }
+    html:lang(ja) .site-links, html:lang(zh) .site-links, html:lang(hi) .site-links { letter-spacing: normal; }
+    html:lang(ja) .subtitle, html:lang(zh) .subtitle, html:lang(hi) .subtitle { font-style: normal; }
+    html:lang(hi) h1, html:lang(hi) h2 { line-height: 1.4; }
+    html:lang(hi) .eyebrow, html:lang(hi) .article-meta { letter-spacing: normal; }
+    @media (max-width: 850px) {
+      .article-page { grid-template-columns: minmax(0, 1fr); }
+      .article-cta { position: static; }
+    }
+    @media (max-width: 600px) {
+      .comparison { grid-template-columns: minmax(0, 1fr); }
+      .site-links { gap: 12px 18px; }
+      .article-header h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <nav class="site-nav container" aria-label="Main navigation">
-    <a class="site-name" href="/">
-      DecisionFramework.online
-    </a>
-
+  <nav class="site-nav container" aria-label="Navigazione principale">
+    <a class="site-name" href="/IT/">DecisionFramework.online</a>
     <div class="site-links">
-      <a href="/">Quadro</a>
-      <a href="/article.html" aria-current="page">Articolo</a>
-      <a href="https://payhip.com/b/7GDAe" target="_blank"
-  rel="noopener noreferrer">Negozio</a>
-      <a href="/#contact">Contatto</a>
-      <a href="/nl/">NL</a>
+      <a href="/IT/">Metodo decisionale</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Negozio</a>
+      <a href="/license-order/">Ordina</a>
+      <a href="/license/">Attiva</a>
     </div>
   </nav>
 
   <header class="article-header">
     <div class="container">
-      <div class="eyebrow">L'investitore in oro · Analisi</div>
+      <div class="eyebrow">L’investitore in oro · Analisi</div>
 
-      <h1>L'oro ha superato i titoli del Tesoro statunitense</h1>
+      <h1>L’oro ha superato i titoli del Tesoro statunitense</h1>
 
-      <p class="subtitle">
-        Il tuo conto di risparmio paga lo 0,4%. Le banche centrali del mondo stanno acquistando
-        Oro. Sanno qualcosa che tu non sai.
-      </p>
+      <p class="subtitle">Il tuo conto di risparmio rende lo 0,4 %. Le banche centrali del mondo comprano oro. Sanno qualcosa che tu non sai.</p>
 
       <div class="ornament"></div>
 
-      <p class="article-meta">
-        Il quadro decisionale sull'oro · Analisi basata sull'evidenza
-      </p>
+      <p class="article-meta">The Gold Decision Framework · Analisi basata sui dati</p>
     </div>
   </header>
 
@@ -55,236 +478,119 @@
     <article class="article-content">
 
       <div class="stat-card">
-        <div class="stat-number">0,39%</div>
+        <div class="stat-number">0,39 %</div>
 
-        <div class="stat-label">
-          Tasso di risparmio medio nazionale degli Stati Uniti
-        </div>
+        <div class="stat-label">Tasso d’interesse medio dei conti di risparmio negli Stati Uniti</div>
       </div>
 
-      <p class="lead">
-        Controlla il tuo estratto conto bancario.
-      </p>
+      <p class="lead">Controlla il tuo estratto conto.</p>
 
-      <p>
-        Il tasso di risparmio medio nazionale degli Stati Uniti è dello 0,39%. Anche il migliore
-        i conti ad alto rendimento sul mercato hanno una capitalizzazione pari a circa il 4% – e questo è tutto
-        prima che le tasse e l’inflazione lo intacchino.
-      </p>
+      <p>Negli Stati Uniti il tasso d’interesse medio dei conti di risparmio è dello 0,39 %. Anche i conti meglio remunerati arrivano a circa il 4 %, prima che imposte e inflazione ne riducano il rendimento.</p>
 
-      <p>
-        Ora guarda quali sono le istituzioni che effettivamente gestiscono il mondo
-        le riserve stanno facendo con i loro soldi.
-      </p>
+      <p>Ora guarda cosa fanno con il proprio denaro le istituzioni che gestiscono le riserve mondiali.</p>
 
-      <p>
-        Non lo stanno mettendo nei conti di risparmio. Stanno comprando oro -
-        ad un ritmo che non si vedeva da oltre un decennio.
-      </p>
+      <p>Non lo depositano su conti di risparmio. Comprano oro a un ritmo che non si vedeva da oltre un decennio.</p>
 
       <h2>Qualcosa è cambiato</h2>
 
-      <p>
-        Per gran parte degli ultimi 30 anni, i titoli del Tesoro statunitense sono stati il default
-        Asset di riserva “sicuri” per le banche centrali di tutto il mondo. Noioso, liquido,
-        affidabile.
-      </p>
+      <p>Per gran parte degli ultimi trent’anni, i titoli del Tesoro statunitense sono stati l’attività di riserva «sicura» di riferimento per le banche centrali: poco emozionante, liquida e affidabile.</p>
 
-      <p>
-        La situazione sta cambiando.
-      </p>
+      <p>La situazione sta cambiando.</p>
 
-      <p>
-        Secondo la revisione del 2025 della Banca Centrale Europea, l’oro ha
-        ha superato l’euro diventando il secondo asset di riserva più grande
-        a livello globale, dietro solo al dollaro USA. Le banche centrali hanno comprato
-        1.000 tonnellate di oro all'anno in ciascuno degli ultimi anni -
-        più del doppio del ritmo del decennio precedente.
-      </p>
+      <p>Secondo il rapporto 2025 della Banca centrale europea, l’oro ha superato l’euro diventando la seconda attività di riserva mondiale, dopo il dollaro statunitense. Negli ultimi anni le banche centrali hanno acquistato oltre 1.000 tonnellate d’oro all’anno, più del doppio del ritmo del decennio precedente.</p>
 
-      <p>
-        Altri tracker vanno oltre: diverse analisi mostrano ora che, per il
-        per la prima volta dal 1996, le banche centrali estere ne detengono collettivamente di più
-        oro rispetto ai titoli del Tesoro USA.
-      </p>
+      <p>Altre analisi indicano che, per la prima volta dal 1996, il valore dell’oro detenuto complessivamente dalle banche centrali estere supera quello dei loro titoli del Tesoro statunitense.</p>
 
-      <p>
-        Questa non è una banca che fa una scommessa. È un modello ampio e pluriennale
-        in decine di paesi.
-      </p>
+      <p>Non è la scommessa di una sola banca, ma una tendenza pluriennale che riguarda decine di paesi.</p>
 
       <div class="evidence-grid">
         <div class="evidence-card">
           <strong>Segnale 01</strong>
-          <p>
-            Le banche centrali acquistano sistematicamente oro e lo riducono
-            dipendenza dai titoli del Tesoro statunitense come asset sicuro predefinito.
-          </p>
+          <p>Le banche centrali acquistano oro sistematicamente e riducono la dipendenza dai titoli del Tesoro statunitense come attività sicura di riferimento.</p>
         </div>
 
         <div class="evidence-card">
           <strong>Segnale 02</strong>
-          <p>
-            Le principali istituzioni stanno riducendo separatamente la loro esposizione verso gli Stati Uniti
-            debito pubblico.
-          </p>
+          <p>Separatamente, grandi istituzioni riducono la propria esposizione al debito pubblico statunitense.</p>
         </div>
       </div>
 
-      <h2>Non si tratta solo delle banche centrali</h2>
+      <h2>Non solo banche centrali</h2>
 
-      <p>I fondi pensione europei stanno tranquillamente facendo qualcosa di simile con i loro
-        proprie partecipazioni obbligazionarie.
-      </p>
+      <p>Anche i fondi pensione europei stanno rivedendo discretamente i propri portafogli obbligazionari.</p>
 
-      <p>
-        ABP, il più grande fondo pensione dei Paesi Bassi: gestisce il denaro pensionistico
-        per circa tre milioni di insegnanti, agenti di polizia e civili
-        servitori – ha tagliato le sue partecipazioni nel Tesoro americano da circa 29 miliardi di euro a
-        19 miliardi di euro in soli sei mesi lo scorso anno.
-      </p>
+      <p>ABP, il maggiore fondo pensione dei Paesi Bassi, gestisce i risparmi previdenziali di circa tre milioni di insegnanti, poliziotti e dipendenti pubblici. Lo scorso anno ha ridotto i titoli del Tesoro statunitense da circa 29 a 19 miliardi di euro in soli sei mesi.</p>
 
       <div class="comparison">
         <div>
-          <div class="comparison-value">29 miliardi di euro</div>
-          <div class="comparison-label">Primi titoli del Tesoro statunitense</div>
+          <div class="comparison-value">29 mld €</div>
+          <div class="comparison-label">Titoli del Tesoro statunitense prima della riduzione</div>
         </div>
 
         <div class="comparison-arrow">→</div>
 
         <div>
-          <div class="comparison-value">19 miliardi di euro</div>
-          <div class="comparison-label">Possedimenti successivi del Tesoro statunitense</div>
+          <div class="comparison-value">19 mld €</div>
+          <div class="comparison-label">Titoli del Tesoro statunitense dopo la riduzione</div>
         </div>
       </div>
 
-      <p>
-        Si tratta di un ritiro reale e dichiarato di dieci miliardi di euro da parte del governo americano
-        debito, riportato da Bloomberg nel gennaio 2026.
-      </p>
+      <p>Bloomberg ha riportato nel gennaio 2026 questa riduzione dichiarata di dieci miliardi di euro nel debito pubblico statunitense.</p>
 
-      <p>
-        Per essere precisi su ciò che sappiamo effettivamente: i resoconti della stessa ABP
-        non dice che l’oro è dove sono finiti quei soldi. Potrebbe essere entrato
-        Obbligazioni europee, altri titoli a reddito fisso o interamente altrove.
-      </p>
+      <p>Occorre essere precisi: i resoconti di ABP non dicono che quel denaro sia stato investito in oro. Potrebbe essere stato destinato a obbligazioni europee, ad altri strumenti a reddito fisso o ad altre attività.</p>
 
-      <p>
-        Ciò che possiamo dire con certezza è che questo è uno dei migliori d’Europa
-        Lo hanno deciso i fondi pensione conservatori e maggiormente regolamentati
-        detenere meno titoli del Tesoro USA era la mossa più sicura. Solo questo vale
-        seduto con.
-      </p>
+      <p>Il dato certo è che uno dei fondi pensione più prudenti e regolamentati d’Europa ha scelto di detenere meno titoli del Tesoro statunitense. È una decisione che merita attenzione.</p>
 
-      <h2>Due segnali separati, una direzione</h2>
+      <h2>Due segnali distinti, una stessa direzione</h2>
 
-      <p>
-        Quindi ci sono due storie distinte qui, ed è importante che non lo facciamo
-        sfocarli:
-      </p>
+      <p>Si tratta di due fenomeni diversi, che non vanno confusi:</p>
 
       <ol>
-        <li>
-          Le banche centrali acquistano sistematicamente oro, riducendone il prezzo
-          dipendenza dai titoli del Tesoro come asset sicuro predefinito – confermata,
-          sostenuto, pluriennale e documentato dalla BCE e dal World Gold
-          Consiglio.
-        </li>
+        <li>Le banche centrali acquistano oro sistematicamente, riducendo la dipendenza dai titoli del Tesoro come attività sicura di riferimento. È una tendenza duratura e pluriennale documentata dalla BCE e dal Consiglio mondiale dell’oro.</li>
 
-        <li>
-          I fondi pensione stanno riducendo separatamente la loro esposizione al Tesoro statunitense
-          confermato specificamente per l’ABP, per ragioni che non sono state completamente chiarite
-          pubblico, ma che puntano allo stesso disagio di fondo:
-          troppa ricchezza nazionale poggia sul debito di un paese e dell’altro
-          stabilità della valuta.
-        </li>
+        <li>Separatamente, i fondi pensione riducono l’esposizione ai titoli del Tesoro statunitense, come nel caso di ABP. Le motivazioni non sono completamente pubbliche, ma possono riflettere una preoccupazione comune: dipendere troppo dal debito di un solo paese e dalla stabilità di un’unica valuta.</li>
       </ol>
 
-      <p>
-        Istituzioni diverse, meccanismi diversi, stessa direzione di marcia.
-      </p>
+      <p>Istituzioni e meccanismi diversi, ma una direzione simile.</p>
 
-      <h2>Perché questo è davvero importante per te</h2>
+      <h2>Perché ti riguarda</h2>
 
-      <p>
-        Una banca centrale può spostare migliaia di tonnellate di oro in un anno. Tu
-        non puoi e non ne hai bisogno.
-      </p>
+      <p>Una banca centrale può movimentare mille tonnellate d’oro in un anno. Tu non puoi, e non ne hai bisogno.</p>
 
-      <div class="pull-quote">
-        Quanto di ciò che hai risparmiato dipende interamente dalle istituzioni,
-        valute e politiche su cui non hai alcun controllo?
-      </div>
+      <div class="pull-quote">Quanta parte dei tuoi risparmi dipende interamente da istituzioni, valute e politiche sulle quali non hai alcun controllo?</div>
 
-      <p>
-        Non è un trucco retorico per venderti oro. L’oro non è esente da rischi
-        commercio: non paga interessi, può crollare, mentre il mercato fisico sì
-        ci sono più modi per sovraccaricarti silenziosamente di quanto la maggior parte delle persone creda.
-      </p>
+      <p>Non è un espediente per venderti oro. L’oro comporta rischi: non paga interessi, il suo prezzo può scendere e il mercato fisico presenta sovrapprezzi che molti acquirenti non riconoscono.</p>
 
-      <p>
-        Una moneta e un lingotto con lo stesso contenuto d'oro possono avere valori molto diversi
-        premi. Prezzo spot, margine del rivenditore, stoccaggio, termini di riacquisto: nessuno di questi
-        è ovvio finché non sai cosa cercare.
-      </p>
+      <p>Una moneta e un lingotto con la stessa quantità d’oro possono avere premi molto diversi. Prezzo a pronti, margine del venditore, custodia e condizioni di riacquisto: nulla è scontato finché non sai cosa valutare.</p>
 
-      <p>Che è esattamente la parte che nessuno spiega prima di chiederti di fare clic
-        “compra”.
-      </p>
+      <p>Sono proprio questi gli aspetti che raramente vengono spiegati prima di invitarti a premere «Acquista».</p>
 
-      <h2>Prima di acquistare qualsiasi cosa, capisci cosa stai acquistando</h2>
+      <h2>Prima di acquistare, comprendi ciò che compri</h2>
 
-      <p>
-        Le istituzioni di cui sopra non si sono svegliate un giorno e hanno trasferito denaro
-        oro alla cieca. Hanno gruppi di ricerca costruiti interamente attorno
-        capire cosa possiedono, quanto costa e come si comporta.
-      </p>
+      <p>Le istituzioni citate non hanno investito in oro alla cieca. I loro gruppi di ricerca studiano ciò che possiedono, quanto costa e come si comporta.</p>
 
-      <p>
-        Puoi ottenere il 90% di questa comprensione in una frazione del tempo —
-        ma solo se qualcuno ti guida davvero attraverso tutto ciò invece che semplicemente
-        dicendoti “l’oro è buono, compra oro”.
-      </p>
+      <p>Puoi acquisire gran parte di queste conoscenze in molto meno tempo, purché qualcuno spieghi davvero i concetti anziché limitarsi a dire «l’oro è buono, compra oro».</p>
 
-      <p>
-        Questo è ciò che fa il tutorial. Non una presentazione di vendita mascherata da
-        istruzione: una panoramica reale di come funziona il mercato dei metalli preziosi:
-        cosa determina il prezzo dell’oro, come vengono determinati i premi e gli spread
-        se hai ottenuto un affare equo, cosa distingue un lingotto legittimo
-        acquistare da un oggetto da collezione troppo caro e come farlo effettivamente
-        confrontare i fornitori invece di indovinare.
-      </p>
+      <p>È lo scopo della guida: spiegare il funzionamento del mercato dei metalli preziosi, i fattori che muovono il prezzo dell’oro e l’effetto dei premi e delle differenze tra acquisto e vendita sul costo effettivo. Aiuta a distinguere l’oro da investimento da un oggetto da collezione troppo caro e a confrontare i venditori con criteri concreti.</p>
 
-      <p>
-        Le banche centrali hanno già fatto la loro mossa. Sia che tu faccia il tuo...
-        e come: vale la pena prendere una decisione con gli occhi aperti.
-      </p>
+      <p>Le banche centrali hanno già agito. Decidere se farlo anche tu, e in che modo, merita una valutazione consapevole.</p>
 
-      <a class="back-link" href="/">
-        ← Torna a The Gold Investor
-      </a>
+      <a class="back-link" href="/IT/">← Torna a L’investitore in oro</a>
 
     </article>
 
     <aside class="article-cta">
-      <h2>Comprendi l'oro prima di acquistarlo</h2>
+      <h2>Comprendi l’oro prima di acquistarlo</h2>
 
-      <p>
-        Leggi il Tutorial completo per Gold Investor per una spiegazione pratica
-        dei prezzi, dei premi, degli spread, dei termini di stoccaggio e di riacquisto.
-      </p>
+      <p>Leggi la guida completa per comprendere prezzi, premi, differenze tra acquisto e vendita, custodia e condizioni di riacquisto.</p>
 
-      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">
-        Ottieni il PDF — € 38
-      </a>
+      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Ottieni il PDF — 38 €</a>
     </aside>
 
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 Filip Allaert. Tutti i diritti riservati.
-    </div>
+    <div class="container">© 2026 Filip Allaert. Tutti i diritti riservati.</div>
   </footer>
 
 </body>
