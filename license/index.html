@@ -586,13 +586,20 @@ content="Activate your license for The Gold Decision Framework."
 
 
   const languageNames = {
-    en: "English",
-    nl: "Nederlands",
-    de: "Deutsch",
-    fr: "Français",
-    es: "Español",
-    it: "Italiano"
-  };
+  en: "English",
+  nl: "Nederlands",
+  es: "Español",
+  de: "Deutsch",
+  zh: "中文",
+  fr: "Français",
+  it: "Italiano",
+  pt: "Português",
+  ru: "Русский",
+  pl: "Polski",
+  ja: "日本語",
+  hi: "हिन्दी",
+  ar: "العربية"
+};
 
 
   const packageNames = {
@@ -605,6 +612,14 @@ content="Activate your license for The Gold Decision Framework."
     diamond: "Diamond"
   };
 
+  const languagePicker =
+  document.getElementById("languagePicker");
+
+const languageSelect =
+  document.getElementById("languageSelect");
+
+const confirmLanguageButton =
+  document.getElementById("confirmLanguageButton");
 
   function showStatus(message, type) {
 
@@ -626,6 +641,8 @@ content="Activate your license for The Gold Decision Framework."
     packageValue.textContent = "";
 
     languageValue.textContent = "";
+
+    languagePicker.style.display = "none";
   }
 
 
@@ -681,6 +698,23 @@ content="Activate your license for The Gold Decision Framework."
 
         const data =
           await response.json();
+
+        if (data.state === "choose_language") {
+
+  showStatus(
+    "✓ License code accepted. Please choose your language.",
+    "success"
+  );
+
+  languagePicker.style.display = "block";
+
+  packageValue.textContent =
+    packageNames[data.package] || data.package;
+
+  licenseDetails.classList.add("visible");
+
+  return;
+}
 
 
         if (!response.ok || !data.success) {
@@ -760,6 +794,109 @@ content="Activate your license for The Gold Decision Framework."
     }
   );
 
+confirmLanguageButton.addEventListener(
+  "click",
+  async function() {
+
+    const code =
+      licenseCode.value.trim().toUpperCase();
+
+    const language =
+      languageSelect.value;
+
+    if (!language) {
+      showStatus(
+        "Please choose a language.",
+        "error"
+      );
+      return;
+    }
+
+    confirmLanguageButton.disabled = true;
+    confirmLanguageButton.textContent =
+      "Confirming…";
+
+    try {
+
+      const response =
+        await fetch(WORKER_URL, {
+          method: "POST",
+
+          headers: {
+            "Content-Type": "application/json"
+          },
+
+          body: JSON.stringify({
+            code: code,
+            language: language
+          })
+        });
+
+      const data =
+        await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(
+          data.error ||
+          "Unable to activate this license."
+        );
+      }
+
+      showStatus(
+        "✓ License activated successfully.",
+        "success"
+      );
+
+      languagePicker.style.display = "none";
+
+      packageValue.textContent =
+        packageNames[data.package] ||
+        data.package;
+
+      languageValue.textContent =
+        languageNames[data.language] ||
+        data.language;
+
+      licenseDetails.classList.add(
+        "visible"
+      );
+
+      nextStep.classList.add(
+        "visible"
+      );
+
+      nextStep.innerHTML = `
+        Your language has been permanently selected.<br><br>
+        <a
+          class="button"
+          href="${data.download_url}"
+        >
+          Download PDF
+        </a>
+        <br><br>
+        Downloads remaining:
+        ${data.downloads_remaining}
+      `;
+
+    } catch (error) {
+
+      console.error(error);
+
+      showStatus(
+        error.message ||
+        "Something went wrong. Please try again.",
+        "error"
+      );
+
+    } finally {
+
+      confirmLanguageButton.disabled = false;
+      confirmLanguageButton.textContent =
+        "Confirm language";
+    }
+  }
+);
+  
 </script>
 
 </body>
