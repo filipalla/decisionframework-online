@@ -4,49 +4,472 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Złoto wyprzedziło amerykańskie obligacje skarbowe | Ramy decyzyjne</title>
+  <title>Złoto wyprzedziło amerykańskie obligacje skarbowe | The Gold Decision Framework</title>
 
   <meta
     name="description"
-    content="Why central banks are buying gold, reducing Treasury exposure and what this shift may mean for individual savers and investors."
+    content="Przeczytaj pełny poradnik o cenach, premiach, różnicach między kupnem a sprzedażą, przechowywaniu i warunkach odkupu."
   >
 
-  [[[BLOK0]]]
+  <style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+      --dark-text: #17120a
+;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+  0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--gold-light);
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .site-name {
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .site-links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .article-header {
+      padding: 110px 0 80px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .article-meta {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-page {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 290px;
+      align-items: start;
+      gap: 60px;
+      padding: 70px 0 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      margin: 70px 0 18px;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: var(--gold-light);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .article-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0 0 42px;
+      padding: 24px;
+      background: rgba(8, 161, 91, 0.1);
+      border: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 34px 0;
+    }
+
+    .evidence-card {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      margin: 34px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .comparison-value {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .comparison-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .comparison-arrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+    }
+
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px;
+      background: rgba(8, 161, 91, 0.1);
+      border-left: 3px solid var(--gold);
+      color: var(--gold-light);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .article-cta {
+      position: sticky;
+      top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .article-cta h2 {
+      margin: 0 0 16px;
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .article-cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: var(--dark-text);
+    }
+
+    .button.store {
+      background: rgba(8, 161, 91, 0.14);
+      color: var(--gold-light);
+    }
+
+    .button.store:hover {
+      background: var(--gold-light);
+      color: var(--dark-text);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: #8f887b
+;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .article-page {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .article-cta {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 760px);
+      }
+
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-links {
+        justify-content: flex-start;
+      }
+
+      .article-header {
+        padding: 80px 0 60px;
+      }
+
+      .article-page {
+        padding: 55px 0 75px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .comparison-arrow {
+        transform: rotate(90deg);
+      }
+
+      .stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  
+    /* Responsive typography for every article language. */
+    .article-page { grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); }
+    .article-content, .article-cta, .site-links { min-width: 0; }
+    .site-nav { flex-wrap: wrap; }
+    .site-links { flex-wrap: wrap; row-gap: 12px; }
+    .article-header h1 { overflow-wrap: anywhere; text-wrap: balance; }
+    .article-content, .article-cta { overflow-wrap: anywhere; hyphens: auto; }
+    .comparison { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+    .comparison-value { font-size: clamp(1.35rem, 2.6vw, 2.15rem); }
+    .comparison-label { overflow-wrap: anywhere; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 5px; }
+    html:lang(ja) body { font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; line-height: 1.95; }
+    html:lang(zh) body { font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif; line-height: 1.9; }
+    html:lang(hi) body { font-family: 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; line-height: 1.9; }
+    html:lang(ja) .site-links, html:lang(zh) .site-links, html:lang(hi) .site-links { letter-spacing: normal; }
+    html:lang(ja) .subtitle, html:lang(zh) .subtitle, html:lang(hi) .subtitle { font-style: normal; }
+    html:lang(hi) h1, html:lang(hi) h2 { line-height: 1.4; }
+    html:lang(hi) .eyebrow, html:lang(hi) .article-meta { letter-spacing: normal; }
+    @media (max-width: 850px) {
+      .article-page { grid-template-columns: minmax(0, 1fr); }
+      .article-cta { position: static; }
+    }
+    @media (max-width: 600px) {
+      .comparison { grid-template-columns: minmax(0, 1fr); }
+      .site-links { gap: 12px 18px; }
+      .article-header h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <nav class="site-nav container" aria-label="Main navigation">
-    <a class="site-name" href="/">
-      DecyzjaFramework.online
-    </a>
-
+  <nav class="site-nav container" aria-label="Nawigacja główna">
+    <a class="site-name" href="/PL/">DecisionFramework.online</a>
     <div class="site-links">
-      <a href="/">Ramy</a>
-      <a href="/article.html" aria-current="page">Artykuł</a>
-      <a href="https://payhip.com/b/7GDAe" target="_blank"
-  rel="noopener noreferrer">Przechowuj</a>
-      <a href="/#contact">Kontakt</a>
-      <a href="/nl/">NL</a>
+      <a href="/PL/">Model decyzyjny</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Sklep</a>
+      <a href="/license-order/">Zamówienie</a>
+      <a href="/license/">Aktywacja</a>
     </div>
   </nav>
 
   <header class="article-header">
     <div class="container">
-      <div class="eyebrow">Złoty inwestor · Analiza</div>
+      <div class="eyebrow">Inwestor w złoto · Analiza</div>
 
       <h1>Złoto wyprzedziło amerykańskie obligacje skarbowe</h1>
 
-      <p class="subtitle">
-        Twoje konto oszczędnościowe płaci 0,4%. Światowe banki centralne kupują
-        Złoto. Wiedzą coś, czego ty nie wiesz.
-      </p>
+      <p class="subtitle">Twoje konto oszczędnościowe daje 0,4 %. Banki centralne na świecie kupują złoto. Wiedzą coś, czego Ty nie wiesz.</p>
 
       <div class="ornament"></div>
 
-      <p class="article-meta">
-        Złote ramy decyzyjne · Analiza oparta na dowodach
-      </p>
+      <p class="article-meta">The Gold Decision Framework · Analiza oparta na danych</p>
     </div>
   </header>
 
@@ -55,236 +478,119 @@
     <article class="article-content">
 
       <div class="stat-card">
-        <div class="stat-number">0,39%</div>
+        <div class="stat-number">0,39 %</div>
 
-        <div class="stat-label">
-          Średnia krajowa stopa oszczędności w USA
-        </div>
+        <div class="stat-label">Średnie oprocentowanie kont oszczędnościowych w USA</div>
       </div>
 
-      <p class="lead">
-        Sprawdź wyciąg z konta bankowego.
-      </p>
+      <p class="lead">Sprawdź wyciąg z konta.</p>
 
-      <p>
-        Średnia krajowa stopa oszczędności w USA wynosi 0,39%. Nawet najlepsze
-        wysokodochodowe konta o kapitalizacji rynkowej wynoszącej około 4% – i to wszystko
-        zanim wchłoną je podatki i inflacja.
-      </p>
+      <p>Średnie oprocentowanie kont oszczędnościowych w USA wynosi 0,39 %. Nawet najlepiej oprocentowane konta oferują około 4 %, zanim podatki i inflacja uszczuplą ten zysk.</p>
 
-      <p>
-        Teraz spójrzcie, czym tak naprawdę zarządzają instytucje na świecie
-        rezerwy robią ze swoimi pieniędzmi.
-      </p>
+      <p>Spójrz teraz, co z pieniędzmi robią instytucje zarządzające światowymi rezerwami.</p>
 
-      <p>
-        Nie odkładają ich na konta oszczędnościowe. Kupują złoto —
-        w tempie nienotowanym od ponad dekady.
-      </p>
+      <p>Nie odkładają ich na kontach oszczędnościowych. Kupują złoto w tempie niewidzianym od ponad dekady.</p>
 
       <h2>Coś się zmieniło</h2>
 
-      <p>
-        Przez większą część ostatnich 30 lat papiery skarbowe Stanów Zjednoczonych były instrumentem domyślnym
-        „bezpieczne” aktywa rezerwowe dla banków centralnych na całym świecie. Nudny, płynny,
-        niezawodny.
-      </p>
+      <p>Przez większość ostatnich trzydziestu lat amerykańskie obligacje skarbowe były podstawowym „bezpiecznym” składnikiem rezerw banków centralnych: mało ekscytującym, płynnym i wiarygodnym.</p>
 
-      <p>
-        To się zmienia.
-      </p>
+      <p>To się zmienia.</p>
 
-      <p>
-        Według przeglądu Europejskiego Banku Centralnego z 2025 r. złoto tak
-        wyprzedził euro i stał się drugim co do wielkości aktywem rezerwowym
-        na świecie, ustępując jedynie dolarowi amerykańskiemu. Banki centralne przekupiły
-        1000 ton złota rocznie w każdym z ostatnich kilku lat —
-        ponad dwukrotnie szybciej niż w poprzedniej dekadzie.
-      </p>
+      <p>Według raportu Europejskiego Banku Centralnego z 2025 roku złoto wyprzedziło euro i stało się drugim co do wielkości aktywem rezerwowym na świecie, po dolarze amerykańskim. W ostatnich latach banki centralne kupowały ponad 1000 ton złota rocznie, ponad dwa razy więcej niż w poprzedniej dekadzie.</p>
 
-      <p>
-        Inne moduły śledzące idą dalej: kilka analiz pokazuje, że np
-        po raz pierwszy od 1996 r. zagraniczne banki centralne łącznie posiadają więcej
-        złota niż amerykańskie obligacje skarbowe.
-      </p>
+      <p>Inne analizy wskazują, że po raz pierwszy od 1996 roku łączna wartość złota posiadanego przez zagraniczne banki centralne przewyższa wartość posiadanych przez nie amerykańskich obligacji skarbowych.</p>
 
-      <p>
-        To nie jest jeden bank, który robi zakład. To szeroki, wieloletni schemat
-        w kilkudziesięciu krajach.
-      </p>
+      <p>Nie jest to zakład jednego banku, lecz wieloletni trend obejmujący dziesiątki państw.</p>
 
       <div class="evidence-grid">
         <div class="evidence-card">
           <strong>Sygnał 01</strong>
-          <p>
-            Banki centralne systematycznie skupują złoto i redukują jego cenę
-            poleganie na amerykańskich obligacjach skarbowych jako domyślnym bezpiecznym aktywie.
-          </p>
+          <p>Banki centralne systematycznie kupują złoto i zmniejszają zależność od amerykańskich obligacji skarbowych jako podstawowego bezpiecznego aktywa.</p>
         </div>
 
         <div class="evidence-card">
           <strong>Sygnał 02</strong>
-          <p>
-            Główne instytucje oddzielnie zmniejszają swoją ekspozycję na USA
-            dług rządowy.
-          </p>
+          <p>Niezależnie od tego duże instytucje ograniczają zaangażowanie w amerykański dług publiczny.</p>
         </div>
       </div>
 
-      <h2>To nie tylko banki centralne</h2>
+      <h2>Nie tylko banki centralne</h2>
 
-      <p>Europejskie fundusze emerytalne po cichu robią coś podobnego ze swoimi
-        własne obligacje.
-      </p>
+      <p>Europejskie fundusze emerytalne również po cichu zmieniają swoje portfele obligacji.</p>
 
-      <p>
-        ABP, największy holenderski fundusz emerytalny — zarządzający pieniędzmi emerytalnymi
-        dla około trzech milionów nauczycieli, funkcjonariuszy policji i cywilów
-        pracowników – obciął swoje zasoby skarbu USA z około 29 miliardów euro do
-        W zeszłym roku w ciągu zaledwie sześciu miesięcy osiągnięto 19 miliardów euro.
-      </p>
+      <p>ABP, największy fundusz emerytalny w Holandii, zarządza oszczędnościami emerytalnymi około trzech milionów nauczycieli, policjantów i urzędników. W ubiegłym roku zmniejszył wartość posiadanych amerykańskich obligacji skarbowych z około 29 do 19 miliardów euro w zaledwie sześć miesięcy.</p>
 
       <div class="comparison">
         <div>
-          <div class="comparison-value">29 miliardów euro</div>
-          <div class="comparison-label">Wcześniejsze udziały w obligacjach skarbu USA</div>
+          <div class="comparison-value">29 mld €</div>
+          <div class="comparison-label">Amerykańskie obligacje skarbowe przed redukcją</div>
         </div>
 
-        <div class="comparison-arrow"> → </div>
+        <div class="comparison-arrow">→</div>
 
         <div>
-          <div class="comparison-value">19 miliardów euro</div>
-          <div class="comparison-label">Późniejsze udziały skarbu USA</div>
+          <div class="comparison-value">19 mld €</div>
+          <div class="comparison-label">Amerykańskie obligacje skarbowe po redukcji</div>
         </div>
       </div>
 
-      <p>
-        To prawdziwy, ujawniony odwrót od rządu USA za dziesięć miliardów euro
-        długu, zgłoszone przez Bloomberg w styczniu 2026 r.
-      </p>
+      <p>Bloomberg poinformował w styczniu 2026 roku o tej ujawnionej redukcji amerykańskiego długu publicznego o dziesięć miliardów euro.</p>
 
-      <p>
-        Mówiąc ściślej o tym, co faktycznie wiemy: raporty własne ABP
-        nie mówi, że złoto było tam, gdzie poszły te pieniądze. Może weszło
-        Obligacje europejskie, inne instrumenty o stałym dochodzie lub w całości gdzie indziej.
-      </p>
+      <p>Trzeba jednak zachować precyzję: raporty ABP nie mówią, że pieniądze trafiły do złota. Mogły zostać ulokowane w europejskich obligacjach, innych instrumentach o stałym dochodzie lub zupełnie innych aktywach.</p>
 
-      <p>
-        To, co możemy z całą pewnością powiedzieć, to to, że jest to jeden z najbardziej znanych w Europie
-        zdecydowały o tym konserwatywne, najbardziej regulowane fundusze emerytalne
-        bezpieczniejszym posunięciem było trzymanie mniejszej liczby amerykańskich obligacji skarbowych. Tylko to jest warte
-        siedzieć z.
-      </p>
+      <p>Wiemy, że jeden z najbardziej ostrożnych i ściśle regulowanych funduszy emerytalnych Europy postanowił posiadać mniej amerykańskich obligacji skarbowych. Już ta decyzja zasługuje na uwagę.</p>
 
-      <h2>Dwa oddzielne sygnały, jeden kierunek</h2>
+      <h2>Dwa odrębne sygnały, jeden kierunek</h2>
 
-      <p>
-        Mamy tu zatem dwie różne historie i ważne jest, że tak nie jest
-        zamazaj je:
-      </p>
+      <p>To dwa różne zjawiska i nie należy ich ze sobą utożsamiać:</p>
 
       <ol>
-        <li>
-          Banki centralne systematycznie skupują złoto, redukując jego cenę
-          poleganie na obligacjach skarbowych jako domyślnym bezpiecznym aktywie – potwierdzone,
-          trwały, wieloletni i udokumentowany przez EBC i World Gold
-          Rada.
-        </li>
+        <li>Banki centralne systematycznie kupują złoto, ograniczając zależność od obligacji skarbowych jako podstawowego bezpiecznego aktywa. Ten utrzymujący się od lat trend opisują EBC i Światowa Rada Złota.</li>
 
-        <li>
-          Fundusze emerytalne oddzielnie zmniejszają swoje zaangażowanie w skarb państwa USA —
-          potwierdzone szczególnie dla ABP – z powodów, które nie są w pełni
-          opinii publicznej, ale to wskazuje na ten sam ukryty dyskomfort:
-          zbyt duża część bogactwa narodowego opiera się na długach jednego i drugiego kraju
-          stabilność waluty.
-        </li>
+        <li>Fundusze emerytalne niezależnie ograniczają zaangażowanie w amerykańskie obligacje skarbowe, czego przykładem jest ABP. Ich motywy nie są w pełni publiczne, ale mogą odzwierciedlać wspólną obawę: zbyt dużą zależność od długu jednego kraju i stabilności jednej waluty.</li>
       </ol>
 
-      <p>
-        Różne instytucje, różni mechanicy, ten sam kierunek podróży.
-      </p>
+      <p>Różne instytucje i mechanizmy, ale podobny kierunek zmian.</p>
 
-      <h2>Dlaczego jest to dla Ciebie ważne</h2>
+      <h2>Dlaczego ma to znaczenie dla Ciebie</h2>
 
-      <p>
-        Bank centralny może przewieźć tysiąc ton złota w ciągu roku. Ty
-        nie możesz i nie musisz.
-      </p>
+      <p>Bank centralny może przenieść tysiąc ton złota w ciągu roku. Ty nie możesz i nie musisz tego robić.</p>
 
-      <div class="pull-quote">
-        To, ile z tego, co zaoszczędzisz, zależy wyłącznie od instytucji,
-        waluty i zasady, nad którymi nie masz kontroli?
-      </div>
+      <div class="pull-quote">Jaka część Twoich oszczędności zależy całkowicie od instytucji, walut i polityki, na które nie masz żadnego wpływu?</div>
 
-      <p>
-        To nie jest retoryczna sztuczka, aby sprzedać ci złoto. Złoto nie jest produktem pozbawionym ryzyka
-        handel — nie płaci odsetek, może spaść, a rynek fizyczny to ma
-        więcej sposobów na ciche przeciążanie, niż większość ludzi zdaje sobie sprawę.
-      </p>
+      <p>To nie jest chwyt mający skłonić Cię do zakupu złota. Złoto wiąże się z ryzykiem: nie płaci odsetek, jego cena może spadać, a na rynku fizycznym występują dodatkowe koszty, których wielu kupujących nie dostrzega.</p>
 
-      <p>
-        Moneta i sztabka o tej samej zawartości złota mogą mieć zupełnie inne wartości
-        składki. Cena spot, marża dealera, przechowywanie, warunki odkupu – żadne z nich
-        jest to oczywiste, dopóki nie wiesz, czego szukać.
-      </p>
+      <p>Moneta i sztabka zawierające tę samą ilość złota mogą mieć bardzo różne premie ponad cenę rynkową. Cena bieżąca, marża sprzedawcy, przechowywanie i warunki odkupu nie są oczywiste, dopóki nie wiesz, na co zwracać uwagę.</p>
 
-      <p>To jest dokładnie ta część, której nikt nie wyjaśnia, zanim poprosi Cię o kliknięcie
-        „kup”.
-      </p>
+      <p>Właśnie te kwestie rzadko wyjaśnia się przed zachętą do kliknięcia „Kup”.</p>
 
-      <h2>Zanim cokolwiek kupisz – dowiedz się, co kupujesz</h2>
+      <h2>Zanim kupisz, zrozum, co kupujesz</h2>
 
-      <p>
-        Powyższe instytucje nie obudziły się pewnego dnia i nie przelały pieniędzy
-        złoto na ślepo. Mają zespoły badawcze zbudowane całkowicie wokół
-        zrozumienie tego, co posiadają, ile to kosztuje i jak się zachowuje.
-      </p>
+      <p>Wspomniane instytucje nie inwestowały w złoto na ślepo. Ich zespoły badawcze analizują posiadane aktywa, ich koszty i zachowanie.</p>
 
-      <p>
-        Możesz uzyskać 90% tego zrozumienia w ułamku czasu —
-        ale tylko wtedy, gdy ktoś faktycznie cię przez to przeprowadzi, a nie tylko
-        mówiąc Ci: „złoto jest dobre, kupuj złoto”.
-      </p>
+      <p>Dużą część tej wiedzy można zdobyć znacznie szybciej, jeśli ktoś rzeczywiście wyjaśni zagadnienia, zamiast powtarzać: „złoto jest dobre, kup złoto”.</p>
 
-      <p>
-        To właśnie robi samouczek. Nie jest to oferta sprzedaży przebrana za
-        edukacja — prawdziwy przegląd funkcjonowania rynku metali szlachetnych:
-        co napędza cenę złota, jak po cichu determinują premie i spready
-        czy masz uczciwą ofertę, co odróżnia legalne złoto
-        kupić od zbyt drogiego przedmiotu kolekcjonerskiego i jak to właściwie zrobić
-        porównaj dostawców zamiast zgadywać.
-      </p>
+      <p>Taki jest cel poradnika: wyjaśnić działanie rynku metali szlachetnych, czynniki kształtujące cenę złota oraz wpływ premii i różnic między ceną kupna a sprzedaży na rzeczywisty koszt. Pomaga odróżnić złoto inwestycyjne od zbyt drogiego przedmiotu kolekcjonerskiego i porównać sprzedawców według konkretnych kryteriów.</p>
 
-      <p>
-        Banki centralne już wykonały swój ruch. Niezależnie od tego, czy zrobisz swoje —
-        i jak – warto podjąć decyzję z otwartymi oczami.
-      </p>
+      <p>Banki centralne już podjęły działania. Warto świadomie zdecydować, czy chcesz zrobić to samo i w jaki sposób.</p>
 
-      <a class="back-link" href="/">
-        ← Powrót do „Złoty inwestor”.
-      </a>
+      <a class="back-link" href="/PL/">← Powrót do Inwestora w złoto</a>
 
     </article>
 
     <aside class="article-cta">
       <h2>Zrozum złoto, zanim je kupisz</h2>
 
-      <p>
-        Przeczytaj cały poradnik dla inwestorów Gold, aby uzyskać praktyczne wyjaśnienia
-        cen, składek, spreadów, warunków przechowywania i wykupu.
-      </p>
+      <p>Przeczytaj pełny poradnik o cenach, premiach, różnicach między kupnem a sprzedażą, przechowywaniu i warunkach odkupu.</p>
 
-      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">
-        Pobierz plik PDF – 38 €
-      </a>
+      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Kup PDF — 38 €</a>
     </aside>
 
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 Filip Allaert. Wszelkie prawa zastrzeżone.
-    </div>
+    <div class="container">© 2026 Filip Allaert. Wszelkie prawa zastrzeżone.</div>
   </footer>
 
 </body>
