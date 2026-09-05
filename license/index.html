@@ -508,8 +508,7 @@ content="Activate your license for The Gold Decision Framework."
     class="next-step"
   >
     Your license has been successfully activated.
-    Secure document delivery will be available here once
-    the PDF delivery system is connected.
+
   </div>
 
 </section>
@@ -699,7 +698,7 @@ const confirmLanguageButton =
         const data =
           await response.json();
 
-   if (data.state === "active") {
+  if (data.state === "active") {
 
   showStatus(
     "✓ License active.",
@@ -739,7 +738,7 @@ const confirmLanguageButton =
   `;
 
   return;
-}     
+}    
         
         if (data.state === "choose_language") {
 
