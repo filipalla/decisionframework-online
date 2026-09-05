@@ -699,6 +699,48 @@ const confirmLanguageButton =
         const data =
           await response.json();
 
+   if (data.state === "active") {
+
+  showStatus(
+    "✓ License active.",
+    "success"
+  );
+
+  packageValue.textContent =
+    packageNames[data.package] ||
+    data.package;
+
+  languageValue.textContent =
+    languageNames[data.language] ||
+    data.language;
+
+  licenseDetails.classList.add(
+    "visible"
+  );
+
+  nextStep.classList.add(
+    "visible"
+  );
+
+  nextStep.innerHTML = `
+    Your language has been permanently selected.<br><br>
+
+    <a
+      class="button"
+      href="${data.download_url}"
+    >
+      Download PDF
+    </a>
+
+    <br><br>
+
+    Downloads remaining:
+    ${data.downloads_remaining}
+  `;
+
+  return;
+}     
+        
         if (data.state === "choose_language") {
 
   showStatus(
