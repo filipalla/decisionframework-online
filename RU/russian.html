@@ -4,49 +4,472 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Золото обогнало казначейские облигации США | Структура принятия решений</title>
+  <title>Золото обогнало казначейские облигации США | The Gold Decision Framework</title>
 
   <meta
     name="description"
-    content="Why central banks are buying gold, reducing Treasury exposure and what this shift may mean for individual savers and investors."
+    content="Прочитайте полное руководство о ценах, наценках, разнице между покупкой и продажей, хранении и условиях обратного выкупа."
   >
 
-  [[[БЛОК0]]]
+  <style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+      --dark-text: #17120a
+;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+  0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--gold-light);
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .site-name {
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .site-links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .article-header {
+      padding: 110px 0 80px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .article-meta {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-page {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 290px;
+      align-items: start;
+      gap: 60px;
+      padding: 70px 0 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      margin: 70px 0 18px;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: var(--gold-light);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .article-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0 0 42px;
+      padding: 24px;
+      background: rgba(8, 161, 91, 0.1);
+      border: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 34px 0;
+    }
+
+    .evidence-card {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      margin: 34px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .comparison-value {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .comparison-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .comparison-arrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+    }
+
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px;
+      background: rgba(8, 161, 91, 0.1);
+      border-left: 3px solid var(--gold);
+      color: var(--gold-light);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .article-cta {
+      position: sticky;
+      top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .article-cta h2 {
+      margin: 0 0 16px;
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .article-cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: var(--dark-text);
+    }
+
+    .button.store {
+      background: rgba(8, 161, 91, 0.14);
+      color: var(--gold-light);
+    }
+
+    .button.store:hover {
+      background: var(--gold-light);
+      color: var(--dark-text);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: #8f887b
+;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .article-page {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .article-cta {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 760px);
+      }
+
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-links {
+        justify-content: flex-start;
+      }
+
+      .article-header {
+        padding: 80px 0 60px;
+      }
+
+      .article-page {
+        padding: 55px 0 75px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .comparison-arrow {
+        transform: rotate(90deg);
+      }
+
+      .stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  
+    /* Responsive typography for every article language. */
+    .article-page { grid-template-columns: minmax(0, 1fr) minmax(240px, 300px); }
+    .article-content, .article-cta, .site-links { min-width: 0; }
+    .site-nav { flex-wrap: wrap; }
+    .site-links { flex-wrap: wrap; row-gap: 12px; }
+    .article-header h1 { overflow-wrap: anywhere; text-wrap: balance; }
+    .article-content, .article-cta { overflow-wrap: anywhere; hyphens: auto; }
+    .comparison { grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); }
+    .comparison-value { font-size: clamp(1.35rem, 2.6vw, 2.15rem); }
+    .comparison-label { overflow-wrap: anywhere; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 5px; }
+    html:lang(ja) body { font-family: 'Yu Mincho', 'Hiragino Mincho ProN', 'Noto Serif CJK JP', serif; line-height: 1.95; }
+    html:lang(zh) body { font-family: 'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif; line-height: 1.9; }
+    html:lang(hi) body { font-family: 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; line-height: 1.9; }
+    html:lang(ja) .site-links, html:lang(zh) .site-links, html:lang(hi) .site-links { letter-spacing: normal; }
+    html:lang(ja) .subtitle, html:lang(zh) .subtitle, html:lang(hi) .subtitle { font-style: normal; }
+    html:lang(hi) h1, html:lang(hi) h2 { line-height: 1.4; }
+    html:lang(hi) .eyebrow, html:lang(hi) .article-meta { letter-spacing: normal; }
+    @media (max-width: 850px) {
+      .article-page { grid-template-columns: minmax(0, 1fr); }
+      .article-cta { position: static; }
+    }
+    @media (max-width: 600px) {
+      .comparison { grid-template-columns: minmax(0, 1fr); }
+      .site-links { gap: 12px 18px; }
+      .article-header h1 { font-size: clamp(2rem, 8vw, 3rem); }
+    }
+
+  </style>
 </head>
 
 <body>
 
-  <nav class="site-nav container" aria-label="Main navigation">
-    <a class="site-name" href="/">
-      DecisionFramework.online
-    </a>
-
+  <nav class="site-nav container" aria-label="Основная навигация">
+    <a class="site-name" href="/RU/">DecisionFramework.online</a>
     <div class="site-links">
-      <a href="/">Рамка</a>
-      <a href="/article.html" aria-current="page">Статья</a>
-      <a href="https://payhip.com/b/7GDAe" target="_blank"
-  rel="noopener noreferrer">Магазин</a>
-      <a href="/#contact">Контакт</a>
-      <a href="/nl/">Нидерланды</a>
+      <a href="/RU/">Система принятия решений</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Магазин</a>
+      <a href="/license-order/">Заказ</a>
+      <a href="/license/">Активация</a>
     </div>
   </nav>
 
   <header class="article-header">
     <div class="container">
-      <div class="eyebrow">Инвестор в золото · Анализ</div>
+      <div class="eyebrow">Инвестор в золото · Аналитика</div>
 
       <h1>Золото обогнало казначейские облигации США</h1>
 
-      <p class="subtitle">
-        Ваш сберегательный счет платит 0,4%. Мировые центральные банки покупают
-        Золото. Они знают то, чего вы не знаете.
-      </p>
+      <p class="subtitle">Ваш сберегательный счёт приносит 0,4 %. Центральные банки мира покупают золото. Они знают то, чего не знаете вы.</p>
 
       <div class="ornament"></div>
 
-      <p class="article-meta">
-        Золотая система принятия решений · Анализ, основанный на фактических данных
-      </p>
+      <p class="article-meta">The Gold Decision Framework · Анализ на основе данных</p>
     </div>
   </header>
 
@@ -55,236 +478,119 @@
     <article class="article-content">
 
       <div class="stat-card">
-        <div class="stat-number">0,39%</div>
+        <div class="stat-number">0,39 %</div>
 
-        <div class="stat-label">
-          Средняя норма сбережений по стране в США
-        </div>
+        <div class="stat-label">Средняя процентная ставка по сберегательным счетам в США</div>
       </div>
 
-      <p class="lead">
-        Проверьте свою банковскую выписку.
-      </p>
+      <p class="lead">Посмотрите выписку по своему счёту.</p>
 
-      <p>
-        Средняя норма сбережений в США составляет 0,39%. Даже лучший
-        высокодоходные счета по рыночной капитализации выходят в районе 4% — и это
-        до того, как налоги и инфляция съедят его.
-      </p>
+      <p>Средняя ставка по сберегательным счетам в США составляет 0,39 %. Даже наиболее доходные предложения дают около 4 %, ещё до того, как налоги и инфляция сократят этот доход.</p>
 
-      <p>
-        Теперь посмотрим, какие институты на самом деле управляют миром.
-        резервы делают на свои деньги.
-      </p>
+      <p>Теперь посмотрите, как распоряжаются деньгами учреждения, управляющие мировыми резервами.</p>
 
-      <p>
-        Они не кладут их на сберегательные счета. Они покупают золото —
-        темпами, не наблюдавшимися более десяти лет.
-      </p>
+      <p>Они не кладут их на сберегательные счета. Они покупают золото темпами, которых не было более десяти лет.</p>
 
       <h2>Что-то изменилось</h2>
 
-      <p>
-        На протяжении большей части последних 30 лет казначейские облигации США были стандартом по умолчанию.
-        «безопасный» резервный актив для центральных банков по всему миру. Скучно, жидко,
-        надежный.
-      </p>
+      <p>На протяжении большей части последних тридцати лет казначейские облигации США были основным «безопасным» резервным активом центральных банков: непримечательным, ликвидным и надёжным.</p>
 
-      <p>
-        Это меняется.
-      </p>
+      <p>Ситуация меняется.</p>
 
-      <p>
-        Согласно собственному обзору Европейского центрального банка за 2025 год, золото
-        обогнал евро и стал вторым по величине резервным активом
-        в мире, уступая только доллару США. Центральные банки выкупили
-        1000 тонн золота в год в течение каждого из последних нескольких лет —
-        более чем в два раза превышают темпы предыдущего десятилетия.
-      </p>
+      <p>Согласно обзору Европейского центрального банка за 2025 год, золото обогнало евро и стало вторым по величине резервным активом мира после доллара США. В последние годы центральные банки покупали более 1000 тонн золота ежегодно, что более чем вдвое превышает темпы предыдущего десятилетия.</p>
 
-      <p>
-        Другие трекеры идут еще дальше: некоторые анализы теперь показывают, что для
-        Впервые с 1996 года иностранные центральные банки коллективно владеют более
-        золота, чем казначейские облигации США.
-      </p>
+      <p>Другие исследования указывают, что впервые с 1996 года совокупная стоимость золота у иностранных центральных банков превышает стоимость принадлежащих им казначейских облигаций США.</p>
 
-      <p>
-        Это не один банк, делающий ставку. Это широкая, многолетняя модель
-        через десятки стран.
-      </p>
+      <p>Это не ставка одного банка, а многолетняя тенденция, охватывающая десятки стран.</p>
 
       <div class="evidence-grid">
         <div class="evidence-card">
           <strong>Сигнал 01</strong>
-          <p>
-            Центральные банки систематически скупают золото и сокращают его
-            опора на казначейские облигации США как на безопасный актив по умолчанию.
-          </p>
+          <p>Центральные банки систематически покупают золото и уменьшают зависимость от казначейских облигаций США как основного безопасного актива.</p>
         </div>
 
         <div class="evidence-card">
           <strong>Сигнал 02</strong>
-          <p>
-            Крупнейшие институты отдельно сокращают свое воздействие на США
-            государственный долг.
-          </p>
+          <p>Независимо от этого крупные учреждения сокращают вложения в государственный долг США.</p>
         </div>
       </div>
 
-      <h2>Это не только центральные банки</h2>
+      <h2>Не только центральные банки</h2>
 
-      <p>Пенсионные фонды Европы потихоньку делают нечто подобное со своими
-        собственные облигационные активы.
-      </p>
+      <p>Европейские пенсионные фонды тоже без лишнего шума пересматривают свои облигационные портфели.</p>
 
-      <p>
-        ABP, крупнейший пенсионный фонд Нидерландов — управление пенсионными деньгами
-        примерно для трех миллионов учителей, полицейских и гражданских
-        слуг — сократила свои активы Казначейства США примерно с 29 миллиардов евро до
-        19 миллиардов евро всего за шесть месяцев прошлого года.
-      </p>
+      <p>ABP, крупнейший пенсионный фонд Нидерландов, управляет пенсионными накоплениями примерно трёх миллионов учителей, полицейских и госслужащих. В прошлом году он за шесть месяцев сократил вложения в казначейские облигации США примерно с 29 до 19 миллиардов евро.</p>
 
       <div class="comparison">
         <div>
-          <div class="comparison-value">29 млрд евро</div>
-          <div class="comparison-label">Предыдущие активы Казначейства США</div>
+          <div class="comparison-value">29 млрд €</div>
+          <div class="comparison-label">Облигации США до сокращения</div>
         </div>
 
         <div class="comparison-arrow">→</div>
 
         <div>
-          <div class="comparison-value">19 млрд евро</div>
-          <div class="comparison-label">Поздние активы Казначейства США</div>
+          <div class="comparison-value">19 млрд €</div>
+          <div class="comparison-label">Облигации США после сокращения</div>
         </div>
       </div>
 
-      <p>
-        Это реальное и раскрытое отступление правительства США на десять миллиардов евро.
-        долга, сообщило агентство Bloomberg в январе 2026 года.
-      </p>
+      <p>В январе 2026 года Bloomberg сообщил об этом раскрытом сокращении вложений в государственный долг США на десять миллиардов евро.</p>
 
-      <p>
-        Если быть точным о том, что мы на самом деле знаем: собственная отчетность ABP.
-        не говорит, что золото – это то, куда пошли эти деньги. Возможно, оно вошло в
-        Европейские облигации, другие облигации с фиксированным доходом или где-либо еще.
-      </p>
+      <p>Важно точно понимать известные факты: отчётность ABP не говорит, что деньги были вложены в золото. Они могли пойти в европейские облигации, другие инструменты с фиксированным доходом или иные активы.</p>
 
-      <p>
-        Что мы можем сказать с уверенностью, так это то, что это один из самых
-        консервативные, наиболее жестко регулируемые пенсионные фонды решили, что
-        держать меньшее количество казначейских облигаций США было более безопасным шагом. Одно это чего стоит
-        сидел с.
-      </p>
+      <p>Известно, что один из наиболее осторожных и строго регулируемых пенсионных фондов Европы решил держать меньше казначейских облигаций США. Уже само это решение заслуживает внимания.</p>
 
       <h2>Два отдельных сигнала, одно направление</h2>
 
-      <p>
-        Итак, здесь есть две разные истории, и важно, чтобы мы не
-        размыть их:
-      </p>
+      <p>Здесь речь о двух разных явлениях, которые не следует смешивать:</p>
 
       <ol>
-        <li>
-          Центральные банки систематически скупают золото, сокращая свои
-          зависимость от казначейских облигаций как безопасного актива по умолчанию — подтверждено,
-          устойчивый, многолетний и документированный ЕЦБ и World Gold
-          Совет.
-        </li>
+        <li>Центральные банки систематически покупают золото, уменьшая зависимость от казначейских облигаций как основного безопасного актива. Эта устойчивая многолетняя тенденция описана ЕЦБ и Всемирным советом по золоту.</li>
 
-        <li>
-          Пенсионные фонды отдельно сокращают свои риски Казначейства США —
-          подтверждено конкретно для ABP — по причинам, которые не полностью
-          публике, но это указывает на тот же основной дискомфорт:
-          слишком много национального богатства опирается на долг одной страны и один
-          стабильность валюты.
-        </li>
+        <li>Пенсионные фонды независимо сокращают вложения в казначейские облигации США, как в случае ABP. Их мотивы раскрыты не полностью, но могут отражать общую обеспокоенность: чрезмерную зависимость от долга одной страны и стабильности одной валюты.</li>
       </ol>
 
-      <p>
-        Разные институты, разные механики, одно и то же направление движения.
-      </p>
+      <p>Разные учреждения и механизмы, но похожее направление движения.</p>
 
-      <h2>Почему это действительно важно для вас</h2>
+      <h2>Почему это касается вас</h2>
 
-      <p>
-        Центральный банк может переместить тысячу тонн золота за год. ты
-        нельзя, да и не нужно.
-      </p>
+      <p>Центральный банк может переместить тысячу тонн золота за год. Вы не можете, да вам это и не нужно.</p>
 
-      <div class="pull-quote">
-        Сколько из того, что вы сэкономили, полностью зависит от учреждений,
-        валюты и политику, над которой вы не имеете никакого контроля?
-      </div>
+      <div class="pull-quote">Какая часть ваших сбережений полностью зависит от учреждений, валют и политических решений, на которые вы никак не влияете?</div>
 
-      <p>
-        Это не риторический трюк с целью продать вам золото. Золото не является безрисковой валютой
-        торговля — проценты не выплачиваются, она может упасть, а физический рынок
-        больше способов незаметно завысить цену, чем думает большинство людей.
-      </p>
+      <p>Это не уловка, чтобы продать вам золото. У золота есть риски: оно не приносит процентов, его цена может снижаться, а физический рынок содержит дополнительные расходы, которые многие покупатели не замечают.</p>
 
-      <p>
-        Монета и слиток с одинаковым содержанием золота могут иметь совершенно разную ценность.
-        премии. Спотовая цена, дилерская маржа, хранение, условия обратного выкупа — ничего из
-        это очевидно, пока вы не знаете, что искать.
-      </p>
+      <p>Монета и слиток с одинаковым содержанием золота могут продаваться с очень разными наценками. Текущая рыночная цена, маржа продавца, хранение и условия обратного выкупа требуют понимания того, на что смотреть.</p>
 
-      <p>Это именно та часть, которую никто не объясняет, прежде чем попросить вас нажать кнопку
-        «купить».
-      </p>
+      <p>Именно эти вопросы редко объясняют, прежде чем предложить нажать «Купить».</p>
 
-      <h2>Прежде чем что-либо покупать — поймите, что вы покупаете</h2>
+      <h2>Прежде чем покупать, разберитесь в покупке</h2>
 
-      <p>
-        Вышеупомянутые учреждения не проснулись однажды и не перевели деньги в
-        золото вслепую. У них есть исследовательские группы, полностью построенные вокруг
-        понимание того, чем они владеют, сколько это стоит и как оно ведет себя.
-      </p>
+      <p>Упомянутые учреждения не инвестировали в золото вслепую. Их исследовательские команды изучают активы, их стоимость и поведение.</p>
 
-      <p>
-        Вы можете получить 90% этого понимания за небольшой промежуток времени.
-        но только если кто-то действительно проведет вас через это, а не просто
-        говоря вам: «золото — это хорошо, покупайте золото».
-      </p>
+      <p>Большую часть этих знаний можно получить гораздо быстрее, если вам действительно объясняют суть, а не просто говорят: «Золото — это хорошо, покупайте золото».</p>
 
-      <p>
-        Это то, что делает учебник. Это не коммерческое предложение, замаскированное под
-        образование — реальный обзор того, как работает рынок драгоценных металлов:
-        что движет ценой золота, как премии и спреды незаметно определяют
-        заключили ли вы честную сделку, что отличает законный слиток
-        купить у коллекционного предмета по завышенной цене и как на самом деле это сделать
-        сравнивайте поставщиков вместо того, чтобы гадать.
-      </p>
+      <p>Такова цель руководства: объяснить устройство рынка драгоценных металлов, факторы цены золота и влияние наценок и разницы между покупкой и продажей на итоговую стоимость. Оно помогает отличить инвестиционное золото от переоценённого коллекционного предмета и сравнивать продавцов по конкретным критериям.</p>
 
-      <p>
-        Центральные банки уже сделали свой ход. Сделаешь ли ты свой —
-        и как — стоит ли принимать решение с открытыми глазами.
-      </p>
+      <p>Центральные банки уже сделали свой шаг. Решение о том, действовать ли вам и каким образом, стоит принимать осознанно.</p>
 
-      <a class="back-link" href="/">
-        ← Вернуться назад на Золотой инвестор
-      </a>
+      <a class="back-link" href="/RU/">← Вернуться к «Инвестору в золото»</a>
 
     </article>
 
     <aside class="article-cta">
-      <h2>Изучите информацию о золоте, прежде чем покупать его</h2>
+      <h2>Разберитесь в золоте до покупки</h2>
 
-      <p>
-        Прочтите полное руководство для золотых инвесторов, чтобы получить практическое объяснение.
-        цен, премий, спредов, условий хранения и обратного выкупа.
-      </p>
+      <p>Прочитайте полное руководство о ценах, наценках, разнице между покупкой и продажей, хранении и условиях обратного выкупа.</p>
 
-      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">
-        Получить PDF-файл — 38 евро.
-      </a>
+      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Купить PDF — 38 €</a>
     </aside>
 
   </main>
 
   <footer>
-    <div class="container">
-      © 2026 Филип Аллаерт. Все права защищены.
-    </div>
+    <div class="container">© 2026 Filip Allaert. Все права защищены.</div>
   </footer>
 
 </body>
