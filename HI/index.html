@@ -4,129 +4,353 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>स्वर्ण निवेशक | स्वर्ण निर्णय रूपरेखा</title>
+  <title>स्वर्ण निवेशक | The Gold Decision Framework</title>
 
   <meta
     name="description"
-    content="The Gold Investor helps readers build their own evidence-based gold thesis."
+    content="बाज़ार की संरचना, व्यापक अर्थव्यवस्था, भू-राजनीति और जोखिम प्रबंधन के माध्यम से सोने तथा अन्य कीमती धातुओं को समझने का व्यावहारिक ढाँचा।"
   >
 
-  [[[ब्लॉक0]]]
+  <style>
+    :root {
+      --background: #111214;
+      --surface: #1b1b1d;
+      --gold: #c6a15b;
+      --gold-light: #e2c887;
+      --text: #f1eadb;
+      --muted: #b8b0a1;
+      --line: rgba(198, 161, 91, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+ 0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      z-index: 10;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+    }
+
+    .language-switcher a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .language-switcher a:hover,
+    .language-switcher a.active {
+      color: var(--gold-light);
+    }
+
+    .language-switcher span {
+      color: var(--muted);
+    }
+
+    header {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: 30px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-style: italic;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 1px solid var(--gold);
+      color: var(--text);
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: #17120a;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      color: var(--muted);
+    }
+
+  .button.store {
+  background: rgba(198, 161, 91, 0.12);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+.button.store:hover {
+  background: var(--gold-light);
+  color: #17120a;
+}
+    section {
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .intro {
+      max-width: 760px;
+    }
+
+    .chapters {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .chapter {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.78);
+      border: 1px solid var(--line);
+    }
+
+    .chapter-number {
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: #8f887b;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .language-switcher {
+        top: 18px;
+        right: 20px;
+      }
+
+      header {
+        min-height: 82vh;
+        padding-top: 100px;
+      }
+
+      .chapters {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  
+    .language-switcher { position:absolute; top:24px; right:28px; z-index:10; display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:flex-end; max-width:min(680px, calc(100% - 56px)); font-family:Arial,sans-serif; font-size:.72rem; letter-spacing:.08em; }
+    .language-switcher a { color:var(--muted); text-decoration:none; }
+    .language-switcher a:hover, .language-switcher a.active { color:var(--gold-light); }
+    .language-switcher span { color:var(--muted); }
+    @media (max-width:760px) { .language-switcher { position:relative; top:auto; right:auto; margin:18px auto 0; padding:0 20px; justify-content:center; max-width:100%; } }
+
+  
+    /* Keep the root-page layout readable in every writing system. */
+    .chapters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .chapter { min-width: 0; overflow-wrap: anywhere; }
+    h1 { overflow-wrap: anywhere; text-wrap: balance; }
+    .contact a { overflow-wrap: anywhere; }
+    .button { max-width: 100%; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+    html:lang(ja) body { font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif; line-height: 1.9; }
+    html:lang(zh) body { font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; line-height: 1.9; }
+    html:lang(hi) body { font-family: 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; line-height: 1.9; }
+    html:lang(hi) h1, html:lang(hi) h2 { line-height: 1.4; }
+    html:lang(hi) .eyebrow { letter-spacing: normal; }
+    html:lang(ja) .subtitle, html:lang(zh) .subtitle, html:lang(hi) .subtitle { font-style: normal; }
+    @media (max-width: 760px) {
+      .chapters { grid-template-columns: minmax(0, 1fr); }
+      header { padding-top: 65px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button, .language-switcher a { transition: none; }
+    }
+
+  </style>
 </head>
 
 <body>
-  <nav class="language-switcher" aria-label="Language selection"><a href="/">EN</a><span>|</span><a href="/nl/">NL</a><span>|</span><a href="/ES/">ES</a><span>|</span><a href="/DE/">DE</a><span>|</span><a href="/ZH/">中文</a><span>|</span><a href="/FR/">FR</a><span>|</span><a href="/IT/">IT</a><span>|</span><a href="/PT/">PT</a><span>|</span><a href="/RU/">RU</a><span>|</span><a href="/PL/">PL</a><span>|</span><a href="/JA/">日本語</a><span>|</span><a href="/HI/" class="active" aria-current="page">हिन्दी</a><span>|</span><a href="/AR/">العربية</a></nav>
+  <nav class="language-switcher" aria-label="भाषा चुनें"><a href="/">EN</a><span aria-hidden="true">|</span><a href="/nl/">NL</a><span aria-hidden="true">|</span><a href="/ES/">ES</a><span aria-hidden="true">|</span><a href="/DE/">DE</a><span aria-hidden="true">|</span><a href="/ZH/">中文</a><span aria-hidden="true">|</span><a href="/FR/">FR</a><span aria-hidden="true">|</span><a href="/IT/">IT</a><span aria-hidden="true">|</span><a href="/PT/">PT</a><span aria-hidden="true">|</span><a href="/RU/">RU</a><span aria-hidden="true">|</span><a href="/PL/">PL</a><span aria-hidden="true">|</span><a href="/JA/">日本語</a><span aria-hidden="true">|</span><a href="/HI/" class="active" aria-current="page">हिन्दी</a><span aria-hidden="true">|</span><a href="/AR/">العربية</a></nav>
+  
 
   <header>
     <div class="container">
-      <div class="eyebrow">द गोल्ड डिसीजन फ्रेमवर्क - पुस्तक 1</div>
+      <div class="eyebrow">The Gold Decision Framework — पुस्तक 1</div>
 
-      <h1>गोल्ड इन्वेस्टर</h1>
+      <h1>स्वर्ण निवेशक</h1>
 
-      <p class="subtitle">अपनी खुद की गोल्ड थीसिस बनाना</p>
+      <p class="subtitle">सोने के बारे में अपना निवेश दृष्टिकोण बनाएँ</p>
 
       <div class="ornament"></div>
 
-      <p class="intro" style="margin-left: auto; margin-right: auto;">
-        सोने और अन्य कीमती धातुओं को समझने के लिए एक व्यावहारिक रूपरेखा
-        बाज़ार संरचना, व्यापक अर्थशास्त्र, भू-राजनीति और जोखिम के माध्यम से
-        प्रबंधन.
-      </p>
+      <p class="intro" style="margin-left: auto; margin-right: auto;">बाज़ार की संरचना, व्यापक अर्थव्यवस्था, भू-राजनीति और जोखिम प्रबंधन के माध्यम से सोने तथा अन्य कीमती धातुओं को समझने का व्यावहारिक ढाँचा।</p>
 
-      <div class="button-row" aria-label="Main navigation">
-  <a class="button" href="#content">
-    रूपरेखा का अन्वेषण करें
-  </a>
+      <div class="button-row" aria-label="मुख्य नेविगेशन">
+  <a class="button" href="#content">ढाँचे को समझें</a>
 
-  <a class="button secondary" href="/HI/hindi.html">
-    लेख
-  </a>
+  <a class="button secondary" href="/HI/hindi.html">लेख</a>
 
   <a class="button store" href="https://payhip.com/b/7GDAe"
    target="_blank"
   rel="noopener noreferrer"
->
-  दुकान
-</a>
-<a class="button secondary" href="/license-order/">
-  लाइसेंस आदेश
-</a>
+>स्टोर</a>
+<a class="button secondary" href="/license-order/" lang="en">License</a>
 
-<a class="button secondary" href="/license/">
-  लाइसेंस सक्रियण
-</a>
+<a class="button secondary" href="/license/" lang="en">Activation</a>
 
 
-  <a class="button secondary" href="#contact">
-    संपर्क करें
-  </a>
+  <a class="button secondary" href="#contact">संपर्क</a>
 </div>
+    </div>
   </header>
 
   <main>
     <section id="content">
       <div class="container">
-        <h2>अपनी स्वयं की साक्ष्य-आधारित थीसिस बनाएं</h2>
+        <h2>तथ्यों पर आधारित अपना निवेश दृष्टिकोण बनाएँ</h2>
 
-        <p class="intro">
-          गोल्ड इन्वेस्टर का इरादा पाठकों को यह बताने का नहीं है कि उन्हें क्या करना चाहिए
-          खरीदें या उन्हें इसे कब खरीदना चाहिए। इससे उन्हें बेहतर प्रश्न पूछने में मदद मिलती है,
-          अपना स्वयं का अनुसंधान करें और उसकी जिम्मेदारी लें
-          निर्णय.
-        </p>
+        <p class="intro">यह मार्गदर्शिका आपको यह नहीं बताती कि क्या खरीदना है या कब खरीदना है। यह बेहतर सवाल पूछने, स्वयं शोध करने और अपने निर्णयों की ज़िम्मेदारी लेने में मदद करती है।</p>
 
         <div class="chapters">
           <article class="chapter">
             <div class="chapter-number">01</div>
             <h3>वास्तविक ब्याज दरें</h3>
-            <p>
-              समझें कि वास्तविक ब्याज दरें और डॉलर क्यों महत्वपूर्ण हैं
-              सोने की कीमत के लिए संकेतक.
-            </p>
+            <p>समझें कि वास्तविक ब्याज दरें और डॉलर सोने की कीमत के लिए महत्त्वपूर्ण संकेतक क्यों हैं।</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">02</div>
             <h3>भू-राजनीति</h3>
-            <p>
-              सुरक्षित-हेवन मांग, भू-राजनीतिक झटके और संरचनात्मक की जांच करें
-              केंद्रीय बैंकों द्वारा खरीद.
-            </p>
+            <p>सुरक्षित परिसंपत्तियों की माँग, भू-राजनीतिक झटकों और केंद्रीय बैंकों की दीर्घकालिक खरीद का अध्ययन करें।</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">03</div>
-            <h3>आपूर्ति और मांग</h3>
-            <p>
-              निवेश मांग, औद्योगिक मांग और बुनियादी बातों को देखें
-              प्रत्येक धातु का संतुलन.
-            </p>
+            <h3>आपूर्ति और माँग</h3>
+            <p>हर धातु की निवेश माँग, औद्योगिक माँग और बाज़ार के मूल संतुलन को समझें।</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">04</div>
-            <h3>खनन आपूर्ति</h3>
-            <p>
-              जानें कि उत्पादन लागत, एआईएससी और धीमी गति से चलने वाली खनन परियोजनाएं कैसे होती हैं
-              आपूर्ति को प्रभावित करें.
-            </p>
+            <h3>खनन से आपूर्ति</h3>
+            <p>जानें कि उत्पादन लागत, खनन जारी रखने की कुल लागत (AISC) और खनन परियोजनाओं की लंबी अवधि आपूर्ति को कैसे प्रभावित करती हैं।</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">05</div>
-            <h3>एक उपकरण चुनना</h3>
-            <p>
-              भौतिक स्वामित्व, ईटीएफ, खनन स्टॉक और वायदा की तुलना करें।
-            </p>
+            <h3>निवेश का साधन चुनना</h3>
+            <p>भौतिक धातु के स्वामित्व, एक्सचेंज-ट्रेडेड फंड (ETF), खनन कंपनियों के शेयरों और वायदा अनुबंधों की तुलना करें।</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">06–09</div>
-            <h3>खरीदारी के समय से लेकर</h3>
-            <p>
-              तकनीकी समय निर्धारण, जोखिम प्रबंधन, थीसिस निर्माण आदि को मिलाएं
-              एक ईमानदार भौतिक खरीदारी.
-            </p>
+            <h3>सही समय चुनने से खरीद तक</h3>
+            <p>तकनीकी विश्लेषण, जोखिम प्रबंधन और निवेश दृष्टिकोण को उचित शर्तों पर भौतिक धातु की खरीद से जोड़ें।</p>
           </article>
         </div>
       </div>
@@ -136,38 +360,28 @@
       <div class="container">
         <h2>लेखक के बारे में</h2>
 
-        <p class="intro">डब्ल्यूटीआई कच्चे तेल और मुद्रा व्यापार की पृष्ठभूमि के साथ, फ़िलिप अल्लार्ट
-          बाजार संरचना के परिप्रेक्ष्य से सोने का दृष्टिकोण,
-          मैक्रोइकॉनॉमिक्स और जोखिम प्रबंधन।
-        </p>
+        <p class="intro">WTI कच्चे तेल और विदेशी मुद्रा के व्यापार में अनुभव रखने वाले Filip Allaert सोने को बाज़ार की संरचना, व्यापक अर्थव्यवस्था और जोखिम प्रबंधन के नज़रिए से देखते हैं।</p>
       </div>
     </section>
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2>संपर्क करें</h2>
+        <h2>संपर्क</h2>
+
+        <p>स्वर्ण निवेशक या The Gold Decision Framework के बारे में कोई प्रश्न है?</p>
 
         <p>
-          स्वर्ण निवेशक या स्वर्ण निर्णय ढांचे के बारे में प्रश्न?
+          <a href="mailto:DecisionFramework@telenet.be">DecisionFramework@telenet.be</a>
         </p>
 
         <p>
-          <a href="mailto:DecisionFramework@telenet.be">
-            DecisionFramework@telenet.be
-          </a>
-        </p>
-
-        <p>
-          <a href="https://decisionframework.online">
-            DecisionFramework.online
-          </a>
+          <a href="https://decisionframework.online">DecisionFramework.online</a>
         </p>
       </div>
     </section>
   </main>
 
-  <footer>
-    © 2026 फ़िलिप अल्लार्ट। सर्वाधिकार सुरक्षित।
-  </footer>
+  <footer>© 2026 Filip Allaert. सर्वाधिकार सुरक्षित।</footer>
 </body>
 </html>
+
