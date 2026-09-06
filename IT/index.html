@@ -4,129 +4,353 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>L'investitore in oro | Il quadro decisionale sull’oro</title>
+  <title>L’investitore in oro | The Gold Decision Framework</title>
 
   <meta
     name="description"
-    content="The Gold Investor helps readers build their own evidence-based gold thesis."
+    content="Un metodo pratico per comprendere l’oro e gli altri metalli preziosi attraverso la struttura del mercato, la macroeconomia, la geopolitica e la gestione del rischio."
   >
 
-  [[[BLOCCO0]]]
+  <style>
+    :root {
+      --background: #111214;
+      --surface: #1b1b1d;
+      --gold: #c6a15b;
+      --gold-light: #e2c887;
+      --text: #f1eadb;
+      --muted: #b8b0a1;
+      --line: rgba(198, 161, 91, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+ 0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      z-index: 10;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+    }
+
+    .language-switcher a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .language-switcher a:hover,
+    .language-switcher a.active {
+      color: var(--gold-light);
+    }
+
+    .language-switcher span {
+      color: var(--muted);
+    }
+
+    header {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: 30px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-style: italic;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 1px solid var(--gold);
+      color: var(--text);
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: #17120a;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      color: var(--muted);
+    }
+
+  .button.store {
+  background: rgba(198, 161, 91, 0.12);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+.button.store:hover {
+  background: var(--gold-light);
+  color: #17120a;
+}
+    section {
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .intro {
+      max-width: 760px;
+    }
+
+    .chapters {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .chapter {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.78);
+      border: 1px solid var(--line);
+    }
+
+    .chapter-number {
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: #8f887b;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .language-switcher {
+        top: 18px;
+        right: 20px;
+      }
+
+      header {
+        min-height: 82vh;
+        padding-top: 100px;
+      }
+
+      .chapters {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  
+    .language-switcher { position:absolute; top:24px; right:28px; z-index:10; display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:flex-end; max-width:min(680px, calc(100% - 56px)); font-family:Arial,sans-serif; font-size:.72rem; letter-spacing:.08em; }
+    .language-switcher a { color:var(--muted); text-decoration:none; }
+    .language-switcher a:hover, .language-switcher a.active { color:var(--gold-light); }
+    .language-switcher span { color:var(--muted); }
+    @media (max-width:760px) { .language-switcher { position:relative; top:auto; right:auto; margin:18px auto 0; padding:0 20px; justify-content:center; max-width:100%; } }
+
+  
+    /* Keep the root-page layout readable in every writing system. */
+    .chapters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .chapter { min-width: 0; overflow-wrap: anywhere; }
+    h1 { overflow-wrap: anywhere; text-wrap: balance; }
+    .contact a { overflow-wrap: anywhere; }
+    .button { max-width: 100%; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+    html:lang(ja) body { font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif; line-height: 1.9; }
+    html:lang(zh) body { font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; line-height: 1.9; }
+    html:lang(hi) body { font-family: 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; line-height: 1.9; }
+    html:lang(hi) h1, html:lang(hi) h2 { line-height: 1.4; }
+    html:lang(hi) .eyebrow { letter-spacing: normal; }
+    html:lang(ja) .subtitle, html:lang(zh) .subtitle, html:lang(hi) .subtitle { font-style: normal; }
+    @media (max-width: 760px) {
+      .chapters { grid-template-columns: minmax(0, 1fr); }
+      header { padding-top: 65px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button, .language-switcher a { transition: none; }
+    }
+
+  </style>
 </head>
 
 <body>
-  <nav class="language-switcher" aria-label="Language selection"><a href="/">EN</a><span>|</span><a href="/nl/">NL</a><span>|</span><a href="/ES/">ES</a><span>|</span><a href="/DE/">DE</a><span>|</span><a href="/ZH/">中文</a><span>|</span><a href="/FR/">FR</a><span>|</span><a href="/IT/" class="active" aria-current="page">IT</a><span>|</span><a href="/PT/">PT</a><span>|</span><a href="/RU/">RU</a><span>|</span><a href="/PL/">PL</a><span>|</span><a href="/JA/">日本語</a><span>|</span><a href="/HI/">हिन्दी</a><span>|</span><a href="/AR/">العربية</a></nav>
+  <nav class="language-switcher" aria-label="Selezione della lingua"><a href="/">EN</a><span aria-hidden="true">|</span><a href="/nl/">NL</a><span aria-hidden="true">|</span><a href="/ES/">ES</a><span aria-hidden="true">|</span><a href="/DE/">DE</a><span aria-hidden="true">|</span><a href="/ZH/">中文</a><span aria-hidden="true">|</span><a href="/FR/">FR</a><span aria-hidden="true">|</span><a href="/IT/" class="active" aria-current="page">IT</a><span aria-hidden="true">|</span><a href="/PT/">PT</a><span aria-hidden="true">|</span><a href="/RU/">RU</a><span aria-hidden="true">|</span><a href="/PL/">PL</a><span aria-hidden="true">|</span><a href="/JA/">日本語</a><span aria-hidden="true">|</span><a href="/HI/">हिन्दी</a><span aria-hidden="true">|</span><a href="/AR/">العربية</a></nav>
+  
 
   <header>
     <div class="container">
-      <div class="eyebrow">Il quadro decisionale sull'oro – Libro 1</div>
+      <div class="eyebrow">The Gold Decision Framework — Libro 1</div>
 
-      <h1>L'investitore in oro</h1>
+      <h1>L’investitore in oro</h1>
 
-      <p class="subtitle">Costruisci la tua tesi d'oro</p>
+      <p class="subtitle">Costruisci la tua tesi sull’oro</p>
 
       <div class="ornament"></div>
 
-      <p class="intro" style="margin-left: auto; margin-right: auto;">
-        Un quadro pratico per comprendere l'oro e altri metalli preziosi
-        attraverso la struttura del mercato, la macroeconomia, la geopolitica e il rischio
-        gestione.
-      </p>
+      <p class="intro" style="margin-left: auto; margin-right: auto;">Un metodo pratico per comprendere l’oro e gli altri metalli preziosi attraverso la struttura del mercato, la macroeconomia, la geopolitica e la gestione del rischio.</p>
 
-      <div class="button-row" aria-label="Main navigation">
-  <a class="button" href="#content">
-    Esplora il quadro
-  </a>
+      <div class="button-row" aria-label="Navigazione principale">
+  <a class="button" href="#content">Esplora il metodo</a>
 
-  <a class="button secondary" href="/IT/italiano.html">
-    Articolo
-  </a>
+  <a class="button secondary" href="/IT/italiano.html">Articolo</a>
 
   <a class="button store" href="https://payhip.com/b/7GDAe"
    target="_blank"
   rel="noopener noreferrer"
->
-  Negozio
-</a>
-<a class="button secondary" href="/license-order/">
-  Ordine di licenza
-</a>
+>Negozio</a>
+<a class="button secondary" href="/license-order/" lang="en">License</a>
 
-<a class="button secondary" href="/license/">
-  Attivazione della licenza
-</a>
+<a class="button secondary" href="/license/" lang="en">Activation</a>
 
 
-  <a class="button secondary" href="#contact">
-    Contatto
-  </a>
+  <a class="button secondary" href="#contact">Contatti</a>
 </div>
+    </div>
   </header>
 
   <main>
     <section id="content">
       <div class="container">
-        <h2>Costruisci la tua tesi basata sull'evidenza</h2>
+        <h2>Costruisci la tua tesi basata sui dati</h2>
 
-        <p class="intro">
-          The Gold Investor non ha lo scopo di dire ai lettori cosa dovrebbero
-          acquistare o quando dovrebbero acquistarlo. Li aiuta a porre domande migliori,
-          condurre le proprie ricerche e assumersene la responsabilità
-          decisioni.
-        </p>
+        <p class="intro">La guida non vuole dirti cosa comprare né quando farlo. Ti aiuta a porre domande migliori, svolgere le tue ricerche e assumerti la responsabilità delle tue decisioni.</p>
 
         <div class="chapters">
           <article class="chapter">
             <div class="chapter-number">01</div>
-            <h3>Tassi di interesse reali</h3>
-            <p>
-              Comprendere perché i tassi di interesse reali e il dollaro sono importanti
-              indicatori del prezzo dell’oro.
-            </p>
+            <h3>Tassi d’interesse reali</h3>
+            <p>Comprendi perché i tassi d’interesse reali e il dollaro sono indicatori importanti per il prezzo dell’oro.</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">02</div>
             <h3>Geopolitica</h3>
-            <p>
-              Esaminare la domanda di beni rifugio, gli shock geopolitici e strutturali
-              acquisti da parte delle banche centrali.
-            </p>
+            <p>Esamina la domanda di beni rifugio, gli shock geopolitici e gli acquisti strutturali delle banche centrali.</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">03</div>
             <h3>Domanda e offerta</h3>
-            <p>
-              Consideriamo la domanda di investimenti, la domanda industriale e i fondamentali
-              equilibrio di ciascun metallo.
-            </p>
+            <p>Analizza la domanda d’investimento, la domanda industriale e l’equilibrio fondamentale di ogni metallo.</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">04</div>
-            <h3>Fornitura mineraria</h3>
-            <p>
-              Scopri come i costi di produzione, l'AISC e i progetti minerari a rotazione lenta
-              influenzare l’offerta.
-            </p>
+            <h3>Produzione mineraria</h3>
+            <p>Scopri come i costi di produzione, i costi complessivi di mantenimento (AISC) e i lunghi tempi dei progetti minerari influenzano l’offerta.</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">05</div>
             <h3>Scegliere uno strumento</h3>
-            <p>
-              Confronta proprietà fisica, ETF, azioni minerarie e futures.
-            </p>
+            <p>Confronta il possesso fisico, i fondi quotati (ETF), le azioni minerarie e i contratti a termine.</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">06–09</div>
-            <h3>Dalla tempistica all'acquisto</h3>
-            <p>
-              Combina tempi tecnici, gestione del rischio, formazione della tesi e
-              un acquisto fisico onesto.
-            </p>
+            <h3>Dal momento d’ingresso all’acquisto</h3>
+            <p>Combina analisi tecnica, gestione del rischio e formulazione della tua tesi con un acquisto fisico a condizioni eque.</p>
           </article>
         </div>
       </div>
@@ -134,40 +358,30 @@
 
     <section id="about">
       <div class="container">
-        <h2>Informazioni sull'autore</h2>
+        <h2>L’autore</h2>
 
-        <p class="intro">Filip Allaert, con esperienza nel commercio di petrolio greggio e valutario WTI
-          si avvicina all’oro attraverso la prospettiva della struttura del mercato,
-          macroeconomia e gestione del rischio.
-        </p>
+        <p class="intro">Grazie all’esperienza nella negoziazione di petrolio WTI e valute, Filip Allaert analizza l’oro attraverso la struttura del mercato, la macroeconomia e la gestione del rischio.</p>
       </div>
     </section>
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2>Contatto</h2>
+        <h2>Contatti</h2>
+
+        <p>Hai domande su L’investitore in oro o su The Gold Decision Framework?</p>
 
         <p>
-          Domande su The Gold Investor o The Gold Decision Framework?
+          <a href="mailto:DecisionFramework@telenet.be">DecisionFramework@telenet.be</a>
         </p>
 
         <p>
-          <a href="mailto:DecisionFramework@telenet.be">
-            DecisionFramework@telenet.be
-          </a>
-        </p>
-
-        <p>
-          <a href="https://decisionframework.online">
-            DecisionFramework.online
-          </a>
+          <a href="https://decisionframework.online">DecisionFramework.online</a>
         </p>
       </div>
     </section>
   </main>
 
-  <footer>
-    © 2026 Filip Allaert. Tutti i diritti riservati.
-  </footer>
+  <footer>© 2026 Filip Allaert. Tutti i diritti riservati.</footer>
 </body>
 </html>
+
