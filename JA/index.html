@@ -4,129 +4,353 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>ゴールド投資家 |ゴールド決定フレームワーク</title>
+  <title>金投資家 | The Gold Decision Framework</title>
 
   <meta
     name="description"
-    content="The Gold Investor helps readers build their own evidence-based gold thesis."
+    content="市場構造、マクロ経済、地政学、リスク管理を通じて、金やその他の貴金属を理解するための実践的な枠組みです。"
   >
 
-  [[[ブロック0]]]
+  <style>
+    :root {
+      --background: #111214;
+      --surface: #1b1b1d;
+      --gold: #c6a15b;
+      --gold-light: #e2c887;
+      --text: #f1eadb;
+      --muted: #b8b0a1;
+      --line: rgba(198, 161, 91, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+ 0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      z-index: 10;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+    }
+
+    .language-switcher a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .language-switcher a:hover,
+    .language-switcher a.active {
+      color: var(--gold-light);
+    }
+
+    .language-switcher span {
+      color: var(--muted);
+    }
+
+    header {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: 30px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-style: italic;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 1px solid var(--gold);
+      color: var(--text);
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: #17120a;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      color: var(--muted);
+    }
+
+  .button.store {
+  background: rgba(198, 161, 91, 0.12);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+.button.store:hover {
+  background: var(--gold-light);
+  color: #17120a;
+}
+    section {
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .intro {
+      max-width: 760px;
+    }
+
+    .chapters {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .chapter {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.78);
+      border: 1px solid var(--line);
+    }
+
+    .chapter-number {
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: #8f887b;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .language-switcher {
+        top: 18px;
+        right: 20px;
+      }
+
+      header {
+        min-height: 82vh;
+        padding-top: 100px;
+      }
+
+      .chapters {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  
+    .language-switcher { position:absolute; top:24px; right:28px; z-index:10; display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:flex-end; max-width:min(680px, calc(100% - 56px)); font-family:Arial,sans-serif; font-size:.72rem; letter-spacing:.08em; }
+    .language-switcher a { color:var(--muted); text-decoration:none; }
+    .language-switcher a:hover, .language-switcher a.active { color:var(--gold-light); }
+    .language-switcher span { color:var(--muted); }
+    @media (max-width:760px) { .language-switcher { position:relative; top:auto; right:auto; margin:18px auto 0; padding:0 20px; justify-content:center; max-width:100%; } }
+
+  
+    /* Keep the root-page layout readable in every writing system. */
+    .chapters { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .chapter { min-width: 0; overflow-wrap: anywhere; }
+    h1 { overflow-wrap: anywhere; text-wrap: balance; }
+    .contact a { overflow-wrap: anywhere; }
+    .button { max-width: 100%; }
+    a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
+    html:lang(ja) body { font-family: 'Yu Mincho', 'Hiragino Mincho ProN', serif; line-height: 1.9; }
+    html:lang(zh) body { font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; line-height: 1.9; }
+    html:lang(hi) body { font-family: 'Nirmala UI', 'Noto Sans Devanagari', sans-serif; line-height: 1.9; }
+    html:lang(hi) h1, html:lang(hi) h2 { line-height: 1.4; }
+    html:lang(hi) .eyebrow { letter-spacing: normal; }
+    html:lang(ja) .subtitle, html:lang(zh) .subtitle, html:lang(hi) .subtitle { font-style: normal; }
+    @media (max-width: 760px) {
+      .chapters { grid-template-columns: minmax(0, 1fr); }
+      header { padding-top: 65px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .button, .language-switcher a { transition: none; }
+    }
+
+  </style>
 </head>
 
 <body>
-  <nav class="language-switcher" aria-label="Language selection"><a href="/">EN</a><span>|</span><a href="/nl/">NL</a><span>|</span><a href="/ES/">ES</a><span>|</span><a href="/DE/">DE</a><span>|</span><a href="/ZH/">中文</a><span>|</span><a href="/FR/">FR</a><span>|</span><a href="/IT/">IT</a><span>|</span><a href="/PT/">PT</a><span>|</span><a href="/RU/">RU</a><span>|</span><a href="/PL/">PL</a><span>|</span><a href="/JA/" class="active" aria-current="page">日本語</a><span>|</span><a href="/HI/">हिन्दी</a><span>|</span><a href="/AR/">العربية</a></nav>
+  <nav class="language-switcher" aria-label="言語選択"><a href="/">EN</a><span aria-hidden="true">|</span><a href="/nl/">NL</a><span aria-hidden="true">|</span><a href="/ES/">ES</a><span aria-hidden="true">|</span><a href="/DE/">DE</a><span aria-hidden="true">|</span><a href="/ZH/">中文</a><span aria-hidden="true">|</span><a href="/FR/">FR</a><span aria-hidden="true">|</span><a href="/IT/">IT</a><span aria-hidden="true">|</span><a href="/PT/">PT</a><span aria-hidden="true">|</span><a href="/RU/">RU</a><span aria-hidden="true">|</span><a href="/PL/">PL</a><span aria-hidden="true">|</span><a href="/JA/" class="active" aria-current="page">日本語</a><span aria-hidden="true">|</span><a href="/HI/">हिन्दी</a><span aria-hidden="true">|</span><a href="/AR/">العربية</a></nav>
+  
 
   <header>
     <div class="container">
-      <div class="eyebrow">ゴールド決定フレームワーク — ブック 1</div>
+      <div class="eyebrow">The Gold Decision Framework — 第1巻</div>
 
-      <h1>ゴールド投資家</h1>
+      <h1>金投資家</h1>
 
-      <p class="subtitle">独自のゴールド論文を構築する</p>
+      <p class="subtitle">自分なりの金投資の考え方を築く</p>
 
       <div class="ornament"></div>
 
-      <p class="intro" style="margin-left: auto; margin-right: auto;">
-        金やその他の貴金属を理解するための実践的な枠組み
-        市場構造、マクロ経済、地政学、リスクを通じて
-        管理。
-      </p>
+      <p class="intro" style="margin-left: auto; margin-right: auto;">市場構造、マクロ経済、地政学、リスク管理を通じて、金やその他の貴金属を理解するための実践的な枠組みです。</p>
 
-      <div class="button-row" aria-label="Main navigation">
-  <a class="button" href="#content">
-    フレームワークを探索する
-  </a>
+      <div class="button-row" aria-label="メインナビゲーション">
+  <a class="button" href="#content">枠組みを詳しく見る</a>
 
-  <a class="button secondary" href="/JA/japanese.html">
-    記事
-  </a>
+  <a class="button secondary" href="/JA/japanese.html">記事</a>
 
   <a class="button store" href="https://payhip.com/b/7GDAe"
    target="_blank"
   rel="noopener noreferrer"
->
-  ストア
-</a>
-<a class="button secondary" href="/license-order/">
-  ライセンスの注文
-</a>
+>ストア</a>
+<a class="button secondary" href="/license-order/" lang="en">License</a>
 
-<a class="button secondary" href="/license/">
-  ライセンスのアクティベーション
-</a>
+<a class="button secondary" href="/license/" lang="en">Activation</a>
 
 
-  <a class="button secondary" href="#contact">
-    お問い合わせ
-  </a>
+  <a class="button secondary" href="#contact">お問い合わせ</a>
 </div>
+    </div>
   </header>
 
   <main>
     <section id="content">
       <div class="container">
-        <h2>証拠に基づいた独自の論文を作成する</h2>
+        <h2>根拠に基づく自分の投資方針を築く</h2>
 
-        <p class="intro">
-          Gold Investor は読者に何をすべきかを伝えることを目的としたものではありません
-          買うか、いつ買うべきか。それは彼らがより良い質問をするのに役立ちます、
-          自ら研究を行い、責任を負います。
-          決断。
-        </p>
+        <p class="intro">このガイドは、何をいつ買うべきかを指示するものではありません。より良い問いを立て、自分で調べ、自らの判断に責任を持つための手助けをします。</p>
 
         <div class="chapters">
           <article class="chapter">
             <div class="chapter-number">01</div>
             <h3>実質金利</h3>
-            <p>
-              実質金利とドルがなぜ重要なのかを理解する
-              金の価格を表す指標。
-            </p>
+            <p>実質金利とドルが、金価格を考えるうえで重要な指標である理由を理解します。</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">02</div>
             <h3>地政学</h3>
-            <p>
-              安全な避難先の需要、地政学的ショック、構造的要因を調査する
-              中央銀行による購入。
-            </p>
+            <p>安全資産への需要、地政学的な衝撃、中央銀行による構造的な購入を検討します。</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">03</div>
-            <h3>供給と需要</h3>
-            <p>
-              投資需要、産業需要、ファンダメンタルズを見てください。
-              各金属のバランス。
-            </p>
+            <h3>需要と供給</h3>
+            <p>投資需要、産業需要、それぞれの金属の基本的な需給バランスを確認します。</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">04</div>
-            <h3>鉱山供給</h3>
-            <p>
-              生産コスト、AISC、および遅々として進まない採掘プロジェクトの仕組みを学ぶ
-              供給に影響を与える。
-            </p>
+            <h3>鉱山からの供給</h3>
+            <p>生産費用、操業維持に必要な総費用（AISC）、長期にわたる鉱山開発が供給に与える影響を学びます。</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">05</div>
-            <h3>楽器の選択</h3>
-            <p>
-              現物の所有権、ETF、鉱山株、先物を比較します。
-            </p>
+            <h3>投資手段の選択</h3>
+            <p>現物保有、上場投資信託（ETF）、鉱山株、先物を比較します。</p>
           </article>
 
           <article class="chapter">
             <div class="chapter-number">06–09</div>
-            <h3>購入までのタイミング</h3>
-            <p>
-              技術的なタイミング、リスク管理、論文の作成、および
-              正直な物理的な購入。
-            </p>
+            <h3>投資時期の判断から購入まで</h3>
+            <p>テクニカル分析、リスク管理、投資方針の策定を、公正な条件での現物購入につなげます。</p>
           </article>
         </div>
       </div>
@@ -136,38 +360,28 @@
       <div class="container">
         <h2>著者について</h2>
 
-        <p class="intro">WTI 原油と為替取引の経験を持つ Filip Allaert 氏
-          市場構造の視点から金にアプローチし、
-          マクロ経済とリスク管理。
-        </p>
+        <p class="intro">WTI原油と外国為替の取引経験を持つFilip Allaertは、市場構造、マクロ経済、リスク管理の観点から金を分析しています。</p>
       </div>
     </section>
 
     <section id="contact" class="contact">
       <div class="container">
-        <h2>連絡先</h2>
+        <h2>お問い合わせ</h2>
+
+        <p>「金投資家」またはThe Gold Decision Frameworkについて、ご質問はありますか。</p>
 
         <p>
-          The Gold Investor または The Gold Decision Framework についての質問がありますか?
+          <a href="mailto:DecisionFramework@telenet.be">DecisionFramework@telenet.be</a>
         </p>
 
         <p>
-          <a href="mailto:DecisionFramework@telenet.be">
-            DecisionFramework@telenet.be
-          </a>
-        </p>
-
-        <p>
-          <a href="https://decisionframework.online">
-            DecisionFramework.online
-          </a>
+          <a href="https://decisionframework.online">DecisionFramework.online</a>
         </p>
       </div>
     </section>
   </main>
 
-  <footer>
-    © 2026 フィリップ・アラート。無断転載を禁じます。
-  </footer>
+  <footer>© 2026 Filip Allaert. 無断転載を禁じます。</footer>
 </body>
 </html>
+
