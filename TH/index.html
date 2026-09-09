@@ -1,1 +1,407 @@
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>The Gold Investor | The Gold Decision Framework</title>
+
+  <meta
+    name="description"
+    content="The Gold Investor ช่วยให้ผู้อ่านสร้างมุมมองการลงทุนในทองคำของตนเองโดยอิงจากข้อมูลและหลักฐาน"
+  >
+
+  <style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+ 0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      z-index: 10;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+    }
+
+    .language-switcher a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .language-switcher a:hover,
+    .language-switcher a.active {
+      color: var(--gold-light);
+    }
+
+    .language-switcher span {
+      color: var(--muted);
+    }
+
+    header {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: 30px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-style: italic;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 1px solid var(--gold);
+      color: var(--text);
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: #17120a
+;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      color: var(--muted);
+    }
+
+  .button.store {
+  background: rgba(198, 161, 91, 0.12);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+.button.store:hover {
+  background: var(--gold-light);
+  color: #17120a
+;
+}
+    section {
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .intro {
+      max-width: 760px;
+    }
+
+    .chapters {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .chapter {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.78);
+      border: 1px solid var(--line);
+    }
+
+    .chapter-number {
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: #8f887b
+;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .language-switcher {
+        top: 18px;
+        right: 20px;
+      }
+
+      header {
+        min-height: 82vh;
+        padding-top: 100px;
+      }
+
+      .chapters {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  
+    .language-switcher { position:absolute; top:24px; right:28px; z-index:10; display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:flex-end; max-width:min(680px, calc(100% - 56px)); font-family:Arial,sans-serif; font-size:.72rem; letter-spacing:.08em; }
+    .language-switcher a { color:var(--muted); text-decoration:none; }
+    .language-switcher a:hover, .language-switcher a.active { color:var(--gold-light); }
+    .language-switcher span { color:var(--muted); }
+    @media (max-width:760px) { .language-switcher { position:relative; top:auto; right:auto; margin:18px auto 0; padding:0 20px; justify-content:center; max-width:100%; } }
+
+  </style>
+</head>
+
+<body>
+  <nav class="language-switcher" aria-label="เลือกภาษา"><a href="/">EN</a><span>|</span><a href="/nl/">NL</a><span>|</span><a href="/ES/">ES</a><span>|</span><a href="/DE/">DE</a><span>|</span><a href="/ZH/">中文</a><span>|</span><a href="/FR/">FR</a><span>|</span><a href="/IT/">IT</a><span>|</span><a href="/PT/">PT</a><span>|</span><a href="/RU/">RU</a><span>|</span><a href="/PL/">PL</a><span>|</span><a href="/JA/">日本語</a><span>|</span><a href="/HI/">हिन्दी</a><span>|</span><a href="/AR/">العربية</a><span>|</span><a href="/TH/" class="active" aria-current="page">ไทย</a></nav>
+
+  <header>
+    <div class="container">
+      <div class="eyebrow">The Gold Decision Framework — เล่ม 1</div>
+
+      <h1>The Gold Investor</h1>
+
+      <p class="subtitle">สร้างมุมมองการลงทุนในทองคำของคุณเองอย่างเป็นระบบ</p>
+
+      <div class="ornament"></div>
+
+      <p class="intro" style="margin-left: auto; margin-right: auto;">
+        กรอบการตัดสินใจที่นำไปใช้ได้จริง เพื่อทำความเข้าใจทองคำและโลหะมีค่าอื่น ๆ ผ่านโครงสร้างตลาด เศรษฐศาสตร์มหภาค ภูมิรัฐศาสตร์ และการบริหารความเสี่ยง
+      </p>
+
+      <div class="button-row" aria-label="เมนูหลัก">
+  <a class="button" href="#content">
+    สำรวจกรอบการตัดสินใจ
+  </a>
+
+  <a class="button secondary" href="/TH/article.html">
+    บทความ
+  </a>
+
+  <a class="button store" href="https://payhip.com/b/7GDAe"
+   target="_blank"
+  rel="noopener noreferrer"
+>
+  ร้านค้า
+</a>
+<a class="button secondary" href="/license-order/">
+  ใบอนุญาต
+</a>
+
+<a class="button secondary" href="/license/">
+  เปิดใช้งาน
+</a>
+
+
+  <a class="button secondary" href="#contact">
+    ติดต่อ
+  </a>
+</div>
+  </header>
+
+  <main>
+    <section id="content">
+      <div class="container">
+        <h2>สร้างมุมมองการลงทุนของคุณเองบนพื้นฐานของข้อมูลและหลักฐาน</h2>
+
+        <p class="intro">
+          The Gold Investor ไม่ได้มีจุดประสงค์เพื่อบอกผู้อ่านว่าควรซื้ออะไรหรือซื้อเมื่อใด แต่ช่วยให้ผู้อ่านตั้งคำถามได้ดีขึ้น ศึกษาค้นคว้าด้วยตนเอง และรับผิดชอบต่อการตัดสินใจของตนเอง
+        </p>
+
+        <div class="chapters">
+          <article class="chapter">
+            <div class="chapter-number">01</div>
+            <h3>อัตราดอกเบี้ยที่แท้จริง</h3>
+            <p>
+              ทำความเข้าใจว่าเหตุใดอัตราดอกเบี้ยที่แท้จริงและค่าเงินดอลลาร์สหรัฐจึงเป็นตัวชี้วัดสำคัญสำหรับราคาทองคำ
+            </p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">02</div>
+            <h3>ภูมิรัฐศาสตร์</h3>
+            <p>
+              วิเคราะห์ความต้องการสินทรัพย์ปลอดภัย แรงกระทบจากเหตุการณ์ทางภูมิรัฐศาสตร์ และการซื้อทองคำของธนาคารกลางที่ขับเคลื่อนด้วยปัจจัยเชิงโครงสร้าง
+            </p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">03</div>
+            <h3>อุปสงค์และอุปทาน</h3>
+            <p>
+              พิจารณาความต้องการเพื่อการลงทุน ความต้องการจากภาคอุตสาหกรรม และสมดุลพื้นฐานระหว่างอุปสงค์กับอุปทานของโลหะแต่ละชนิด
+            </p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">04</div>
+            <h3>อุปทานจากการทำเหมือง</h3>
+            <p>
+              เรียนรู้ว่าต้นทุนการผลิต ต้นทุนรวมเพื่อรักษาระดับการผลิต (AISC) และโครงการเหมืองที่ใช้เวลาพัฒนายาวนานส่งผลต่ออุปทานอย่างไร
+            </p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">05</div>
+            <h3>การเลือกเครื่องมือการลงทุน</h3>
+            <p>
+              เปรียบเทียบการถือครองโลหะมีค่าจริง กองทุน ETF หุ้นบริษัทเหมือง และสัญญาซื้อขายล่วงหน้า
+            </p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">06–09</div>
+            <h3>จากการหาจังหวะลงทุนสู่การซื้อ</h3>
+            <p>
+              เชื่อมโยงการหาจังหวะลงทุนด้วยการวิเคราะห์ทางเทคนิค การบริหารความเสี่ยง การสร้างมุมมองการลงทุน และการซื้อโลหะมีค่าจริงอย่างโปร่งใสและเป็นธรรม
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>เกี่ยวกับผู้เขียน</h2>
+
+        <p class="intro">
+          ด้วยประสบการณ์ด้านการซื้อขายน้ำมันดิบ WTI และเงินตราต่างประเทศ Filip Allaert วิเคราะห์ทองคำผ่านมุมมองด้านโครงสร้างตลาด เศรษฐศาสตร์มหภาค และการบริหารความเสี่ยง
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>ติดต่อ</h2>
+
+        <p>
+          หากมีคำถามเกี่ยวกับ The Gold Investor หรือ The Gold Decision Framework สามารถติดต่อได้ที่
+        </p>
+
+        <p>
+          <a href="mailto:DecisionFramework@telenet.be">
+            DecisionFramework@telenet.be
+          </a>
+        </p>
+
+        <p>
+          <a href="https://decisionframework.online">
+            DecisionFramework.online
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Filip Allaert. สงวนลิขสิทธิ์
+  </footer>
+</body>
+</html>
