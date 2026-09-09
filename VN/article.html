@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vàng đã vượt trái phiếu Kho bạc Mỹ | Decision Framework</title>
+
+  <meta
+    name="description"
+    content="Vì sao các ngân hàng trung ương mua vàng, giảm nắm giữ trái phiếu Kho bạc Mỹ và sự dịch chuyển này có thể mang ý nghĩa gì đối với người tiết kiệm và nhà đầu tư cá nhân."
+  >
+
+  <style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+      --dark-text: #17120a
+;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+  0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--gold-light);
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .site-name {
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .site-links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .article-header {
+      padding: 110px 0 80px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .article-meta {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-page {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 290px;
+      align-items: start;
+      gap: 60px;
+      padding: 70px 0 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      margin: 70px 0 18px;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: var(--gold-light);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .article-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0 0 42px;
+      padding: 24px;
+      background: rgba(8, 161, 91, 0.1);
+      border: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 34px 0;
+    }
+
+    .evidence-card {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      margin: 34px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .comparison-value {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .comparison-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .comparison-arrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+    }
+
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px;
+      background: rgba(8, 161, 91, 0.1);
+      border-left: 3px solid var(--gold);
+      color: var(--gold-light);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .article-cta {
+      position: sticky;
+      top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .article-cta h2 {
+      margin: 0 0 16px;
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .article-cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: var(--dark-text);
+    }
+
+    .button.store {
+      background: rgba(8, 161, 91, 0.14);
+      color: var(--gold-light);
+    }
+
+    .button.store:hover {
+      background: var(--gold-light);
+      color: var(--dark-text);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: #8f887b
+;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .article-page {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .article-cta {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 760px);
+      }
+
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-links {
+        justify-content: flex-start;
+      }
+
+      .article-header {
+        padding: 80px 0 60px;
+      }
+
+      .article-page {
+        padding: 55px 0 75px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .comparison-arrow {
+        transform: rotate(90deg);
+      }
+
+      .stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="site-nav container" aria-label="Điều hướng chính">
+    <a class="site-name" href="/VN/">
+      DecisionFramework.online
+    </a>
+
+    <div class="site-links">
+      <a href="/VN/">Khung tư duy</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank"
+  rel="noopener noreferrer">Cửa hàng</a>
+      <a href="/license-order/">Giấy phép</a>
+      <a href="/license/">Kích hoạt</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="eyebrow">Nhà đầu tư vàng · Phân tích</div>
+
+      <h1>Vàng đã vượt trái phiếu Kho bạc Mỹ</h1>
+
+      <p class="subtitle">
+        Tài khoản tiết kiệm của bạn trả lãi 0,4%. Các ngân hàng trung ương trên thế giới đang mua vàng. Họ biết điều mà bạn chưa biết.
+      </p>
+
+      <div class="ornament"></div>
+
+      <p class="article-meta">
+        The Gold Decision Framework · Phân tích dựa trên bằng chứng
+      </p>
+    </div>
+  </header>
+
+  <main class="article-page container">
+
+    <article class="article-content">
+
+      <div class="stat-card">
+        <div class="stat-number">0,39%</div>
+
+        <div class="stat-label">
+          Lãi suất tiết kiệm bình quân tại Mỹ
+        </div>
+      </div>
+
+      <p class="lead">
+        Hãy xem sao kê ngân hàng của bạn.
+      </p>
+
+      <p>
+        Lãi suất tiết kiệm bình quân tại Mỹ là 0,39%. Ngay cả những tài khoản lãi suất cao tốt nhất trên thị trường cũng chỉ đạt khoảng 4%, và đó là trước khi thuế và lạm phát bào mòn lợi nhuận.
+      </p>
+
+      <p>
+        Bây giờ hãy xem các tổ chức thực sự quản lý nguồn dự trữ của thế giới đang làm gì với tiền của họ.
+      </p>
+
+      <p>
+        Họ không gửi tiền vào tài khoản tiết kiệm. Họ đang mua vàng với tốc độ chưa từng thấy trong hơn một thập kỷ.
+      </p>
+
+      <h2>Có điều gì đó đã thay đổi</h2>
+
+      <p>
+        Trong phần lớn 30 năm qua, trái phiếu Kho bạc Mỹ là lựa chọn mặc định cho tài sản dự trữ “an toàn” của các ngân hàng trung ương trên toàn thế giới. Không hấp dẫn, nhưng thanh khoản cao và đáng tin cậy.
+      </p>
+
+      <p>
+        Điều đó đang thay đổi.
+      </p>
+
+      <p>
+        Theo báo cáo đánh giá năm 2025 của chính Ngân hàng Trung ương châu Âu, vàng đã vượt đồng euro để trở thành tài sản dự trữ lớn thứ hai toàn cầu, chỉ sau đồng đô la Mỹ. Trong vài năm gần đây, mỗi năm các ngân hàng trung ương đều mua hơn 1.000 tấn vàng, cao hơn gấp đôi tốc độ của thập kỷ trước.
+      </p>
+
+      <p>
+        Các nguồn theo dõi khác còn đi xa hơn: một số phân tích hiện cho thấy, lần đầu tiên kể từ năm 1996, tổng lượng vàng do các ngân hàng trung ương ngoài Mỹ nắm giữ đã vượt lượng trái phiếu Kho bạc Mỹ mà họ sở hữu.
+      </p>
+
+      <p>
+        Đây không phải là một ngân hàng đơn lẻ đặt cược. Đây là xu hướng rộng khắp, kéo dài nhiều năm tại hàng chục quốc gia.
+      </p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <strong>Tín hiệu 01</strong>
+          <p>
+            Các ngân hàng trung ương đang mua vàng một cách có hệ thống và giảm phụ thuộc vào trái phiếu Kho bạc Mỹ như lựa chọn mặc định cho tài sản an toàn.
+          </p>
+        </div>
+
+        <div class="evidence-card">
+          <strong>Tín hiệu 02</strong>
+          <p>
+            Trong một diễn biến riêng biệt, các tổ chức lớn cũng đang giảm mức đầu tư vào nợ chính phủ Mỹ.
+          </p>
+        </div>
+      </div>
+
+      <h2>Không chỉ có các ngân hàng trung ương</h2>
+
+      <p>
+        Các quỹ hưu trí châu Âu đang âm thầm làm điều tương tự với danh mục trái phiếu của mình.
+      </p>
+
+      <p>
+        ABP, quỹ hưu trí lớn nhất Hà Lan, quản lý tiền hưu trí cho khoảng ba triệu giáo viên, cảnh sát và công chức, đã giảm lượng trái phiếu Kho bạc Mỹ nắm giữ từ khoảng 29 tỷ euro xuống còn 19 tỷ euro chỉ trong sáu tháng của năm ngoái.
+      </p>
+
+      <div class="comparison">
+        <div>
+          <div class="comparison-value">29 tỷ €</div>
+          <div class="comparison-label">Giá trị trái phiếu Kho bạc Mỹ nắm giữ trước đó</div>
+        </div>
+
+        <div class="comparison-arrow">→</div>
+
+        <div>
+          <div class="comparison-value">19 tỷ €</div>
+          <div class="comparison-label">Giá trị trái phiếu Kho bạc Mỹ nắm giữ sau đó</div>
+        </div>
+      </div>
+
+      <p>
+        Đó là mức cắt giảm đầu tư vào nợ chính phủ Mỹ trị giá mười tỷ euro đã thực sự diễn ra và được công bố, được Bloomberg đưa tin vào tháng 1 năm 2026.
+      </p>
+
+      <p>
+        Cần nói chính xác về những gì chúng ta thực sự biết: báo cáo của ABP không nói rằng số tiền đó được chuyển sang vàng. Nó có thể đã được đầu tư vào trái phiếu châu Âu, các tài sản thu nhập cố định khác hoặc một nơi hoàn toàn khác.
+      </p>
+
+      <p>
+        Điều chúng ta có thể khẳng định chắc chắn là một trong những quỹ hưu trí thận trọng nhất và chịu sự giám sát chặt chẽ nhất châu Âu đã quyết định rằng nắm giữ ít trái phiếu Kho bạc Mỹ hơn là bước đi an toàn hơn. Chỉ riêng điều đó cũng đáng để suy ngẫm.
+      </p>
+
+      <h2>Hai tín hiệu riêng biệt, cùng một hướng</h2>
+
+      <p>
+        Như vậy, có hai diễn biến khác nhau ở đây, và điều quan trọng là không đánh đồng chúng:
+      </p>
+
+      <ol>
+        <li>
+          Các ngân hàng trung ương đang mua vàng một cách có hệ thống, giảm phụ thuộc vào trái phiếu Kho bạc Mỹ như tài sản an toàn mặc định. Đây là xu hướng đã được xác nhận, diễn ra liên tục trong nhiều năm và được Ngân hàng Trung ương châu Âu (ECB) cùng Hội đồng Vàng Thế giới ghi nhận.
+        </li>
+
+        <li>
+          Trong một diễn biến riêng biệt, các quỹ hưu trí đang giảm mức đầu tư vào trái phiếu Kho bạc Mỹ, với trường hợp ABP đã được xác nhận cụ thể. Lý do chưa được công bố đầy đủ, nhưng cho thấy cùng một mối lo căn bản: quá nhiều của cải quốc gia phụ thuộc vào nợ của một nước và sự ổn định của một đồng tiền.
+        </li>
+      </ol>
+
+      <p>
+        Khác tổ chức, khác cách thực hiện, nhưng cùng một hướng đi.
+      </p>
+
+      <h2>Vì sao điều này thực sự quan trọng với bạn</h2>
+
+      <p>
+        Một ngân hàng trung ương có thể giao dịch cả nghìn tấn vàng trong một năm. Bạn không thể, và cũng không cần làm vậy.
+      </p>
+
+      <div class="pull-quote">
+        Bao nhiêu trong số tiền bạn đã tiết kiệm phụ thuộc hoàn toàn vào các tổ chức, đồng tiền và chính sách mà bạn không có chút quyền kiểm soát nào?
+      </div>
+
+      <p>
+        Đó không phải là thủ thuật ngôn từ để bán vàng cho bạn. Đầu tư vàng không phải là giao dịch không rủi ro: vàng không trả lãi, giá có thể giảm, và thị trường vàng vật chất có nhiều cách khiến bạn âm thầm trả quá cao hơn phần lớn mọi người nhận ra.
+      </p>
+
+      <p>
+        Một đồng vàng và một thỏi vàng có cùng hàm lượng vàng có thể có mức phụ trội rất khác nhau. Giá giao ngay, biên lợi nhuận của người bán, lưu trữ, điều kiện mua lại: không điều nào rõ ràng cho đến khi bạn biết cần xem xét những gì.
+      </p>
+
+      <p>
+        Và đó chính là phần không ai giải thích trước khi yêu cầu bạn nhấp vào “mua”.
+      </p>
+
+      <h2>Trước khi mua bất cứ thứ gì, hãy hiểu mình đang mua gì</h2>
+
+      <p>
+        Các tổ chức trên không thức dậy một ngày rồi chuyển tiền vào vàng một cách mù quáng. Họ có các nhóm nghiên cứu chuyên tìm hiểu tài sản mình nắm giữ, chi phí và cách tài sản đó vận động.
+      </p>
+
+      <p>
+        Bạn có thể đạt được 90% mức độ hiểu biết đó trong thời gian ngắn hơn rất nhiều, nhưng chỉ khi có người thực sự hướng dẫn từng bước thay vì chỉ bảo bạn rằng “vàng tốt, hãy mua vàng”.
+      </p>
+
+      <p>
+        Đó là điều cuốn hướng dẫn này làm. Không phải lời chào hàng khoác áo kiến thức, mà là phân tích thực chất về cách thị trường kim loại quý vận hành: điều gì thúc đẩy giá vàng, mức phụ trội và chênh lệch giá mua–bán âm thầm quyết định liệu bạn có mua được với giá hợp lý hay không, điều gì phân biệt một giao dịch mua vàng đầu tư đúng nghĩa với món đồ sưu tầm bị định giá quá cao, và cách thực sự so sánh các nhà cung cấp thay vì phỏng đoán.
+      </p>
+
+      <p>
+        Các ngân hàng trung ương đã hành động. Bạn có hành động hay không, và bằng cách nào, là quyết định đáng được đưa ra khi đã hiểu rõ mọi mặt.
+      </p>
+
+      <a class="back-link" href="/VN/">
+        ← Quay lại Nhà đầu tư vàng
+      </a>
+
+    </article>
+
+    <aside class="article-cta">
+      <h2>Hiểu về vàng trước khi mua</h2>
+
+      <p>
+        Đọc toàn bộ cuốn hướng dẫn Nhà đầu tư vàng để hiểu rõ cách định giá, mức phụ trội, chênh lệch giá mua–bán, lưu trữ và điều kiện mua lại trong thực tế.
+      </p>
+
+      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">
+        Mua bản PDF — 38 €
+      </a>
+    </aside>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Filip Allaert. Bảo lưu mọi quyền.
+    </div>
+  </footer>
+
+</body>
+</html>
