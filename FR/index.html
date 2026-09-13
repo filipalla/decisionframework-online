@@ -271,6 +271,11 @@
       .button, .language-switcher a { transition: none; }
     }
 
+  
+    .community-links { margin: 24px auto 0; text-align: center; }
+    .community-links nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .community-links .community-language { margin: 10px 0 0; font-size: 0.85rem; color: var(--muted); }
+    .community-links a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
   </style>
 </head>
 
@@ -306,6 +311,14 @@
 
   <a class="button secondary" href="#contact">Contactez-nous</a>
 </div>
+    <div class="community-links">
+      <nav aria-label="Insights &amp; Newsletter">
+        <a class="button secondary" href="../insights-and-partners.html#insights">Analyses</a>
+        <a class="button secondary" href="../insights-and-partners.html#newsletter">Newsletter</a>
+      </nav>
+      <p class="community-language">Contenu en anglais</p>
+    </div>
+
     </div>
   </header>
 
