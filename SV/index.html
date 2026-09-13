@@ -257,6 +257,11 @@
     .language-switcher span { color:var(--muted); }
     @media (max-width:760px) { .language-switcher { position:relative; top:auto; right:auto; margin:18px auto 0; padding:0 20px; justify-content:center; max-width:100%; } }
 
+  
+    .community-links { margin: 24px auto 0; text-align: center; }
+    .community-links nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .community-links .community-language { margin: 10px 0 0; font-size: 0.85rem; color: var(--muted); }
+    .community-links a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
   </style>
 </head>
 
@@ -304,6 +309,14 @@
     Kontakt
   </a>
 </div>
+    <div class="community-links">
+      <nav aria-label="Insights &amp; Newsletter">
+        <a class="button secondary" href="../insights-and-partners.html#insights">Insikter</a>
+        <a class="button secondary" href="../insights-and-partners.html#newsletter">Nyhetsbrev</a>
+      </nav>
+      <p class="community-language">Innehåll på engelska</p>
+    </div>
+
   </header>
 
   <main>
