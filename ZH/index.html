@@ -271,6 +271,11 @@
       .button, .language-switcher a { transition: none; }
     }
 
+  
+    .community-links { margin: 24px auto 0; text-align: center; }
+    .community-links nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+    .community-links .community-language { margin: 10px 0 0; font-size: 0.85rem; color: var(--muted); }
+    .community-links a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
   </style>
 </head>
 
@@ -306,6 +311,14 @@
 
   <a class="button secondary" href="#contact">联系我们</a>
 </div>
+    <div class="community-links">
+      <nav aria-label="Insights &amp; Newsletter">
+        <a class="button secondary" href="../insights-and-partners.html#insights">洞察</a>
+        <a class="button secondary" href="../insights-and-partners.html#newsletter">电子简报</a>
+      </nav>
+      <p class="community-language">内容为英文</p>
+    </div>
+
     </div>
   </header>
 
