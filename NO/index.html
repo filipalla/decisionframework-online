@@ -1,1 +1,465 @@
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="nb-NO"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Gullinvestoren | The Gold Decision Framework</title>
+
+  <meta name="description" content="Gullinvestoren hjelper deg med å utvikle din egen evidensbaserte investeringstese for gull.">
+
+<style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+ 0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .language-switcher {
+      position: absolute;
+      top: 24px;
+      right: 28px;
+      z-index: 10;
+      display: flex;
+      gap: 9px;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+    }
+
+    .language-switcher a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .language-switcher a:hover,
+    .language-switcher a.active {
+      color: var(--gold-light);
+    }
+
+    .language-switcher span {
+      color: var(--muted);
+    }
+
+    header {
+      min-height: 92vh;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 0.8rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: 30px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2vw, 1.6rem);
+      font-style: italic;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 38px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 24px;
+      border: 1px solid var(--gold);
+      color: var(--text);
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: #17120a
+;
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      color: var(--muted);
+    }
+
+  .button.store {
+  background: rgba(198, 161, 91, 0.12);
+  border-color: var(--gold-light);
+  color: var(--gold-light);
+}
+
+.button.store:hover {
+  background: var(--gold-light);
+  color: #17120a
+;
+}
+    section {
+      padding: 90px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    h2 {
+      margin-top: 0;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 400;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-size: 1.35rem;
+      font-weight: 400;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .intro {
+      max-width: 760px;
+    }
+
+    .chapters {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 36px;
+    }
+
+    .chapter {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.78);
+      border: 1px solid var(--line);
+    }
+
+    .chapter-number {
+      color: var(--gold);
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact a {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      color: #8f887b
+;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .language-switcher {
+        top: 18px;
+        right: 20px;
+      }
+
+      header {
+        min-height: 82vh;
+        padding-top: 100px;
+      }
+
+      .chapters {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+    }
+  
+    .language-switcher { position:absolute; top:24px; right:28px; z-index:10; display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:flex-end; max-width:min(680px, calc(100% - 56px)); font-family:Arial,sans-serif; font-size:.72rem; letter-spacing:.08em; }
+    .language-switcher a { color:var(--muted); text-decoration:none; }
+    .language-switcher a:hover, .language-switcher a.active { color:var(--gold-light); }
+    .language-switcher span { color:var(--muted); }
+    @media (max-width:760px) { .language-switcher { position:relative; top:auto; right:auto; margin:18px auto 0; padding:0 20px; justify-content:center; max-width:100%; } }
+
+  .choice-boxes {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 24px;
+  text-align: left;
+}
+
+.choice-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 100px;
+  padding: 24px;
+  background: rgba(27, 27, 29, 0.78);
+  border: 1px solid var(--line);
+  color: var(--gold-light);
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.choice-box:hover {
+  background: rgba(198, 161, 91, 0.12);
+  border-color: var(--gold);
+}
+
+.choice-box:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 4px;
+}
+
+.free-preview {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+
+.pdf-viewer {
+  display: block;
+  width: 100%;
+  height: 800px;
+  border: 1px solid var(--line);
+  background: #f6f0e3;
+}
+
+@media (max-width: 900px) {
+  .choice-boxes {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .pdf-viewer {
+    height: 580px;
+  }
+}
+
+@media (max-width: 480px) {
+  .choice-boxes {
+    grid-template-columns: 1fr;
+  }
+
+  .choice-box {
+    min-height: 76px;
+  }
+}
+</style>
+<style>.language-announcement{margin:26px auto 8px;max-width:850px}.language-announcement p{margin:0;color:var(--gold-light);font-size:clamp(1.65rem,3vw,2.35rem);font-weight:600;line-height:1.25}.language-announcement a{font:14px/1.6 Arial,sans-serif;color:var(--muted);text-underline-offset:4px;display:inline-block;margin-top:10px}.language-switcher{max-width:min(880px,calc(100% - 56px));font-size:.8rem}.chapter,.choice-box{min-width:0;overflow-wrap:break-word}.pdf-viewer{display:block}a:focus-visible{outline:2px solid var(--gold-light);outline-offset:5px}@media(max-width:760px){header{padding-top:55px}.language-switcher{max-width:100%}.language-announcement{margin-top:22px}.button-row{gap:12px}}</style></head>
+
+<body>
+  <nav class="language-switcher" aria-label="Velg språk" id="languages"><a href="/" class="">EN</a><span>|</span><a href="/nl/">NL</a><span>|</span><a href="/ES/">ES</a><span>|</span><a href="/DE/">DE</a><span>|</span><a href="/ZH/">中文</a><span>|</span><a href="/FR/">FR</a><span>|</span><a href="/IT/">IT</a><span>|</span><a href="/PT/">PT</a><span>|</span><a href="/RU/">RU</a><span>|</span><a href="/PL/">PL</a><span>|</span><a href="/JA/">日本語</a><span>|</span><a href="/HI/">हिन्दी</a><span>|</span><a href="/AR/">العربية</a><span>|</span><a href="/TH/">ไทย</a><span>|</span><a href="/SV/">SV</a><span>|</span><a href="/TR/">TR</a><span>|</span><a href="/ID/">ID</a><span>|</span><a href="/VN/">Tiếng Việt</a><span>|</span><a href="/KR/">한국어</a><span>|</span><a href="/MS/">MS</a><span>|</span><a href="/NO/" title="Norsk bokmål" hreflang="nb" class="active" aria-current="page">NO</a><span>|</span><a href="/DA/" title="Dansk" hreflang="da">DA</a></nav>
+
+  <header>
+    <div class="container">
+      <div class="eyebrow">The Gold Decision Framework — Bok 1</div>
+
+      <h1>Gullinvestoren</h1>
+
+      <p class="subtitle">Utvikle din egen investeringstese for gull</p><div class="language-announcement"><p>Les boken på 22 språk</p><a href="#languages">Velg språket ditt ovenfor.</a></div>
+
+      <div class="ornament"></div>
+
+      <p class="intro" style="margin-left: auto; margin-right: auto;">Et praktisk rammeverk for å forstå gull og andre edelmetaller gjennom markedsstruktur, makroøkonomi, geopolitikk og risikostyring.</p>
+
+      <div class="button-row" aria-label="Hovednavigasjon">
+  <a class="button" href="#content">Utforsk rammeverket</a>
+
+  <a class="button secondary" href="/NO/article.html">Artikkel</a>
+
+  <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Nettbutikk</a>
+<a class="button secondary" href="/license-order/">Lisens</a>
+
+<a class="button secondary" href="/license/">Aktivering</a>
+
+
+  <a class="button secondary" href="#contact">Kontakt</a>
+</div>
+<nav class="choice-boxes" aria-label="Partnere og innsikt">
+          <a class="choice-box" href="/insights-and-partners.html#global">Globale partnere <span aria-hidden="true">↗</span></a>
+          <a class="choice-box" href="/insights-and-partners.html#regional">Regionale partnere <span aria-hidden="true">↗</span></a>
+          <a class="choice-box" href="/insights-and-partners.html#insights">Innsikt <span aria-hidden="true">↗</span></a>
+          <a class="choice-box" href="/insights-and-partners.html#newsletter">Nyhetsbrev <span aria-hidden="true">↗</span></a>
+        </nav>
+</div>
+
+      
+      
+  </header>
+
+  <main>
+    <section id="content">
+      <div class="container">
+        <h2>Utvikle din egen evidensbaserte investeringstese</h2>
+
+        <p class="intro">Gullinvestoren er ikke ment å fortelle leserne hva de skal kjøpe, eller når de skal kjøpe det. Den hjelper dem med å stille bedre spørsmål, gjøre egne undersøkelser og ta ansvar for sine beslutninger.</p>
+
+        <div class="chapters">
+          <article class="chapter">
+            <div class="chapter-number">01</div>
+            <h3>Realrenter</h3>
+            <p>Forstå hvorfor realrenter og dollaren er viktige indikatorer for gullprisen.</p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">02</div>
+            <h3>Geopolitikk</h3>
+            <p>Undersøk etterspørsel etter trygge havner, geopolitiske sjokk og sentralbankenes strukturelle kjøp.</p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">03</div>
+            <h3>Tilbud og etterspørsel</h3>
+            <p>Se på investeringsetterspørsel, industriell etterspørsel og den grunnleggende balansen for hvert metall.</p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">04</div>
+            <h3>Gruvetilbud</h3>
+            <p>Lær hvordan produksjonskostnader, AISC og gruveprosjekter med lang ledetid påvirker tilbudet.</p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">05</div>
+            <h3>Valg av instrument</h3>
+            <p>Sammenlign fysisk eierskap, ETF-er, gruveaksjer og futures.</p>
+          </article>
+
+          <article class="chapter">
+            <div class="chapter-number">06–09</div>
+            <h3>Fra timing til kjøp</h3>
+            <p>Kombiner teknisk timing, risikostyring, utvikling av en tese og kjøp av fysisk metall på rimelige vilkår.</p>
+          </article>
+        </div>
+<div class="free-preview" id="free-preview">
+  <h2>Les den gratis norske smakebiten</h2>
+
+  <p>Utforsk de første sidene og hele innholdsfortegnelsen, inkludert vedlegg A–F.</p>
+
+  <iframe class="pdf-viewer" src="the-gold-investor-no-preview.pdf#view=FitH" title="Gullinvestoren — Les den gratis norske smakebiten" loading="lazy">
+  </iframe>
+
+  <p>
+    <a class="button" href="the-gold-investor-no-preview.pdf" target="_blank" rel="noopener">Åpne PDF-smakebiten</a>
+
+    <a class="button secondary" href="the-gold-investor-no-preview.pdf" download="">Last ned gratis smakebit</a>
+  </p>
+</div>
+      </div>
+  
+    
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>Om forfatteren</h2>
+
+        <p class="intro">Med bakgrunn fra handel med WTI-råolje og valuta analyserer Filip Allaert gull ut fra markedsstruktur, makroøkonomi og risikostyring.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Kontakt</h2>
+
+        <p>Spørsmål om Gullinvestoren eller The Gold Decision Framework?</p>
+
+        <p>
+          <a href="mailto:DecisionFramework@telenet.be">
+            DecisionFramework@telenet.be
+          </a>
+        </p>
+
+        <p>
+          <a href="https://decisionframework.online">
+            DecisionFramework.online
+          </a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Filip Allaert. Med enerett.</footer>
+
+<!-- Cloudflare Web Analytics -->
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;:&quot;ae803409637b4e77b5373cc93b16429c&quot;}">
+</script>
+<!-- End Cloudflare Web Analytics -->
+
+</body></html>
