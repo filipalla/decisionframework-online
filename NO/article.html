@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<!DOCTYPE html><html lang="nb-NO"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gull har passert amerikanske statspapirer | Decision Framework</title>
+
+  <meta name="description" content="Hvorfor sentralbanker kjøper gull og reduserer eksponeringen mot amerikanske statspapirer, og hva denne endringen kan bety for private sparere og investorer.">
+
+  <style>
+    :root {
+      --background: #111214
+;
+      --surface: #1b1b1d
+;
+      --gold: #c6a15b
+;
+      --gold-light: #e2c887
+;
+      --text: #f1eadb
+;
+      --muted: #b8b0a1
+;
+      --line: rgba(198, 161, 91, 0.45);
+      --dark-text: #17120a
+;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c
+  0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.75;
+    }
+
+    a {
+      color: var(--gold-light);
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: Arial, sans-serif;
+    }
+
+    .site-name {
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .site-links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .article-header {
+      padding: 110px 0 80px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text);
+      font-size: clamp(3rem, 8vw, 6.4rem);
+      font-weight: 400;
+      line-height: 1.05;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .article-meta {
+      margin: 0;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-page {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 290px;
+      align-items: start;
+      gap: 60px;
+      padding: 70px 0 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      margin: 70px 0 18px;
+      color: var(--gold-light);
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-weight: 400;
+      line-height: 1.15;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: var(--gold-light);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .article-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0 0 42px;
+      padding: 24px;
+      background: rgba(198, 161, 91, 0.1);
+      border: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 34px 0;
+    }
+
+    .evidence-card {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      margin: 34px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .comparison-value {
+      color: var(--gold-light);
+      font-family: Arial, sans-serif;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .comparison-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+    }
+
+    .comparison-arrow {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+    }
+
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px;
+      background: rgba(198, 161, 91, 0.1);
+      border-left: 3px solid var(--gold);
+      color: var(--gold-light);
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-style: italic;
+      line-height: 1.4;
+    }
+
+    .article-cta {
+      position: sticky;
+      top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .article-cta h2 {
+      margin: 0 0 16px;
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.2;
+    }
+
+    .article-cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: #111214;
+    }
+
+    .button.store {
+      background: rgba(198, 161, 91, 0.14);
+      color: var(--gold-light);
+    }
+
+    .button.store:hover {
+      background: var(--gold-light);
+      color: #111214;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: #8f887b
+;
+      font-family: Arial, sans-serif;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .article-page {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .article-cta {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 760px);
+      }
+
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-links {
+        justify-content: flex-start;
+      }
+
+      .article-header {
+        padding: 80px 0 60px;
+      }
+
+      .article-page {
+        padding: 55px 0 75px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .comparison-arrow {
+        transform: rotate(90deg);
+      }
+
+      .stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  
+.article-content,.article-cta{min-width:0}.article-content{overflow-wrap:break-word}.comparison-value{font-size:clamp(1.7rem,3.4vw,2.6rem)}a:focus-visible{outline:2px solid var(--gold-light);outline-offset:5px}
+</style>
+</head>
+
+<body>
+
+  <nav class="site-nav container" aria-label="Hovednavigasjon">
+    <a class="site-name" href="/NO/">
+      DecisionFramework.online
+    </a>
+
+    <div class="site-links">
+      <a href="/NO/">Rammeverket</a>
+      <a href="/NO/article.html" aria-current="page">Artikkel</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Nettbutikk</a>
+      <a href="/NO/#contact">Kontakt</a>
+      <a href="/article.html" hreflang="en">EN</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="eyebrow">Gullinvestoren · Analyse</div>
+
+      <h1>Gull har passert amerikanske statspapirer</h1>
+
+      <p class="subtitle">Sparekontoen din gir 0,4 %. Verdens sentralbanker kjøper gull. De vet noe du ikke vet.</p>
+
+      <div class="ornament"></div>
+
+      <p class="article-meta">The Gold Decision Framework · Evidensbasert analyse</p>
+    </div>
+  </header>
+
+  <main class="article-page container">
+
+    <article class="article-content">
+
+      <div class="stat-card">
+        <div class="stat-number">0,39 %</div>
+
+        <div class="stat-label">Gjennomsnittlig sparerente i USA</div>
+      </div>
+
+      <p class="lead">Se på kontoutskriften din.</p>
+
+      <p>Den gjennomsnittlige sparerenten i USA er 0,39 %. Selv de beste høyrentekontoene på markedet stopper rundt 4 % — og det er før skatt og inflasjon spiser av avkastningen.</p>
+
+      <p>Se så på hva institusjonene som faktisk forvalter verdens reserver, gjør med pengene sine.</p>
+
+      <p>De setter dem ikke på sparekonto. De kjøper gull — i et tempo vi ikke har sett på over ti år.</p>
+
+      <h2>Noe har endret seg</h2>
+
+      <p>Gjennom mesteparten av de siste 30 årene var amerikanske statspapirer det selvfølgelige «trygge» reserveaktivumet for sentralbanker verden over. Kjedelige, likvide og pålitelige.</p>
+
+      <p>Det er i ferd med å endre seg.</p>
+
+      <p>Ifølge Den europeiske sentralbankens egen gjennomgang for 2025 har gull passert euroen som verdens nest største reserveaktivum, bare slått av amerikanske dollar. Sentralbankene kjøpte over 1 000 tonn gull årlig i hvert av de siste årene — mer enn dobbelt så mye som årstakten i det foregående tiåret.</p>
+
+      <p>Andre oversikter går lenger: flere analyser viser nå at utenlandske sentralbanker samlet for første gang siden 1996 eier mer gull enn amerikanske statspapirer.</p>
+
+      <p>Dette er ikke én bank som tar et veddemål. Det er et bredt mønster over flere år i dusinvis av land.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <strong>Signal 01</strong>
+          <p>Sentralbankene kjøper systematisk gull og reduserer avhengigheten av amerikanske statspapirer som det selvfølgelige trygge aktivumet.</p>
+        </div>
+
+        <div class="evidence-card">
+          <strong>Signal 02</strong>
+          <p>Store institusjoner reduserer separat eksponeringen mot amerikansk statsgjeld.</p>
+        </div>
+      </div>
+
+      <h2>Det er ikke bare sentralbankene</h2>
+
+      <p>Europas pensjonsfond gjør i det stille noe lignende med sine egne obligasjonsbeholdninger.</p>
+
+      <p>ABP, Nederlands største pensjonsfond — som forvalter pensjonspenger for rundt tre millioner lærere, politifolk og offentlig ansatte — reduserte beholdningen av amerikanske statspapirer fra rundt 29 milliarder euro til 19 milliarder euro på bare seks måneder i fjor.</p>
+
+      <div class="comparison">
+        <div>
+          <div class="comparison-value">29 mrd. €</div>
+          <div class="comparison-label">Tidligere beholdning av amerikanske statspapirer</div>
+        </div>
+
+        <div class="comparison-arrow">→</div>
+
+        <div>
+          <div class="comparison-value">19 mrd. €</div>
+          <div class="comparison-label">Senere beholdning av amerikanske statspapirer</div>
+        </div>
+      </div>
+
+      <p>Det er en faktisk, offentliggjort tilbaketrekning på ti milliarder euro fra amerikansk statsgjeld, omtalt av Bloomberg i januar 2026.</p>
+
+      <p>For å være presis om hva vi faktisk vet: ABPs egen rapportering sier ikke at pengene gikk til gull. De kan ha gått til europeiske obligasjoner, andre renteinvesteringer eller noe helt annet.</p>
+
+      <p>Det vi kan si med sikkerhet, er at et av Europas mest konservative og strengest regulerte pensjonsfond mente det var tryggere å eie færre amerikanske statspapirer. Bare det er verdt å stoppe opp ved.</p>
+
+      <h2>To separate signaler, én retning</h2>
+
+      <p>Her er det altså to forskjellige historier, og det er viktig at vi ikke blander dem sammen:</p>
+
+      <ol>
+        <li>Sentralbankene kjøper systematisk gull og reduserer avhengigheten av amerikanske statspapirer som det selvfølgelige trygge aktivumet — bekreftet, vedvarende, over flere år, og dokumentert av Den europeiske sentralbanken og World Gold Council.</li>
+
+        <li>Pensjonsfond reduserer separat eksponeringen mot amerikanske statspapirer — bekreftet spesifikt for ABP — av grunner som ikke er fullt offentlig kjent, men som peker mot den samme underliggende uroen: for mye av et lands formue hviler på ett enkelt lands gjeld og én valutas stabilitet.</li>
+      </ol>
+
+      <p>Ulike institusjoner, ulike mekanismer, samme retning.</p>
+
+      <h2>Hvorfor dette faktisk angår deg</h2>
+
+      <p>En sentralbank kan flytte tusen tonn gull i løpet av ett år. Det kan ikke du, og det trenger du heller ikke.</p>
+
+      <div class="pull-quote">Hvor mye av det du har spart, er helt avhengig av institusjoner, valutaer og politiske beslutninger du ikke har noen kontroll over?</div>
+
+      <p>Det er ikke et retorisk knep for å selge deg gull. Gull er ingen risikofri investering — det gir ingen rente, det kan falle i pris, og det fysiske markedet har flere måter å ta for mye betalt på uten at du merker det, enn de fleste er klar over.</p>
+
+      <p>En mynt og en barre med samme gullinnhold kan ha svært forskjellige premier. Spotpris, forhandlermargin, oppbevaring, tilbakekjøpsvilkår — ingenting av dette er opplagt før du vet hva du skal se etter.</p>
+
+      <p>Og det er nettopp den delen ingen forklarer før de ber deg klikke på «kjøp».</p>
+
+      <h2>Forstå hva du kjøper — før du kjøper noe</h2>
+
+      <p>Institusjonene ovenfor våknet ikke en dag og overførte penger til gull i blinde. De har analyseteam som utelukkende arbeider med å forstå hva de eier, hva det koster, og hvordan det oppfører seg.</p>
+
+      <p>Du kan få 90 % av den forståelsen på en brøkdel av tiden — men bare hvis noen faktisk går gjennom det med deg, fremfor bare å si «gull er bra, kjøp gull».</p>
+
+      <p>Det er det veiledningen gjør. Ikke en salgstale forkledd som opplæring — men en grundig gjennomgang av hvordan edelmetallmarkedet fungerer: hva som driver gullprisen, hvordan premier og spreader i det stille avgjør om du har gjort en rimelig handel, hva som skiller et seriøst kjøp av investeringsgull fra et overpriset samleobjekt, og hvordan du faktisk sammenligner tilbydere fremfor å gjette.</p>
+
+      <p>Sentralbankene har allerede handlet. Om du skal gjøre det — og hvordan — er en beslutning det er verdt å ta med åpne øyne.</p>
+
+      <a class="back-link" href="/NO/">← Tilbake til Gullinvestoren</a>
+
+    </article>
+
+    <aside class="article-cta">
+      <h2>Forstå gull før du kjøper det</h2>
+
+      <p>Les hele Gullinvestoren for en praktisk forklaring av prising, premier, spreader, oppbevaring og tilbakekjøpsvilkår.</p>
+
+      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">Kjøp PDF-en — 38 €</a>
+    </aside>
+
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Filip Allaert. Med enerett.</div>
+  </footer>
+
+
+
+</body></html>
