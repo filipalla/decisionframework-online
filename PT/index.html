@@ -277,10 +277,17 @@
     .community-links .community-language { margin: 10px 0 0; font-size: 0.85rem; color: var(--muted); }
     .community-links a:focus-visible { outline: 2px solid var(--gold-light); outline-offset: 4px; }
   </style>
+<style id="preview-section-style">
+.free-preview{margin-top:48px;padding-top:36px;border-top:1px solid var(--line)}
+.pdf-viewer{display:block;width:100%;height:800px;border:1px solid var(--line);background:#f6f0e3;box-sizing:border-box}
+.preview-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.preview-actions .button{white-space:normal;text-align:center;max-width:100%;box-sizing:border-box}
+@media(max-width:900px){.pdf-viewer{height:580px}}
+</style>
 </head>
 
 <body>
-  <nav class="language-switcher" aria-label="Seleção de idioma"><a href="/">EN</a><span aria-hidden="true">|</span><a href="/nl/">NL</a><span aria-hidden="true">|</span><a href="/ES/">ES</a><span aria-hidden="true">|</span><a href="/DE/">DE</a><span aria-hidden="true">|</span><a href="/ZH/">中文</a><span aria-hidden="true">|</span><a href="/FR/">FR</a><span aria-hidden="true">|</span><a href="/IT/">IT</a><span aria-hidden="true">|</span><a href="/PT/" class="active" aria-current="page">PT</a><span aria-hidden="true">|</span><a href="/RU/">RU</a><span aria-hidden="true">|</span><a href="/PL/">PL</a><span aria-hidden="true">|</span><a href="/JA/">日本語</a><span aria-hidden="true">|</span><a href="/HI/">हिन्दी</a><span aria-hidden="true">|</span><a href="/AR/">العربية</a><span>|</span><a href="/TH/">ไทย</a><span>|</span><a href="/SV/">SV</a><span>|</span><a href="/TR/">TR</a><span>|</span><a href="/ID/">ID</a><span>|</span><a href="/VN/">Tiếng Việt</a><span>|</span><a href="/KR/">한국어</a><span>|</span><a href="/MS/">MS</a></nav>
+  <nav class="language-switcher" aria-label="Seleção de idioma"><a href="/">EN</a><span aria-hidden="true">|</span><a href="/nl/">NL</a><span aria-hidden="true">|</span><a href="/ES/">ES</a><span aria-hidden="true">|</span><a href="/DE/">DE</a><span aria-hidden="true">|</span><a href="/ZH/">中文</a><span aria-hidden="true">|</span><a href="/FR/">FR</a><span aria-hidden="true">|</span><a href="/IT/">IT</a><span aria-hidden="true">|</span><a href="/PT/" class="active" aria-current="page">PT</a><span aria-hidden="true">|</span><a href="/RU/">RU</a><span aria-hidden="true">|</span><a href="/PL/">PL</a><span aria-hidden="true">|</span><a href="/JA/">日本語</a><span aria-hidden="true">|</span><a href="/HI/">हिन्दी</a><span aria-hidden="true">|</span><a href="/AR/">العربية</a><span>|</span><a href="/TH/">ไทย</a><span>|</span><a href="/SV/">SV</a><span>|</span><a href="/TR/">TR</a><span>|</span><a href="/ID/">ID</a><span>|</span><a href="/VN/">Tiếng Việt</a><span>|</span><a href="/KR/">한국어</a><span>|</span><a href="/MS/">MS</a><span>|</span><a href="/NO/" title="Norsk bokmål" hreflang="nb">NO</a><span>|</span><a href="/DA/" title="Dansk" hreflang="da">DA</a></nav>
   
 
   <header>
@@ -365,6 +372,15 @@
             <h3>Do momento de entrada à compra</h3>
             <p>Combine análise técnica, gestão do risco e formulação da sua tese com uma compra física em condições justas.</p>
           </article>
+        </div>
+<div class="free-preview" id="free-preview">
+          <h2>Leia a amostra gratuita</h2>
+          <p>Descubra as primeiras páginas do livro.</p>
+          <iframe class="pdf-viewer" src="Portuguese_Gold_Investor_Preview_12_pages.pdf#view=FitH" title="Leia a amostra gratuita" loading="lazy"></iframe>
+          <p class="preview-actions">
+            <a class="button" href="Portuguese_Gold_Investor_Preview_12_pages.pdf" target="_blank" rel="noopener">Abrir o PDF</a>
+            <a class="button secondary" href="Portuguese_Gold_Investor_Preview_12_pages.pdf" download>Descarregar a amostra gratuita</a>
+          </p>
         </div>
       </div>
     </section>
