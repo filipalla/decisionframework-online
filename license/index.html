@@ -433,24 +433,6 @@ content="Activate your license for The Gold Decision Framework."
     class="code-input"
   >
     <option value="">Select a language</option>
-    <option value="en">English</option>
-    <option value="nl">Nederlands</option>
-    <option value="es">Español</option>
-    <option value="de">Deutsch</option>
-    <option value="zh">中文</option>
-    <option value="fr">Français</option>
-    <option value="it">Italiano</option>
-    <option value="pt">Português</option>
-    <option value="ru">Русский</option>
-    <option value="pl">Polski</option>
-    <option value="ja">日本語</option>
-    <option value="hi">हिन्दी</option>
-    <option value="ar">العربية</option>
-    <option value="th">ไทย</option>
-    <option value="ko">한국어</option>
-    <option value="vi">Tiếng Việt</option>
-    <option value="id">Bahasa Indonesia</option>
-    <option value="tr">Türkçe</option>
   </select>
 
   <button
@@ -711,6 +693,7 @@ const confirmLanguageButton =
     data.package;
 
   languageValue.textContent =
+    data.language_name ||
     languageNames[data.language] ||
     data.language;
 
@@ -748,6 +731,18 @@ const confirmLanguageButton =
     "success"
   );
 
+  languageSelect.innerHTML =
+    '<option value="">Select a language</option>';
+
+  Object.entries(data.languages || {}).forEach(
+    ([code, name]) => {
+      const option = document.createElement("option");
+      option.value = code;
+      option.textContent = name;
+      languageSelect.appendChild(option);
+    }
+  );
+
   languagePicker.style.display = "block";
 
   packageValue.textContent =
@@ -774,6 +769,7 @@ const confirmLanguageButton =
 
 
         const languageName =
+          data.language_name ||
           languageNames[data.language] ||
           data.language;
 
@@ -896,6 +892,7 @@ confirmLanguageButton.addEventListener(
         data.package;
 
       languageValue.textContent =
+        data.language_name ||
         languageNames[data.language] ||
         data.language;
 
