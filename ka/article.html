@@ -1,1 +1,672 @@
-<!doctype html><html lang="ka"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>ოქროს ინვესტორი</title><style>body{margin:0;background:#111214;color:#f1eadb;font:1.1rem Georgia,serif;line-height:1.8}main{max-width:820px;margin:auto;padding:40px 20px}h1,h2{color:#e2c887;font-weight:400}p{color:#b8b0a1}a{color:#e2c887}</style></head><body><main><p>ქართული</p><h1>ოქროს ინვესტორი</h1><h2>შექმენით საკუთარი ოქროს თეზისი</h2><p>ოქროს გაგების პრაქტიკული ჩარჩო ბაზრის სტრუქტურის, მაკროეკონომიკის, გეოპოლიტიკისა და რისკის მართვის მეშვეობით.</p><h2>Evidence and responsibility</h2><p>ოქროს გაგების პრაქტიკული ჩარჩო ბაზრის სტრუქტურის, მაკროეკონომიკის, გეოპოლიტიკისა და რისკის მართვის მეშვეობით. The framework is designed to help readers ask better questions, conduct their own research and take responsibility for their decisions. It is not personal investment advice.</p><p><a href="index.html">← ქართული</a></p></main></body></html>
+<!DOCTYPE html>
+<html lang="ka" class="no-caps">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ოქრომ გადაუსწრო აშშ-ის სახაზინო ობლიგაციებს | Decision Framework</title>
+
+  <meta name="description" content="რატომ ყიდულობენ ცენტრალური ბანკები ოქროს, ამცირებენ სახაზინო ობლიგაციებში დაბანდებას და რას შეიძლება ნიშნავდეს ეს ცვლილება ინდივიდუალური მეანაბრეებისა და ინვესტორებისთვის.">
+
+  <style>
+    :root {
+      --background: #111214;
+      --surface: #1b1b1d;
+      --gold: #c6a15b;
+      --gold-light: #e2c887;
+      --text: #f1eadb;
+      --muted: #b8b0a1;
+      --line: rgba(198, 161, 91, 0.45);
+      --dark-text: #17120a;
+      --serif: Georgia, "Sylfaen", "Noto Serif Georgian", "Times New Roman", serif;
+      --sans: Arial, "Sylfaen", "Noto Sans Georgian", sans-serif;
+      --body-lh: 1.85;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #49391c 0%,
+          var(--background) 38%
+        );
+      color: var(--text);
+      font-family: var(--serif);
+      line-height: var(--body-lh);
+    }
+
+    a {
+      color: var(--gold-light);
+    }
+
+    .container {
+      width: min(1100px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 22px 0;
+      border-bottom: 1px solid var(--line);
+      font-family: var(--sans);
+    }
+
+    .site-name {
+      color: var(--gold-light);
+      font-size: 0.85rem;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      justify-content: flex-end;
+    }
+
+    .site-links a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .site-links a:hover {
+      color: var(--gold-light);
+    }
+
+    .article-header {
+      padding: 110px 0 80px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      margin-bottom: 28px;
+      color: var(--gold-light);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin: 0 auto;
+      color: var(--text);
+      font-size: clamp(2.4rem, 7vw, 6rem);
+      font-weight: 400;
+      line-height: 1.1;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      margin: 34px auto 0;
+      color: var(--gold-light);
+      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .ornament {
+      width: 180px;
+      height: 1px;
+      margin: 42px auto;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        var(--gold),
+        transparent
+      );
+    }
+
+    .article-meta {
+      margin: 0;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .article-page {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) 290px;
+      align-items: start;
+      gap: 60px;
+      padding: 70px 0 110px;
+      border-top: 1px solid var(--line);
+    }
+
+    .article-content {
+      min-width: 0;
+    }
+
+    .article-content h2 {
+      margin: 70px 0 18px;
+      color: var(--gold-light);
+      font-size: clamp(1.8rem, 4vw, 2.9rem);
+      font-weight: 400;
+      line-height: 1.2;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    .article-content h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-content h3 {
+      color: var(--gold-light);
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+
+    .article-content p {
+      margin: 0 0 24px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .article-content .lead {
+      color: var(--text);
+      font-size: 1.25rem;
+    }
+
+    .article-content li {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 14px;
+    }
+
+    .stat-card {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      margin: 0 0 42px;
+      padding: 24px;
+      background: rgba(198, 161, 91, 0.1);
+      border: 1px solid var(--line);
+    }
+
+    .stat-number {
+      color: var(--gold-light);
+      font-family: var(--sans);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+    }
+
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin: 34px 0;
+    }
+
+    .evidence-card {
+      padding: 24px;
+      background: rgba(27, 27, 29, 0.8);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--gold-light);
+      font-family: var(--sans);
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      font-size: 0.98rem;
+    }
+
+    .comparison {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 20px;
+      margin: 34px 0;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .comparison-value {
+      color: var(--gold-light);
+      font-family: var(--sans);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .comparison-label {
+      margin-top: 10px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+    }
+
+    .comparison-arrow {
+      color: var(--gold);
+      font-family: var(--sans);
+      font-size: 2rem;
+    }
+
+    .pull-quote {
+      margin: 48px 0;
+      padding: 32px;
+      background: rgba(198, 161, 91, 0.1);
+      border-left: 3px solid var(--gold);
+      color: var(--gold-light);
+      font-size: clamp(1.35rem, 3vw, 1.9rem);
+      font-style: italic;
+      line-height: 1.45;
+    }
+
+    .article-cta {
+      position: sticky;
+      top: 28px;
+      padding: 28px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+    }
+
+    .article-cta h2 {
+      margin: 0 0 16px;
+      color: var(--gold-light);
+      font-size: 1.7rem;
+      font-weight: 400;
+      line-height: 1.25;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+
+    .article-cta p {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: var(--gold);
+      color: var(--dark-text);
+    }
+
+    .button.store {
+      background: rgba(198, 161, 91, 0.14);
+      color: var(--gold-light);
+    }
+
+    .button.store:hover {
+      background: var(--gold-light);
+      color: var(--dark-text);
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      color: var(--muted);
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--gold-light);
+    }
+
+    footer {
+      padding: 34px 0;
+      border-top: 1px solid var(--line);
+      color: #8f887b;
+      font-family: var(--sans);
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+
+    .article-content,.article-cta{min-width:0}.article-content{overflow-wrap:break-word}.comparison-value{font-size:clamp(1.7rem,3.4vw,2.6rem)}a:focus-visible{outline:2px solid var(--gold-light);outline-offset:5px}
+
+    /* Scripts without letter case (or where wide tracking hurts readability) */
+    html.no-caps .site-name,
+    html.no-caps .site-links a,
+    html.no-caps .eyebrow,
+    html.no-caps .article-meta,
+    html.no-caps .evidence-card strong,
+    html.no-caps .button {
+      text-transform: none;
+      letter-spacing: 0.04em;
+    }
+
+    html.no-caps .subtitle,
+    html.no-caps .pull-quote {
+      font-style: normal;
+    }
+
+    @media (max-width: 850px) {
+      .article-page {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .article-cta {
+        position: static;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: min(100% - 28px, 760px);
+      }
+
+      .site-nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .site-links {
+        justify-content: flex-start;
+      }
+
+      .article-header {
+        padding: 80px 0 60px;
+      }
+
+      .article-page {
+        padding: 55px 0 75px;
+      }
+
+      .evidence-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .comparison-arrow {
+        transform: rotate(90deg);
+      }
+
+      .stat-card {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="site-nav container" aria-label="მთავარი ნავიგაცია">
+    <a class="site-name" href="/ka/">
+      DecisionFramework.online
+    </a>
+
+    <div class="site-links">
+      <a href="/ka/">ჩარჩო</a>
+      <a href="/ka/article.html" aria-current="page">სტატია</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">მაღაზია</a>
+      <a href="/ka/#contact">კონტაქტი</a>
+      <a href="/article.html" hreflang="en">EN</a>
+    </div>
+  </nav>
+
+  <header class="article-header">
+    <div class="container">
+      <div class="eyebrow">ოქროს ინვესტორი · ანალიზი</div>
+
+      <h1>ოქრომ გადაუსწრო აშშ-ის სახაზინო ობლიგაციებს</h1>
+
+      <p class="subtitle">
+        შენი დანაზოგის ანგარიში 0.4%-ს იხდის. მსოფლიოს ცენტრალური ბანკები ოქროს ყიდულობენ. მათ რაღაც იციან, რაც შენ არ იცი.
+      </p>
+
+      <div class="ornament"></div>
+
+      <p class="article-meta">
+        The Gold Decision Framework · მტკიცებულებებზე დაფუძნებული ანალიზი
+      </p>
+    </div>
+  </header>
+
+  <main class="article-page container">
+
+    <article class="article-content">
+
+      <div class="stat-card">
+        <div class="stat-number">0.39%</div>
+
+        <div class="stat-label">
+          აშშ-ში დანაზოგის ანგარიშების საშუალო ეროვნული განაკვეთი
+        </div>
+      </div>
+
+      <p class="lead">
+        შეხედე შენს საბანკო ამონაწერს.
+      </p>
+
+      <p>
+        აშშ-ში დანაზოგის ანგარიშების საშუალო ეროვნული განაკვეთი 0.39%-ია. ბაზარზე საუკეთესო მაღალშემოსავლიანი ანგარიშებიც კი დაახლოებით 4%-ს აღწევს — და ესეც გადასახადებისა და ინფლაციის შეჭმამდე.
+      </p>
+
+      <p>
+        ახლა შეხედე, რას აკეთებენ საკუთარი ფულით ის ინსტიტუტები, რომლებიც სინამდვილეში მსოფლიოს რეზერვებს მართავენ.
+      </p>
+
+      <p>
+        ისინი მას დანაზოგის ანგარიშებზე არ ინახავენ. ისინი ოქროს ყიდულობენ — ისეთი ტემპით, როგორიც ათ წელზე მეტია არ უნახავს.
+      </p>
+
+      <h2>რაღაც შეიცვალა</h2>
+
+      <p>
+        ბოლო 30 წლის უმეტეს ნაწილში აშშ-ის სახაზინო ობლიგაციები მსოფლიოს ცენტრალური ბანკებისთვის ნაგულისხმევი „უსაფრთხო“ სარეზერვო აქტივი იყო. მოსაწყენი, ლიკვიდური, საიმედო.
+      </p>
+
+      <p>
+        ეს იცვლება.
+      </p>
+
+      <p>
+        ევროპის ცენტრალური ბანკის საკუთარი 2025 წლის მიმოხილვის თანახმად, ოქრომ ევროს გადაუსწრო და გახდა მსოფლიოში სიდიდით მეორე სარეზერვო აქტივი, მხოლოდ აშშ-ის დოლარის შემდეგ. ცენტრალური ბანკები ბოლო რამდენიმე წლის განმავლობაში ყოველწლიურად 1 000 ტონაზე მეტ ოქროს ყიდულობდნენ — წინა ათწლეულის ტემპზე ორჯერ მეტს.
+      </p>
+
+      <p>
+        სხვა მონიტორინგის წყაროები კიდევ უფრო შორს მიდიან: რამდენიმე ანალიზი ახლა აჩვენებს, რომ 1996 წლის შემდეგ პირველად უცხოური ცენტრალური ბანკები ერთად უფრო მეტ ოქროს ფლობენ, ვიდრე აშშ-ის სახაზინო ობლიგაციებს.
+      </p>
+
+      <p>
+        ეს ერთი ბანკის ფსონი არ არის. ეს ათეულობით ქვეყანაში ფართო, მრავალწლიანი ტენდენციაა.
+      </p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <strong>სიგნალი 01</strong>
+          <p>
+            ცენტრალური ბანკები სისტემატურად ყიდულობენ ოქროს და ამცირებენ დამოკიდებულებას აშშ-ის სახაზინო ობლიგაციებზე, როგორც ნაგულისხმევ უსაფრთხო სარეზერვო აქტივზე.
+          </p>
+        </div>
+
+        <div class="evidence-card">
+          <strong>სიგნალი 02</strong>
+          <p>
+            მსხვილი ინსტიტუტები ცალკე ამცირებენ თავიანთ ექსპოზიციას აშშ-ის მთავრობის ვალზე.
+          </p>
+        </div>
+      </div>
+
+      <h2>საქმე მხოლოდ ცენტრალურ ბანკებში არ არის</h2>
+
+      <p>
+        ევროპის საპენსიო ფონდები ჩუმად ასეთსავე რამეს აკეთებენ საკუთარ ობლიგაციების პორტფელებთან.
+      </p>
+
+      <p>
+        ნიდერლანდების უდიდესმა საპენსიო ფონდმა ABP-მ, რომელიც დაახლოებით სამი მილიონი მასწავლებლის, პოლიციელისა და საჯარო მოხელის საპენსიო თანხებს მართავს, გასულ წელს მხოლოდ ექვს თვეში აშშ-ის სახაზინო ობლიგაციებში ჩადებული თანხა დაახლოებით 29 მილიარდი ევროდან 19 მილიარდ ევრომდე შეამცირა.
+      </p>
+
+      <div class="comparison">
+        <div>
+          <div class="comparison-value">29 მლრდ €</div>
+          <div class="comparison-label">აშშ-ის სახაზინო ობლიგაციების ადრინდელი მოცულობა</div>
+        </div>
+
+        <div class="comparison-arrow">→</div>
+
+        <div>
+          <div class="comparison-value">19 მლრდ €</div>
+          <div class="comparison-label">აშშ-ის სახაზინო ობლიგაციების შემდგომი მოცულობა</div>
+        </div>
+      </div>
+
+      <p>
+        ეს აშშ-ის მთავრობის ვალიდან ათი მილიარდი ევროს რეალური, გამჟღავნებული გასვლაა, რომლის შესახებაც Bloomberg-მა 2026 წლის იანვარში იტყობინა.
+      </p>
+
+      <p>
+        იმის დასაზუსტებლად, რაც სინამდვილეში ვიცით: თავად ABP-ის ანგარიშგება არ ამბობს, რომ ეს ფული ოქროში გადავიდა. ის შეიძლება ევროპულ ობლიგაციებში, სხვა ფიქსირებული შემოსავლის ინსტრუმენტებში ან საერთოდ სხვაგან წასულიყო.
+      </p>
+
+      <p>
+        რაც დანამდვილებით შეგვიძლია ვთქვათ, ესაა — ევროპის ერთ-ერთმა ყველაზე კონსერვატიულმა და ყველაზე მკაცრად რეგულირებადმა საპენსიო ფონდმა გადაწყვიტა, რომ აშშ-ის სახაზინო ობლიგაციების ნაკლები რაოდენობით ფლობა უფრო უსაფრთხო ნაბიჯია. მხოლოდ ესეც ღირს დაფიქრებად.
+      </p>
+
+      <h2>ორი ცალკეული სიგნალი, ერთი მიმართულება</h2>
+
+      <p>
+        ასე რომ, აქ ორი განსხვავებული ისტორიაა და მნიშვნელოვანია, ერთმანეთში არ ავურიოთ:
+      </p>
+
+      <ol>
+        <li>
+          ცენტრალური ბანკები სისტემატურად ყიდულობენ ოქროს და ამცირებენ დამოკიდებულებას სახაზინო ობლიგაციებზე, როგორც ნაგულისხმევ უსაფრთხო სარეზერვო აქტივზე — დადასტურებულია, მდგრადია, მრავალწლიანია და დოკუმენტირებულია ECB-ისა და World Gold Council-ის მიერ.
+        </li>
+
+        <li>
+          საპენსიო ფონდები ცალკე ამცირებენ ექსპოზიციას აშშ-ის სახაზინო ობლიგაციებზე — დადასტურებულია კონკრეტულად ABP-ის შემთხვევაში — მიზეზებით, რომლებიც სრულად საჯარო არ არის, მაგრამ იმავე ღრმა შეშფოთებაზე მიუთითებს: ეროვნული სიმდიდრის ზედმეტად დიდი ნაწილი ერთი ქვეყნის ვალსა და ერთი ვალუტის სტაბილურობაზეა დამოკიდებული.
+        </li>
+      </ol>
+
+      <p>
+        სხვადასხვა ინსტიტუტი, სხვადასხვა მექანიკა, ერთი და იგივე მიმართულება.
+      </p>
+
+      <h2>რატომ არის ეს სინამდვილეში მნიშვნელოვანი შენთვის</h2>
+
+      <p>
+        ცენტრალურ ბანკს წელიწადში ათასი ტონა ოქროს გადატანა შეუძლია. შენ არ შეგიძლია და არც გჭირდება.
+      </p>
+
+      <div class="pull-quote">
+        შენი დაგროვილი თანხის რა ნაწილი არის სრულად დამოკიდებული ინსტიტუტებზე, ვალუტებსა და პოლიტიკაზე, რომლებზეც არანაირი კონტროლი არ გაქვს?
+      </div>
+
+      <p>
+        ეს არ არის რიტორიკული ხრიკი, რომ ოქრო გაგიყიდოს. ოქრო ურისკო გარიგება არ არის — ის პროცენტს არ იხდის, შეიძლება გაუფასურდეს, ფიზიკურ ბაზარზე კი უფრო მეტი გზაა, ჩუმად გადაგახდევინონ, ვიდრე უმეტესობას წარმოუდგენია.
+      </p>
+
+      <p>
+        მონეტასა და ზოდს ოქროს ერთი და იგივე შემცველობით შეიძლება ძალიან განსხვავებული პრემიები ჰქონდეს. სპოტ ფასი, დილერის მარჟა, შენახვა, გამოსყიდვის პირობები — არცერთი მათგანი არ არის აშკარა, სანამ არ იცი, რას უნდა დააკვირდე.
+      </p>
+
+      <p>
+        და სწორედ ეს ის ნაწილია, რომელსაც არავინ განგიმარტავს, სანამ „ყიდვის“ დაჭერას გთხოვენ.
+      </p>
+
+      <h2>სანამ რამეს იყიდი — გაიგე, რას ყიდულობ</h2>
+
+      <p>
+        ზემოთ ნახსენები ინსტიტუტები ერთ მშვენიერ დღეს არ გაღვიძებულან და ფული ბრმად არ გადაუყვანიათ ოქროში. მათ აქვთ კვლევითი გუნდები, რომლებიც მთლიანად იმის გასაგებად არის აგებული, რას ფლობენ, რა უჯდებათ და როგორ იქცევა ის.
+      </p>
+
+      <p>
+        ამ გაგების 90%-ის მიღება დროის მცირე ნაწილში შეგიძლია — მაგრამ მხოლოდ იმ შემთხვევაში, თუ ვინმე მართლა გაგატარებს ამაში, იმის ნაცვლად, რომ უბრალოდ გითხრას „ოქრო კარგია, იყიდე ოქრო“.
+      </p>
+
+      <p>
+        სწორედ ამას აკეთებს სახელმძღვანელო. ეს არ არის განათლებად შენიღბული გაყიდვების გამოსვლა — ეს არის ძვირფასი ლითონების ბაზრის მუშაობის რეალური ანალიზი: რა განსაზღვრავს ოქროს ფასს, როგორ განსაზღვრავს პრემიები და ყიდვა-გაყიდვის ფასების სხვაობა ჩუმად იმას, სამართლიანი გარიგება მიიღე თუ არა, რა განასხვავებს ზოდის ლეგიტიმურ ყიდვას ზედმეტად გაძვირებული კოლექციური ნივთისგან და როგორ შეადარო მომწოდებლები სინამდვილეში, ვარაუდის ნაცვლად.
+      </p>
+
+      <p>
+        ცენტრალურმა ბანკებმა თავიანთი ნაბიჯი უკვე გადადგეს. გადადგამ თუ არა შენ შენსას — და როგორ — გადაწყვეტილებაა, რომელიც ღია თვალებით მიღებად ღირს.
+      </p>
+
+      <a class="back-link" href="/ka/">
+        ← უკან წიგნის გვერდზე
+      </a>
+
+    </article>
+
+    <aside class="article-cta">
+      <h2>გაიგე ოქრო, სანამ იყიდი</h2>
+
+      <p>
+        წაიკითხე სრული სახელმძღვანელო „ოქროს ინვესტორი“ ფასწარმოქმნის, პრემიების, ყიდვა-გაყიდვის ფასების სხვაობის, შენახვისა და გამოსყიდვის პირობების პრაქტიკული ახსნისთვის.
+      </p>
+
+      <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">
+        მიიღე PDF — €38
+      </a>
+    </aside>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Filip Allaert. ყველა უფლება დაცულია.
+    </div>
+  </footer>
+<!-- Cloudflare Web Analytics -->
+<script
+  type="module"
+  src="https://static.cloudflareinsights.com/beacon.min.js"
+  data-cf-beacon='{"token":"ae803409637b4e77b5373cc93b16429c"}'>
+</script>
+<!-- End Cloudflare Web Analytics -->
+</body>
+</html>
