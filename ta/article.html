@@ -1,33 +1,26 @@
 <!DOCTYPE html>
-<html lang="ta">
+<html lang="ta" class="no-caps">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>தங்கம் அமெரிக்க கருவூலப் பத்திரங்களை முந்தியுள்ளது | முடிவு கட்டமைப்பு</title>
+  <title>தங்கம் அமெரிக்க கருவூலப் பத்திரங்களை மிஞ்சிவிட்டது | Decision Framework</title>
 
-  <meta
-    name="description"
-    content="Why central banks are buying gold, reducing Treasury exposure and what this shift may mean for individual savers and investors."
-  >
+  <meta name="description" content="மத்திய வங்கிகள் ஏன் தங்கத்தை வாங்குகின்றன, கருவூலப் பத்திர முதலீட்டை ஏன் குறைக்கின்றன, இந்த மாற்றம் தனிநபர் சேமிப்பாளர்கள் மற்றும் முதலீட்டாளர்களுக்கு என்ன பொருள் தரக்கூடும்.">
 
   <style>
     :root {
-      --background: #111214
-;
-      --surface: #1b1b1d
-;
-      --gold: #c6a15b
-;
-      --gold-light: #e2c887
-;
-      --text: #f1eadb
-;
-      --muted: #b8b0a1
-;
+      --background: #111214;
+      --surface: #1b1b1d;
+      --gold: #c6a15b;
+      --gold-light: #e2c887;
+      --text: #f1eadb;
+      --muted: #b8b0a1;
       --line: rgba(198, 161, 91, 0.45);
-      --dark-text: #17120a
-;
+      --dark-text: #17120a;
+      --serif: Georgia, "Noto Serif Tamil", "Latha", "Nirmala UI", "Times New Roman", serif;
+      --sans: Arial, "Noto Sans Tamil", "Latha", "Nirmala UI", sans-serif;
+      --body-lh: 1.95;
     }
 
     * {
@@ -43,13 +36,12 @@
       background:
         radial-gradient(
           circle at 50% 0%,
-          #49391c
-  0%,
+          #49391c 0%,
           var(--background) 38%
         );
       color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.75;
+      font-family: var(--serif);
+      line-height: var(--body-lh);
     }
 
     a {
@@ -68,7 +60,7 @@
       gap: 20px;
       padding: 22px 0;
       border-bottom: 1px solid var(--line);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
     }
 
     .site-name {
@@ -106,7 +98,7 @@
     .eyebrow {
       margin-bottom: 28px;
       color: var(--gold-light);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: 0.78rem;
       letter-spacing: 0.25em;
       text-transform: uppercase;
@@ -116,9 +108,11 @@
       max-width: 900px;
       margin: 0 auto;
       color: var(--text);
-      font-size: clamp(3rem, 8vw, 6.4rem);
+      font-size: clamp(2.4rem, 7vw, 6rem);
       font-weight: 400;
-      line-height: 1.05;
+      line-height: 1.1;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .subtitle {
@@ -127,7 +121,7 @@
       color: var(--gold-light);
       font-size: clamp(1.2rem, 2.3vw, 1.65rem);
       font-style: italic;
-      line-height: 1.45;
+      line-height: 1.5;
     }
 
     .ornament {
@@ -145,7 +139,7 @@
     .article-meta {
       margin: 0;
       color: var(--muted);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: 0.82rem;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -167,9 +161,11 @@
     .article-content h2 {
       margin: 70px 0 18px;
       color: var(--gold-light);
-      font-size: clamp(2rem, 4vw, 3.1rem);
+      font-size: clamp(1.8rem, 4vw, 2.9rem);
       font-weight: 400;
-      line-height: 1.15;
+      line-height: 1.2;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .article-content h2:first-child {
@@ -193,19 +189,25 @@
       font-size: 1.25rem;
     }
 
+    .article-content li {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 14px;
+    }
+
     .stat-card {
       display: flex;
       align-items: center;
       gap: 22px;
       margin: 0 0 42px;
       padding: 24px;
-      background: rgba(8, 161, 91, 0.1);
+      background: rgba(198, 161, 91, 0.1);
       border: 1px solid var(--line);
     }
 
     .stat-number {
       color: var(--gold-light);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 700;
       line-height: 1;
@@ -213,7 +215,7 @@
 
     .stat-label {
       color: var(--muted);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: 0.9rem;
       letter-spacing: 0.04em;
     }
@@ -235,7 +237,7 @@
       display: block;
       margin-bottom: 8px;
       color: var(--gold-light);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: 0.8rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -260,7 +262,7 @@
 
     .comparison-value {
       color: var(--gold-light);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: clamp(2rem, 5vw, 3.2rem);
       font-weight: 700;
       line-height: 1;
@@ -269,25 +271,25 @@
     .comparison-label {
       margin-top: 10px;
       color: var(--muted);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: 0.82rem;
     }
 
     .comparison-arrow {
       color: var(--gold);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: 2rem;
     }
 
     .pull-quote {
       margin: 48px 0;
       padding: 32px;
-      background: rgba(8, 161, 91, 0.1);
+      background: rgba(198, 161, 91, 0.1);
       border-left: 3px solid var(--gold);
       color: var(--gold-light);
-      font-size: clamp(1.45rem, 3vw, 2rem);
+      font-size: clamp(1.35rem, 3vw, 1.9rem);
       font-style: italic;
-      line-height: 1.4;
+      line-height: 1.45;
     }
 
     .article-cta {
@@ -303,7 +305,9 @@
       color: var(--gold-light);
       font-size: 1.7rem;
       font-weight: 400;
-      line-height: 1.2;
+      line-height: 1.25;
+      overflow-wrap: break-word;
+      hyphens: auto;
     }
 
     .article-cta p {
@@ -318,7 +322,7 @@
       border: 1px solid var(--gold);
       background: transparent;
       color: var(--text);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: 0.78rem;
       letter-spacing: 0.08em;
       text-decoration: none;
@@ -332,7 +336,7 @@
     }
 
     .button.store {
-      background: rgba(8, 161, 91, 0.14);
+      background: rgba(198, 161, 91, 0.14);
       color: var(--gold-light);
     }
 
@@ -345,7 +349,7 @@
       display: inline-block;
       margin-top: 32px;
       color: var(--muted);
-      font-family: Arial, sans-serif;
+      font-family: var(--sans);
       font-size: 0.82rem;
       text-decoration: none;
     }
@@ -357,11 +361,29 @@
     footer {
       padding: 34px 0;
       border-top: 1px solid var(--line);
-      color: #8f887b
-;
-      font-family: Arial, sans-serif;
+      color: #8f887b;
+      font-family: var(--sans);
       font-size: 0.85rem;
       text-align: center;
+    }
+
+
+    .article-content,.article-cta{min-width:0}.article-content{overflow-wrap:break-word}.comparison-value{font-size:clamp(1.7rem,3.4vw,2.6rem)}a:focus-visible{outline:2px solid var(--gold-light);outline-offset:5px}
+
+    /* Scripts without letter case (or where wide tracking hurts readability) */
+    html.no-caps .site-name,
+    html.no-caps .site-links a,
+    html.no-caps .eyebrow,
+    html.no-caps .article-meta,
+    html.no-caps .evidence-card strong,
+    html.no-caps .button {
+      text-transform: none;
+      letter-spacing: 0.04em;
+    }
+
+    html.no-caps .subtitle,
+    html.no-caps .pull-quote {
+      font-style: normal;
     }
 
     @media (max-width: 850px) {
@@ -420,34 +442,34 @@
 
 <body>
 
-  <nav class="site-nav container" aria-label="Main navigation">
-    <a class="site-name" href="/">
-      Decisionகட்டமைப்பு.online
+  <nav class="site-nav container" aria-label="முதன்மை வழிசெலுத்தல்">
+    <a class="site-name" href="/ta/">
+      DecisionFramework.online
     </a>
 
     <div class="site-links">
-      <a href="/">கட்டமைப்பு</a>
-      <a href="https://payhip.com/b/7GDAe" target="_blank"
-  rel="noopener noreferrer">கடை</a>
-      <a href="/license-order/">உரிமம்</a>
-      <a href="/license/">செயல்படுத்தல்</a>
+      <a href="/ta/">கட்டமைப்பு</a>
+      <a href="/ta/article.html" aria-current="page">கட்டுரை</a>
+      <a href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">கடை</a>
+      <a href="/ta/#contact">தொடர்பு</a>
+      <a href="/article.html" hreflang="en">EN</a>
     </div>
   </nav>
 
   <header class="article-header">
     <div class="container">
-      <div class="eyebrow">தங்க முதலீட்டாளர் · Analysis</div>
+      <div class="eyebrow">தங்க முதலீட்டாளர் · பகுப்பாய்வு</div>
 
-      <h1>தங்கம் அமெரிக்க கருவூலப் பத்திரங்களை முந்தியுள்ளது</h1>
+      <h1>தங்கம் அமெரிக்க கருவூலப் பத்திரங்களை மிஞ்சிவிட்டது</h1>
 
       <p class="subtitle">
-        உங்கள் சேமிப்புக் கணக்கு 0.4% வழங்குகிறது. உலக மத்திய வங்கிகள் தங்கம் வாங்குகின்றன. உங்களுக்குத் தெரியாத ஒன்றை அவை அறிந்திருக்கின்றன.
+        உங்கள் சேமிப்புக் கணக்கு 0.4% மட்டுமே தருகிறது. உலகின் மத்திய வங்கிகள் தங்கத்தை வாங்குகின்றன. உங்களுக்குத் தெரியாத ஒன்றை அவை அறிந்திருக்கின்றன.
       </p>
 
       <div class="ornament"></div>
 
       <p class="article-meta">
-        தங்க முடிவு கட்டமைப்பு · ஆதார அடிப்படையிலான பகுப்பாய்வு
+        The Gold Decision Framework · ஆதாரம் சார்ந்த பகுப்பாய்வு
       </p>
     </div>
   </header>
@@ -460,225 +482,175 @@
         <div class="stat-number">0.39%</div>
 
         <div class="stat-label">
-          அமெரிக்காவின் சராசரி சேமிப்பு விகிதம்
+          அமெரிக்காவின் தேசிய சராசரி சேமிப்பு வட்டி விகிதம்
         </div>
       </div>
 
       <p class="lead">
-        உங்கள் வங்கி அறிக்கையைச் சரிபாருங்கள்.
+        உங்கள் வங்கி அறிக்கையைப் பாருங்கள்.
       </p>
 
       <p>
-        The அமெரிக்காவின் சராசரி சேமிப்பு விகிதம் is 0.39%. Even the best
-        high-yield accounts on the market cap out around 4% — and that’s
-        before tax and inflation eat into it.
+        அமெரிக்காவின் தேசிய சராசரி சேமிப்பு வட்டி விகிதம் 0.39% ஆகும். சந்தையில் உள்ள சிறந்த உயர்-வருவாய் கணக்குகளும் சுமார் 4% வரைதான் செல்கின்றன — அதுவும் வரிகளும் பணவீக்கமும் அதில் ஒரு பகுதியைத் தின்னும் முன்பே.
       </p>
 
       <p>
-        Now look at what the institutions actually managing the world’s
-        reserves are doing with their money.
+        இப்போது, உலகின் இருப்புகளை உண்மையில் நிர்வகிக்கும் நிறுவனங்கள் தங்கள் பணத்தை என்ன செய்கின்றன என்பதைப் பாருங்கள்.
       </p>
 
       <p>
-        They’re not putting it in savings accounts. They’re buying gold —
-        at a pace not seen in over a decade.
+        அவை அதைச் சேமிப்புக் கணக்குகளில் வைப்பதில்லை. அவை தங்கத்தை வாங்குகின்றன — ஒரு தசாப்தத்திற்கும் மேலாகக் காணப்படாத வேகத்தில்.
       </p>
 
-      <h2>ஏதோ ஒன்று மாறியுள்ளது</h2>
+      <h2>ஏதோ ஒன்று மாறிவிட்டது</h2>
 
       <p>
-        For most of the last 30 years, US Treasuries were the default
-        “safe” reserve asset for central banks worldwide. Boring, liquid,
-        dependable.
+        கடந்த 30 ஆண்டுகளின் பெரும்பகுதி, அமெரிக்க கருவூலப் பத்திரங்களே உலகெங்கிலும் உள்ள மத்திய வங்கிகளின் இயல்புநிலை “பாதுகாப்பான” இருப்புச் சொத்தாக இருந்தன. சலிப்பூட்டும், எளிதில் பணமாக்கக்கூடிய, நம்பகமான சொத்து.
       </p>
 
       <p>
-        That’s shifting.
+        அது மாறி வருகிறது.
       </p>
 
       <p>
-        According to the European Central Bank’s own 2025 review, gold has
-        overtaken the euro to become the second-largest reserve asset
-        globally, behind only the US dollar. Central banks bought over
-        1,000 tonnes of gold a year in each of the last several years —
-        more than double the pace of the previous decade.
+        ஐரோப்பிய மத்திய வங்கியின் சொந்த 2025 மதிப்பாய்வின்படி, தங்கம் யூரோவை மிஞ்சி, அமெரிக்க டாலருக்கு அடுத்தபடியாக உலகின் இரண்டாவது பெரிய இருப்புச் சொத்தாகிவிட்டது. மத்திய வங்கிகள் கடந்த பல ஆண்டுகளில் ஒவ்வொரு ஆண்டும் 1,000 டன்னுக்கு மேல் தங்கத்தை வாங்கின — முந்தைய தசாப்தத்தின் வேகத்தைவிட இரு மடங்குக்கும் அதிகம்.
       </p>
 
       <p>
-        Other trackers go further: several analyses now show that, for the
-        first time since 1996, foreign central banks collectively hold more
-        gold than US Treasuries.
+        மற்ற கண்காணிப்பாளர்கள் இன்னும் மேலே செல்கிறார்கள்: 1996-க்குப் பிறகு முதல் முறையாக, வெளிநாட்டு மத்திய வங்கிகள் மொத்தமாக அமெரிக்க கருவூலப் பத்திரங்களைவிட அதிகமான தங்கத்தை வைத்திருப்பதாகப் பல பகுப்பாய்வுகள் இப்போது காட்டுகின்றன.
       </p>
 
       <p>
-        This isn’t one bank making a bet. It’s a broad, multi-year pattern
-        across dozens of countries.
+        இது ஒரு வங்கி எடுக்கும் பந்தயம் அல்ல. இது பல டஜன் நாடுகளில் பரவியுள்ள, பல ஆண்டுகளாகத் தொடரும் ஒரு பரந்த போக்கு.
       </p>
 
       <div class="evidence-grid">
         <div class="evidence-card">
           <strong>சமிக்ஞை 01</strong>
           <p>
-            Central banks are systematically buying gold and reducing their
-            reliance on US Treasuries as the default safe asset.
+            மத்திய வங்கிகள் முறையாகத் தங்கத்தை வாங்கி, இயல்புநிலைப் பாதுகாப்பான இருப்புச் சொத்தாக அமெரிக்க கருவூலப் பத்திரங்களை நம்பியிருப்பதைக் குறைக்கின்றன.
           </p>
         </div>
 
         <div class="evidence-card">
           <strong>சமிக்ஞை 02</strong>
           <p>
-            Major institutions are separately reducing their exposure to US
-            government debt.
+            பெரிய நிறுவனங்கள் தனியாக, அமெரிக்க அரசுக் கடனில் தங்களுக்குள்ள வெளிப்பாட்டைக் குறைக்கின்றன.
           </p>
         </div>
       </div>
 
-      <h2>மத்திய வங்கிகள் மட்டும் அல்ல</h2>
+      <h2>இது மத்திய வங்கிகள் மட்டுமல்ல</h2>
 
       <p>
-        Europe’s pension funds are quietly doing something similar with their
-        own bond holdings.
+        ஐரோப்பாவின் ஓய்வூதிய நிதிகளும் தங்கள் சொந்தப் பத்திரப் பங்குகளுடன் அமைதியாக இதேபோன்ற ஒன்றைச் செய்து வருகின்றன.
       </p>
 
       <p>
-        ABP, the Netherlands’ largest pension fund — managing retirement money
-        for roughly three million teachers, police officers, and civil
-        servants — cut its US Treasury holdings from around €29 billion to
-        €19 billion in just six months last year.
+        நெதர்லாந்தின் மிகப்பெரிய ஓய்வூதிய நிதியான ABP — சுமார் மூன்று மில்லியன் ஆசிரியர்கள், காவலர்கள் மற்றும் அரசு ஊழியர்களின் ஓய்வூதியப் பணத்தை நிர்வகிக்கிறது — கடந்த ஆண்டு வெறும் ஆறு மாதங்களில் தனது அமெரிக்க கருவூலப் பத்திர இருப்பை சுமார் €29 பில்லியனிலிருந்து €19 பில்லியனாகக் குறைத்தது.
       </p>
 
       <div class="comparison">
         <div>
-          <div class="comparison-value">€29bn</div>
-          <div class="comparison-label">Earlier US Treasury holdings</div>
+          <div class="comparison-value">€29 பி.</div>
+          <div class="comparison-label">முந்தைய அமெரிக்க கருவூலப் பத்திர இருப்பு</div>
         </div>
 
         <div class="comparison-arrow">→</div>
 
         <div>
-          <div class="comparison-value">€19bn</div>
-          <div class="comparison-label">Later US Treasury holdings</div>
+          <div class="comparison-value">€19 பி.</div>
+          <div class="comparison-label">பிந்தைய அமெரிக்க கருவூலப் பத்திர இருப்பு</div>
         </div>
       </div>
 
       <p>
-        That’s a real, disclosed, ten-billion-euro retreat from US government
-        debt, reported by Bloomberg in January 2026.
+        இது அமெரிக்க அரசுக் கடனிலிருந்து பத்து பில்லியன் யூரோ அளவுக்கு நடந்த உண்மையான, வெளிப்படுத்தப்பட்ட பின்வாங்கல்; 2026 ஜனவரியில் Bloomberg இதைப் பற்றி செய்தி வெளியிட்டது.
       </p>
 
       <p>
-        To be precise about what we actually know: ABP’s own reporting
-        doesn’t say gold is where that money went. It may have gone into
-        European bonds, other fixed income, or elsewhere entirely.
+        நாம் உண்மையில் அறிந்தது என்ன என்பதில் துல்லியமாக இருக்க: அந்தப் பணம் தங்கத்திற்குச் சென்றது என்று ABP-யின் சொந்த அறிக்கைகள் கூறவில்லை. அது ஐரோப்பியப் பத்திரங்கள், பிற நிலையான வருவாய் சொத்துகள், அல்லது முற்றிலும் வேறெங்காவது சென்றிருக்கலாம்.
       </p>
 
       <p>
-        What we can say with certainty is this — one of Europe’s most
-        conservative, most heavily regulated pension funds decided that
-        holding fewer US Treasuries was the safer move. That alone is worth
-        sitting with.
+        நாம் உறுதியாகக் கூறக்கூடியது இதுதான் — ஐரோப்பாவின் மிகவும் பழமைவாதமான, மிகக் கடுமையாக ஒழுங்குபடுத்தப்பட்ட ஓய்வூதிய நிதிகளில் ஒன்று, அமெரிக்க கருவூலப் பத்திரங்களைக் குறைவாக வைத்திருப்பதே பாதுகாப்பான நடவடிக்கை என்று முடிவு செய்தது. இதுவே சற்று நிதானித்து யோசிக்கத் தகுந்தது.
       </p>
 
       <h2>இரண்டு தனித்தனி சமிக்ஞைகள், ஒரே திசை</h2>
 
       <p>
-        So there are two distinct stories here, and it matters that we don’t
-        blur them:
+        எனவே இங்கே இரண்டு வெவ்வேறு கதைகள் உள்ளன; அவற்றைக் கலக்காமல் இருப்பது முக்கியம்:
       </p>
 
       <ol>
         <li>
-          Central banks are systematically buying gold, reducing their
-          reliance on Treasuries as the default safe asset — confirmed,
-          sustained, multi-year, and documented by the ECB and the World Gold
-          Council.
+          மத்திய வங்கிகள் முறையாகத் தங்கத்தை வாங்குகின்றன; இயல்புநிலைப் பாதுகாப்பான இருப்புச் சொத்தாகக் கருவூலப் பத்திரங்களை நம்பியிருப்பதைக் குறைக்கின்றன — இது உறுதிப்படுத்தப்பட்டது, தொடர்ச்சியானது, பல ஆண்டுகளாக நடப்பது, ECB மற்றும் World Gold Council ஆகியவற்றால் ஆவணப்படுத்தப்பட்டது.
         </li>
 
         <li>
-          Pension funds are separately reducing their US Treasury exposure —
-          confirmed for ABP specifically — for reasons that aren’t fully
-          public, but that point toward the same underlying discomfort:
-          too much national wealth resting on one country’s debt and one
-          currency’s stability.
+          ஓய்வூதிய நிதிகள் தனியாக, அமெரிக்க கருவூலப் பத்திரங்களில் தங்களுக்குள்ள வெளிப்பாட்டைக் குறைக்கின்றன — குறிப்பாக ABP-க்கு இது உறுதிப்படுத்தப்பட்டது — முழுமையாக வெளிப்படையாக இல்லாத காரணங்களுக்காக; ஆனால் அவை அதே அடிப்படை அசௌகரியத்தையே சுட்டிக்காட்டுகின்றன: ஒரு நாட்டின் கடனையும் ஒரு நாணயத்தின் நிலைத்தன்மையையும் அளவுக்கு அதிகமாக நம்பியிருக்கும் தேசிய செல்வம்.
         </li>
       </ol>
 
       <p>
-        Different institutions, different mechanics, same direction of travel.
+        வெவ்வேறு நிறுவனங்கள், வெவ்வேறு செயல்முறைகள், ஒரே பயணத் திசை.
       </p>
 
-      <h2>இது உங்களுக்கு ஏன் முக்கியம்</h2>
+      <h2>இது உங்களுக்கு ஏன் உண்மையில் முக்கியம்</h2>
 
       <p>
-        A central bank can move a thousand tonnes of gold in a year. You
-        can’t, and you don’t need to.
+        ஒரு மத்திய வங்கியால் ஒரு ஆண்டில் ஆயிரம் டன் தங்கத்தை நகர்த்த முடியும். உங்களால் முடியாது, அது உங்களுக்குத் தேவையுமில்லை.
       </p>
 
       <div class="pull-quote">
-        How much of what you’ve saved depends entirely on institutions,
-        currencies, and policies you have zero control over?
+        நீங்கள் சேமித்ததில் எவ்வளவு, உங்களுக்குக் கொஞ்சமும் கட்டுப்பாடு இல்லாத நிறுவனங்கள், நாணயங்கள், கொள்கைகளை முழுமையாகச் சார்ந்திருக்கிறது?
       </div>
 
       <p>
-        That’s not a rhetorical trick to sell you gold. Gold isn’t a risk-free
-        trade — it pays no interest, it can fall, and the physical market has
-        more ways to quietly overcharge you than most people realize.
+        இது உங்களுக்குத் தங்கத்தை விற்பதற்கான சொல்லாட்சித் தந்திரம் அல்ல. தங்கம் ஆபத்தில்லாத வர்த்தகம் அல்ல — அது வட்டி தருவதில்லை, விலை சரியலாம், மேலும் பெரும்பாலானோர் உணர்வதைவிட, உங்களிடம் அமைதியாக அதிகம் வசூலிக்கும் வழிகள் நேரடிச் சந்தையில் அதிகம்.
       </p>
 
       <p>
-        A coin and a bar with the same gold content can carry wildly different
-        premiums. Spot price, dealer margin, storage, buyback terms — none of
-        it is obvious until you know what to look for.
+        ஒரே தங்க அளவு கொண்ட ஒரு நாணயத்திற்கும் ஒரு கட்டிக்கும் மிகவும் வேறுபட்ட பிரீமியங்கள் இருக்கலாம். ஸ்பாட் விலை, டீலர் லாப விகிதம், சேமிப்பு, திரும்பப் பெறும் நிபந்தனைகள் — எதைப் பார்க்க வேண்டும் என்று தெரியும் வரை இவை எதுவும் வெளிப்படையாகத் தெரியாது.
       </p>
 
       <p>
-        Which is exactly the part nobody explains before asking you to click
-        “buy.”
+        “வாங்கு” என்பதை அழுத்தச் சொல்லும் முன், யாரும் விளக்காத பகுதி இதுவே.
       </p>
 
-      <h2>எதையும் வாங்குவதற்கு முன் — நீங்கள் வாங்குவது என்ன என்பதைப் புரிந்துகொள்ளுங்கள்</h2>
+      <h2>எதையும் வாங்கும் முன் — நீங்கள் என்ன வாங்குகிறீர்கள் என்பதைப் புரிந்துகொள்ளுங்கள்</h2>
 
       <p>
-        The institutions above didn’t wake up one day and wire money into
-        gold blindly. They have research teams built entirely around
-        understanding what they own, what it costs, and how it behaves.
+        மேலே குறிப்பிட்ட நிறுவனங்கள் ஒரு நாள் காலையில் எழுந்து கண்மூடித்தனமாகத் தங்கத்தில் பணத்தை மாற்றிவிடவில்லை. தாங்கள் எதை வைத்திருக்கின்றன, அதன் விலை என்ன, அது எப்படி நடந்துகொள்கிறது என்பதைப் புரிந்துகொள்வதையே முழுமையாக மையமாகக் கொண்ட ஆய்வுக் குழுக்கள் அவற்றிடம் உள்ளன.
       </p>
 
       <p>
-        You can get 90% of that understanding in a fraction of the time —
-        but only if someone actually walks you through it instead of just
-        telling you “gold is good, buy gold.”
+        அந்தப் புரிதலில் 90%-ஐ மிகக் குறைந்த நேரத்தில் நீங்கள் பெறலாம் — ஆனால் யாராவது “தங்கம் நல்லது, தங்கத்தை வாங்குங்கள்” என்று மட்டும் சொல்லாமல், உண்மையிலேயே உங்களுக்கு அதை படிப்படியாக விளக்கினால் மட்டுமே.
       </p>
 
       <p>
-        That’s what the tutorial does. Not a sales pitch dressed up as
-        education — a real breakdown of how the precious metals market works:
-        what drives gold’s price, how premiums and spreads quietly determine
-        whether you got a fair deal, what separates a legitimate bullion
-        purchase from an overpriced collector’s item, and how to actually
-        compare providers instead of guessing.
+        இந்த வழிகாட்டி செய்வது இதுதான். கல்வி என்ற போர்வையில் மறைந்த விற்பனைப் பேச்சு அல்ல — விலைமதிப்புள்ள உலோகச் சந்தை எவ்வாறு செயல்படுகிறது என்பதன் உண்மையான விளக்கம்: தங்கத்தின் விலையை எது இயக்குகிறது, பிரீமியங்களும் வாங்கும்-விற்கும் விலை வேறுபாடும் நீங்கள் நியாயமான ஒப்பந்தம் பெற்றீர்களா என்பதை அமைதியாக எப்படித் தீர்மானிக்கின்றன, முறையான தங்கக் கட்டி வாங்குதலை அதிக விலை கொண்ட சேகரிப்புப் பொருளிலிருந்து எது வேறுபடுத்துகிறது, மேலும் ஊகிப்பதற்குப் பதிலாக வழங்குநர்களை உண்மையில் எவ்வாறு ஒப்பிடுவது.
       </p>
 
       <p>
-        The central banks already made their move. Whether you make yours —
-        and how — is a decision worth making with your eyes open.
+        மத்திய வங்கிகள் ஏற்கனவே தங்கள் நகர்வைச் செய்துவிட்டன. நீங்கள் உங்கள் நகர்வைச் செய்வீர்களா — எப்படிச் செய்வீர்கள் — என்பது கண்களைத் திறந்து வைத்து எடுக்க வேண்டிய முடிவு.
       </p>
 
-      <a class="back-link" href="/">
-        ← Back to தங்க முதலீட்டாளர்
+      <a class="back-link" href="/ta/">
+        ← புத்தகப் பக்கத்திற்குத் திரும்பு
       </a>
 
     </article>
 
     <aside class="article-cta">
-      <h2>வாங்குவதற்கு முன் தங்கத்தைப் புரிந்துகொள்ளுங்கள்</h2>
+      <h2>தங்கத்தை வாங்கும் முன் புரிந்துகொள்ளுங்கள்</h2>
 
       <p>
-        விலை நிர்ணயம், கூடுதல் கட்டணங்கள், விலை வேறுபாடுகள், சேமிப்பு மற்றும் மீள்வாங்கும் நிபந்தனைகள் பற்றிய நடைமுறை விளக்கத்திற்கு முழுமையான தங்க முதலீட்டாளர் வழிகாட்டியைப் படியுங்கள்.
+        விலை நிர்ணயம், பிரீமியங்கள், வாங்கும்-விற்கும் விலை வேறுபாடு, சேமிப்பு மற்றும் திரும்பப் பெறும் நிபந்தனைகள் குறித்த நடைமுறை விளக்கத்திற்கு முழுமையான தங்க முதலீட்டாளர் வழிகாட்டியைப் படியுங்கள்.
       </p>
 
       <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">
-        PDF-ஐப் பெறுங்கள் — €38
+        PDF பெறுங்கள் — €38
       </a>
     </aside>
 
