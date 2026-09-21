@@ -405,6 +405,36 @@ header {
       }
     }
   
+    .inline-link {
+      color: var(--gold-light);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .inline-link:hover { color: #fff; }
+    .enterprise-partner {
+      margin-top: 16px;
+      font-size: 0.9rem;
+    }
+
+    /* Partner Edition shortcut (top of page) */
+    .partner-link {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 10px 20px;
+      border: 1px solid var(--gold);
+      border-radius: 999px;
+      color: var(--gold-light);
+      font-size: 0.95rem;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .partner-link:hover,
+    .partner-link:focus-visible {
+      background: var(--gold);
+      color: #111;
+    }
+    html { scroll-behavior: smooth; }
+
     /* Partner Edition */
 
     .partner-section {
@@ -567,6 +597,8 @@ header {
         an individual license code. One bulk order covers all available book languages; no language selection is required when ordering.
       </p>
 
+      <a class="partner-link" href="#partner">Want your own branding? Request a Partner Edition &darr;</a>
+
     </div>
   </header>
 
@@ -580,7 +612,7 @@ header {
           <h2>Choose your volume</h2>
           <p>
             Larger orders receive a lower price per copy. Select one
-            package below to continue, or contact us for an Enterprise contract. License codes must be activated within 12 months of purchase. Once successfully activated, the selected language edition does not expire. Each activated license allows up to 3 downloads of that edition.
+            package below to continue, or contact us for an Enterprise contract. Want the book with your own branding and your own choice of languages? See the <a class="inline-link" href="#partner">Partner Edition</a>. License codes must be activated within 12 months of purchase. Once successfully activated, the selected language edition does not expire. Each activated license allows up to 3 downloads of that edition.
           </p>
         </div>
 
@@ -798,6 +830,7 @@ header {
             <div class="package-price">Custom pricing and contract</div>
             <p>Contact us to discuss your organization's licensing requirements.</p>
             <a class="continue-button" href="/#contact">Contact</a>
+            <p class="enterprise-partner">Want your own logo on the book? <a class="inline-link" href="#partner">Partner Edition</a></p>
           </article>
         </div>
 
