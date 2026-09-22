@@ -1,0 +1,59 @@
+<!--
+  PASTE LOCATION: insights-and-partners.html
+  Insert this whole block immediately after the closing </section> of the
+  regional-partners section, and immediately before <section id="insights">.
+
+  Today the file reads:  ...</section><section id="insights">
+  It should read:        ...</section>[THIS BLOCK]<section id="insights">
+
+  This reuses the site's existing .featured-article / .label / .button
+  classes verbatim, so it should drop in without any new CSS. If the
+  insights/regional sections are wrapped in a container div (e.g. a
+  ".wrap" or ".container"), place this section inside that same wrapper
+  pattern so widths line up — check the live file for that outer div,
+  since it wasn't visible in the fetch used to draft this.
+
+  v2: simplified to a single indicator (the real yield / TIPS) rather
+  than the three-symbol ticker tape — sharper hook, and it sidesteps the
+  dollar-index widget's real-time data issue entirely (see notes sent
+  alongside this file).
+
+  v3: confirmed the destination page (real-rates-and-the-dollar.html)
+  is finished — commodity index on the chart, a live 30-currency
+  performance table standing in for the old dollar-index line, and a
+  new "Confidence, defined" section. None of that changed what belongs
+  in this teaser: still a single sharp TIPS number and one click through.
+
+  v4: title is now the clickable element ("Real Interest Rates & the
+  Dollar", matching the destination page's own h1), placed just above
+  the article/Insights section, per feedback. The "See the full
+  picture" button stays as a second, more explicit click target.
+-->
+<section id="indicators">
+  <article class="featured-article">
+    <div class="label">Live indicator &middot; Real interest rates</div>
+    <h3><a href="real-rates-and-the-dollar.html" style="color:inherit;text-decoration:none">Real Interest Rates &amp; the Dollar</a></h3>
+    <p>One number does more to set the price of gold than almost any headline: the real interest rate &mdash; what it actually costs, after inflation, to hold cash instead of gold. Here's where it stands right now.</p>
+
+    <div class="tradingview-widget-container" style="height:160px;margin:18px 0 20px">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+      {
+        "symbol": "FRED:DFII10",
+        "width": "100%",
+        "height": "100%",
+        "locale": "en",
+        "dateRange": "12m",
+        "colorTheme": "dark",
+        "trendLineColor": "rgba(198, 161, 91, 1)",
+        "underLineColor": "rgba(198, 161, 91, 0.15)",
+        "isTransparent": true,
+        "autosize": true,
+        "largeChartUrl": ""
+      }
+      </script>
+    </div>
+
+    <a class="button" href="real-rates-and-the-dollar.html">See the full picture</a>
+  </article>
+</section>
