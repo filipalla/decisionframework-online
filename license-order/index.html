@@ -233,6 +233,35 @@
       font-size: 0.78rem;
     }
 
+    /* Sponsor bonus (Diamond / Business / Enterprise) */
+
+    .sponsor-badge {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px dashed var(--line);
+    }
+
+    .sponsor-badge .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      background: var(--gold);
+      color: #17120a;
+      font-family: Arial, sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      border-radius: 3px;
+    }
+
+    .sponsor-badge .duration {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-family: Arial, sans-serif;
+      font-size: 0.8rem;
+    }
+
     /* Selected summary */
 
     .order-summary {
@@ -404,7 +433,7 @@ header {
         padding: 55px 0 65px;
       }
     }
-  
+
     .inline-link {
       color: var(--gold-light);
       text-decoration: underline;
@@ -813,6 +842,11 @@ header {
               €11,000.00
               <span>total</span>
             </div>
+
+            <div class="sponsor-badge">
+              <span class="tag">+ Country Sponsor</span>
+              <span class="duration">Public listing on decisionframework.online for 12 months</span>
+            </div>
           </article>
 
           <article class="package" data-package="business" data-name="Business" data-copies="2500" data-price="9.99">
@@ -822,6 +856,11 @@ header {
             <div class="package-copies">2,500 copies</div>
             <div class="package-price"><strong>€9.99</strong> per copy</div>
             <div class="package-total">€24,975.00 <span>total</span></div>
+
+            <div class="sponsor-badge">
+              <span class="tag">+ Regional Sponsor</span>
+              <span class="duration">Public listing on decisionframework.online for 15 months</span>
+            </div>
           </article>
           <article class="package enterprise">
             <div class="package-level">Enterprise contract</div>
@@ -831,12 +870,22 @@ header {
             <p>Contact us to discuss your organization's licensing requirements.</p>
             <a class="continue-button" href="/#contact">Contact</a>
             <p class="enterprise-partner">Want your own logo on the book? <a class="inline-link" href="#partner">Partner Edition</a></p>
+
+            <div class="sponsor-badge">
+              <span class="tag">+ Global Sponsor</span>
+              <span class="duration">Public listing on decisionframework.online for 18 months</span>
+            </div>
           </article>
         </div>
 
         <p class="language-note"><strong>One order. Individual language choices.</strong>
           Each code activates one copy in one available language. Recipients choose at activation;
           their language choice is permanent. You do not need to allocate languages in advance.</p>
+
+        <p class="language-note"><strong>Sponsor recognition.</strong>
+          Diamond, Business and Enterprise orders include public sponsor listing on this site —
+          Country, Regional or Global — and growing volume can move you up. Reach out if you're
+          building toward a tier and want to talk through timing.</p>
         <!-- Order summary -->
         <div class="order-summary">
 
@@ -1063,7 +1112,7 @@ header {
     const continueButton = document.getElementById("continueButton");
 
     // Checkout links for the fixed-volume packages.
-    
+
     const payhipLinks = {
       business: "https://payhip.com/b/ft59T",
       tin: "https://payhip.com/b/Pb5oJ",
@@ -1202,7 +1251,3 @@ header {
 <!-- End Cloudflare Web Analytics -->
 </body>
 </html>
-
-
-
-
