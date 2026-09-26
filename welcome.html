@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welcome | The DecisionFramework Brief</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+:root{--background:#111214;--surface:#1b1b1d;--gold:#c6a15b;--gold-light:#e2c887;--text:#f1eadb;--muted:#b8b0a1;--line:rgba(198,161,91,.45)}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--background) 45%);background-color:var(--background);color:var(--text);font-family:Georgia,"Times New Roman",serif;line-height:1.7;display:flex;align-items:center}
+.wrap{width:min(680px,calc(100% - 32px));margin:48px auto;text-align:center}
+.eyebrow{color:var(--gold-light);font:12px/1.4 Arial,sans-serif;letter-spacing:.28em;text-transform:uppercase;margin-bottom:18px}
+h1{margin:0;font-weight:400;font-size:clamp(2rem,5vw,3rem);line-height:1.15}
+p{color:var(--muted)}
+.card{margin:32px 0;padding:28px;background:var(--surface);border:1px solid var(--line)}
+.card h2{margin:0 0 6px;font-weight:400;font-size:1.35rem;color:var(--gold-light)}
+.code{display:flex;justify-content:center;align-items:center;gap:10px;flex-wrap:wrap;margin:18px 0}
+.code code{font:600 1.35rem/1 "Courier New",monospace;letter-spacing:.06em;color:var(--text);padding:14px 18px;border:1px dashed var(--gold);background:rgba(198,161,91,.08)}
+button{font:14px Arial,sans-serif;padding:12px 16px;background:transparent;color:var(--muted);border:1px solid var(--line);cursor:pointer}
+button:hover{color:var(--text);border-color:var(--gold)}
+.button{display:inline-block;padding:13px 26px;text-decoration:none;border:1px solid var(--gold-light);background:rgba(198,161,91,.12);color:var(--gold-light);transition:.2s}
+.button:hover{background:var(--gold-light);color:#17120a}
+.button.secondary{border-color:var(--line);background:none;color:var(--muted)}
+.row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.small{font:13px/1.6 Arial,sans-serif}
+.langs{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:8px;margin-top:16px}.langs a{display:block;padding:9px 10px;border:1px solid var(--line);color:var(--text);text-decoration:none;font:14px/1.4 Arial,sans-serif}.langs a:hover{border-color:var(--gold);color:var(--gold-light)}.small a{color:var(--muted)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="eyebrow">The DecisionFramework Brief</div>
+  <h1>You're in. Welcome.</h1>
+  <p>Thanks for confirming. Here is your subscriber price for the full book.</p>
+
+  <div class="card">
+    <h2>€35 instead of €38</h2>
+    <p class="small">Enter this code at checkout for one single-licence copy:</p>
+    <div class="code">
+      <code id="code">SingleLicense35</code>
+      <button type="button" id="copy">Copy code</button>
+    </div>
+    <a class="button" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener">Get the full book</a>
+    <p class="small" style="margin-bottom:0">You choose your language when you activate your licence.</p>
+  </div>
+
+  <div class="card">
+    <h2>Read the preview in your language</h2>
+    <p class="small">Choose a language to open its free preview.</p>
+    <nav class="langs" aria-label="Preview languages">
+      <a href="/#free-preview">English</a>
+      <a href="/nl/#free-preview">Nederlands</a>
+      <a href="/DE/#free-preview">Deutsch</a>
+      <a href="/FR/#free-preview">Français</a>
+      <a href="/ES/#free-preview">Español</a>
+      <a href="/IT/#free-preview">Italiano</a>
+      <a href="/PT/#free-preview">Português</a>
+      <a href="/PL/#free-preview">Polski</a>
+      <a href="/RU/#free-preview">Русский</a>
+      <a href="/SV/#free-preview">Svenska</a>
+      <a href="/NO/#free-preview">Norsk</a>
+      <a href="/DA/#free-preview">Dansk</a>
+      <a href="/fi/#free-preview">Suomi</a>
+      <a href="/et/#free-preview">Eesti</a>
+      <a href="/lv/#free-preview">Latviešu</a>
+      <a href="/lt/#free-preview">Lietuvių</a>
+      <a href="/hu/#free-preview">Magyar</a>
+      <a href="/ro/#free-preview">Română</a>
+      <a href="/bg/#free-preview">Български</a>
+      <a href="/sr/#free-preview">Српски</a>
+      <a href="/ka/#free-preview">ქართული</a>
+      <a href="/TR/#free-preview">Türkçe</a>
+      <a href="/AR/#free-preview">العربية</a>
+      <a href="/HI/#free-preview">हिन्दी</a>
+      <a href="/ta/#free-preview">தமிழ்</a>
+      <a href="/TH/#free-preview">ไทย</a>
+      <a href="/VN/#free-preview">Tiếng Việt</a>
+      <a href="/ID/#free-preview">Bahasa Indonesia</a>
+      <a href="/MS/#free-preview">Bahasa Melayu</a>
+      <a href="/ZH-HANS/#free-preview">简体中文</a>
+      <a href="/zh-hant/#free-preview">繁體中文</a>
+      <a href="/JA/#free-preview">日本語</a>
+      <a href="/KR/#free-preview">한국어</a>
+    </nav>
+  </div>
+  <p class="small"><a href="/insights-and-partners.html#insights">Read the latest insights</a></p>
+</main>
+<script>
+document.getElementById('copy').addEventListener('click',function(){
+  var b=this,t=document.getElementById('code').textContent;
+  function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy code'},2000)}
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,function(){})}
+});
+</script>
+</body>
+</html>
