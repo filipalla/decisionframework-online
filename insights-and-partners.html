@@ -94,4 +94,37 @@
   <p class="df-small">You'll get a confirmation email first. Occasional emails on gold, real rates and the dollar. Unsubscribe anytime.</p>
 </div>
 </section><section id="media"><div class="label">External media & partnerships</div><h2>Build something useful together.</h2><div class="grid"><article class="card"><h3>Written media</h3><p>Collaborate through written articles, email Q&As and resource sharing about gold, macroeconomics and investment decision-making.</p><a class="button" href="mailto:DecisionFramework@telenet.be?subject=Written%20media%20collaboration">Discuss written collaboration</a></article><article class="card"><h3>Partner campaigns</h3><p>Discuss a dedicated resource page, educational campaign or book offer for your audience.</p><a class="button" href="mailto:DecisionFramework@telenet.be?subject=Partnership%20campaign%20enquiry">Discuss a campaign</a></article><article class="card"><h3>Books & team licences</h3><p>Explore The Gold Investor or discuss access for your team or organisation.</p><a class="button" href="https://payhip.com/b/7GDAe">Visit the store</a></article></div></section><footer>© 2026 Filip Allaert · <a href="mailto:DecisionFramework@telenet.be">Contact</a><p class="muted">Sponsored placements and commercial relationships will be labelled. Educational content supports your own research and decisions.</p></footer></main><script>document.getElementById('region').addEventListener('change',function(){document.querySelectorAll('[data-region]').forEach(card=>{card.hidden=this.value!=='all'&&card.dataset.region!==this.value})})</script><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<script>
+(function(){
+  document.querySelectorAll('form[action*="app.kit.com/forms/9913050"]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button'), input=form.querySelector('input[name=email_address]');
+      var msg=form.parentNode.querySelector('.df-msg');
+      if(!msg){msg=document.createElement('p');msg.className='df-msg';msg.setAttribute('role','status');msg.style.cssText='margin:14px 0 0;color:#e2c887;font:15px/1.6 Arial,sans-serif';form.parentNode.insertBefore(msg,form.nextSibling);}
+      var fd=new FormData();
+      fd.append('email_address',input.value.trim());
+      fd.append('token','');
+      fd.append('referrer',document.referrer||'');
+      fd.append('host',location.href);
+      fd.append('search',location.search||'');
+      fd.append('user',(window.crypto&&crypto.randomUUID)?crypto.randomUUID():String(Date.now()));
+      fd.append('ckjs_version','6');
+      btn.disabled=true; var old=btn.textContent; btn.textContent='Sending…';
+      fetch(form.action,{method:'POST',body:fd,headers:{'Accept':'application/json','X-CKJS-Version':'6'}})
+        .then(function(r){return r.json().catch(function(){return {};}).then(function(d){return {ok:r.ok,d:d};});})
+        .then(function(res){
+          if(res.ok && (!res.d.status || res.d.status==='success')){
+            form.style.display='none';
+            msg.textContent='Almost there! Check your inbox and confirm your subscription to get the free preview in your language and your €35 code. Not there? Check your spam folder.';
+          } else {
+            btn.disabled=false; btn.textContent=old;
+            msg.textContent=(res.d && res.d.errors && res.d.errors.messages && res.d.errors.messages.join(' ')) || 'Something went wrong. Please check your email address and try again.';
+          }
+        })
+        .catch(function(){ btn.disabled=false; btn.textContent=old; msg.textContent='Connection problem. Please try again in a moment.'; });
+    });
+  });
+})();
+</script>
 </html>

@@ -186,5 +186,38 @@ a:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
 <footer>
   <div class="container">© 2026 Filip Allaert · <a href="/">decisionframework.online</a> · <a href="mailto:DecisionFramework@telenet.be">Contact</a><br>Educational content to support your own research and decisions. Not financial advice.</div>
 </footer>
+<script>
+(function(){
+  document.querySelectorAll('form[action*="app.kit.com/forms/9913050"]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button'), input=form.querySelector('input[name=email_address]');
+      var msg=form.parentNode.querySelector('.df-msg');
+      if(!msg){msg=document.createElement('p');msg.className='df-msg';msg.setAttribute('role','status');msg.style.cssText='margin:14px 0 0;color:#e2c887;font:15px/1.6 Arial,sans-serif';form.parentNode.insertBefore(msg,form.nextSibling);}
+      var fd=new FormData();
+      fd.append('email_address',input.value.trim());
+      fd.append('token','');
+      fd.append('referrer',document.referrer||'');
+      fd.append('host',location.href);
+      fd.append('search',location.search||'');
+      fd.append('user',(window.crypto&&crypto.randomUUID)?crypto.randomUUID():String(Date.now()));
+      fd.append('ckjs_version','6');
+      btn.disabled=true; var old=btn.textContent; btn.textContent='Sending…';
+      fetch(form.action,{method:'POST',body:fd,headers:{'Accept':'application/json','X-CKJS-Version':'6'}})
+        .then(function(r){return r.json().catch(function(){return {};}).then(function(d){return {ok:r.ok,d:d};});})
+        .then(function(res){
+          if(res.ok && (!res.d.status || res.d.status==='success')){
+            form.style.display='none';
+            msg.textContent='Almost there! Check your inbox and confirm your subscription to get the free preview in your language and your €35 code. Not there? Check your spam folder.';
+          } else {
+            btn.disabled=false; btn.textContent=old;
+            msg.textContent=(res.d && res.d.errors && res.d.errors.messages && res.d.errors.messages.join(' ')) || 'Something went wrong. Please check your email address and try again.';
+          }
+        })
+        .catch(function(){ btn.disabled=false; btn.textContent=old; msg.textContent='Connection problem. Please try again in a moment.'; });
+    });
+  });
+})();
+</script>
 </body>
 </html>
