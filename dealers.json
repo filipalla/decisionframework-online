@@ -664,10 +664,10 @@
   },
   {
    "name": "Baird & Co",
-   "url": "https://www.goldline.co.uk",
+   "url": "https://www.bairdmint.com",
    "region": "Europe",
    "country": "United Kingdom",
-   "city": "London",
+   "city": "London (Hatton Garden)",
    "type": "Refiner / dealer",
    "founded": 1967,
    "markets": [
@@ -675,7 +675,7 @@
    ],
    "storage": "Storage offered",
    "ira": null,
-   "notes": "London refiner and bullion dealer.",
+   "notes": "London refiner and bullion dealer with its own refinery; LBMA Full Member.",
    "sponsor": false
   },
   {
@@ -685,14 +685,14 @@
    "country": "United Kingdom",
    "city": "Birmingham",
    "type": "Online dealer",
-   "founded": null,
+   "founded": 2008,
    "markets": [
     "United Kingdom",
     "EU"
    ],
    "storage": "Storage offered",
    "ira": null,
-   "notes": "",
+   "notes": "LBMA Full Member; free insured delivery.",
    "sponsor": false
   },
   {
@@ -702,13 +702,13 @@
    "country": "United Kingdom",
    "city": "Blackpool",
    "type": "Dealer with showrooms",
-   "founded": null,
+   "founded": 1964,
    "markets": [
     "United Kingdom"
    ],
    "storage": "Storage offered",
    "ira": null,
-   "notes": "Family firm trading for more than six decades.",
+   "notes": "Blackpool and London (Hatton Garden); sovereign specialists; LBMA Full Member.",
    "sponsor": false
   },
   {
@@ -716,15 +716,15 @@
    "url": "https://www.atkinsonsbullion.com",
    "region": "Europe",
    "country": "United Kingdom",
-   "city": "London",
+   "city": "Sutton Coldfield",
    "type": "Dealer with showrooms",
-   "founded": null,
+   "founded": 1990,
    "markets": [
     "United Kingdom"
    ],
-   "storage": null,
+   "storage": "Vaultor storage",
    "ira": null,
-   "notes": "",
+   "notes": "LBMA Affiliate; BNTA member; storage via Vaultor.",
    "sponsor": false
   },
   {
@@ -4246,7 +4246,7 @@
   },
   {
    "name": "New Zealand Gold Merchants",
-   "url": null,
+   "url": "https://gogold.co.nz",
    "region": "Asia-Pacific",
    "country": "New Zealand",
    "city": "",
@@ -4302,6 +4302,651 @@
    "founded": null,
    "markets": [
     "Canada"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Manfra, Tordella & Brookes (MTB)",
+   "url": "https://www.mtbmetals.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "New York, NY",
+   "type": "Dealer with vault",
+   "founded": 1957,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Vaulting and storage in New York",
+   "ira": null,
+   "notes": "US Mint Authorized Purchaser; US distributor of PAMP products.",
+   "sponsor": false
+  },
+  {
+   "name": "Bullion Exchanges",
+   "url": "https://bullionexchanges.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "New York, NY (Diamond District)",
+   "type": "Dealer with vault",
+   "founded": 2012,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Segregated vault under 30 W 47th St, insured by Lloyd's",
+   "ira": true,
+   "notes": "Showroom on 47th Street; vault acquired from MTB in 2022.",
+   "sponsor": false
+  },
+  {
+   "name": "Bullion Trading LLC",
+   "url": "https://bulliontradingllc.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "New York, NY (Diamond District)",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Over-the-counter shop at 20 W 47th St; also in Connecticut, Pennsylvania and New Jersey.",
+   "sponsor": false
+  },
+  {
+   "name": "Brink's (precious-metals vaulting)",
+   "url": "https://www.brinks.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Multiple incl. New York",
+   "type": "Vault operator",
+   "founded": null,
+   "markets": [
+    "United States",
+    "International"
+   ],
+   "storage": "Vaults in several US cities and worldwide",
+   "ira": true,
+   "notes": "Used by many dealers and IRA custodians.",
+   "sponsor": false
+  },
+  {
+   "name": "Loomis",
+   "url": "https://www.loomis.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Inwood NY, Miami FL, Los Angeles CA",
+   "type": "Vault operator",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Precious-metals vaults incl. Miami and New York",
+   "ira": null,
+   "notes": "Mainly serves dealers and institutions.",
+   "sponsor": false
+  },
+  {
+   "name": "Stack's Bowers Galleries",
+   "url": "https://stacksbowers.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Costa Mesa, CA",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "United States",
+    "International"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Rare-coin auction house and dealer; galleries include Miami and New York.",
+   "sponsor": false
+  },
+  {
+   "name": "Monex",
+   "url": "https://www.monex.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Newport Beach, CA",
+   "type": "Dealer",
+   "founded": 1987,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "Acquired by A-Mark in 2026. A CFTC enforcement case over its former Atlas leveraged-trading programme ended in a 2022 court order.",
+   "sponsor": false
+  },
+  {
+   "name": "Goldline",
+   "url": "https://www.goldline.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "California",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "Part of the A-Mark group.",
+   "sponsor": false
+  },
+  {
+   "name": "BGASC",
+   "url": "https://www.bgasc.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Hero Bullion",
+   "url": "https://www.herobullion.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "U.S. Gold Bureau",
+   "url": "https://www.usgoldbureau.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Leander, TX",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "US Mint Authorized Purchaser.",
+   "sponsor": false
+  },
+  {
+   "name": "SchiffGold",
+   "url": "https://schiffgold.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "New York, NY",
+   "type": "Dealer",
+   "founded": 2010,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Colorado Gold",
+   "url": "https://www.coloradogold.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Montrose, CO",
+   "type": "Dealer",
+   "founded": 1977,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Goldco",
+   "url": "https://goldco.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Calabasas, CA",
+   "type": "IRA specialist",
+   "founded": 2006,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Via IRS-approved depositories",
+   "ira": true,
+   "notes": "Sells metals mainly for retirement accounts; compare minimums and premiums with online dealers.",
+   "sponsor": false
+  },
+  {
+   "name": "Augusta Precious Metals",
+   "url": "https://www.augustapreciousmetals.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Beverly Hills, CA",
+   "type": "IRA specialist",
+   "founded": 2012,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Via IRS-approved depositories",
+   "ira": true,
+   "notes": "Sells metals mainly for retirement accounts; compare minimums and premiums with online dealers.",
+   "sponsor": false
+  },
+  {
+   "name": "Birch Gold Group",
+   "url": "https://www.birchgold.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Burbank, CA",
+   "type": "IRA specialist",
+   "founded": 2003,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Via IRS-approved depositories",
+   "ira": true,
+   "notes": "Sells metals mainly for retirement accounts; compare minimums and premiums with online dealers.",
+   "sponsor": false
+  },
+  {
+   "name": "American Hartford Gold",
+   "url": "https://www.americanhartfordgold.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Los Angeles, CA",
+   "type": "IRA specialist",
+   "founded": 2015,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Via IRS-approved depositories",
+   "ira": true,
+   "notes": "Sells metals mainly for retirement accounts; compare minimums and premiums with online dealers.",
+   "sponsor": false
+  },
+  {
+   "name": "Noble Gold Investments",
+   "url": "https://noblegoldinvestments.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Pasadena, CA",
+   "type": "IRA specialist",
+   "founded": 2016,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Via IRS-approved depositories",
+   "ira": true,
+   "notes": "Sells metals mainly for retirement accounts; compare minimums and premiums with online dealers.",
+   "sponsor": false
+  },
+  {
+   "name": "International Depository Services (IDS)",
+   "url": "https://internationaldepositoryservices.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Dallas, TX",
+   "type": "IRA depository",
+   "founded": null,
+   "markets": [
+    "United States",
+    "Canada"
+   ],
+   "storage": "Dallas TX, New Castle DE, Mississauga ON",
+   "ira": true,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "CNT Depository",
+   "url": "https://www.cnt.us",
+   "region": "North America",
+   "country": "United States",
+   "city": "Bridgewater, MA",
+   "type": "IRA depository",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Segregated and commingled storage",
+   "ira": true,
+   "notes": "Part of Coins 'N Things, a US Mint Authorized Purchaser.",
+   "sponsor": false
+  },
+  {
+   "name": "Dakota Depository",
+   "url": "https://www.dakotadepository.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Fargo, ND",
+   "type": "IRA depository",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Depository storage",
+   "ira": true,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Kingdom Trust",
+   "url": "https://www.kingdomtrust.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Murray, KY",
+   "type": "IRA custodian",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "Self-directed IRA custodian.",
+   "sponsor": false
+  },
+  {
+   "name": "GoldStar Trust",
+   "url": "https://www.goldstartrust.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Canyon, TX",
+   "type": "IRA custodian",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "Self-directed IRA custodian focused on precious metals.",
+   "sponsor": false
+  },
+  {
+   "name": "Sharps Pixley",
+   "url": "https://www.sharpspixley.com",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "London (St James's)",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "Historic London bullion name; the UK's first bullion-only retail shop, on St James's Street; LBMA Full Member.",
+   "sponsor": false
+  },
+  {
+   "name": "Hatton Garden Metals",
+   "url": "https://hattongardenmetals.com",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "London (Hatton Garden)",
+   "type": "Dealer with showrooms",
+   "founded": 2007,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "LBMA Affiliate; walk-in buying and selling.",
+   "sponsor": false
+  },
+  {
+   "name": "Physical Gold",
+   "url": "https://www.physicalgold.com",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "London (Hatton Garden)",
+   "type": "Dealer",
+   "founded": 2008,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": "Segregated storage",
+   "ira": null,
+   "notes": "BNTA member.",
+   "sponsor": false
+  },
+  {
+   "name": "ATS Bullion",
+   "url": "https://www.atsbullion.com",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "London (Strand)",
+   "type": "Dealer with showrooms",
+   "founded": 2002,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "BNTA member; walk-in shop at Savoy Court.",
+   "sponsor": false
+  },
+  {
+   "name": "Harrods Gold Bullion",
+   "url": "https://www.harrods.com",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "London (Knightsbridge)",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "Bullion desk inside the Knightsbridge department store.",
+   "sponsor": false
+  },
+  {
+   "name": "The Pure Gold Company",
+   "url": "https://puregoldcompany.co.uk",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "London",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Solomon Global",
+   "url": "https://www.solomonglobal.com",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "London",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Kingdom",
+    "International"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Gold.co.uk",
+   "url": "https://www.gold.co.uk",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "Birmingham",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": "Brink's storage",
+   "ira": null,
+   "notes": "Operated by an LBMA Full Member.",
+   "sponsor": false
+  },
+  {
+   "name": "The Gold Bullion Company",
+   "url": "https://www.thegoldbullion.co.uk",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "Wolverhampton",
+   "type": "Online dealer",
+   "founded": 1993,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": "Segregated storage",
+   "ira": null,
+   "notes": "Free insured delivery.",
+   "sponsor": false
+  },
+  {
+   "name": "TD Precious Metals",
+   "url": "https://preciousmetals.td.com",
+   "region": "North America",
+   "country": "Canada",
+   "city": "Toronto",
+   "type": "Bank",
+   "founded": null,
+   "markets": [
+    "Canada"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "TD Bank's online precious-metals shop.",
+   "sponsor": false
+  },
+  {
+   "name": "Bullion Mart",
+   "url": "https://www.bullionmart.ca",
+   "region": "North America",
+   "country": "Canada",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Canada"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Canadian PMX",
+   "url": "https://canadianpmx.com",
+   "region": "North America",
+   "country": "Canada",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Canada"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Ainslie Bullion",
+   "url": "https://ainsliebullion.com.au",
+   "region": "Asia-Pacific",
+   "country": "Australia",
+   "city": "Brisbane",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Australia"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "Stores in Brisbane, Melbourne and the Gold Coast.",
+   "sponsor": false
+  },
+  {
+   "name": "Jaggards",
+   "url": "https://www.jaggards.com.au",
+   "region": "Asia-Pacific",
+   "country": "Australia",
+   "city": "Sydney",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Australia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Online and in-store in Sydney.",
+   "sponsor": false
+  },
+  {
+   "name": "Guardian Gold",
+   "url": "https://guardian-gold.com.au",
+   "region": "Asia-Pacific",
+   "country": "Australia",
+   "city": "Sydney",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Australia"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "Sydney and Melbourne.",
+   "sponsor": false
+  },
+  {
+   "name": "New Zealand Mint",
+   "url": "https://newzealandmint.com",
+   "region": "Asia-Pacific",
+   "country": "New Zealand",
+   "city": "Auckland",
+   "type": "Mint",
+   "founded": null,
+   "markets": [
+    "New Zealand",
+    "International"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Retail bullion from the New Zealand Mint.",
+   "sponsor": false
+  },
+  {
+   "name": "Best Bullion",
+   "url": "https://bestbullion.co.nz",
+   "region": "Asia-Pacific",
+   "country": "New Zealand",
+   "city": "Christchurch",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "New Zealand"
    ],
    "storage": null,
    "ira": null,
