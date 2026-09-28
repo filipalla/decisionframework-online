@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Precious Metals Dealer Directory | DecisionFramework</title>
+<meta name="description" content="A neutral directory of established gold and silver dealers, mints, vault platforms and IRA providers, organised by region and country.">
+<meta property="og:title" content="Precious Metals Dealer Directory">
+<meta property="og:description" content="Established dealers, mints, vault platforms and IRA providers by region and country. A directory, not a ranking.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GoldThesis">
+<style>
+:root{--bg:#111214;--surface:#1b1b1d;--gold:#c6a15b;--light:#e2c887;--text:#f1eadb;--muted:#b8b0a1;--line:rgba(198,161,91,.45)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--bg) 38%);color:var(--text);font:17px/1.75 Georgia,serif}a{color:var(--light)}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}nav{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);font:12px Arial;letter-spacing:.1em;text-transform:uppercase}nav a{text-decoration:none;color:var(--muted)}header{text-align:center;padding:100px 0 60px}header .eyebrow,.label{color:var(--light);font:12px Arial;letter-spacing:.22em;text-transform:uppercase}h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:400;line-height:1.05;margin:28px auto;max-width:900px}.subtitle{color:var(--light);font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;max-width:760px;margin:auto}.caption{text-align:center;color:var(--muted);font:13px Arial;letter-spacing:.05em;margin-top:12px}h2{color:var(--light);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:64px 0 18px}p{color:var(--muted)}.button{display:inline-block;padding:11px 18px;border:1px solid var(--gold);text-decoration:none;font:12px Arial;letter-spacing:.1em;text-transform:uppercase}footer{padding:30px 0;border-top:1px solid var(--line);font:13px Arial;color:var(--muted)}@media(max-width:800px){.wrap{width:min(100% - 28px,1100px)}nav{flex-direction:column}}
+.dir{padding:60px 0 100px;border-top:1px solid var(--line)}
+.method{padding:24px;margin:0 0 36px;background:rgba(198,161,91,.1);border-left:3px solid var(--gold);color:var(--light);font-size:1.05rem}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}.tabs button{padding:10px 16px;background:transparent;color:var(--muted);border:1px solid var(--line);font:12px Arial;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}.tabs button[aria-pressed=true]{background:rgba(198,161,91,.16);color:var(--light);border-color:var(--light)}.tabs button:hover{color:var(--light)}.tabs .n{opacity:.7;margin-left:6px}
+.regionnote{padding:24px;margin:0 0 24px;background:var(--surface);border:1px solid var(--line)}.regionnote h3{margin:0 0 8px;color:var(--light);font-weight:400;font-size:1.35rem}.regionnote ul{margin:0;padding-left:20px;color:var(--muted);font-size:.98rem}.regionnote li{margin-bottom:6px}.regionnote li strong{color:var(--text);font-weight:400}
+.controls{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:12px;margin:0 0 12px}.controls label{display:block;font:11px Arial;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}.controls select,.controls input{width:100%;padding:12px;background:var(--surface);color:var(--text);border:1px solid var(--line);font:15px Arial,sans-serif}.controls select:focus,.controls input:focus,.tabs button:focus-visible,a:focus-visible{outline:2px solid var(--light);outline-offset:2px}
+.count{font:13px Arial;color:var(--muted);margin:0 0 20px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{position:relative;padding:24px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column}.card.sponsor{border-color:var(--light);background:linear-gradient(120deg,#302719,#1b1b1d)}.card .label{font-size:11px;letter-spacing:.18em}.card h3{margin:10px 0 4px;font-weight:400;font-size:1.5rem;line-height:1.2;color:var(--text)}.card .meta{font:13px Arial;color:var(--muted);margin:0 0 14px}.card dl{margin:0 0 16px;font:14px/1.6 Arial,sans-serif}.card dt{color:var(--light);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:10px}.card dd{margin:2px 0 0;color:var(--muted)}.card .notes{font-size:.95rem;margin:0 0 18px;flex:1}.card .button{align-self:flex-start}
+.badge{display:inline-block;margin-left:8px;padding:2px 8px;border:1px solid var(--line);font:10px Arial;letter-spacing:.12em;text-transform:uppercase;color:var(--light);vertical-align:middle}.badge.ira{border-color:#7fa37a;color:#a9cfa3}.badge.sp{background:var(--light);color:#17120a;border-color:var(--light)}
+.empty{padding:30px;text-align:center;border:1px dashed var(--line);color:var(--muted)}
+.cta{margin:56px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:18px}.cta .box{padding:28px;background:linear-gradient(120deg,#2a2217,#1b1b1d);border:1px solid var(--line)}.cta h3{margin:10px 0 8px;font-weight:400;font-size:1.4rem;color:var(--text)}
+.fine{font:13px/1.7 Arial,sans-serif;color:var(--muted);margin-top:40px}
+@media(max-width:800px){.grid,.cta{grid-template-columns:1fr}.controls{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <a href="/">DecisionFramework.online</a>
+  <span><a href="/insights-and-partners.html#insights">Insights</a> &middot; <a href="/">Framework</a></span>
+</nav>
+
+<header class="wrap">
+  <div class="eyebrow">The Gold Decision Framework &middot; Resource</div>
+  <h1>Dealer Directory</h1>
+  <p class="subtitle">Established dealers, mints, vault platforms and IRA providers, organised by region. Each market works differently, so start with yours.</p>
+  <p class="caption" id="updated">Last checked 28 September 2026</p>
+</header>
+
+<main class="wrap dir">
+
+  <div class="method"><strong>A directory, not a ranking.</strong> Firms are listed for their size, track record or relevance to a market, and no one paid to be included. Order within a region is alphabetical. Sponsored listings, when there are any, are clearly labelled. Always do your own checks before buying or storing metal with anyone.</div>
+
+  <div class="tabs" role="group" aria-label="Region" id="tabs"></div>
+
+  <div class="regionnote" id="regionnote" aria-live="polite"></div>
+
+  <div class="controls">
+    <div><label for="country">Country or market</label><select id="country"></select></div>
+    <div><label for="type">Type</label><select id="type"></select></div>
+    <div><label for="q">Search</label><input id="q" type="search" placeholder="Name, city, storage…" autocomplete="off"></div>
+  </div>
+  <p class="count" id="count" role="status"></p>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="cta">
+    <div class="box">
+      <div class="label">For dealers</div>
+      <h3>Missing, or something out of date?</h3>
+      <p>Send a correction or a listing request. Inclusion is free and based on public, checkable facts.</p>
+      <a class="button" href="mailto:DecisionFramework@telenet.be?subject=Dealer%20directory%20correction%20or%20listing">Send a correction</a>
+    </div>
+    <div class="box">
+      <div class="label">Sponsorship</div>
+      <h3>Be recognised in your market</h3>
+      <p>Country, Regional and Global sponsors are labelled in this directory and across the site.</p>
+      <a class="button" href="/insights-and-partners.html#country">See sponsorship options</a>
+    </div>
+  </div>
+
+  <p class="fine">Tax and regulatory notes are general summaries and can change; check the current rules in your own country. A listing is not a recommendation or a guarantee of any firm&rsquo;s solvency, service or prices. Educational content to support your own research and decisions. Not financial advice.</p>
+
+  <p><a class="button" href="/insights-and-partners.html#insights">&larr; Back to Insights</a></p>
+</main>
+
+<footer>
+  <div class="wrap">&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">Contact</a></div>
+</footer>
+
+<script>
+(function(){
+  var REGIONS=[
+    {id:'Europe',title:'Europe',points:[
+      '<strong>Investment gold is VAT-free across the EU</strong>: bars of at least 99.5% purity and qualifying legal-tender coins. Silver and platinum are usually subject to VAT.',
+      '<strong>The UK</strong>: Britannia and Sovereign coins are legal tender and exempt from UK capital gains tax.',
+      '<strong>Switzerland</strong> is the usual choice for storage outside the EU; many EU dealers offer Swiss vaults.',
+      '<strong>From July 2027</strong> an EU-wide €10,000 cash limit applies, and precious-metals dealers must identify customers.']},
+    {id:'North America',title:'North America',points:[
+      '<strong>Precious-metals IRAs are a US feature.</strong> Metal must be held by an IRS-approved custodian at an approved depository; storing IRA metal at home is not allowed.',
+      '<strong>Purity rules</strong>: gold generally needs to be at least 99.5% fine to qualify (the American Gold Eagle is a named exception).',
+      '<strong>The IRA chain</strong> has three parts: a dealer sells the metal, a custodian holds the account, a depository stores the bars. This directory marks all three.',
+      '<strong>Canada</strong>: investment gold and silver of qualifying purity are generally exempt from GST/HST.']},
+    {id:'Middle East',title:'Middle East',points:[
+      '<strong>UAE and Saudi Arabia</strong>: investment gold of at least 99% purity is generally zero-rated for VAT.',
+      '<strong>Dubai</strong> is a global trading hub; look for DMCC-licensed dealers and accredited refiners.',
+      '<strong>Shariah-compliant gold</strong> products follow the AAOIFI gold standard; ask providers which standard they follow.',
+      '<strong>This region is still being expanded.</strong> Corrections and additions are welcome.']},
+    {id:'Asia-Pacific',title:'Asia-Pacific',points:[
+      '<strong>Singapore</strong>: investment-grade gold, silver and platinum have been exempt from GST since 2012, which makes it a major storage hub.',
+      '<strong>Australia</strong>: investment-grade bullion is generally free of GST; the Perth Mint is government-owned.',
+      '<strong>India</strong> applies GST to gold; digital-gold products are backed by vaulted metal.',
+      '<strong>Japan</strong>: established refiners run their own retail shops.']},
+    {id:'Global',title:'Global vault platforms',points:[
+      '<strong>One account, several jurisdictions</strong>: these platforms let you own allocated bars in vaults in different countries.',
+      '<strong>Foreign-held assets</strong> can carry reporting duties in your home country; check before you open an account.',
+      '<strong>Check the legal title</strong>: allocated and segregated means specific bars in your name, not a claim on a pool.']}
+  ];
+  var tabs=document.getElementById('tabs'),note=document.getElementById('regionnote'),grid=document.getElementById('grid'),
+      csel=document.getElementById('country'),tsel=document.getElementById('type'),q=document.getElementById('q'),count=document.getElementById('count');
+  var ALL=[],region='Europe';
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function opts(sel,vals,label){var cur=sel.value;sel.innerHTML='<option value="">'+label+'</option>'+vals.map(function(v){return '<option>'+esc(v)+'</option>';}).join('');if(vals.indexOf(cur)>-1)sel.value=cur;}
+  function inRegion(){return ALL.filter(function(d){return d.region===region;});}
+  function buildTabs(){
+    tabs.innerHTML=REGIONS.map(function(r){var n=ALL.filter(function(d){return d.region===r.id;}).length;
+      return '<button type="button" data-r="'+esc(r.id)+'" aria-pressed="'+(r.id===region)+'">'+esc(r.title)+'<span class="n">'+n+'</span></button>';}).join('');
+  }
+  function buildNote(){var r=REGIONS.filter(function(x){return x.id===region;})[0];
+    note.innerHTML='<div class="label">What is different here</div><h3>'+esc(r.title)+'</h3><ul>'+r.points.map(function(p){return '<li>'+p+'</li>';}).join('')+'</ul>';}
+  function buildFilters(){var list=inRegion(),c={},t={};
+    list.forEach(function(d){(d.markets||[]).forEach(function(m){c[m]=1;});c[d.country]=1;t[d.type]=1;});
+    opts(csel,Object.keys(c).sort(),'All countries & markets');opts(tsel,Object.keys(t).sort(),'All types');}
+  function card(d){
+    var meta=[[d.city,d.country].filter(Boolean).join(', ')];if(d.founded)meta.push('Founded '+d.founded);
+    var badges=(d.sponsor?'<span class="badge sp">Sponsor</span>':'')+(d.ira?'<span class="badge ira">IRA</span>':'');
+    var dl='<dt>Markets</dt><dd>'+esc((d.markets||[]).join(', '))+'</dd>';
+    if(d.storage)dl+='<dt>Storage</dt><dd>'+esc(d.storage)+'</dd>';
+    return '<article class="card'+(d.sponsor?' sponsor':'')+'"><div class="label">'+esc(d.type)+badges+'</div><h3>'+esc(d.name)+'</h3><p class="meta">'+esc(meta.join(' · '))+'</p><dl>'+dl+'</dl>'+
+      (d.notes?'<p class="notes">'+esc(d.notes)+'</p>':'<p class="notes"></p>')+
+      '<a class="button" href="'+esc(d.url)+'" target="_blank" rel="noopener nofollow">Visit website &nearr;</a></article>';
+  }
+  function render(){
+    var c=csel.value,t=tsel.value,s=q.value.trim().toLowerCase();
+    var list=inRegion().filter(function(d){
+      if(c&&d.country!==c&&(d.markets||[]).indexOf(c)<0)return false;
+      if(t&&d.type!==t)return false;
+      if(s){var hay=[d.name,d.city,d.country,d.type,d.storage,d.notes,(d.markets||[]).join(' ')].join(' ').toLowerCase();if(hay.indexOf(s)<0)return false;}
+      return true;}).sort(function(a,b){return (b.sponsor-a.sponsor)||a.name.localeCompare(b.name);});
+    count.textContent=list.length+(list.length===1?' listing':' listings');
+    grid.innerHTML=list.length?list.map(card).join(''):'<div class="empty">No listings match these filters. Try another country or clear the search.</div>';
+  }
+  function setRegion(r){region=r;csel.value='';tsel.value='';q.value='';buildTabs();buildNote();buildFilters();render();
+    try{history.replaceState(null,'','#'+encodeURIComponent(r.toLowerCase().replace(/\s+/g,'-')));}catch(e){}}
+  tabs.addEventListener('click',function(e){var b=e.target.closest('button');if(b)setRegion(b.getAttribute('data-r'));});
+  [csel,tsel].forEach(function(el){el.addEventListener('change',render);});q.addEventListener('input',render);
+  fetch('dealers.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(data){
+    ALL=data.dealers||[];
+    if(data.updated){var d=new Date(data.updated+'T12:00:00');document.getElementById('updated').textContent='Last checked '+d.toLocaleDateString('en-GB',{day:'numeric',month:'long',year:'numeric'});}
+    var h=decodeURIComponent(location.hash.slice(1));var m=REGIONS.filter(function(r){return r.id.toLowerCase().replace(/\s+/g,'-')===h;})[0];
+    setRegion(m?m.id:'Europe');
+  }).catch(function(){grid.innerHTML='<div class="empty">The directory could not be loaded. Please refresh the page.</div>';});
+})();
+</script>
+</body>
+</html>

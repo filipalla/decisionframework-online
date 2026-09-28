@@ -1,0 +1,932 @@
+{
+ "updated": "2026-09-28",
+ "note": "Neutral directory, not a ranking. Listed for size, reputation or market relevance; no fees were paid. Sponsored listings are labelled.",
+ "dealers": [
+  {
+   "name": "APMEX",
+   "url": "https://www.apmex.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Oklahoma City, OK",
+   "type": "Online dealer",
+   "founded": 1999,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Via partner depositories",
+   "ira": true,
+   "notes": "One of the largest US online dealers; offers precious-metals IRAs.",
+   "sponsor": false
+  },
+  {
+   "name": "JM Bullion",
+   "url": "https://www.jmbullion.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Dallas, TX",
+   "type": "Online dealer",
+   "founded": 2011,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Via partner depositories",
+   "ira": true,
+   "notes": "Large US online dealer; IRA-eligible products and storage options.",
+   "sponsor": false
+  },
+  {
+   "name": "SD Bullion",
+   "url": "https://sdbullion.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Ottawa Lake, MI",
+   "type": "Online dealer",
+   "founded": 2012,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Via partner depositories",
+   "ira": true,
+   "notes": "Low-premium US online dealer.",
+   "sponsor": false
+  },
+  {
+   "name": "Money Metals Exchange",
+   "url": "https://www.moneymetals.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Eagle, ID",
+   "type": "Online dealer",
+   "founded": 2010,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Own depository (Money Metals Depository)",
+   "ira": true,
+   "notes": "Operates its own depository in Idaho.",
+   "sponsor": false
+  },
+  {
+   "name": "Provident Metals",
+   "url": "https://www.providentmetals.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Dallas, TX",
+   "type": "Online dealer",
+   "founded": 2009,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "US online dealer.",
+   "sponsor": false
+  },
+  {
+   "name": "Gainesville Coins",
+   "url": "https://www.gainesvillecoins.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Lutz, FL",
+   "type": "Online dealer",
+   "founded": 2000,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "US online dealer of bullion and numismatics.",
+   "sponsor": false
+  },
+  {
+   "name": "GoldSilver",
+   "url": "https://goldsilver.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "New York, NY",
+   "type": "Online dealer",
+   "founded": 2005,
+   "markets": [
+    "United States",
+    "International"
+   ],
+   "storage": "Vaults in several countries",
+   "ira": true,
+   "notes": "Also offers international vault storage.",
+   "sponsor": false
+  },
+  {
+   "name": "Texas Precious Metals",
+   "url": "https://www.texmetals.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Shiner, TX",
+   "type": "Online dealer",
+   "founded": 2011,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Texas Bullion Depository (via partner)",
+   "ira": true,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Kitco",
+   "url": "https://www.kitco.com",
+   "region": "North America",
+   "country": "Canada",
+   "city": "Montreal",
+   "type": "Online dealer",
+   "founded": 1977,
+   "markets": [
+    "Canada",
+    "United States",
+    "International"
+   ],
+   "storage": "Storage programme",
+   "ira": null,
+   "notes": "Long-established dealer and widely used price source.",
+   "sponsor": false
+  },
+  {
+   "name": "Silver Gold Bull",
+   "url": "https://silvergoldbull.com",
+   "region": "North America",
+   "country": "Canada",
+   "city": "Calgary",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Canada",
+    "United States"
+   ],
+   "storage": "Storage programme",
+   "ira": true,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Royal Canadian Mint (shop)",
+   "url": "https://www.mint.ca",
+   "region": "North America",
+   "country": "Canada",
+   "city": "Ottawa",
+   "type": "Mint",
+   "founded": 1908,
+   "markets": [
+    "Canada",
+    "International"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Sovereign mint; producer of the Maple Leaf.",
+   "sponsor": false
+  },
+  {
+   "name": "Delaware Depository",
+   "url": "https://www.delawaredepository.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Wilmington, DE",
+   "type": "IRA depository",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": "Segregated and commingled storage",
+   "ira": true,
+   "notes": "IRS-approved depository used by many IRA custodians.",
+   "sponsor": false
+  },
+  {
+   "name": "Texas Bullion Depository",
+   "url": "https://www.texasbullion.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Leander, TX",
+   "type": "IRA depository",
+   "founded": 2018,
+   "markets": [
+    "United States"
+   ],
+   "storage": "State-administered depository",
+   "ira": true,
+   "notes": "First state-administered bullion depository in the US.",
+   "sponsor": false
+  },
+  {
+   "name": "Equity Trust Company",
+   "url": "https://www.trustetc.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Westlake, OH",
+   "type": "IRA custodian",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "Self-directed IRA custodian; holds metals at approved depositories.",
+   "sponsor": false
+  },
+  {
+   "name": "STRATA Trust Company",
+   "url": "https://www.stratatrust.com",
+   "region": "North America",
+   "country": "United States",
+   "city": "Waco, TX",
+   "type": "IRA custodian",
+   "founded": null,
+   "markets": [
+    "United States"
+   ],
+   "storage": null,
+   "ira": true,
+   "notes": "Self-directed IRA custodian.",
+   "sponsor": false
+  },
+  {
+   "name": "Degussa Goldhandel",
+   "url": "https://www.degussa-goldhandel.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "Frankfurt",
+   "type": "Dealer with showrooms",
+   "founded": 2010,
+   "markets": [
+    "Germany",
+    "Switzerland",
+    "Spain",
+    "United Kingdom"
+   ],
+   "storage": "Branch safe deposit and vault storage",
+   "ira": null,
+   "notes": "Branch network in Germany and Switzerland; affiliated companies in Spain and the UK.",
+   "sponsor": false
+  },
+  {
+   "name": "pro aurum",
+   "url": "https://www.proaurum.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "Munich",
+   "type": "Dealer with showrooms",
+   "founded": 1989,
+   "markets": [
+    "Germany",
+    "Austria",
+    "Switzerland"
+   ],
+   "storage": "Vault storage incl. Switzerland",
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Reisebank",
+   "url": "https://www.reisebank.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "Frankfurt",
+   "type": "Bank / dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Branch network at railway stations and airports.",
+   "sponsor": false
+  },
+  {
+   "name": "Goldsilbershop.de",
+   "url": "https://www.goldsilbershop.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Germany",
+    "EU"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "philoro",
+   "url": "https://philoro.com",
+   "region": "Europe",
+   "country": "Austria",
+   "city": "Vienna",
+   "type": "Dealer with showrooms",
+   "founded": 2011,
+   "markets": [
+    "Austria",
+    "Germany",
+    "Switzerland",
+    "Liechtenstein",
+    "Hong Kong",
+    "United States"
+   ],
+   "storage": "Safes and storage incl. Switzerland and Liechtenstein",
+   "ira": null,
+   "notes": "Over 17 locations in the German-speaking region; runs its own refinery since 2023.",
+   "sponsor": false
+  },
+  {
+   "name": "Münze Österreich (shop)",
+   "url": "https://www.muenzeoesterreich.at",
+   "region": "Europe",
+   "country": "Austria",
+   "city": "Vienna",
+   "type": "Mint",
+   "founded": null,
+   "markets": [
+    "Austria",
+    "EU"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Austrian mint; producer of the Vienna Philharmonic.",
+   "sponsor": false
+  },
+  {
+   "name": "Degussa (Switzerland)",
+   "url": "https://www.degussa-goldhandel.ch",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "Zurich",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": "Vault storage",
+   "ira": null,
+   "notes": "Swiss arm of Degussa Goldhandel.",
+   "sponsor": false
+  },
+  {
+   "name": "GoldAvenue",
+   "url": "https://www.goldavenue.com",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "Geneva",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland",
+    "EU",
+    "International"
+   ],
+   "storage": "Swiss vault storage",
+   "ira": null,
+   "notes": "Online platform linked to the MKS PAMP group.",
+   "sponsor": false
+  },
+  {
+   "name": "Holland Gold",
+   "url": "https://www.hollandgold.nl",
+   "region": "Europe",
+   "country": "Netherlands",
+   "city": "Alkmaar",
+   "type": "Online dealer",
+   "founded": 2020,
+   "markets": [
+    "Netherlands",
+    "Belgium"
+   ],
+   "storage": "Insured storage in Switzerland",
+   "ira": null,
+   "notes": "Roots in Amsterdam Gold (2010) and Aunexum (2012); LBMA Affiliate Member since 2025. Offices in Alkmaar, Rotterdam, Breda.",
+   "sponsor": false
+  },
+  {
+   "name": "The Silver Mountain",
+   "url": "https://www.thesilvermountain.nl",
+   "region": "Europe",
+   "country": "Netherlands",
+   "city": "Hilversum",
+   "type": "Online dealer",
+   "founded": 2008,
+   "markets": [
+    "Netherlands",
+    "Belgium"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "AFM licence holder; buy-back guarantee.",
+   "sponsor": false
+  },
+  {
+   "name": "Goudwisselkantoor",
+   "url": "https://www.goudwisselkantoor.nl",
+   "region": "Europe",
+   "country": "Netherlands",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Netherlands",
+    "Belgium"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Branch network in the Netherlands and Belgium; more than 40 years in business.",
+   "sponsor": false
+  },
+  {
+   "name": "Argentor",
+   "url": "https://www.argentorshop.be",
+   "region": "Europe",
+   "country": "Belgium",
+   "city": "Antwerp",
+   "type": "Dealer with showroom",
+   "founded": 1987,
+   "markets": [
+    "Belgium"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Assayers and dealers; walk-in shop at Pelikaanstraat 62, Antwerp; LBMA-refinery products.",
+   "sponsor": false
+  },
+  {
+   "name": "GFI Gold & Forex International",
+   "url": "https://www.goldforex.be",
+   "region": "Europe",
+   "country": "Belgium",
+   "city": "Brussels",
+   "type": "Dealer with showroom",
+   "founded": null,
+   "markets": [
+    "Belgium"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Gold dealer and currency exchange.",
+   "sponsor": false
+  },
+  {
+   "name": "Godot & Fils",
+   "url": "https://godotetfils.com",
+   "region": "Europe",
+   "country": "France",
+   "city": "Paris",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "France"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "Branch network in France.",
+   "sponsor": false
+  },
+  {
+   "name": "AuCOFFRE",
+   "url": "https://www.aucoffre.com",
+   "region": "Europe",
+   "country": "France",
+   "city": "Lyon",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "France",
+    "EU"
+   ],
+   "storage": "Vault storage",
+   "ira": null,
+   "notes": "Online buying, storage and resale.",
+   "sponsor": false
+  },
+  {
+   "name": "Confinvest",
+   "url": "https://www.confinvest.it",
+   "region": "Europe",
+   "country": "Italy",
+   "city": "Milan",
+   "type": "Dealer",
+   "founded": 1983,
+   "markets": [
+    "Italy"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Italian investment-gold dealer.",
+   "sponsor": false
+  },
+  {
+   "name": "Italpreziosi",
+   "url": "https://www.italpreziosi.it",
+   "region": "Europe",
+   "country": "Italy",
+   "city": "Arezzo",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "Italy"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Refiner and investment-gold supplier.",
+   "sponsor": false
+  },
+  {
+   "name": "OuroCaixa Invest",
+   "url": "https://invest.ourocaixa.pt",
+   "region": "Europe",
+   "country": "Portugal",
+   "city": "Lisbon",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Portugal"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Investment arm of the OuroCaixa gold-buying chain.",
+   "sponsor": false
+  },
+  {
+   "name": "Tavex",
+   "url": "https://www.tavex.eu",
+   "region": "Europe",
+   "country": "Estonia",
+   "city": "Tallinn",
+   "type": "Dealer with showrooms",
+   "founded": 1991,
+   "markets": [
+    "Estonia",
+    "Latvia",
+    "Finland",
+    "Sweden",
+    "Norway",
+    "Denmark",
+    "Poland",
+    "Hungary",
+    "Romania",
+    "Bulgaria",
+    "Serbia",
+    "United Kingdom"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Founded as Tavid AS; around 25 offices serving Northern and Central-Eastern Europe.",
+   "sponsor": false
+  },
+  {
+   "name": "Mennica Polska (Mint of Poland)",
+   "url": "https://www.mennica.com.pl",
+   "region": "Europe",
+   "country": "Poland",
+   "city": "Warsaw",
+   "type": "Mint",
+   "founded": 1766,
+   "markets": [
+    "Poland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Polish state-founded mint.",
+   "sponsor": false
+  },
+  {
+   "name": "Mennica Skarbowa",
+   "url": "https://www.mennicaskarbowa.pl",
+   "region": "Europe",
+   "country": "Poland",
+   "city": "Warsaw",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Poland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Goldenmark",
+   "url": "https://goldenmark.com",
+   "region": "Europe",
+   "country": "Poland",
+   "city": "Warsaw",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Poland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "The Royal Mint",
+   "url": "https://www.royalmint.com",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "Llantrisant",
+   "type": "Mint",
+   "founded": null,
+   "markets": [
+    "United Kingdom",
+    "International"
+   ],
+   "storage": "The Vault (Royal Mint storage)",
+   "ira": null,
+   "notes": "UK sovereign mint; Britannias and Sovereigns are exempt from UK capital gains tax.",
+   "sponsor": false
+  },
+  {
+   "name": "Baird & Co",
+   "url": "https://www.goldline.co.uk",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "London",
+   "type": "Refiner / dealer",
+   "founded": 1967,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "London refiner and bullion dealer.",
+   "sponsor": false
+  },
+  {
+   "name": "BullionByPost",
+   "url": "https://www.bullionbypost.co.uk",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "Birmingham",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "United Kingdom",
+    "EU"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Chards",
+   "url": "https://www.chards.co.uk",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "Blackpool",
+   "type": "Dealer with showroom",
+   "founded": null,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "Family firm trading for more than six decades.",
+   "sponsor": false
+  },
+  {
+   "name": "Atkinsons Bullion",
+   "url": "https://www.atkinsonsbullion.com",
+   "region": "Europe",
+   "country": "United Kingdom",
+   "city": "London",
+   "type": "Dealer with showroom",
+   "founded": null,
+   "markets": [
+    "United Kingdom"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "GoldCore",
+   "url": "https://goldcore.com",
+   "region": "Europe",
+   "country": "Ireland",
+   "city": "Dublin",
+   "type": "Online dealer",
+   "founded": 2003,
+   "markets": [
+    "Ireland",
+    "United Kingdom",
+    "International"
+   ],
+   "storage": "Segregated storage in Zurich, London, Singapore and others",
+   "ira": null,
+   "notes": "Serves clients internationally; fully segregated bars.",
+   "sponsor": false
+  },
+  {
+   "name": "SABAYIK",
+   "url": "https://www.sabayik.sa",
+   "region": "Middle East",
+   "country": "Saudi Arabia",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Saudi Arabia"
+   ],
+   "storage": "Storage offered",
+   "ira": null,
+   "notes": "Gold buying, storage, selling and delivery.",
+   "sponsor": false
+  },
+  {
+   "name": "IBV Gold",
+   "url": "https://www.ibvgold.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Dubai dealer in gold, silver and platinum.",
+   "sponsor": false
+  },
+  {
+   "name": "Emirates Gold",
+   "url": "https://emiratesgold.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai",
+   "type": "Refiner",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates",
+    "International"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Dubai refinery producing investment bars.",
+   "sponsor": false
+  },
+  {
+   "name": "Amanat Vaults",
+   "url": "https://www.amanatvaults.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Sharjah",
+   "type": "Vault operator",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": "Private vault storage",
+   "ira": null,
+   "notes": "Vault operator with insured storage.",
+   "sponsor": false
+  },
+  {
+   "name": "BullionStar",
+   "url": "https://www.bullionstar.com",
+   "region": "Asia-Pacific",
+   "country": "Singapore",
+   "city": "Singapore",
+   "type": "Dealer with showroom",
+   "founded": 2012,
+   "markets": [
+    "Singapore",
+    "United States",
+    "New Zealand",
+    "International"
+   ],
+   "storage": "Vaults in Singapore, United States and New Zealand",
+   "ira": null,
+   "notes": "Customers in 115 countries in FY2025; allocated, segregated storage.",
+   "sponsor": false
+  },
+  {
+   "name": "Silver Bullion",
+   "url": "https://www.silverbullion.com.sg",
+   "region": "Asia-Pacific",
+   "country": "Singapore",
+   "city": "Singapore",
+   "type": "Dealer with vault",
+   "founded": 2009,
+   "markets": [
+    "Singapore",
+    "International"
+   ],
+   "storage": "Own vault in Singapore",
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "The Perth Mint",
+   "url": "https://www.perthmint.com",
+   "region": "Asia-Pacific",
+   "country": "Australia",
+   "city": "Perth",
+   "type": "Mint",
+   "founded": 1899,
+   "markets": [
+    "Australia",
+    "International"
+   ],
+   "storage": "Government-guaranteed storage programme",
+   "ira": null,
+   "notes": "Owned by the Government of Western Australia.",
+   "sponsor": false
+  },
+  {
+   "name": "ABC Bullion",
+   "url": "https://www.abcbullion.com.au",
+   "region": "Asia-Pacific",
+   "country": "Australia",
+   "city": "Sydney",
+   "type": "Refiner / dealer",
+   "founded": 1951,
+   "markets": [
+    "Australia",
+    "Singapore",
+    "New Zealand"
+   ],
+   "storage": "Vault storage",
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Tanaka Kikinzoku",
+   "url": "https://gold.tanaka.co.jp",
+   "region": "Asia-Pacific",
+   "country": "Japan",
+   "city": "Tokyo",
+   "type": "Refiner / dealer",
+   "founded": 1885,
+   "markets": [
+    "Japan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Japan's leading precious-metals group; retail bullion shops.",
+   "sponsor": false
+  },
+  {
+   "name": "MMTC-PAMP",
+   "url": "https://www.mmtcpamp.com",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "Nuh, Haryana",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": "Digital gold with vaulting",
+   "ira": null,
+   "notes": "LBMA-accredited Indian refiner; joint venture with PAMP.",
+   "sponsor": false
+  },
+  {
+   "name": "BullionVault",
+   "url": "https://www.bullionvault.com",
+   "region": "Global",
+   "country": "United Kingdom",
+   "city": "London",
+   "type": "Vault platform",
+   "founded": 2005,
+   "markets": [
+    "International"
+   ],
+   "storage": "Zurich, London, New York, Toronto, Singapore",
+   "ira": null,
+   "notes": "Peer-to-peer platform for allocated bullion with daily audit.",
+   "sponsor": false
+  },
+  {
+   "name": "Goldmoney",
+   "url": "https://www.goldmoney.com",
+   "region": "Global",
+   "country": "Canada",
+   "city": "Toronto",
+   "type": "Vault platform",
+   "founded": 2001,
+   "markets": [
+    "International"
+   ],
+   "storage": "Vaults in several jurisdictions",
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  }
+ ]
+}
