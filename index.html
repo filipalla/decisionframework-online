@@ -1,521 +1,270 @@
 <!DOCTYPE html>
-<!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>The Gold Investor | The Gold Decision Framework</title>
-
-  <meta name="description" content="The Gold Investor helps readers build their own evidence-based gold thesis.">
-
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DecisionFramework | A trader's framework for gold decisions</title>
+<meta name="description" content="Analysis, live indicators and practical tools for owning gold and other commodities: dealer directory, commodity ETF guide and The Gold Decision Framework.">
+<meta property="og:title" content="DecisionFramework: decide, don't guess">
+<meta property="og:description" content="Analysis, live indicators and practical tools for owning gold and other commodities, built on a trader's framework.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GoldThesis">
+<link rel="canonical" href="https://decisionframework.online/">
 <style>
-    :root {
-      --background: #111214
-;
-      --surface: #1b1b1d
-;
-      --gold: #c6a15b
-;
-      --gold-light: #e2c887
-;
-      --text: #f1eadb
-;
-      --muted: #b8b0a1
-;
-      --line: rgba(198, 161, 91, 0.45);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      margin: 0;
-      background:
-        radial-gradient(
-          circle at 50% 0%,
-          #49391c
- 0%,
-          var(--background) 38%
-        );
-      color: var(--text);
-      font-family: Georgia, "Times New Roman", serif;
-      line-height: 1.7;
-    }
-
-    .container {
-      width: min(1100px, calc(100% - 40px));
-      margin: 0 auto;
-    }
-
-    .language-switcher {
-      position: absolute;
-      top: 24px;
-      right: 28px;
-      z-index: 10;
-      display: flex;
-      gap: 9px;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      font-size: 0.8rem;
-      letter-spacing: 0.12em;
-    }
-
-    .language-switcher a {
-      color: var(--muted);
-      text-decoration: none;
-      transition: color 0.2s ease;
-    }
-
-    .language-switcher a:hover,
-    .language-switcher a.active {
-      color: var(--gold-light);
-    }
-
-    .language-switcher span {
-      color: var(--muted);
-    }
-
-    header {
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      padding: 80px 0;
-    }
-
-    .eyebrow {
-      color: var(--gold-light);
-      font-size: 0.8rem;
-      letter-spacing: 0.28em;
-      text-transform: uppercase;
-      margin-bottom: 28px;
-    }
-
-    h1 {
-      margin: 0;
-      color: var(--text);
-      font-size: clamp(3rem, 8vw, 6.5rem);
-      font-weight: 400;
-      line-height: 1.05;
-    }
-
-    .subtitle {
-      max-width: 650px;
-      margin: 30px auto 0;
-      color: var(--gold-light);
-      font-size: clamp(1.2rem, 2vw, 1.6rem);
-      font-style: italic;
-    }
-
-    .ornament {
-      width: 180px;
-      height: 1px;
-      margin: 42px auto;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        var(--gold),
-        transparent
-      );
-    }
-
-    .button-row {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin-top: 38px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 12px 24px;
-      border: 1px solid var(--gold);
-      color: var(--text);
-      text-decoration: none;
-      transition: 0.2s ease;
-    }
-
-    .button:hover {
-      background: var(--gold);
-      color: #17120a
-;
-    }
-
-    .button.secondary {
-      border-color: var(--line);
-      color: var(--muted);
-    }
-
-  .button.store {
-  background: rgba(198, 161, 91, 0.12);
-  border-color: var(--gold-light);
-  color: var(--gold-light);
-}
-
-.button.store:hover {
-  background: var(--gold-light);
-  color: #17120a
-;
-}
-    section {
-      padding: 90px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    h2 {
-      margin-top: 0;
-      color: var(--gold-light);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 400;
-    }
-
-    h3 {
-      margin-bottom: 8px;
-      color: var(--gold-light);
-      font-size: 1.35rem;
-      font-weight: 400;
-    }
-
-    p {
-      color: var(--muted);
-      font-size: 1.08rem;
-    }
-
-    .intro {
-      max-width: 760px;
-    }
-
-    .chapters {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 36px;
-    }
-
-    .chapter {
-      padding: 24px;
-      background: rgba(27, 27, 29, 0.78);
-      border: 1px solid var(--line);
-    }
-
-    .chapter-number {
-      color: var(--gold);
-      font-size: 0.8rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
-
-    .contact {
-      text-align: center;
-    }
-
-    .contact a {
-      color: var(--gold-light);
-    }
-
-    footer {
-      padding: 34px 0;
-      border-top: 1px solid var(--line);
-      text-align: center;
-      color: #8f887b
-;
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 760px) {
-      .language-switcher {
-        top: 18px;
-        right: 20px;
-      }
-
-      header {
-        min-height: 82vh;
-        padding-top: 100px;
-      }
-
-      .chapters {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 65px 0;
-      }
-    }
-  
-    .language-switcher { position:absolute; top:24px; right:28px; z-index:10; display:flex; flex-wrap:wrap; gap:8px; align-items:center; justify-content:flex-end; max-width:min(680px, calc(100% - 56px)); font-family:Arial,sans-serif; font-size:.72rem; letter-spacing:.08em; }
-    .language-switcher a { color:var(--muted); text-decoration:none; }
-    .language-switcher a:hover, .language-switcher a.active { color:var(--gold-light); }
-    .language-switcher span { color:var(--muted); }
-    @media (max-width:760px) { .language-switcher { position:relative; top:auto; right:auto; margin:18px auto 0; padding:0 20px; justify-content:center; max-width:100%; } }
-
-  .choice-boxes {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  margin-top: 24px;
-  text-align: left;
-}
-
-.choice-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  min-height: 100px;
-  padding: 24px;
-  background: rgba(27, 27, 29, 0.78);
-  border: 1px solid var(--line);
-  color: var(--gold-light);
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-
-.choice-box:hover {
-  background: rgba(198, 161, 91, 0.12);
-  border-color: var(--gold);
-}
-
-.choice-box:focus-visible {
-  outline: 2px solid var(--gold-light);
-  outline-offset: 4px;
-}
-
-.free-preview {
-  margin-top: 48px;
-  padding-top: 36px;
-  border-top: 1px solid var(--line);
-}
-
-.pdf-viewer {
-  display: block;
-  width: 100%;
-  height: 800px;
-  border: 1px solid var(--line);
-  background: #f6f0e3;
-}
-
-@media (max-width: 900px) {
-  .choice-boxes {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 760px) {
-  .pdf-viewer {
-    height: 580px;
-  }
-}
-
-@media (max-width: 480px) {
-  .choice-boxes {
-    grid-template-columns: 1fr;
-  }
-
-  .choice-box {
-    min-height: 76px;
-  }
-}
+:root{--bg:#111214;--surface:#1b1b1d;--gold:#c6a15b;--light:#e2c887;--text:#f1eadb;--muted:#b8b0a1;--line:rgba(198,161,91,.45)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--bg) 38%);color:var(--text);font:17px/1.7 Georgia,serif}a{color:var(--light)}
+.wrap{width:min(1100px,calc(100% - 40px));margin:auto}
+nav.top{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap;padding:20px 0;border-bottom:1px solid var(--line);font:12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+nav.top .brand{color:var(--text);text-decoration:none;letter-spacing:.14em}nav.top .links{display:flex;flex-wrap:wrap;gap:18px}nav.top .links a{color:var(--muted);text-decoration:none}nav.top .links a:hover{color:var(--light)}
+.label{color:var(--light);font:12px Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase}
+header.hero{text-align:center;padding:110px 0 90px}
+h1{font-size:clamp(3.2rem,9vw,6.8rem);font-weight:400;line-height:1.02;margin:26px auto 0}
+.subtitle{color:var(--light);font-size:clamp(1.2rem,2.4vw,1.65rem);font-style:italic;max-width:780px;margin:28px auto 0}
+.ornament{width:180px;height:1px;margin:40px auto;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.btns{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.button{display:inline-block;padding:12px 22px;border:1px solid var(--gold);color:var(--text);text-decoration:none;font:13px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;transition:.2s}.button:hover{background:var(--gold);color:#17120a}
+.button.fill{background:rgba(198,161,91,.14);border-color:var(--light);color:var(--light)}.button.fill:hover{background:var(--light);color:#17120a}
+.button.quiet{border-color:var(--line);color:var(--muted)}
+.hero .small{font:13px Arial,sans-serif;color:var(--muted);margin-top:22px}
+section{padding:80px 0;border-top:1px solid var(--line)}
+h2{color:var(--light);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:12px 0 14px}
+p{color:var(--muted)}.lead{font-size:1.15rem;color:var(--text);max-width:760px}
+.feature{display:grid;grid-template-columns:1.25fr 1fr;gap:18px;margin-top:28px}
+.card{display:flex;flex-direction:column;padding:26px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:inherit;transition:.2s}.card:hover{border-color:var(--light);background:#211e18}
+.card h3{margin:10px 0 8px;font-weight:400;font-size:1.4rem;line-height:1.25;color:var(--text)}.card p{margin:0 0 14px;font-size:1rem}.card .more{margin-top:auto;font:12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--light)}
+.card.big{background:linear-gradient(120deg,#302719,#1b1b1d);border-color:var(--gold)}.card.big h3{font-size:clamp(1.7rem,3vw,2.3rem)}
+.stack{display:grid;gap:18px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
+.ind{padding:14px;background:var(--surface);border:1px solid var(--line)}.ind .t{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--light);margin:0 0 6px}.ind .w{height:150px}
+.journey{counter-reset:q;display:grid;gap:14px;margin-top:28px}
+.q{display:grid;grid-template-columns:70px 1fr auto;gap:20px;align-items:center;padding:22px 26px;background:var(--surface);border:1px solid var(--line)}
+.q::before{counter-increment:q;content:"0" counter(q);font-size:2rem;color:var(--gold);line-height:1}
+.q h3{margin:0 0 4px;font-weight:400;font-size:1.35rem;color:var(--text)}.q p{margin:0;font-size:.98rem}.q .go{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.door{padding:32px;border:1px solid var(--line);background:var(--surface)}.door h3{margin:10px 0;font-weight:400;font-size:1.8rem;color:var(--text)}.door ul{color:var(--muted);padding-left:20px;margin:0 0 22px}.door li{margin-bottom:6px}
+.book{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:36px;background:linear-gradient(120deg,#2a2217,#1b1b1d);border:1px solid var(--gold)}
+.book h2{margin-top:10px}.book .side{display:flex;flex-direction:column;gap:10px;min-width:240px}.book .side .button{text-align:center}
+.biz{font:13px Arial,sans-serif;color:var(--muted);margin:16px 0 0}.biz a{color:var(--muted)}
+.df-signup{background:var(--surface);border:1px solid var(--line);padding:28px;max-width:640px}.df-signup h3{margin:0 0 8px;font-weight:400;font-size:1.45rem;color:var(--light);line-height:1.3}.df-signup p{margin:0 0 16px}.df-signup form{display:flex;gap:10px;flex-wrap:wrap}.df-signup input[type=email]{flex:1 1 220px;min-width:0;padding:13px 14px;background:var(--bg);color:var(--text);border:1px solid var(--line);font:16px Arial,sans-serif}.df-signup input[type=email]:focus{outline:2px solid var(--light);outline-offset:2px}.df-signup button{flex:0 0 auto;padding:13px 22px;background:rgba(198,161,91,.14);color:var(--light);border:1px solid var(--light);font:15px Arial,sans-serif;cursor:pointer}.df-signup button:hover{background:var(--light);color:#17120a}.df-signup .df-small{margin:12px 0 0;font:12.5px/1.6 Arial,sans-serif}
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
+footer{padding:34px 0;border-top:1px solid var(--line);font:13px Arial,sans-serif;color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}footer a{color:var(--muted)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offset:3px}
+@media(max-width:900px){.feature,.split,.two,.book{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}.grid4{grid-template-columns:1fr 1fr}.q{grid-template-columns:50px 1fr}.q .go{grid-column:1/-1;justify-content:flex-start}}
+@media(max-width:600px){.wrap{width:calc(100% - 28px)}.grid3,.grid4{grid-template-columns:1fr}nav.top{flex-direction:column;align-items:flex-start}header.hero{padding:70px 0 60px}.book{padding:24px}.door{padding:24px}}
 </style>
-<style>.language-announcement{margin:26px auto 8px;max-width:850px}.language-announcement p{margin:0;color:var(--gold-light);font-size:clamp(1.65rem,3vw,2.35rem);font-weight:600;line-height:1.25}.language-announcement a{font:14px/1.6 Arial,sans-serif;color:var(--muted);text-underline-offset:4px;display:inline-block;margin-top:10px}.language-switcher{max-width:min(880px,calc(100% - 56px));font-size:.8rem}.chapter,.choice-box{min-width:0;overflow-wrap:break-word}.pdf-viewer{display:block}a:focus-visible{outline:2px solid var(--gold-light);outline-offset:5px}@media(max-width:760px){header{padding-top:55px}.language-switcher{max-width:100%}.language-announcement{margin-top:22px}.button-row{gap:12px}}</style></head>
-
+</head>
 <body>
-  <nav class="language-switcher" aria-label="Language selection" id="languages"><a href="/" class="active" aria-current="page">EN</a><span>|</span><a href="/zh-hant/">繁體中文</a><span>|</span><a href="/fi/">Suomi</a><span>|</span><a href="/et/">Eesti</a><span>|</span><a href="/lv/">Latviešu</a><span>|</span><a href="/lt/">Lietuvių</a><span>|</span><a href="/bg/">Български</a><span>|</span><a href="/ro/">Română</a><span>|</span><a href="/ka/">ქართული</a><span>|</span><a href="/hu/">Magyar</a><span>|</span><a href="/sr/">Српски</a><span>|</span><a href="/ta/">தமிழ்</a><span>|</span><a href="/ZH-HANS/">简体中文</a><span>|</span><a href="/nl/">NL</a><span>|</span><a href="/ES/">ES</a><span>|</span><a href="/DE/">DE</a><span>|</span><a href="/FR/">FR</a><span>|</span><a href="/IT/">IT</a><span>|</span><a href="/PT/">PT</a><span>|</span><a href="/RU/">RU</a><span>|</span><a href="/PL/">PL</a><span>|</span><a href="/JA/">日本語</a><span>|</span><a href="/HI/">हिन्दी</a><span>|</span><a href="/AR/">العربية</a><span>|</span><a href="/TH/">ไทย</a><span>|</span><a href="/SV/">SV</a><span>|</span><a href="/TR/">TR</a><span>|</span><a href="/ID/">ID</a><span>|</span><a href="/VN/">Tiếng Việt</a><span>|</span><a href="/KR/">한국어</a><span>|</span><a href="/MS/">MS</a><span>|</span><a href="/NO/">NO</a><span>|</span><a href="/DA/">DA</a></nav>
 
-  <header>
-    <div class="container">
-      <div class="eyebrow">The Gold Decision Framework — Book 1</div>
+<nav class="top wrap" aria-label="Main navigation">
+  <a class="brand" href="/">DecisionFramework.online</a>
+  <span class="links">
+    <a href="/insights-and-partners.html#insights">Insights</a>
+    <a href="/real-rates-and-the-dollar.html">Indicators</a>
+    <a href="/dealer-directory.html">Physical metal</a>
+    <a href="/commodity-etf-guide.html">Financial exposure</a>
+    <a href="/framework/">The Framework</a>
+    <a href="#newsletter">Newsletter</a>
+  </span>
+</nav>
 
-      <h1>The Gold Investor</h1>
+<header class="hero wrap">
+  <div class="label">A trader's framework for gold decisions</div>
+  <h1>Decide, don't guess.</h1>
+  <p class="subtitle">Analysis, live indicators and practical tools for owning gold and other commodities, built on the method behind <em>The Gold Decision Framework</em>.</p>
+  <div class="ornament"></div>
+  <div class="btns">
+    <a class="button fill" href="#latest">Latest analysis</a>
+    <a class="button" href="#decisions">Start with a question</a>
+    <a class="button quiet" href="/free-preview.html">Free book preview</a>
+  </div>
+  <p class="small">The framework is available in 33 languages. <a href="/framework/#languages">Choose yours</a>.</p>
+</header>
 
-      <p class="subtitle">Building your own gold thesis</p><div class="language-announcement"><p>Read the book in 33 languages</p><a href="#languages">Choose your language above.</a></div>
+<main>
 
-      <div class="ornament"></div>
-
-      <p class="intro" style="margin-left: auto; margin-right: auto;">
-        A practical framework for understanding gold and other precious metals
-        through market structure, macroeconomics, geopolitics and risk
-        management.
-      </p>
-
-      <div class="button-row" aria-label="Main navigation">
-  <a class="button" href="#content">
-    Explore the framework
-  </a>
-
-  <a class="button secondary" href="/article.html">
-    Article
-  </a>
-
-  <a class="button store" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener noreferrer">
-  Store
-</a>
-<a class="button secondary" href="/license-order/">
-  License
-</a>
-
-<a class="button secondary" href="/license/">
-  Activation
-</a>
-
-
-  <a class="button secondary" href="#contact">
-    Contact
-  </a>
-</div>
-<nav class="choice-boxes" aria-label="Partners and insights">
-          <a class="choice-box" href="insights-and-partners.html#global">Global partners <span aria-hidden="true">↗</span></a>
-          <a class="choice-box" href="insights-and-partners.html#regional">Regional partners <span aria-hidden="true">↗</span></a>
-          <a class="choice-box" href="insights-and-partners.html#insights">Insights <span aria-hidden="true">↗</span></a>
-          <a class="choice-box" href="insights-and-partners.html#newsletter">Newsletter <span aria-hidden="true">↗</span></a>
-        </nav>
-</div>
-
-      
-      
-  </header>
-
-  <main>
-    <section id="content">
-      <div class="container">
-        <h2>Build your own evidence-based thesis</h2>
-
-        <p class="intro">
-          The Gold Investor is not intended to tell readers what they should
-          buy or when they should buy it. It helps them ask better questions,
-          conduct their own research and take responsibility for their
-          decisions.
-        </p>
-
-        <div class="chapters">
-          <article class="chapter">
-            <div class="chapter-number">01</div>
-            <h3>Real interest rates</h3>
-            <p>
-              Understand why real interest rates and the dollar are important
-              indicators for the price of gold.
-            </p>
-          </article>
-
-          <article class="chapter">
-            <div class="chapter-number">02</div>
-            <h3>Geopolitics</h3>
-            <p>
-              Examine safe-haven demand, geopolitical shocks and structural
-              purchases by central banks.
-            </p>
-          </article>
-
-          <article class="chapter">
-            <div class="chapter-number">03</div>
-            <h3>Supply and demand</h3>
-            <p>
-              Look at investment demand, industrial demand and the fundamental
-              balance of each metal.
-            </p>
-          </article>
-
-          <article class="chapter">
-            <div class="chapter-number">04</div>
-            <h3>Mining supply</h3>
-            <p>
-              Learn how production costs, AISC and slow-moving mining projects
-              influence supply.
-            </p>
-          </article>
-
-          <article class="chapter">
-            <div class="chapter-number">05</div>
-            <h3>Choosing an instrument</h3>
-            <p>
-              Compare physical ownership, ETFs, mining stocks and futures.
-            </p>
-          </article>
-
-          <article class="chapter">
-            <div class="chapter-number">06–09</div>
-            <h3>From timing to purchase</h3>
-            <p>
-              Combine technical timing, risk management, thesis formation and
-              an honest physical purchase.
-            </p>
-          </article>
+  <section id="latest">
+    <div class="wrap">
+      <div class="label">Latest analysis</div>
+      <h2>What is moving, and why it matters for gold.</h2>
+      <div class="feature">
+        <a class="card big" href="/could-europe-take-your-gold.html">
+          <div class="label">New · Confiscation risk &amp; custody</div>
+          <h3>Could Europe Take Your Gold?</h3>
+          <p>125 years of gold confiscation, debt above 100% of GDP in five euro states, and a continent rearming. Why where your gold sits matters more than how much you hold.</p>
+          <span class="more">Read the analysis &rarr;</span>
+        </a>
+        <div class="stack">
+          <a class="card" href="/china-took-the-leverage-out.html">
+            <div class="label">China &amp; physical demand</div>
+            <h3>China Took the Leverage Out, Not the Gold</h3>
+            <span class="more">Read &rarr;</span>
+          </a>
+          <a class="card" href="/confidence-tokenized.html">
+            <div class="label">Confidence, part four</div>
+            <h3>Confidence, Tokenized</h3>
+            <span class="more">Read &rarr;</span>
+          </a>
         </div>
-<div class="free-preview" id="free-preview">
-  <h2>Read the free English preview</h2>
-
-  <p>
-    Explore the opening pages and complete table of contents,
-    including Appendices A–F.
-  </p>
-
-  <iframe class="pdf-viewer" src="the-gold-investor-english-preview.pdf#view=FitH" title="The Gold Investor — free English PDF preview" loading="lazy">
-  </iframe>
-
-  <p>
-    <a class="button" href="the-gold-investor-english-preview.pdf" target="_blank" rel="noopener">
-      Open preview PDF
-    </a>
-
-    <a class="button secondary" href="the-gold-investor-english-preview.pdf" download="">
-      Download free preview
-    </a>
-  </p>
-</div>
       </div>
-  
-    
-    </section>
+      <p style="margin-top:22px"><a class="button quiet" href="/insights-and-partners.html#insights">All insights &rarr;</a></p>
+    </div>
+  </section>
 
-    <section id="about">
-      <div class="container">
-        <h2>About the author</h2>
-
-        <p class="intro">
-          With a background in WTI crude oil and currency trading, Filip Allaert
-          approaches gold through the perspective of market structure,
-          macroeconomics and risk management.
-        </p>
-        <p>
-          <a class="button secondary" href="https://www.linkedin.com/in/filipallaert/" target="_blank" rel="noopener noreferrer">View Filip Allaert’s LinkedIn profile</a>
-        </p>
+  <section id="indicators">
+    <div class="wrap">
+      <div class="label">Live indicators</div>
+      <h2>The dashboard behind the analysis.</h2>
+      <p class="lead">Gold rarely moves on headlines alone. These are the quieter variables the framework watches: what it costs to hold cash instead of gold, and whether commodities as a whole are moving with it.</p>
+      <div class="grid4">
+        <div class="ind"><p class="t">Gold (USD)</p><div class="w" data-tv="TVC:GOLD"></div></div>
+        <div class="ind"><p class="t">US 10-year real yield</p><div class="w" data-tv="FRED:DFII10"></div></div>
+        <div class="ind"><p class="t">Commodities · DBC</p><div class="w" data-tv="AMEX:DBC"></div></div>
+        <div class="ind"><p class="t">Commodities · BCOM (BCI)</p><div class="w" data-tv="AMEX:BCI"></div></div>
       </div>
-    </section>
+      <p style="margin-top:22px"><a class="button quiet" href="/real-rates-and-the-dollar.html">Open the full panel, with the dollar table &rarr;</a></p>
+    </div>
+  </section>
 
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact</h2>
-
-        <p>
-          Questions about The Gold Investor or The Gold Decision Framework?
-        </p>
-
-        <p>
-          <a href="mailto:DecisionFramework@telenet.be">
-            DecisionFramework@telenet.be
-          </a>
-        </p>
-
-        <p>
-          <a href="https://decisionframework.online">
-            DecisionFramework.online
-          </a>
-        </p>
+  <section id="decisions">
+    <div class="wrap">
+      <div class="label">The decision framework</div>
+      <h2>Every gold decision runs through five questions.</h2>
+      <p class="lead">Start where you are. Each question leads to the analysis and tools that help you answer it for yourself.</p>
+      <div class="journey">
+        <div class="q"><div><h3>Why gold, and why now?</h3><p>Real rates, the dollar, confidence in money and central banks.</p></div>
+          <div class="go"><a class="button quiet" href="/insights-and-partners.html#insights">Insights</a><a class="button quiet" href="/real-rates-and-the-dollar.html">Indicators</a></div></div>
+        <div class="q"><div><h3>How much, and when?</h3><p>Position size, timing and risk management: the core of the framework.</p></div>
+          <div class="go"><a class="button quiet" href="/framework/#content">The framework</a><a class="button quiet" href="/commodity-etf-guide.html">Charts &amp; timing</a></div></div>
+        <div class="q"><div><h3>Physical or financial?</h3><p>Metal you own, or a claim through the financial system. Different risks, different tools.</p></div>
+          <div class="go"><a class="button quiet" href="#physical-or-financial">Compare both</a></div></div>
+        <div class="q"><div><h3>Where do I buy and store it?</h3><p>Established dealers, mints and vaults by region, with what is different in each market.</p></div>
+          <div class="go"><a class="button quiet" href="/dealer-directory.html">Dealer directory</a></div></div>
+        <div class="q"><div><h3>What could go wrong?</h3><p>Confiscation, custody, counterparty and policy risk, and how to spread it.</p></div>
+          <div class="go"><a class="button quiet" href="/could-europe-take-your-gold.html">Confiscation risk</a><a class="button quiet" href="/sovereign-debt-loop.html">Sovereign debt</a></div></div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    © 2026 Filip Allaert. All rights reserved.
-  </footer>
+  <section id="physical-or-financial">
+    <div class="wrap">
+      <div class="label">Two ways to own it</div>
+      <h2>Physical metal or financial exposure?</h2>
+      <p class="lead">Both give you the price of gold. They fail in different ways, so they are covered separately.</p>
+      <div class="split">
+        <div class="door">
+          <div class="label">Physical metal</div>
+          <h3>Metal you own</h3>
+          <ul><li>Bars and coins at home, or allocated in a vault</li><li>No issuer between you and the metal</li><li>Costs: premiums, storage, insurance, resale spread</li></ul>
+          <a class="button fill" href="/dealer-directory.html">Dealer directory: 300+ firms</a>
+        </div>
+        <div class="door">
+          <div class="label">Financial exposure</div>
+          <h3>A claim, not a bar</h3>
+          <ul><li>ETFs, ETCs and funds, traded like shares</li><li>Easy sector exposure: metals, energy, grains, softs</li><li>Costs: fees, roll costs, issuer and custodian risk</li></ul>
+          <a class="button fill" href="/commodity-etf-guide.html">Commodity ETF guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="framework">
+    <div class="wrap">
+      <div class="book">
+        <div>
+          <div class="label">The framework behind this site</div>
+          <h2>The Gold Investor</h2>
+          <p class="lead">Book 1 of The Gold Decision Framework: a practical method for building your own gold thesis through market structure, macroeconomics, geopolitics and risk management. It won't tell you what to buy. It helps you decide for yourself.</p>
+          <p class="biz">For dealers and businesses: <a href="/license-order/">bulk licences</a> · <a href="/license/">activate a licence</a> · <a href="/insights-and-partners.html#country">sponsorship</a></p>
+        </div>
+        <div class="side">
+          <span id="free-preview"></span>
+          <a class="button fill" href="/free-preview.html">Free preview, 33 languages</a>
+          <a class="button" href="/the-gold-investor-english-preview.pdf" target="_blank" rel="noopener">English preview (PDF)</a>
+          <a class="button" href="/framework/">About the book</a>
+          <a class="button quiet" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener">Store</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter">
+    <div class="wrap two">
+      <div>
+        <div class="label">About</div>
+        <h2>A trader's view on gold.</h2>
+        <p>DecisionFramework is written by Filip Allaert. With a background in WTI crude oil and currency trading, he approaches gold through market structure, macroeconomics and risk management rather than headlines.</p>
+        <p>Nothing here tells you what to buy. The aim is to make the decision clearer, and yours.</p>
+        <p><a class="button quiet" href="https://www.linkedin.com/in/filipallaert/" target="_blank" rel="noopener">LinkedIn</a> <a class="button quiet" href="/media.html">Media</a></p>
+      </div>
+      <div class="df-signup">
+        <h3>The DecisionFramework Brief</h3>
+        <p>New analysis and indicator updates by email. You also get the free preview in your language, and the full book for &euro;35 instead of &euro;38.</p>
+        <form action="https://app.kit.com/forms/9913050/subscriptions" method="post">
+          <label for="df-email" style="position:absolute;left:-9999px">Email address</label>
+          <input id="df-email" type="email" name="email_address" placeholder="Your email address" required autocomplete="email">
+          <button type="submit">Subscribe &amp; get &euro;3 off</button>
+        </form>
+        <p class="df-small">You'll get a confirmation email first. Occasional emails on gold, real rates and the dollar. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <span>&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">DecisionFramework@telenet.be</a></span>
+    <span>Educational content to support your own research and decisions. Not financial advice.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Live indicator mini charts (TradingView), loaded when the section scrolls into view
+  function mini(el){var c=document.createElement('div');c.className='tradingview-widget-container';c.style.height='100%';
+    var w=document.createElement('div');w.className='tradingview-widget-container__widget';c.appendChild(w);
+    var s=document.createElement('script');s.type='text/javascript';s.async=true;s.src='https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
+    s.text=JSON.stringify({symbol:el.getAttribute('data-tv'),width:'100%',height:'100%',locale:'en',dateRange:'12M',colorTheme:'dark',trendLineColor:'rgba(198, 161, 91, 1)',underLineColor:'rgba(198, 161, 91, 0.15)',underLineBottomColor:'rgba(198, 161, 91, 0)',isTransparent:true,autosize:true,chartOnly:false,noTimeScale:false});
+    c.appendChild(s);el.appendChild(c);}
+  var boxes=[].slice.call(document.querySelectorAll('.ind .w[data-tv]'));
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){boxes.forEach(mini);io.disconnect();}});},{rootMargin:'300px'});io.observe(document.getElementById('indicators'));}
+  else boxes.forEach(mini);
+  // Kit newsletter form (same handler as the rest of the site)
+  document.querySelectorAll('form[action*="app.kit.com/forms/9913050"]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button'), input=form.querySelector('input[name=email_address]');
+      var msg=form.parentNode.querySelector('.df-msg');
+      if(!msg){msg=document.createElement('p');msg.className='df-msg';msg.setAttribute('role','status');msg.style.cssText='margin:14px 0 0;color:#e2c887;font:15px/1.6 Arial,sans-serif';form.parentNode.insertBefore(msg,form.nextSibling);}
+      var fd=new FormData();
+      fd.append('email_address',input.value.trim());
+      fd.append('token','');
+      fd.append('referrer',document.referrer||'');
+      fd.append('host',location.href);
+      fd.append('search',location.search||'');
+      fd.append('user',(window.crypto&&crypto.randomUUID)?crypto.randomUUID():String(Date.now()));
+      fd.append('ckjs_version','6');
+      btn.disabled=true; var old=btn.textContent; btn.textContent='Sending…';
+      fetch(form.action,{method:'POST',body:fd,headers:{'Accept':'application/json','X-CKJS-Version':'6'}})
+        .then(function(r){return r.json().catch(function(){return {};}).then(function(d){return {ok:r.ok,d:d};});})
+        .then(function(res){
+          if(res.ok && (!res.d.status || res.d.status==='success')){
+            form.style.display='none';
+            msg.textContent='Almost there! Check your inbox and confirm your subscription to get the free preview in your language and your €35 code. Not there? Check your spam folder.';
+          } else {
+            btn.disabled=false; btn.textContent=old;
+            msg.textContent=(res.d && res.d.errors && res.d.errors.messages && res.d.errors.messages.join(' ')) || 'Something went wrong. Please check your email address and try again.';
+          }
+        })
+        .catch(function(){ btn.disabled=false; btn.textContent=old; msg.textContent='Connection problem. Please try again in a moment.'; });
+    });
+  });
+})();
+</script>
 
 <!-- Cloudflare Web Analytics -->
 <script type="module" src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon="{&quot;token&quot;:&quot;ae803409637b4e77b5373cc93b16429c&quot;}">
 </script>
 <!-- End Cloudflare Web Analytics -->
-
-</body></html>
+</body>
+</html>
