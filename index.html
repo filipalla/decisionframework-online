@@ -47,6 +47,8 @@ p{color:var(--muted)}.lead{font-size:1.15rem;color:var(--text);max-width:760px}
 .biz{font:13px Arial,sans-serif;color:var(--muted);margin:16px 0 0}.biz a{color:var(--muted)}
 .df-signup{background:var(--surface);border:1px solid var(--line);padding:28px;max-width:640px}.df-signup h3{margin:0 0 8px;font-weight:400;font-size:1.45rem;color:var(--light);line-height:1.3}.df-signup p{margin:0 0 16px}.df-signup form{display:flex;gap:10px;flex-wrap:wrap}.df-signup input[type=email]{flex:1 1 220px;min-width:0;padding:13px 14px;background:var(--bg);color:var(--text);border:1px solid var(--line);font:16px Arial,sans-serif}.df-signup input[type=email]:focus{outline:2px solid var(--light);outline-offset:2px}.df-signup button{flex:0 0 auto;padding:13px 22px;background:rgba(198,161,91,.14);color:var(--light);border:1px solid var(--light);font:15px Arial,sans-serif;cursor:pointer}.df-signup button:hover{background:var(--light);color:#17120a}.df-signup .df-small{margin:12px 0 0;font:12.5px/1.6 Arial,sans-serif}
 .getbook{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}.path{display:flex;flex-direction:column;padding:26px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:inherit;transition:.2s}.path:hover{border-color:var(--light);background:#211e18}.path .who{font:11.5px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--light)}.path h3{margin:10px 0 6px;font-weight:400;font-size:1.45rem;line-height:1.25;color:var(--text)}.path .price{font:14px Arial,sans-serif;color:var(--light);margin:0 0 10px}.path p{margin:0 0 16px;font-size:1rem;color:var(--muted)}.path .go{margin-top:auto;font:12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--light)}.path.main{border-color:var(--gold);background:linear-gradient(120deg,#302719,#1b1b1d)}@media(max-width:900px){.getbook{grid-template-columns:1fr}}
+.northstar{display:inline-flex;align-items:center;gap:7px;padding:6px 12px;border:1px solid var(--light);color:var(--light)!important;text-decoration:none;font:11.5px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;background:rgba(198,161,91,.08);transition:.2s}.northstar:hover{background:var(--light);color:#17120a!important}.northstar .s{font-size:13px;line-height:1}
+.path.star{border-top:2px solid var(--light)}.path.star .who::before{content:"\2726  ";color:var(--light)}
 .two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
 footer{padding:34px 0;border-top:1px solid var(--line);font:13px Arial,sans-serif;color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}footer a{color:var(--muted)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offset:3px}
@@ -58,7 +60,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
 
 <nav class="top wrap" aria-label="Main navigation">
   <a class="brand" href="/">DecisionFramework.online</a>
-  <span class="links">
+  <span class="links" style="align-items:center">
     <a href="/insights-and-partners.html#insights">Insights</a>
     <a href="/real-rates-and-the-dollar.html">Indicators</a>
     <a href="/dealer-directory.html">Physical metal</a>
@@ -66,6 +68,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
     <a href="/framework/">The Framework</a>
     <a href="#get-the-book" style="color:var(--light)">Get the book</a>
     <a href="#newsletter">Newsletter</a>
+    <a class="northstar" href="/license/"><span class="s" aria-hidden="true">&#10022;</span>Activate licence</a>
   </span>
 </nav>
 
@@ -202,7 +205,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
           <p>Individual activation codes to hand out. Each recipient picks their own language. Partner Editions with your logo available.</p>
           <span class="go">See licence packages &rarr;</span>
         </a>
-        <a class="path" href="/license/">
+        <a class="path star" href="/license/">
           <span class="who">Already have a code?</span>
           <h3>Activate your licence</h3>
           <p class="price">Received a code from a dealer or employer</p>
