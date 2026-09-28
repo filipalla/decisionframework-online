@@ -167,6 +167,23 @@
    "sponsor": false
   },
   {
+   "name": "Sprott Money",
+   "url": "https://www.sprottmoney.com",
+   "region": "North America",
+   "country": "Canada",
+   "city": "Toronto",
+   "type": "Online dealer",
+   "founded": 2008,
+   "markets": [
+    "Canada",
+    "United States"
+   ],
+   "storage": "Toronto, Vancouver, Delaware, Singapore, Switzerland",
+   "ira": true,
+   "notes": "Supports IRAs in the US and RRSP/TFSA accounts in Canada. Separate from the exchange-listed Sprott Physical trusts.",
+   "sponsor": false
+  },
+  {
    "name": "Royal Canadian Mint (shop)",
    "url": "https://www.mint.ca",
    "region": "North America",
@@ -446,7 +463,7 @@
    "region": "Europe",
    "country": "Belgium",
    "city": "Antwerp",
-   "type": "Dealer with showroom",
+   "type": "Dealer with showrooms",
    "founded": 1987,
    "markets": [
     "Belgium"
@@ -462,7 +479,7 @@
    "region": "Europe",
    "country": "Belgium",
    "city": "Brussels",
-   "type": "Dealer with showroom",
+   "type": "Dealer with showrooms",
    "founded": null,
    "markets": [
     "Belgium"
@@ -684,7 +701,7 @@
    "region": "Europe",
    "country": "United Kingdom",
    "city": "Blackpool",
-   "type": "Dealer with showroom",
+   "type": "Dealer with showrooms",
    "founded": null,
    "markets": [
     "United Kingdom"
@@ -700,7 +717,7 @@
    "region": "Europe",
    "country": "United Kingdom",
    "city": "London",
-   "type": "Dealer with showroom",
+   "type": "Dealer with showrooms",
    "founded": null,
    "markets": [
     "United Kingdom"
@@ -765,6 +782,40 @@
    "url": "https://emiratesgold.ae",
    "region": "Middle East",
    "country": "United Arab Emirates",
+   "city": "Dubai (DMCC)",
+   "type": "Refiner",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates",
+    "International"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "UAE's oldest-running refiner, over 30 years in operation; UAE Good Delivery accredited; investment kilobars and smaller bars.",
+   "sponsor": false
+  },
+  {
+   "name": "Al Etihad Gold",
+   "url": "https://www.aletihadgold.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai (DMCC)",
+   "type": "Refiner",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates",
+    "International"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "UAE Good Delivery accredited refiner; bars from 1 g up to 400 oz.",
+   "sponsor": false
+  },
+  {
+   "name": "SAM Precious Metals",
+   "url": "https://sampreciousmetals.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
    "city": "Dubai",
    "type": "Refiner",
    "founded": null,
@@ -774,7 +825,136 @@
    ],
    "storage": null,
    "ira": null,
-   "notes": "Dubai refinery producing investment bars.",
+   "notes": "UAE Good Delivery accredited gold and silver refinery.",
+   "sponsor": false
+  },
+  {
+   "name": "Emirates Minting Factory",
+   "url": "https://emiratesminting.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai",
+   "type": "Mint",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Minted bars and coins.",
+   "sponsor": false
+  },
+  {
+   "name": "IGR Metals Trading",
+   "url": "https://www.igrglobal.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai (DMCC)",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "DMCC bullion dealer with a presence in the Gold Souk.",
+   "sponsor": false
+  },
+  {
+   "name": "APM International",
+   "url": "https://www.apmintldmcc.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai (DMCC)",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Buys and sells gold bars in Dubai.",
+   "sponsor": false
+  },
+  {
+   "name": "Ashoka Global",
+   "url": "https://www.ashokaglobal.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Gold bullion dealer and trader.",
+   "sponsor": false
+  },
+  {
+   "name": "GVS Trading",
+   "url": "https://www.gvs-trading.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Gold, silver and other precious metals.",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Vault Trading",
+   "url": "https://goldvaulttrading.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Gold bars and coins.",
+   "sponsor": false
+  },
+  {
+   "name": "Transguard",
+   "url": "https://www.transguard.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai",
+   "type": "Vault operator",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": "Vaults at Dubai Airport Free Zone, Almas Tower and the Gold Souk",
+   "ira": null,
+   "notes": "DGCX-approved vault operator.",
+   "sponsor": false
+  },
+  {
+   "name": "DMCC Vault (Almas Tower)",
+   "url": "https://www.dmcc.ae/gateway-to-trade/commodities/gold/dmcc-vault",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "Dubai (DMCC)",
+   "type": "Vault operator",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates",
+    "International"
+   ],
+   "storage": "Almas Tower, Jumeirah Lakes Towers",
+   "ira": null,
+   "notes": "Described as the largest non-sovereign vault in the Middle East; mainly used by trade and institutional clients.",
    "sponsor": false
   },
   {
@@ -799,7 +979,7 @@
    "region": "Asia-Pacific",
    "country": "Singapore",
    "city": "Singapore",
-   "type": "Dealer with showroom",
+   "type": "Dealer with showrooms",
    "founded": 2012,
    "markets": [
     "Singapore",
@@ -924,6 +1104,3206 @@
     "International"
    ],
    "storage": "Vaults in several jurisdictions",
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Zlato Gulden",
+   "url": "https://zlatogulden.cz",
+   "region": "Europe",
+   "country": "Czech Republic",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Czech Republic"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Part of a holding group active since 1991; buy-back guarantee; bars from Metalor, PAMP, Valcambi and Argor-Heraeus.",
+   "sponsor": false
+  },
+  {
+   "name": "GoldVault.sk",
+   "url": "https://goldvault.sk",
+   "region": "Europe",
+   "country": "Slovakia",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Slovakia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Buy-back guarantee and guarantee of origin.",
+   "sponsor": false
+  },
+  {
+   "name": "Jalonom",
+   "url": "https://jalonom.fi",
+   "region": "Europe",
+   "country": "Finland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Finland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Family business; also active in Sweden.",
+   "sponsor": false
+  },
+  {
+   "name": "Nordisk Guld",
+   "url": "https://nordiskguld.dk",
+   "region": "Europe",
+   "country": "Denmark",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Denmark"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Dansk Mønt",
+   "url": null,
+   "region": "Europe",
+   "country": "Denmark",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Denmark"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Coin and bullion dealer in Copenhagen.",
+   "sponsor": false
+  },
+  {
+   "name": "Norsk Gull",
+   "url": "https://norskgull.com",
+   "region": "Europe",
+   "country": "Norway",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Norway"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Gullfunn",
+   "url": null,
+   "region": "Europe",
+   "country": "Norway",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Norway"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Oslo; online and walk-in.",
+   "sponsor": false
+  },
+  {
+   "name": "David-Andersen",
+   "url": null,
+   "region": "Europe",
+   "country": "Norway",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Norway"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Bergen; coin specialist.",
+   "sponsor": false
+  },
+  {
+   "name": "Guldcentralen",
+   "url": "https://guldcentralen.se",
+   "region": "Europe",
+   "country": "Sweden",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Sweden"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Noblex",
+   "url": null,
+   "region": "Europe",
+   "country": "Sweden",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Sweden"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Helsingborg; registered with Finansinspektionen; PAMP, Valcambi and Argor-Heraeus products.",
+   "sponsor": false
+  },
+  {
+   "name": "Capitaurum",
+   "url": null,
+   "region": "Europe",
+   "country": "Sweden",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Sweden"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Insured delivery and price guarantee.",
+   "sponsor": false
+  },
+  {
+   "name": "Finguld (Pantbanken)",
+   "url": null,
+   "region": "Europe",
+   "country": "Sweden",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Sweden"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Pawnbroker and gold dealer tracing back to 1866; around 24 offices.",
+   "sponsor": false
+  },
+  {
+   "name": "CelticGold",
+   "url": "https://celticgold.eu",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "More than 130,000 orders processed.",
+   "sponsor": false
+  },
+  {
+   "name": "StoneX Bullion",
+   "url": "https://stonexbullion.com",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "German arm of the StoneX group.",
+   "sponsor": false
+  },
+  {
+   "name": "Auragentum",
+   "url": "https://auragentum.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "ESG Edelmetall-Service",
+   "url": "https://edelmetall-handel.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Heubach Edelmetalle",
+   "url": "https://heubach-edelmetalle.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Geiger Edelmetalle",
+   "url": "https://geiger-edelmetalle.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Kettner Edelmetalle",
+   "url": "https://kettner-edelmetalle.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Anlagegold24",
+   "url": "https://anlagegold24.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "MP Edelmetalle",
+   "url": "https://mp-edelmetalle.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Goldkontor Hamburg (Feingoldhandel.de)",
+   "url": "https://feingoldhandel.de",
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Haeger Edelmetalle",
+   "url": null,
+   "region": "Europe",
+   "country": "Germany",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Germany"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Online and walk-in.",
+   "sponsor": false
+  },
+  {
+   "name": "Goldvorsorge (GVS)",
+   "url": "https://goldvorsorge.at",
+   "region": "Europe",
+   "country": "Austria",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Austria"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Schoeller Münzhandel",
+   "url": "https://smh.net",
+   "region": "Europe",
+   "country": "Austria",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Austria"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "GOLDINVEST Edelmetalle",
+   "url": "https://goldinvest.at",
+   "region": "Europe",
+   "country": "Austria",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Austria"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Vienna; coins, bars and numismatics.",
+   "sponsor": false
+  },
+  {
+   "name": "Gold & Co.",
+   "url": "https://goldundco.at",
+   "region": "Europe",
+   "country": "Austria",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Austria"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "ÖGUSSA",
+   "url": "https://oegussa.at",
+   "region": "Europe",
+   "country": "Austria",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "Austria"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "interGOLD Edelmetalle",
+   "url": "https://intergold.at",
+   "region": "Europe",
+   "country": "Austria",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Austria"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Sincona Trading",
+   "url": "https://sincona-trading.com",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Zurich.",
+   "sponsor": false
+  },
+  {
+   "name": "Basler Kantonalbank",
+   "url": "https://bkb.ch",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Bank",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Cantonal bank in Basel with a precious-metals desk.",
+   "sponsor": false
+  },
+  {
+   "name": "Rheingold Edelmetall",
+   "url": "https://rheingoldag.com",
+   "region": "Europe",
+   "country": "Liechtenstein",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Liechtenstein"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Triesen.",
+   "sponsor": false
+  },
+  {
+   "name": "swissgoldplan",
+   "url": "https://swissgoldplan.com",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Savings plan",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Gold savings plans.",
+   "sponsor": false
+  },
+  {
+   "name": "Euporos",
+   "url": "https://euporos.ch",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Geneva.",
+   "sponsor": false
+  },
+  {
+   "name": "Valorum",
+   "url": "https://valorum.ch",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Geneva and Lausanne.",
+   "sponsor": false
+  },
+  {
+   "name": "Oro in Euro Suisse",
+   "url": "https://oroineuro.ch",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Ticino.",
+   "sponsor": false
+  },
+  {
+   "name": "Resonor",
+   "url": "https://resonor.ch",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Lugano.",
+   "sponsor": false
+  },
+  {
+   "name": "Orobanco (Banco ORO 9999)",
+   "url": "https://orobanco.com",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Lugano.",
+   "sponsor": false
+  },
+  {
+   "name": "Mondial Change",
+   "url": "https://mondialchange.ch",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Ticino.",
+   "sponsor": false
+  },
+  {
+   "name": "GFI Gold Switzerland",
+   "url": "https://gfigold.ch",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Geneva.",
+   "sponsor": false
+  },
+  {
+   "name": "Global Metals",
+   "url": "https://global-metals.ch",
+   "region": "Europe",
+   "country": "Switzerland",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Switzerland"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Lucerne.",
+   "sponsor": false
+  },
+  {
+   "name": "Comptoir National de l'Or (Gold.fr)",
+   "url": "https://gold.fr",
+   "region": "Europe",
+   "country": "France",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "France"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "In business since 1976.",
+   "sponsor": false
+  },
+  {
+   "name": "GoldUnion",
+   "url": null,
+   "region": "Europe",
+   "country": "France",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "France"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Founded 2010 in Paris; national network.",
+   "sponsor": false
+  },
+  {
+   "name": "Or.fr / GoldBroker",
+   "url": "https://goldbroker.com",
+   "region": "Europe",
+   "country": "France",
+   "city": "",
+   "type": "Vault platform",
+   "founded": null,
+   "markets": [
+    "France"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Storage in your own name and resale.",
+   "sponsor": false
+  },
+  {
+   "name": "LINGOR",
+   "url": "https://lingor.fr",
+   "region": "Europe",
+   "country": "France",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "France"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Pièces OR",
+   "url": "https://pieces-or.com",
+   "region": "Europe",
+   "country": "France",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "France"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Or en Cash",
+   "url": "https://orencash.fr",
+   "region": "Europe",
+   "country": "France",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "France"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "GOLDMARKET",
+   "url": "https://goldmarket.fr",
+   "region": "Europe",
+   "country": "France",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "France"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Abacor",
+   "url": null,
+   "region": "Europe",
+   "country": "France",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "France"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "OreGold",
+   "url": "https://oregold.it",
+   "region": "Europe",
+   "country": "Italy",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Italy"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Milan; online platform since 2020; numbered bars.",
+   "sponsor": false
+  },
+  {
+   "name": "Orovilla",
+   "url": "https://orovilla.com",
+   "region": "Europe",
+   "country": "Italy",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Italy"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Online since 2015; gold savings plans.",
+   "sponsor": false
+  },
+  {
+   "name": "OroCash",
+   "url": null,
+   "region": "Europe",
+   "country": "Italy",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Italy"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Gold-buying chain with 350+ shops.",
+   "sponsor": false
+  },
+  {
+   "name": "Quilatia",
+   "url": null,
+   "region": "Europe",
+   "country": "Spain",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Spain"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Online plus branches in Extremadura; bars from 2 g to 1 kg.",
+   "sponsor": false
+  },
+  {
+   "name": "Sempsa",
+   "url": null,
+   "region": "Europe",
+   "country": "Spain",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Spain"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Sociedad Española de Metales Preciosos.",
+   "sponsor": false
+  },
+  {
+   "name": "Bellido",
+   "url": null,
+   "region": "Europe",
+   "country": "Spain",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Spain"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Shops in Alzira and Algemesí; since 1994.",
+   "sponsor": false
+  },
+  {
+   "name": "InvestirEmOuro",
+   "url": null,
+   "region": "Europe",
+   "country": "Portugal",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Portugal"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Online bars and coins.",
+   "sponsor": false
+  },
+  {
+   "name": "Goldn'Tec",
+   "url": null,
+   "region": "Europe",
+   "country": "Portugal",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Portugal"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "OuroCerto",
+   "url": null,
+   "region": "Europe",
+   "country": "Portugal",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Portugal"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Loja do Ouro",
+   "url": "https://lojadoouro.pt",
+   "region": "Europe",
+   "country": "Portugal",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "Portugal"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Jewellery and gold retail chain.",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Suisse (Portugal)",
+   "url": "https://gold-suisse.com",
+   "region": "Europe",
+   "country": "Portugal",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Portugal"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Sintra.",
+   "sponsor": false
+  },
+  {
+   "name": "Prosegur Digital Gold",
+   "url": null,
+   "region": "Europe",
+   "country": "Portugal",
+   "city": "",
+   "type": "Digital gold app",
+   "founded": null,
+   "markets": [
+    "Portugal"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Tokenised gold launched in 2026.",
+   "sponsor": false
+  },
+  {
+   "name": "GoldRepublic",
+   "url": null,
+   "region": "Europe",
+   "country": "Netherlands",
+   "city": "",
+   "type": "Vault platform",
+   "founded": null,
+   "markets": [
+    "Netherlands"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Storage in Amsterdam, Zurich and Frankfurt.",
+   "sponsor": false
+  },
+  {
+   "name": "Goudverzekerd",
+   "url": null,
+   "region": "Europe",
+   "country": "Netherlands",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Netherlands"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Storage in the Netherlands.",
+   "sponsor": false
+  },
+  {
+   "name": "Doijer & Kalff",
+   "url": null,
+   "region": "Europe",
+   "country": "Netherlands",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Netherlands"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Founded 1825.",
+   "sponsor": false
+  },
+  {
+   "name": "Goud999",
+   "url": null,
+   "region": "Europe",
+   "country": "Belgium",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Belgium"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Belgium and the Netherlands; allocated storage in Swiss vaults.",
+   "sponsor": false
+  },
+  {
+   "name": "Europese Goudstandaard",
+   "url": null,
+   "region": "Europe",
+   "country": "Belgium",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Belgium"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Istanbul Gold Refinery (IGR)",
+   "url": "https://igrglobal.com",
+   "region": "Middle East",
+   "country": "Turkey",
+   "city": "",
+   "type": "Refiner",
+   "founded": null,
+   "markets": [
+    "Turkey"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "LBMA-accredited refinery.",
+   "sponsor": false
+  },
+  {
+   "name": "Nadir Metal Rafineri",
+   "url": null,
+   "region": "Middle East",
+   "country": "Turkey",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "Turkey"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Refinery and distributor (Nadir Döviz).",
+   "sponsor": false
+  },
+  {
+   "name": "Troy Precious Metals / GoldTakas",
+   "url": null,
+   "region": "Middle East",
+   "country": "Turkey",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Turkey"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Linked to Borsa Istanbul.",
+   "sponsor": false
+  },
+  {
+   "name": "May Gold",
+   "url": "https://maygold.com",
+   "region": "Middle East",
+   "country": "Turkey",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Turkey"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Grand Bazaar, Istanbul.",
+   "sponsor": false
+  },
+  {
+   "name": "Gramaltin",
+   "url": "https://gramaltin.com",
+   "region": "Middle East",
+   "country": "Turkey",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Turkey"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Standard DMCC",
+   "url": "https://goldstandarddmcc.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Branches in Dubai and Bahrain.",
+   "sponsor": false
+  },
+  {
+   "name": "Simha Bullion Trading",
+   "url": "https://simhabullion.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Aseel Gold Trading",
+   "url": null,
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Aetram Bullion",
+   "url": "https://aetrambullion.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "EGC Bullion Gold Trading",
+   "url": "https://egcbullion.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "DXBGold (New Mount Precious Metal Trading)",
+   "url": "https://dxbgold.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Purshottam Kanji & Co.",
+   "url": "https://pkintltd.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "RYA Precious Metals",
+   "url": "https://ryametals.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Nexa Gold",
+   "url": "https://nexagold.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "IBZ Gold Trading",
+   "url": "https://ibzgold.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Tora Bullion",
+   "url": "https://toragold.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Wingold & Metals",
+   "url": "https://wingoldandmetals.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "DMCC.",
+   "sponsor": false
+  },
+  {
+   "name": "Noha Gold",
+   "url": "https://nohagold.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Delor Gold Trading",
+   "url": "https://delor.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "GILT Trading",
+   "url": "https://gilt.ae",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Taza Gold",
+   "url": "https://tazagoldgroup.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Orovia Precious Metals",
+   "url": "https://oroviajewellery.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Arakkal Bullion Trading",
+   "url": "https://arakkalbullion.com",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Standard Pure Gold (SPG)",
+   "url": "https://standardpure.gold",
+   "region": "Middle East",
+   "country": "United Arab Emirates",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "United Arab Emirates"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Ounce",
+   "url": "https://ounce.com.sa",
+   "region": "Middle East",
+   "country": "Saudi Arabia",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Saudi Arabia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Saudi gold bars.",
+   "sponsor": false
+  },
+  {
+   "name": "Diwan Gold",
+   "url": null,
+   "region": "Middle East",
+   "country": "Saudi Arabia",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Saudi Arabia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Golden Cash KSA",
+   "url": null,
+   "region": "Middle East",
+   "country": "Saudi Arabia",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Saudi Arabia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Al Saab Bullion",
+   "url": null,
+   "region": "Middle East",
+   "country": "Saudi Arabia",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Saudi Arabia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Al Sulaiman Jewellers",
+   "url": null,
+   "region": "Middle East",
+   "country": "Qatar",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "Qatar"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Falcon Gold & Precious Metals",
+   "url": null,
+   "region": "Middle East",
+   "country": "Qatar",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Qatar"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "GSK Gold Trading",
+   "url": null,
+   "region": "Middle East",
+   "country": "Qatar",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Qatar"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Exclusive Gold & Jewellery",
+   "url": null,
+   "region": "Middle East",
+   "country": "Qatar",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "Qatar"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Standard Kuwait",
+   "url": "https://goldstandardkw.com",
+   "region": "Middle East",
+   "country": "Kuwait",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Kuwait"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Kuwait Finance House",
+   "url": "https://kfh.com",
+   "region": "Middle East",
+   "country": "Kuwait",
+   "city": "",
+   "type": "Bank",
+   "founded": null,
+   "markets": [
+    "Kuwait"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Islamic bank offering gold products.",
+   "sponsor": false
+  },
+  {
+   "name": "Pure Bullion",
+   "url": "https://purebullion.co",
+   "region": "Middle East",
+   "country": "Kuwait",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Kuwait"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Bafleh Jewellery",
+   "url": "https://bafleh.com",
+   "region": "Middle East",
+   "country": "Kuwait",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "Kuwait"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Golden Invest",
+   "url": "https://goldeninvest.net",
+   "region": "Middle East",
+   "country": "Kuwait",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Kuwait"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "MSS Gold",
+   "url": "https://mssgold.com",
+   "region": "Middle East",
+   "country": "Bahrain",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Bahrain"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "NUMU Bullion",
+   "url": "https://numu.gold",
+   "region": "Middle East",
+   "country": "Bahrain",
+   "city": "",
+   "type": "Digital gold app",
+   "founded": null,
+   "markets": [
+    "Bahrain"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Khalaf Gold",
+   "url": null,
+   "region": "Middle East",
+   "country": "Bahrain",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Bahrain"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Rizan Bullion",
+   "url": "https://rizanjewellery.com",
+   "region": "Middle East",
+   "country": "Bahrain",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Bahrain"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "BTC – Bullion Trading Center",
+   "url": "https://btcegyptgold.com",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Dahab Masr",
+   "url": "https://dahabmasr.com",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Evolve Holding",
+   "url": "https://evolveinvestment.com",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Swiss Gold Egypt",
+   "url": "https://swissgold.com.eg",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Gram",
+   "url": "https://goldgram.net",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Bullion Egypt",
+   "url": "https://goldbullioneg.com",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Dahab Zaman",
+   "url": "https://dahabzaman.com",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Trade Center (GTC)",
+   "url": "https://gtc.gold",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Golden Circle (GCT)",
+   "url": "https://golden-circle.net",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "SABIKA",
+   "url": "https://sabika.app",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Digital gold app",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Empire of Gold",
+   "url": "https://empireofgold.co",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "OwnOw / GoldHub",
+   "url": "https://ownow.app",
+   "region": "Africa",
+   "country": "Egypt",
+   "city": "",
+   "type": "Digital gold app",
+   "founded": null,
+   "markets": [
+    "Egypt"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "The Scoin Shop",
+   "url": "https://sagoldcoin.com",
+   "region": "Africa",
+   "country": "South Africa",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "South Africa"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Krugerrand and gold-coin specialist.",
+   "sponsor": false
+  },
+  {
+   "name": "The Gold Bar",
+   "url": "https://goldbar.co.za",
+   "region": "Africa",
+   "country": "South Africa",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Africa"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "African Bullion",
+   "url": null,
+   "region": "Africa",
+   "country": "South Africa",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Africa"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Trader",
+   "url": null,
+   "region": "Africa",
+   "country": "South Africa",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Africa"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "SA Bullion",
+   "url": null,
+   "region": "Africa",
+   "country": "South Africa",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Africa"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Randburg Coin",
+   "url": null,
+   "region": "Africa",
+   "country": "South Africa",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Africa"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Investgold",
+   "url": null,
+   "region": "Africa",
+   "country": "South Africa",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Africa"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Bullion Traders",
+   "url": null,
+   "region": "Africa",
+   "country": "South Africa",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Africa"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Carol DTVM",
+   "url": "https://caroldtvm.com.br",
+   "region": "Latin America",
+   "country": "Brazil",
+   "city": "",
+   "type": "Broker (DTVM)",
+   "founded": null,
+   "markets": [
+    "Brazil"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Founded 1958; immediate buy-back guarantee.",
+   "sponsor": false
+  },
+  {
+   "name": "Unida DTVM (formerly Parmetal)",
+   "url": "https://unidadtvm.com.br",
+   "region": "Latin America",
+   "country": "Brazil",
+   "city": "",
+   "type": "Broker (DTVM)",
+   "founded": null,
+   "markets": [
+    "Brazil"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "OuroDireto",
+   "url": null,
+   "region": "Latin America",
+   "country": "Brazil",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Brazil"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "GINZA TANAKA",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Japan",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "Japan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Retail chain; coins and bars.",
+   "sponsor": false
+  },
+  {
+   "name": "Mitsubishi Materials",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Japan",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "Japan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "99.99% bars; storage and online sales.",
+   "sponsor": false
+  },
+  {
+   "name": "Tokuriki Honten",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Japan",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "Japan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "LBMA Good Delivery refiner.",
+   "sponsor": false
+  },
+  {
+   "name": "Ishifuku Metal Industry",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Japan",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "Japan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "SGC (Shin Gold Company)",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Japan",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Japan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Yutaka Trusty Securities",
+   "url": "https://yutaka-trusty.co.jp",
+   "region": "Asia-Pacific",
+   "country": "Japan",
+   "city": "",
+   "type": "Broker",
+   "founded": null,
+   "markets": [
+    "Japan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Hokushin Bussan (Hoxsin)",
+   "url": "https://hoxsin.co.jp",
+   "region": "Asia-Pacific",
+   "country": "Japan",
+   "city": "",
+   "type": "Broker",
+   "founded": null,
+   "markets": [
+    "Japan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "IJIMA Precious Metals",
+   "url": "https://ijima-tokyo.co.jp",
+   "region": "Asia-Pacific",
+   "country": "Japan",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Japan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Tokyo.",
+   "sponsor": false
+  },
+  {
+   "name": "Korea Gold Exchange",
+   "url": "https://exgold.co.kr",
+   "region": "Asia-Pacific",
+   "country": "South Korea",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Korea"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Samsung Gold Exchange",
+   "url": "https://samsunggold.co.kr",
+   "region": "Asia-Pacific",
+   "country": "South Korea",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Korea"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Korea Authorized Gold Exchange",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "South Korea",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Korea"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "NAU GOLD",
+   "url": "https://naugold.co.kr",
+   "region": "Asia-Pacific",
+   "country": "South Korea",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "South Korea"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "China Gold Group",
+   "url": "https://chinagoldgroup.com",
+   "region": "Asia-Pacific",
+   "country": "China",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "China"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "State-owned gold group.",
+   "sponsor": false
+  },
+  {
+   "name": "China Gold Jewellery (中金珠寶)",
+   "url": "https://chnau99999.com",
+   "region": "Asia-Pacific",
+   "country": "China",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "China"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Beijing Caibai (菜百股份)",
+   "url": "https://bjcaibai.com.cn",
+   "region": "Asia-Pacific",
+   "country": "China",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "China"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Beijing gold and jewellery retailer.",
+   "sponsor": false
+  },
+  {
+   "name": "Dongwu Gold (東吳黃金)",
+   "url": "https://dongwugold.com",
+   "region": "Asia-Pacific",
+   "country": "China",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "China"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "China Great Wall Coins Investments",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "China",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "China"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "LPM Group",
+   "url": "https://lpm.hk",
+   "region": "Asia-Pacific",
+   "country": "Hong Kong",
+   "city": "",
+   "type": "Dealer with vault",
+   "founded": null,
+   "markets": [
+    "Hong Kong"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Bullion and numismatics; also in Singapore; vault storage.",
+   "sponsor": false
+  },
+  {
+   "name": "PI Bullion",
+   "url": "https://prestigegroup.com.hk",
+   "region": "Asia-Pacific",
+   "country": "Hong Kong",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Hong Kong"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "First Gold (第一金)",
+   "url": "https://firstbullion.com",
+   "region": "Asia-Pacific",
+   "country": "Hong Kong",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Hong Kong"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "MWC Bullion",
+   "url": "https://mwcbullion.com",
+   "region": "Asia-Pacific",
+   "country": "Hong Kong",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Hong Kong"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Wells Commodities",
+   "url": "https://wellscommodities.com",
+   "region": "Asia-Pacific",
+   "country": "Hong Kong",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Hong Kong"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Hong Kong and Macau.",
+   "sponsor": false
+  },
+  {
+   "name": "Royalex Group",
+   "url": "https://royalexsilver.com",
+   "region": "Asia-Pacific",
+   "country": "Macau",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Macau"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "San Gold Coins (三省金幣)",
+   "url": "https://yycoin.com",
+   "region": "Asia-Pacific",
+   "country": "Macau",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Macau"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Bank of Taiwan – Precious Metals",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Taiwan",
+   "city": "",
+   "type": "Bank",
+   "founded": null,
+   "markets": [
+    "Taiwan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "State-owned bank selling gold passbooks, bars and coins.",
+   "sponsor": false
+  },
+  {
+   "name": "Wang Ding Precious Metal",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Taiwan",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Taiwan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Glory Gold",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Taiwan",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Taiwan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Shiny",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Taiwan",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Taiwan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Eternal Gold",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Taiwan",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Taiwan"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "GoldSilver Central",
+   "url": "https://goldsilvercentral.com.sg",
+   "region": "Asia-Pacific",
+   "country": "Singapore",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Singapore"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Indigo Precious Metals",
+   "url": "https://indigopreciousmetals.com",
+   "region": "Asia-Pacific",
+   "country": "Singapore",
+   "city": "",
+   "type": "Dealer with vault",
+   "founded": null,
+   "markets": [
+    "Singapore"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Singdasin Gold",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Singapore",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "Singapore"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Traditional gold shop.",
+   "sponsor": false
+  },
+  {
+   "name": "YLG Bullion",
+   "url": "https://ylgbullion.co.th",
+   "region": "Asia-Pacific",
+   "country": "Thailand",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Thailand"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Major Thai gold trader; also active in TFEX futures.",
+   "sponsor": false
+  },
+  {
+   "name": "MTS Gold Group",
+   "url": "https://mtsgoldgroup.com",
+   "region": "Asia-Pacific",
+   "country": "Thailand",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Thailand"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "One of Thailand's largest bullion companies.",
+   "sponsor": false
+  },
+  {
+   "name": "Hua Seng Heng",
+   "url": "https://huasengheng.com",
+   "region": "Asia-Pacific",
+   "country": "Thailand",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Thailand"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Long-established gold shop in Bangkok's Chinatown.",
+   "sponsor": false
+  },
+  {
+   "name": "Ausiris",
+   "url": "https://ausiris.co.th",
+   "region": "Asia-Pacific",
+   "country": "Thailand",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Thailand"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "SJC (Saigon Jewelry Company)",
+   "url": "https://sjc.com.vn",
+   "region": "Asia-Pacific",
+   "country": "Vietnam",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "Vietnam"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "State-linked; SJC bars are Vietnam's benchmark.",
+   "sponsor": false
+  },
+  {
+   "name": "DOJI Gold & Gems",
+   "url": "https://doji.vn",
+   "region": "Asia-Pacific",
+   "country": "Vietnam",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "Vietnam"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "80+ stores; since 1996.",
+   "sponsor": false
+  },
+  {
+   "name": "PNJ (Phu Nhuan Jewelry)",
+   "url": "https://pnj.com.vn",
+   "region": "Asia-Pacific",
+   "country": "Vietnam",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "Vietnam"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Largest jewellery chain in Vietnam.",
+   "sponsor": false
+  },
+  {
+   "name": "Mi Hong",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Vietnam",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Vietnam"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Ho Chi Minh City.",
+   "sponsor": false
+  },
+  {
+   "name": "Bao Tin Minh Chau",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Vietnam",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Vietnam"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Logam Mulia (PT Antam)",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Indonesia",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "Indonesia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "State-owned refiner with retail outlets.",
+   "sponsor": false
+  },
+  {
+   "name": "Pegadaian",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Indonesia",
+   "city": "",
+   "type": "Pawn / retail chain",
+   "founded": null,
+   "markets": [
+    "Indonesia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "State-owned pawnshop chain selling gold.",
+   "sponsor": false
+  },
+  {
+   "name": "IndoGold",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Indonesia",
+   "city": "",
+   "type": "Digital gold app",
+   "founded": null,
+   "markets": [
+    "Indonesia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Treasury (Indonesia)",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Indonesia",
+   "city": "",
+   "type": "Digital gold app",
+   "founded": null,
+   "markets": [
+    "Indonesia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Pluang",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Indonesia",
+   "city": "",
+   "type": "Digital gold app",
+   "founded": null,
+   "markets": [
+    "Indonesia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Straits Bullion",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Indonesia",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Indonesia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "PAMP distributor for Indonesia.",
+   "sponsor": false
+  },
+  {
+   "name": "Augmont",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "SafeGold",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Digital gold app",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "DigiGold",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Digital gold app",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Kalyan Jewellers",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "BullionSmart",
+   "url": "https://bullionsmart.in",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "RSBL (RiddiSiddhi Bullions)",
+   "url": "https://rsbl.co.in",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Raksha Bullion",
+   "url": "https://rakshabullion.com",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Abans Group",
+   "url": "https://abans.co.in",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Mahraja Bullion",
+   "url": "https://mahrajabullion.in",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Bullion India",
+   "url": "https://bullionindia.in",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Paavi Bullion",
+   "url": "https://paavi.co.in",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Malabar Gold & Diamonds",
+   "url": "https://malabargroup.com",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Also has a bullion division.",
+   "sponsor": false
+  },
+  {
+   "name": "Tanishq (Titan)",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Jeweller",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Goldsikka",
+   "url": "https://goldsikka.com",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Kundan Refinery",
+   "url": "https://kundangroup.com",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Refiner",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Bangalore Refinery (BRPL)",
+   "url": "https://bangalorerefinery.com",
+   "region": "Asia-Pacific",
+   "country": "India",
+   "city": "",
+   "type": "Refiner",
+   "founded": null,
+   "markets": [
+    "India"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Bullion Exchange (Gold Brokers Group)",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Australia",
+   "city": "",
+   "type": "Dealer with showrooms",
+   "founded": null,
+   "markets": [
+    "Australia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Seven stores in Queensland and New South Wales; own refinery.",
+   "sponsor": false
+  },
+  {
+   "name": "Gold Stackers",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Australia",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Australia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Melbourne.",
+   "sponsor": false
+  },
+  {
+   "name": "KJC Bullion",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "Australia",
+   "city": "",
+   "type": "Dealer",
+   "founded": null,
+   "markets": [
+    "Australia"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Since 1995.",
+   "sponsor": false
+  },
+  {
+   "name": "New Zealand Gold Merchants",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "New Zealand",
+   "city": "",
+   "type": "Refiner / dealer",
+   "founded": null,
+   "markets": [
+    "New Zealand"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "45+ years; own refinery.",
+   "sponsor": false
+  },
+  {
+   "name": "MyGold",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "New Zealand",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "New Zealand"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Auckland.",
+   "sponsor": false
+  },
+  {
+   "name": "Buy Bullion NZ",
+   "url": null,
+   "region": "Asia-Pacific",
+   "country": "New Zealand",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "New Zealand"
+   ],
+   "storage": null,
+   "ira": null,
+   "notes": "Dunedin; nationwide delivery.",
+   "sponsor": false
+  },
+  {
+   "name": "Canada Bullion",
+   "url": null,
+   "region": "North America",
+   "country": "Canada",
+   "city": "",
+   "type": "Online dealer",
+   "founded": null,
+   "markets": [
+    "Canada"
+   ],
+   "storage": null,
    "ira": null,
    "notes": "",
    "sponsor": false

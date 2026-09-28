@@ -98,12 +98,20 @@
       '<strong>UAE and Saudi Arabia</strong>: investment gold of at least 99% purity is generally zero-rated for VAT.',
       '<strong>Dubai</strong> is a global trading hub; look for DMCC-licensed dealers and accredited refiners.',
       '<strong>Shariah-compliant gold</strong> products follow the AAOIFI gold standard; ask providers which standard they follow.',
-      '<strong>This region is still being expanded.</strong> Corrections and additions are welcome.']},
+      '<strong>The Deira Gold Souk</strong> has hundreds of shops; for bars, check the refiner is on the UAE Good Delivery list and ask about buy-back terms.']},
     {id:'Asia-Pacific',title:'Asia-Pacific',points:[
       '<strong>Singapore</strong>: investment-grade gold, silver and platinum have been exempt from GST since 2012, which makes it a major storage hub.',
       '<strong>Australia</strong>: investment-grade bullion is generally free of GST; the Perth Mint is government-owned.',
       '<strong>India</strong> applies GST to gold; digital-gold products are backed by vaulted metal.',
       '<strong>Japan</strong>: established refiners run their own retail shops.']},
+    {id:'Africa',title:'Africa',points:[
+      '<strong>South Africa</strong> is home of the Krugerrand, the first modern gold bullion coin (1967).',
+      '<strong>Egypt</strong>: gold bars and coins are a common savings tool; check the hallmark, the maker and the buy-back spread before buying.',
+      '<strong>Digital gold apps</strong> are growing fast in the region; ask who stores the metal and whether it is allocated in your name.']},
+    {id:'Latin America',title:'Latin America',points:[
+      '<strong>Brazil</strong>: gold as a financial asset is traded through DTVMs, brokers authorised by the central bank.',
+      '<strong>Check where the gold comes from.</strong> Illegal mining is a known problem in the Amazon region; ask for refinery and origin documentation.',
+      '<strong>This region is still being expanded.</strong> Corrections and additions are welcome.']},
     {id:'Global',title:'Global vault platforms',points:[
       '<strong>One account, several jurisdictions</strong>: these platforms let you own allocated bars in vaults in different countries.',
       '<strong>Foreign-held assets</strong> can carry reporting duties in your home country; check before you open an account.',
@@ -112,6 +120,15 @@
   var tabs=document.getElementById('tabs'),note=document.getElementById('regionnote'),grid=document.getElementById('grid'),
       csel=document.getElementById('country'),tsel=document.getElementById('type'),q=document.getElementById('q'),count=document.getElementById('count');
   var ALL=[],region='Europe';
+  var CATS=[
+    ['Dealers',['Online dealer','Dealer','Dealer with showrooms','Dealer with vault','Jeweller','Pawn / retail chain']],
+    ['Mints & refiners',['Mint','Refiner','Refiner / dealer']],
+    ['Storage',['Vault platform','Vault operator']],
+    ['Banks & brokers',['Bank','Bank / dealer','Broker','Broker (DTVM)']],
+    ['Digital & savings',['Digital gold app','Savings plan']],
+    ['US retirement (IRA)',['IRA custodian','IRA depository']]
+  ];
+  function catOf(t){for(var i=0;i<CATS.length;i++){if(CATS[i][1].indexOf(t)>-1)return CATS[i][0];}return 'Other';}
   function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
   function opts(sel,vals,label){var cur=sel.value;sel.innerHTML='<option value="">'+label+'</option>'+vals.map(function(v){return '<option>'+esc(v)+'</option>';}).join('');if(vals.indexOf(cur)>-1)sel.value=cur;}
   function inRegion(){return ALL.filter(function(d){return d.region===region;});}
@@ -123,21 +140,29 @@
     note.innerHTML='<div class="label">What is different here</div><h3>'+esc(r.title)+'</h3><ul>'+r.points.map(function(p){return '<li>'+p+'</li>';}).join('')+'</ul>';}
   function buildFilters(){var list=inRegion(),c={},t={};
     list.forEach(function(d){(d.markets||[]).forEach(function(m){c[m]=1;});c[d.country]=1;t[d.type]=1;});
-    opts(csel,Object.keys(c).sort(),'All countries & markets');opts(tsel,Object.keys(t).sort(),'All types');}
+    opts(csel,Object.keys(c).sort(),'All countries & markets');
+    var cur=tsel.value,h='<option value="">All types</option>';
+    CATS.concat([['Other',[]]]).forEach(function(cat){
+      var sub=Object.keys(t).filter(function(x){return catOf(x)===cat[0];}).sort(function(a,b){var i=cat[1].indexOf(a),j=cat[1].indexOf(b);return (i<0?99:i)-(j<0?99:j)||a.localeCompare(b);});
+      if(!sub.length)return;
+      h+='<optgroup label="'+esc(cat[0])+'">';
+      if(sub.length>1)h+='<option value="cat:'+esc(cat[0])+'">All '+esc(cat[0].replace(/^[A-Z](?=[a-z])/,function(c){return c.toLowerCase();}))+'</option>';
+      h+=sub.map(function(x){return '<option value="'+esc(x)+'">'+esc(x)+'</option>';}).join('')+'</optgroup>';});
+    tsel.innerHTML=h;if([].some.call(tsel.options,function(o){return o.value===cur;}))tsel.value=cur;}
   function card(d){
     var meta=[[d.city,d.country].filter(Boolean).join(', ')];if(d.founded)meta.push('Founded '+d.founded);
     var badges=(d.sponsor?'<span class="badge sp">Sponsor</span>':'')+(d.ira?'<span class="badge ira">IRA</span>':'');
     var dl='<dt>Markets</dt><dd>'+esc((d.markets||[]).join(', '))+'</dd>';
     if(d.storage)dl+='<dt>Storage</dt><dd>'+esc(d.storage)+'</dd>';
-    return '<article class="card'+(d.sponsor?' sponsor':'')+'"><div class="label">'+esc(d.type)+badges+'</div><h3>'+esc(d.name)+'</h3><p class="meta">'+esc(meta.join(' · '))+'</p><dl>'+dl+'</dl>'+
+    return '<article class="card'+(d.sponsor?' sponsor':'')+'"><div class="label">'+esc(catOf(d.type)+' · '+d.type)+badges+'</div><h3>'+esc(d.name)+'</h3><p class="meta">'+esc(meta.join(' · '))+'</p><dl>'+dl+'</dl>'+
       (d.notes?'<p class="notes">'+esc(d.notes)+'</p>':'<p class="notes"></p>')+
-      '<a class="button" href="'+esc(d.url)+'" target="_blank" rel="noopener nofollow">Visit website &nearr;</a></article>';
+      (d.url?'<a class="button" href="'+esc(d.url)+'" target="_blank" rel="noopener nofollow">Visit website &nearr;</a>':'<a class="button" href="https://duckduckgo.com/?q='+encodeURIComponent(d.name+' '+d.country+' gold')+'" target="_blank" rel="noopener nofollow">Find online &nearr;</a>')+'</article>';
   }
   function render(){
     var c=csel.value,t=tsel.value,s=q.value.trim().toLowerCase();
     var list=inRegion().filter(function(d){
       if(c&&d.country!==c&&(d.markets||[]).indexOf(c)<0)return false;
-      if(t&&d.type!==t)return false;
+      if(t){if(t.indexOf('cat:')===0){if(catOf(d.type)!==t.slice(4))return false;}else if(d.type!==t)return false;}
       if(s){var hay=[d.name,d.city,d.country,d.type,d.storage,d.notes,(d.markets||[]).join(' ')].join(' ').toLowerCase();if(hay.indexOf(s)<0)return false;}
       return true;}).sort(function(a,b){return (b.sponsor-a.sponsor)||a.name.localeCompare(b.name);});
     count.textContent=list.length+(list.length===1?' listing':' listings');
