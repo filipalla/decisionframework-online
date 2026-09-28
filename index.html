@@ -46,6 +46,7 @@ p{color:var(--muted)}.lead{font-size:1.15rem;color:var(--text);max-width:760px}
 .book h2{margin-top:10px}.book .side{display:flex;flex-direction:column;gap:10px;min-width:240px}.book .side .button{text-align:center}
 .biz{font:13px Arial,sans-serif;color:var(--muted);margin:16px 0 0}.biz a{color:var(--muted)}
 .df-signup{background:var(--surface);border:1px solid var(--line);padding:28px;max-width:640px}.df-signup h3{margin:0 0 8px;font-weight:400;font-size:1.45rem;color:var(--light);line-height:1.3}.df-signup p{margin:0 0 16px}.df-signup form{display:flex;gap:10px;flex-wrap:wrap}.df-signup input[type=email]{flex:1 1 220px;min-width:0;padding:13px 14px;background:var(--bg);color:var(--text);border:1px solid var(--line);font:16px Arial,sans-serif}.df-signup input[type=email]:focus{outline:2px solid var(--light);outline-offset:2px}.df-signup button{flex:0 0 auto;padding:13px 22px;background:rgba(198,161,91,.14);color:var(--light);border:1px solid var(--light);font:15px Arial,sans-serif;cursor:pointer}.df-signup button:hover{background:var(--light);color:#17120a}.df-signup .df-small{margin:12px 0 0;font:12.5px/1.6 Arial,sans-serif}
+.getbook{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:22px}.path{display:flex;flex-direction:column;padding:26px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:inherit;transition:.2s}.path:hover{border-color:var(--light);background:#211e18}.path .who{font:11.5px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--light)}.path h3{margin:10px 0 6px;font-weight:400;font-size:1.45rem;line-height:1.25;color:var(--text)}.path .price{font:14px Arial,sans-serif;color:var(--light);margin:0 0 10px}.path p{margin:0 0 16px;font-size:1rem;color:var(--muted)}.path .go{margin-top:auto;font:12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--light)}.path.main{border-color:var(--gold);background:linear-gradient(120deg,#302719,#1b1b1d)}@media(max-width:900px){.getbook{grid-template-columns:1fr}}
 .two{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:start}
 footer{padding:34px 0;border-top:1px solid var(--line);font:13px Arial,sans-serif;color:var(--muted)}footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}footer a{color:var(--muted)}
 a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offset:3px}
@@ -63,6 +64,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
     <a href="/dealer-directory.html">Physical metal</a>
     <a href="/commodity-etf-guide.html">Financial exposure</a>
     <a href="/framework/">The Framework</a>
+    <a href="#get-the-book" style="color:var(--light)">Get the book</a>
     <a href="#newsletter">Newsletter</a>
   </span>
 </nav>
@@ -174,15 +176,41 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
           <div class="label">The framework behind this site</div>
           <h2>The Gold Investor</h2>
           <p class="lead">Book 1 of The Gold Decision Framework: a practical method for building your own gold thesis through market structure, macroeconomics, geopolitics and risk management. It won't tell you what to buy. It helps you decide for yourself.</p>
-          <p class="biz">For dealers and businesses: <a href="/license-order/">bulk licences</a> · <a href="/license/">activate a licence</a> · <a href="/insights-and-partners.html#country">sponsorship</a></p>
         </div>
         <div class="side">
           <span id="free-preview"></span>
           <a class="button fill" href="/free-preview.html">Free preview, 33 languages</a>
           <a class="button" href="/the-gold-investor-english-preview.pdf" target="_blank" rel="noopener">English preview (PDF)</a>
           <a class="button" href="/framework/">About the book</a>
-          <a class="button quiet" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener">Store</a>
         </div>
+      </div>
+      <div id="get-the-book" style="scroll-margin-top:20px;margin-top:40px">
+        <div class="label">Get the book</div>
+        <h2 style="margin-bottom:0">Which one fits you?</h2>
+      <div class="getbook">
+        <a class="path main" href="https://payhip.com/b/7GDAe" target="_blank" rel="noopener">
+          <span class="who">For yourself</span>
+          <h3>Buy one copy</h3>
+          <p class="price">&euro;38 &middot; &euro;35 for newsletter subscribers</p>
+          <p>The complete book in the language of your choice.</p>
+          <span class="go">Go to the store &rarr;</span>
+        </a>
+        <a class="path" href="/license-order/">
+          <span class="who">For clients or a team</span>
+          <h3>Bulk licences</h3>
+          <p class="price">From 5 copies &middot; &euro;35 per copy, lower at volume</p>
+          <p>Individual activation codes to hand out. Each recipient picks their own language. Partner Editions with your logo available.</p>
+          <span class="go">See licence packages &rarr;</span>
+        </a>
+        <a class="path" href="/license/">
+          <span class="who">Already have a code?</span>
+          <h3>Activate your licence</h3>
+          <p class="price">Received a code from a dealer or employer</p>
+          <p>Enter your code, choose your language and download your copy.</p>
+          <span class="go">Activate a code &rarr;</span>
+        </a>
+      </div>
+        <p class="biz" style="margin-top:18px">Dealers and financial firms: licence volume also counts toward <a href="/insights-and-partners.html#country">Country, Regional and Global sponsor status</a>.</p>
       </div>
     </div>
   </section>
