@@ -35,6 +35,7 @@ p{color:var(--muted)}.lead{font-size:1.15rem;color:var(--text);max-width:760px}
 .stack{display:grid;gap:18px}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
 .tips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:18px;margin-top:28px;padding:26px;background:linear-gradient(120deg,#302719,#1b1b1d);border:1px solid var(--gold)}.tips h3{margin:10px 0 10px;font-weight:400;font-size:clamp(1.6rem,3vw,2.1rem);color:var(--text)}.tips p{margin:0 0 12px}.ind.big{background:transparent;border-color:rgba(198,161,91,.3)}.ind.big .w{height:260px}.grid3i{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}@media(max-width:900px){.tips{grid-template-columns:1fr}.grid3i{grid-template-columns:1fr 1fr}}@media(max-width:600px){.grid3i{grid-template-columns:1fr}.tips{padding:20px}}
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin-top:26px}.rule{display:grid;grid-template-columns:44px 1fr auto;gap:14px;align-items:baseline;padding:16px 18px;background:var(--surface);border:1px solid var(--line);text-decoration:none;color:var(--muted);transition:.2s}.rule:hover{border-color:var(--light);background:#211e18}.rule .n{font:13px Arial,sans-serif;letter-spacing:.1em;color:var(--light)}.rule .rt{font-size:.98rem;line-height:1.55}.rule .rt strong{color:var(--text);font-weight:400}.rule .rg{font:11px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--light);white-space:nowrap}.rule:first-child{grid-column:1/-1;background:linear-gradient(120deg,#302719,#1b1b1d);border-color:var(--gold)}@media(max-width:900px){.rules{grid-template-columns:1fr}.rule{grid-template-columns:36px 1fr}.rule .rg{grid-column:2}}
 .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
 .ind{padding:14px;background:var(--surface);border:1px solid var(--line)}.ind .t{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--light);margin:0 0 6px}.ind .w{height:150px}
 .journey{counter-reset:q;display:grid;gap:14px;margin-top:28px}
@@ -137,6 +138,23 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
         <div class="ind"><p class="t">Commodities · BCOM (BCI)</p><div class="w" data-tv="AMEX:BCI"></div></div>
       </div>
       <p style="margin-top:22px"><a class="button quiet" href="/real-rates-and-the-dollar.html">Open the full panel, with the dollar table &rarr;</a></p>
+    </div>
+  </section>
+
+  <section id="rules">
+    <div class="wrap">
+      <div class="label">How we read the market</div>
+      <h2>A trader&rsquo;s rules.</h2>
+      <p class="lead">Short rules behind the analysis on this site. Each one links to the piece that explains it.</p>
+      <div class="rules">
+        <a class="rule" href="/real-rates-and-the-dollar.html"><span class="n">01</span><span class="rt"><strong>Watch the real rate first.</strong> The TIPS yield is what it costs to hold cash instead of gold. Start every gold view here.</span><span class="rg">Live panel &rarr;</span></a>
+        <a class="rule" href="/oil-curve-expiry-week.html"><span class="n">02</span><span class="rt"><strong>Oil is a curve, not a price.</strong> Every delivery month has its own price. The shape of the curve says more than the headline.</span><span class="rg">Read why &rarr;</span></a>
+        <a class="rule" href="/oil-curve-expiry-week.html"><span class="n">03</span><span class="rt"><strong>Compare like with like.</strong> Same month, same market, same day. Otherwise a spread can &ldquo;move&rdquo; without anything happening.</span><span class="rg">Read why &rarr;</span></a>
+        <a class="rule" href="/gold-three-prices.html"><span class="n">04</span><span class="rt"><strong>Gold has three prices.</strong> London, New York and Shanghai. When they disagree, the gap tells you who is really buying.</span><span class="rg">Read why &rarr;</span></a>
+        <a class="rule" href="/gold-three-prices.html"><span class="n">05</span><span class="rt"><strong>Metal or money?</strong> Physical buying builds a floor. Leveraged buying can leave in a day. Know which one drives the price.</span><span class="rg">Read why &rarr;</span></a>
+        <a class="rule" href="/china-took-the-leverage-out.html"><span class="n">06</span><span class="rt"><strong>Name your instrument.</strong> Price exposure is not ownership. Ask what a 30% fall would do to what you actually hold.</span><span class="rg">Read why &rarr;</span></a>
+        <a class="rule" href="/could-europe-take-your-gold.html"><span class="n">07</span><span class="rt"><strong>Where it sits decides your exposure.</strong> A custodian inside the jurisdiction only needs a letter. Spread custody on purpose.</span><span class="rg">Read why &rarr;</span></a>
+      </div>
     </div>
   </section>
 
