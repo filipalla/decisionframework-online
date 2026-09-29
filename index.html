@@ -34,6 +34,7 @@ p{color:var(--muted)}.lead{font-size:1.15rem;color:var(--text);max-width:760px}
 .card.big{background:linear-gradient(120deg,#302719,#1b1b1d);border-color:var(--gold)}.card.big h3{font-size:clamp(1.7rem,3vw,2.3rem)}
 .stack{display:grid;gap:18px}
 .grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:28px}
+.tips{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:18px;margin-top:28px;padding:26px;background:linear-gradient(120deg,#302719,#1b1b1d);border:1px solid var(--gold)}.tips h3{margin:10px 0 10px;font-weight:400;font-size:clamp(1.6rem,3vw,2.1rem);color:var(--text)}.tips p{margin:0 0 12px}.ind.big{background:transparent;border-color:rgba(198,161,91,.3)}.ind.big .w{height:260px}.grid3i{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:14px}@media(max-width:900px){.tips{grid-template-columns:1fr}.grid3i{grid-template-columns:1fr 1fr}}@media(max-width:600px){.grid3i{grid-template-columns:1fr}.tips{padding:20px}}
 .grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:28px}
 .ind{padding:14px;background:var(--surface);border:1px solid var(--line)}.ind .t{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--light);margin:0 0 6px}.ind .w{height:150px}
 .journey{counter-reset:q;display:grid;gap:14px;margin-top:28px}
@@ -121,9 +122,17 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
       <div class="label">Live indicators</div>
       <h2>The dashboard behind the analysis.</h2>
       <p class="lead">Gold rarely moves on headlines alone. These are the quieter variables the framework watches: what it costs to hold cash instead of gold, and whether commodities as a whole are moving with it.</p>
-      <div class="grid4">
+      <div class="tips">
+        <div class="tips-text">
+          <div class="label">The first indicator &middot; TIPS</div>
+          <h3>The real interest rate</h3>
+          <p>One number does more to set the price of gold than almost any headline: the yield on US Treasury Inflation-Protected Securities, the real interest rate. It is what it actually costs, after inflation, to hold cash instead of gold. When it rises, gold normally struggles. When it falls, gold normally shines.</p>
+          <p>This year it climbed to levels not seen since 2008, and gold did not fall the way the textbook says it should. <a href="/the-confidence-indicator.html">Why that gap matters &rarr;</a></p>
+        </div>
+        <div class="ind big"><p class="t">US 10-year real yield (TIPS) &middot; live</p><div class="w" data-tv="FRED:DFII10"></div></div>
+      </div>
+      <div class="grid3i">
         <div class="ind"><p class="t">Gold (USD)</p><div class="w" data-tv="TVC:GOLD"></div></div>
-        <div class="ind"><p class="t">US 10-year real yield</p><div class="w" data-tv="FRED:DFII10"></div></div>
         <div class="ind"><p class="t">Commodities · DBC</p><div class="w" data-tv="AMEX:DBC"></div></div>
         <div class="ind"><p class="t">Commodities · BCOM (BCI)</p><div class="w" data-tv="AMEX:BCI"></div></div>
       </div>
