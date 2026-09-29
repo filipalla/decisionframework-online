@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Why Oil Can Fall $7 Overnight Without Anything Happening | DecisionFramework</title>
+<meta name="description" content="Brent's November contract expires on 30 September, and the headline oil price will jump to December, about $7.50 lower. How futures curves, backwardation, contango, options expiry and the roll really work, how to read oil properly, and why copper now has two curves.">
+<meta property="og:title" content="Why Oil Can Fall $7 Overnight Without Anything Happening">
+<meta property="og:description" content="The oil price is not one price. A trader's guide to the futures curve, backwardation, contango and expiry week, written as Brent's November contract expires.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@GoldThesis">
+<style>
+:root{--bg:#111214;--surface:#1b1b1d;--gold:#c6a15b;--light:#e2c887;--text:#f1eadb;--muted:#b8b0a1;--line:rgba(198,161,91,.45)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--bg) 38%);color:var(--text);font:17px/1.75 Georgia,serif}a{color:var(--light)}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}nav{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);font:12px Arial;letter-spacing:.1em;text-transform:uppercase}nav a{text-decoration:none;color:var(--muted)}header{text-align:center;padding:100px 0 70px}header .eyebrow,.label{color:var(--light);font:12px Arial;letter-spacing:.22em;text-transform:uppercase}h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:400;line-height:1.05;margin:28px auto;max-width:900px}.subtitle{color:var(--light);font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;max-width:760px;margin:auto}.caption{text-align:center;color:var(--muted);font:13px Arial;letter-spacing:.05em;margin-top:12px}.article{display:grid;grid-template-columns:minmax(0,760px) 280px;gap:60px;padding:70px 0 100px;border-top:1px solid var(--line)}h2{color:var(--light);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:64px 0 18px}h2:first-child{margin-top:0}p{color:var(--muted)}.lead{font-size:1.25rem;color:var(--text)}.chain,.quote{padding:24px;margin:30px 0;background:rgba(198,161,91,.1);border-left:3px solid var(--gold);color:var(--light);font-size:1.2rem}.side{align-self:start;position:sticky;top:24px;padding:24px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}.side h3{margin-top:0;color:var(--light);font-size:1.05rem;font-weight:400}.side dl{margin:0}.side dt{color:var(--text);font:12px Arial;letter-spacing:.05em;text-transform:uppercase;margin-top:16px}.side dt:first-child{margin-top:0}.side dd{margin:4px 0 0;font-size:.95rem}.button{display:inline-block;padding:11px 18px;border:1px solid var(--gold);text-decoration:none;font:12px Arial;letter-spacing:.1em;text-transform:uppercase}footer{padding:30px 0;border-top:1px solid var(--line);font:13px Arial;color:var(--muted)}@media(max-width:800px){.article{grid-template-columns:1fr}.side{position:static}.wrap{width:min(100% - 28px,760px)}nav{flex-direction:column}}
+.df-signup{margin:56px 0 0;padding:28px;background:var(--surface);border:1px solid var(--line)}.df-signup h3{margin:0 0 8px;font-weight:400;font-size:1.45rem;color:var(--light);line-height:1.3}.df-signup p{margin:0 0 16px}.df-signup form{display:flex;gap:10px;flex-wrap:wrap}.df-signup input[type=email]{flex:1 1 220px;min-width:0;padding:13px 14px;background:var(--bg);color:var(--text);border:1px solid var(--line);font:16px Arial,sans-serif}.df-signup button{flex:0 0 auto;padding:13px 22px;background:rgba(198,161,91,.14);color:var(--light);border:1px solid var(--light);font:15px Arial,sans-serif;cursor:pointer}.df-signup button:hover{background:var(--light);color:#17120a}.df-signup .df-small{margin:12px 0 0;font:12.5px/1.6 Arial,sans-serif}.sources{font:14px/1.7 Arial,sans-serif}.sources li{margin-bottom:6px}@media(max-width:480px){.df-signup{padding:20px}.df-signup button{flex:1 1 100%}}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:30px 0}.stat{padding:16px 18px;background:var(--surface);border:1px solid var(--line)}.stat .k{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.stat .v{font-size:1.6rem;color:var(--text);line-height:1.2;margin-top:4px}.stat .n{font:12.5px/1.5 Arial,sans-serif;color:var(--muted);margin-top:4px}.levels{margin:30px 0;border:1px solid var(--gold)}.levels .row{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 18px;border-top:1px solid rgba(198,161,91,.2)}.levels .row:first-child{border-top:0}.levels .p{font-size:1.35rem;color:var(--light)}.levels .t{color:var(--muted);font-size:1rem}.levels .t strong{color:var(--text);font-weight:400}.week{padding:22px 24px;margin:30px 0;background:linear-gradient(120deg,#2a2217,#1b1b1d);border:1px solid var(--line)}.week .k{font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--light)}.week p{margin:8px 0 0;color:var(--text)}@media(max-width:640px){.stats{grid-template-columns:1fr 1fr}.levels .row{grid-template-columns:1fr;gap:2px}}</style>
+<style>.fig{margin:34px 0;padding:22px 22px 14px;background:var(--surface);border:1px solid var(--line)}.fig .cap{font:12.5px/1.6 Arial,sans-serif;color:var(--muted);margin-top:8px}.fig .ttl{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--light);margin-bottom:10px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:30px 0}.two div{padding:18px 20px;background:var(--surface);border:1px solid var(--line)}.two h4{margin:0 0 6px;font-weight:400;color:var(--light);font-size:1.15rem}.two p{margin:0;font-size:.98rem}table.t{width:100%;border-collapse:collapse;margin:26px 0;font:14px/1.5 Arial,sans-serif}table.t th,table.t td{padding:10px 12px;border-bottom:1px solid rgba(198,161,91,.2);text-align:left;color:var(--muted)}table.t th{color:var(--light);font-weight:400;letter-spacing:.06em;text-transform:uppercase;font-size:11px}table.t td strong{color:var(--text);font-weight:400}@media(max-width:640px){.two{grid-template-columns:1fr}table.t{font-size:13px}}</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <a href="/">DecisionFramework.online</a>
+  <span><a href="/insights-and-partners.html#insights">Insights</a> &middot; <a href="/framework/">Framework</a></span>
+</nav>
+
+<header class="wrap">
+  <div class="eyebrow">The Gold Decision Framework &middot; Market mechanics</div>
+  <h1>Why Oil Can Fall $7 Overnight Without Anything Happening</h1>
+  <p class="subtitle">The oil price is not one price. It is a curve, it expires every month, and the number in the headlines is often the least important point on it.</p>
+  <p class="caption">Written 29 September 2026 &middot; prices from the early European session</p>
+</header>
+
+<div class="wrap article">
+  <main>
+
+    <p class="lead">On Thursday morning, many screens will show Brent crude around $99 a barrel, down from about $106. Some headlines will call it a fall. It will not be one. On Wednesday 30 September the November Brent contract stops trading, and the &ldquo;front month&rdquo; quoted everywhere becomes December, which already trades about $7.50 lower. Nothing about the supply of oil will have changed overnight. Only the label on the price.</p>
+
+    <div class="stats" aria-label="The curve in numbers">
+      <div class="stat"><div class="k">Brent November</div><div class="v">$106.31</div><div class="n">Expires Wed 30 September</div></div>
+      <div class="stat"><div class="k">Brent December</div><div class="v">$98.79</div><div class="n">Front month from Thu 1 October</div></div>
+      <div class="stat"><div class="k">One month apart</div><div class="v">$7.52</div><div class="n">About 7% between two neighbouring contracts</div></div>
+      <div class="stat"><div class="k">Brent, 13 months out</div><div class="v">$80.58</div><div class="n">December 2027: $25.73 below November</div></div>
+      <div class="stat"><div class="k">WTI November</div><div class="v">$92.67</div><div class="n">Trades until Tue 20 October</div></div>
+      <div class="stat"><div class="k">WTI October</div><div class="v">Expired</div><div class="n">Tue 22 September, last week</div></div>
+    </div>
+
+    <p>It already happened once this month. WTI&rsquo;s October contract expired on 22 September, and most people watching a continuous oil chart never noticed that the line had quietly switched contracts. Two benchmark rolls in eight days is a good moment to explain what sits underneath the one number everyone quotes.</p>
+
+    <h2>Oil is a curve, not a price</h2>
+    <p>When you buy a crude oil future, you agree today on a price for barrels delivered in a specific month. Every month has its own contract, and each one trades at its own price. Line them up from the nearest month to the furthest and you get the <strong style="color:var(--text);font-weight:400">futures curve</strong>. Brent and WTI are listed years ahead; the chart below shows the first eight months.</p>
+
+    <div class="fig">
+      <div class="ttl">Brent and WTI futures curves, 29 September 2026, first eight months</div>
+      <svg viewBox="0 0 720 380" role="img" aria-label="Brent and WTI futures curves, November 2026 to June 2027" style="width:100%;height:auto;font:12px Arial,sans-serif;fill:#b8b0a1">
+<line x1="56" x2="700" y1="284.6" y2="284.6" stroke="rgba(198,161,91,.15)"/><text x="46" y="288.6" text-anchor="end">$80</text><line x1="56" x2="700" y1="197.7" y2="197.7" stroke="rgba(198,161,91,.15)"/><text x="46" y="201.7" text-anchor="end">$90</text><line x1="56" x2="700" y1="110.9" y2="110.9" stroke="rgba(198,161,91,.15)"/><text x="46" y="114.9" text-anchor="end">$100</text><line x1="56" x2="700" y1="24.0" y2="24.0" stroke="rgba(198,161,91,.15)"/><text x="46" y="28.0" text-anchor="end">$110</text><text x="56.0" y="350" text-anchor="middle">Nov 26</text><text x="148.0" y="350" text-anchor="middle">Dec</text><text x="240.0" y="350" text-anchor="middle">Jan 27</text><text x="332.0" y="350" text-anchor="middle">Feb</text><text x="424.0" y="350" text-anchor="middle">Mar</text><text x="516.0" y="350" text-anchor="middle">Apr</text><text x="608.0" y="350" text-anchor="middle">May</text><text x="700.0" y="350" text-anchor="middle">Jun 27</text>
+<path d="M56.0,56.1 L148.0,121.4 L240.0,151.9 L332.0,173.1 L424.0,188.5 L516.0,202.1 L608.0,214.8 L700.0,226.4" fill="none" stroke="#e2c887" stroke-width="2.5"/>
+<path d="M56.0,174.5 L148.0,205.4 L240.0,226.4 L332.0,242.0 L424.0,255.2 L516.0,267.3 L608.0,277.3 L700.0,287.0" fill="none" stroke="#8fa3b8" stroke-width="2.5"/>
+<circle cx="56.0" cy="56.1" r="3.4" fill="#e2c887"/><circle cx="148.0" cy="121.4" r="3.4" fill="#e2c887"/><circle cx="240.0" cy="151.9" r="3.4" fill="#e2c887"/><circle cx="332.0" cy="173.1" r="3.4" fill="#e2c887"/><circle cx="424.0" cy="188.5" r="3.4" fill="#e2c887"/><circle cx="516.0" cy="202.1" r="3.4" fill="#e2c887"/><circle cx="608.0" cy="214.8" r="3.4" fill="#e2c887"/><circle cx="700.0" cy="226.4" r="3.4" fill="#e2c887"/><circle cx="56.0" cy="174.5" r="3.4" fill="#8fa3b8"/><circle cx="148.0" cy="205.4" r="3.4" fill="#8fa3b8"/><circle cx="240.0" cy="226.4" r="3.4" fill="#8fa3b8"/><circle cx="332.0" cy="242.0" r="3.4" fill="#8fa3b8"/><circle cx="424.0" cy="255.2" r="3.4" fill="#8fa3b8"/><circle cx="516.0" cy="267.3" r="3.4" fill="#8fa3b8"/><circle cx="608.0" cy="277.3" r="3.4" fill="#8fa3b8"/><circle cx="700.0" cy="287.0" r="3.4" fill="#8fa3b8"/>
+<text x="66.0" y="60.1" style="fill:#f1eadb">Brent Nov $106.31 · expires 30 Sep</text>
+<text x="158.0" y="125.4" style="fill:#f1eadb">Dec $98.79 · front month from 1 Oct</text>
+<text x="60.0" y="214.5" style="fill:#f1eadb">WTI Nov $92.67</text>
+<text x="696.0" y="214.4" text-anchor="end" style="fill:#e2c887">Brent</text>
+<text x="696.0" y="307.0" text-anchor="end" style="fill:#8fa3b8">WTI</text>
+</svg>
+      <div class="cap">Last traded price per contract month, early European session. Both curves slope steeply downward: the market pays far more for oil now than for oil next year. Sources: CME Group (WTI), Oilprice.com (Brent).</div>
+    </div>
+
+    <p>The shape of that line says more about the oil market than any single price on it. It tells you whether barrels are scarce now or plentiful now, and how long the market expects that to last.</p>
+
+    <h2>Backwardation and contango</h2>
+    <div class="two">
+      <div><h4>Backwardation</h4><p>Near months trade <em>above</em> later months. The curve slopes down. Buyers pay a premium for oil now: supply is tight, inventories are low, and nobody wants to wait. That is today&rsquo;s market.</p></div>
+      <div><h4>Contango</h4><p>Near months trade <em>below</em> later months. The curve slopes up. Oil is plentiful now, storage fills up, and the later price has to cover the cost of tanks, insurance and money. That was April 2020.</p></div>
+    </div>
+    <p>A normal, calm oil market often sits in mild contango or close to flat. What we see now is not mild. Brent&rsquo;s November contract is $7.52 above December, December is $3.52 above January, and the curve keeps falling for more than a year. The steepest part is right at the front, which is exactly where the Strait of Hormuz disruption bites: the shortage is in barrels available <em>now</em>.</p>
+    <p>The gap between Brent and WTI tells a similar story. Brent is seaborne crude priced in the North Sea and competes directly for the tankers and cargoes that Hormuz affects. WTI is landlocked American crude delivered in Oklahoma. It is no surprise that Brent&rsquo;s front end is under far more strain: its first two months are $7.52 apart, WTI&rsquo;s only $3.56.</p>
+    <div class="quote">The level of oil tells you what it costs. The shape of the curve tells you how urgently the world needs it.</div>
+
+    <h2>Why the headline price lies during expiry week</h2>
+    <p>News sites and most charts quote the &ldquo;front month&rdquo;: the nearest contract that still trades. They keep quoting it until its very last day. The market does not wait that long.</p>
+    <p>Anyone who has traded crude futures knows the pattern. Four or five trading days before expiry, the volume moves out of the expiring contract and into the next one. Funds, index trackers and ETFs roll their positions on published schedules well before the last day, and speculators who have no use for physical barrels get out while there are still buyers. What is left in the expiring contract during its final days is a thinning group of traders, often commercial players settling physical business, plus anyone who waited too long.</p>
+    <p>You can watch it happen. On CME this morning, three weeks before its expiry, WTI November had traded 50,622 contracts against 21,755 in December: the volume is still firmly in the front month. In the week before 20 October, that ratio will flip. Brent&rsquo;s November contract, one day from expiry, is already on the other side of that line.</p>
+    <p>So for most of expiry week, the number in the headlines is the price of a contract that has already been abandoned by most of the market. The real price discovery is happening one month further out.</p>
+
+    <h2>Everything that expires around delivery</h2>
+    <p>Expiry is not one event. It is a cluster of deadlines, and options come first.</p>
+    <table class="t">
+      <thead><tr><th>Date</th><th>What expires</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Tue 22 Sep</strong></td><td>WTI October futures</td><td>Last week&rsquo;s quiet roll on US crude</td></tr>
+        <tr><td><strong>Fri 25 Sep</strong></td><td>Brent November options</td><td>Expire three business days before the futures</td></tr>
+        <tr><td><strong>Wed 30 Sep</strong></td><td>Brent November futures</td><td>Headline Brent switches to December</td></tr>
+        <tr><td><strong>Thu 15 Oct</strong></td><td>WTI November options</td><td>Expire three business days before the futures</td></tr>
+        <tr><td><strong>Tue 20 Oct</strong></td><td>WTI November futures</td><td>Headline WTI switches to December</td></tr>
+      </tbody>
+    </table>
+    <p><strong style="color:var(--text);font-weight:400">Options expire first.</strong> Monthly oil options on both exchanges stop trading a few days before their futures. In-the-money options turn into futures positions, and traders who sold options stop hedging them. In the run-up, prices often gravitate towards strikes where large option positions sit, and that pull disappears once the options are gone. For the few days between options expiry and futures expiry, the expiring contract is thinner still.</p>
+    <p><strong style="color:var(--text);font-weight:400">Delivery works differently on each side of the Atlantic.</strong> WTI is physically delivered: whoever still holds a long November contract at expiry must take barrels at Cushing, Oklahoma, during November, with pipeline and tank space to receive them. Brent settles against the ICE Brent Index, with the option of physical delivery through an exchange-for-physical. That difference explains a lot of history.</p>
+    <p><strong style="color:var(--text);font-weight:400">The extreme case: April 2020.</strong> On 20 April 2020, the day before the May WTI contract expired, it settled at <em>minus</em> $37.63 a barrel. Demand had collapsed with the pandemic, storage at Cushing was close to full, and holders of the expiring contract who could not take delivery had to pay someone to take it off their hands. The CFTC later pointed to thin liquidity and extreme price speed in the final hour before settlement. The next month&rsquo;s contract, where the real market had already moved, stayed positive throughout. It was the clearest demonstration ever that the front month and &ldquo;the oil price&rdquo; are not the same thing.</p>
+
+    <h2>The spread that will &ldquo;move&rdquo; on Thursday</h2>
+    <p>The popular Brent&ndash;WTI spread will jump too, and for the same mechanical reason. Compare what each headline pair actually measures:</p>
+    <div class="levels" aria-label="Brent-WTI spread, like for like">
+      <div class="row"><div class="p">~$13.60</div><div class="t"><strong>Today, November vs November.</strong> Like for like, but November Brent is in its last hours.</div></div>
+      <div class="row"><div class="p">~$9.70</div><div class="t"><strong>December vs December.</strong> The honest comparison: the same delivery month for both, and where Brent<strong>December vs December.</strong> The honest comparison, where the volume is.rsquo;s volume now sits.</div></div>
+      <div class="row"><div class="p">~$6.10</div><div class="t"><strong>Thursday&rsquo;s headline: December Brent vs November WTI.</strong> Two different delivery months. A spread that looks like it collapsed, but didn&rsquo;t.</div></div>
+    </div>
+    <p>Brent and WTI prices here come from two exchanges at slightly different times this morning, so treat the spreads as approximate. The point stands: whenever you compare Brent and WTI, check that both prices are for the same month.</p>
+
+    <h2>Why ETF holders should care</h2>
+    <p>An oil ETF cannot hold barrels, so it holds futures and has to roll them every month: sell the expiring contract, buy the next. The shape of the curve decides whether that roll quietly helps or hurts, regardless of what the oil price does.</p>
+    <ul style="color:var(--muted)">
+      <li><strong style="color:var(--text);font-weight:400">In backwardation</strong>, the fund sells the expensive near month and buys the cheaper next one. Selling November Brent at $106.31 to buy December at $98.79 buys about 7.6% more barrels for the same money. If the curve stays where it is, that later contract tends to drift up towards the spot price as it approaches expiry: a positive <em>roll yield</em>.</li>
+      <li><strong style="color:var(--text);font-weight:400">In contango</strong>, it is the other way round. The fund buys ever more expensive contracts and loses a little every month, even if spot oil goes nowhere. In 2020 this is what hurt oil ETF holders so badly.</li>
+    </ul>
+    <p>That is why an oil ETF can lag or beat the oil price you see in the news by a wide margin over a year. It does not track &ldquo;oil&rdquo;. It tracks a rolling position on the curve. Our <a href="/commodity-etf-guide.html">commodity ETF guide</a> lists WTI and Brent funds such as USO, BNO and the WisdomTree oil ETCs, with the structure of each: check whether a fund holds the front month or spreads its holdings further out.</p>
+
+    <h2>What this means for gold and silver</h2>
+    <p>The same mechanics run through precious metals futures, only more gently. Gold&rsquo;s curve normally slopes slightly upward, because holding gold costs money: the price of later months reflects interest rates and storage. When rates are high, as they are now, that slope is steeper. A flat or inverted gold curve is rare, and when it appears it signals real physical tightness. It is one of the quieter indicators worth watching.</p>
+    <p>It is also why our <a href="/silver-oil-rates-leverage.html">silver note</a> quoted the December contract: that is where silver&rsquo;s volume is, not the nearest month on the calendar.</p>
+
+
+    <h2>Copper: one metal, two curves</h2>
+    <p>If oil shows how a curve moves through time, copper shows how it can split by place. The same metal trades in London on the LME and in New York on COMEX, and on 28 September the two curves pointed in opposite directions.</p>
+    <div class="fig">
+      <div class="ttl">Copper, COMEX vs LME, US$ per tonne, settlement 28 September 2026</div>
+      <svg viewBox="0 0 720 360" role="img" aria-label="COMEX and LME copper curves in dollars per tonne, October 2026 to March 2027" style="width:100%;height:auto;font:12px Arial,sans-serif;fill:#b8b0a1">
+<line x1="70" x2="696" y1="284.0" y2="284.0" stroke="rgba(198,161,91,.15)"/><text x="60" y="288.0" text-anchor="end">$14,400</text><line x1="70" x2="696" y1="232.0" y2="232.0" stroke="rgba(198,161,91,.15)"/><text x="60" y="236.0" text-anchor="end">$14,500</text><line x1="70" x2="696" y1="180.0" y2="180.0" stroke="rgba(198,161,91,.15)"/><text x="60" y="184.0" text-anchor="end">$14,600</text><line x1="70" x2="696" y1="128.0" y2="128.0" stroke="rgba(198,161,91,.15)"/><text x="60" y="132.0" text-anchor="end">$14,700</text><line x1="70" x2="696" y1="76.0" y2="76.0" stroke="rgba(198,161,91,.15)"/><text x="60" y="80.0" text-anchor="end">$14,800</text><line x1="70" x2="696" y1="24.0" y2="24.0" stroke="rgba(198,161,91,.15)"/><text x="60" y="28.0" text-anchor="end">$14,900</text><text x="70.0" y="332" text-anchor="middle">Oct 26</text><text x="195.2" y="332" text-anchor="middle">Nov</text><text x="320.4" y="332" text-anchor="middle">Dec</text><text x="445.6" y="332" text-anchor="middle">Jan 27</text><text x="570.8" y="332" text-anchor="middle">Feb</text><text x="696.0" y="332" text-anchor="middle">Mar 27</text><line x1="70.0" x2="70.0" y1="240.7" y2="257.8" stroke="rgba(226,200,135,.35)" stroke-dasharray="2 3"/><line x1="195.2" x2="195.2" y1="204.0" y2="258.4" stroke="rgba(226,200,135,.35)" stroke-dasharray="2 3"/><line x1="320.4" x2="320.4" y1="167.4" y2="264.9" stroke="rgba(226,200,135,.35)" stroke-dasharray="2 3"/><line x1="445.6" x2="445.6" y1="122.6" y2="269.2" stroke="rgba(226,200,135,.35)" stroke-dasharray="2 3"/><line x1="570.8" x2="570.8" y1="85.9" y2="270.2" stroke="rgba(226,200,135,.35)" stroke-dasharray="2 3"/><line x1="696.0" x2="696.0" y1="48.1" y2="271.0" stroke="rgba(226,200,135,.35)" stroke-dasharray="2 3"/>
+<path d="M70.0,240.7 L195.2,204.0 L320.4,167.4 L445.6,122.6 L570.8,85.9 L696.0,48.1" fill="none" stroke="#e2c887" stroke-width="2.5"/>
+<path d="M70.0,257.8 L195.2,258.4 L320.4,264.9 L445.6,269.2 L570.8,270.2 L696.0,271.0" fill="none" stroke="#8fa3b8" stroke-width="2.5"/>
+<circle cx="70.0" cy="240.7" r="3.4" fill="#e2c887"/><circle cx="195.2" cy="204.0" r="3.4" fill="#e2c887"/><circle cx="320.4" cy="167.4" r="3.4" fill="#e2c887"/><circle cx="445.6" cy="122.6" r="3.4" fill="#e2c887"/><circle cx="570.8" cy="85.9" r="3.4" fill="#e2c887"/><circle cx="696.0" cy="48.1" r="3.4" fill="#e2c887"/><circle cx="70.0" cy="257.8" r="3.4" fill="#8fa3b8"/><circle cx="195.2" cy="258.4" r="3.4" fill="#8fa3b8"/><circle cx="320.4" cy="264.9" r="3.4" fill="#8fa3b8"/><circle cx="445.6" cy="269.2" r="3.4" fill="#8fa3b8"/><circle cx="570.8" cy="270.2" r="3.4" fill="#8fa3b8"/><circle cx="696.0" cy="271.0" r="3.4" fill="#8fa3b8"/>
+<text x="688.0" y="36.1" text-anchor="end" style="fill:#e2c887">COMEX (New York): rising</text>
+<text x="688.0" y="293.0" text-anchor="end" style="fill:#8fa3b8">LME (London): flat to falling</text>
+<text x="70.0" y="288.7" style="fill:#f1eadb">Gap +$33</text>
+<text x="698.0" y="159.6" text-anchor="end" style="fill:#f1eadb">+$429 </text>
+</svg>
+      <div class="cap">COMEX prices converted from US$ per pound (&times;&nbsp;2,204.62). Both curves use 28 September settlements so they compare the same day. Sources: CME Group (COMEX copper), London Metal Exchange (closing prices).</div>
+    </div>
+    <div class="two">
+      <div><h4>London: tight now</h4><p>LME cash copper at $14,544 sits about $92 above the three-month price, and October to March drifts slightly lower. Mild backwardation: metal in London is still wanted now, weeks after a squeeze that took the cash-to-three-month spread above $550 a tonne in late August.</p></div>
+      <div><h4>New York: plenty now</h4><p>COMEX rises every month, from $6.57 a pound in October to $6.74 in March, about 2.6% in five months, or roughly 6% a year. That is close to full carry: the price of storing and financing metal that is already there. COMEX warehouses hold close to 700,000 tonnes, far more than the LME.</p></div>
+    </div>
+    <p>Put side by side, the gap between them grows month by month. For October delivery, New York is only about $33 a tonne above London, close to the long-run average of the two markets. By March the premium is about $429.</p>
+    <p>One reading: the near months reflect copper that is already in place, with New York well stocked and London still short. The later months carry a growing probability that the United States puts tariffs on refined copper, which would lift US prices above the world&rsquo;s. Metal was shipped from London to the US all summer to get ahead of exactly that. The spot price, around $6.53 a pound this morning, shows none of it. The curves show all of it.</p>
+    <div class="quote">A single price tells you what copper costs. Two curves tell you where it is, where it is missing, and what the market expects a government to do next.</div>
+
+    <h2>How to read a curve properly</h2>
+    <ul style="color:var(--muted)">
+      <li><strong style="color:var(--text);font-weight:400">Follow the most active contract,</strong> not the continuous front month, and switch four or five days before expiry, as the market does.</li>
+      <li><strong style="color:var(--text);font-weight:400">Watch the first two months.</strong> The gap between them is the market&rsquo;s live reading of how scarce oil is right now. When a $7.50 gap narrows towards $2, the shortage is easing, even if the headline price barely moves.</li>
+      <li><strong style="color:var(--text);font-weight:400">Mark the expiry calendar.</strong> Options first, futures a few days later. Big moves in the last days of an expiring contract often say more about who is stuck than about supply and demand.</li>
+      <li><strong style="color:var(--text);font-weight:400">Compare like with like.</strong> Same month, same benchmark, same day, before you draw a conclusion.</li>
+      <li><strong style="color:var(--text);font-weight:400">Compare exchanges, not just months.</strong> When the same commodity has two curves that disagree, as copper does now, the gap is information: about stocks, trade flows and policy.</li>
+    </ul>
+
+    <div class="week"><div class="k">This week</div><p>Wednesday 30 September: Brent November expires. From Thursday, expect headline Brent near December&rsquo;s price, around $99 at today&rsquo;s levels. If you see &ldquo;oil falls below $100&rdquo;, check which contract is being quoted first.</p></div>
+
+    <h2>Write it down</h2>
+    <p>Next time you read that oil &ldquo;jumped&rdquo; or &ldquo;fell&rdquo;, write down three things before you react: which contract, how many days to its expiry, and what the gap to the next month is doing. If you can&rsquo;t answer the first two, the headline hasn&rsquo;t told you anything yet.</p>
+
+    <div class="df-signup" id="signup">
+      <h3>Get market notes like this by email</h3>
+      <p>Short notes on the moves and mechanics that matter, from a trader&rsquo;s point of view. Subscribers also get the free preview of <em>The Gold Investor</em> in their language, and the full book for &euro;35 instead of &euro;38.</p>
+      <form action="https://app.kit.com/forms/9913050/subscriptions" method="post">
+        <label for="df-email" style="position:absolute;left:-9999px">Email address</label>
+        <input id="df-email" type="email" name="email_address" placeholder="Your email address" required autocomplete="email">
+        <button type="submit">Subscribe &amp; get &euro;3 off</button>
+      </form>
+      <p class="df-small">You'll get a confirmation email first. Occasional emails on gold, real rates and the dollar. Unsubscribe anytime. Or <a href="/free-preview.html">read the preview first</a>.</p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="sources">
+      <li>ICE Futures Europe, &ldquo;<a href="https://www.ice.com/products/219/Brent-Crude-Futures" target="_blank" rel="noopener">Brent Crude Futures</a>&rdquo;, contract specifications (last trading day, EFP delivery and cash settlement against the ICE Brent Index).</li>
+      <li>ICE Futures Europe, &ldquo;<a href="https://status.ice.com/products/218/Brent-Crude-American-style-Options" target="_blank" rel="noopener">Brent Crude American-style Options</a>&rdquo;, contract specifications (expiry three business days before the futures).</li>
+      <li>CME Group, &ldquo;<a href="https://www.cmegroup.com/trading/files/WTI-Fact-Card.pdf" target="_blank" rel="noopener">Light Sweet Crude Oil (WTI) Futures and Options</a>&rdquo;, fact card (termination of trading, physical delivery at Cushing, options expiry).</li>
+      <li>Oilprice.com, &ldquo;<a href="https://oilprice.com/futures/brent" target="_blank" rel="noopener">Brent Crude Oil Futures Contracts</a>&rdquo; and &ldquo;<a href="https://oilprice.com/futures/wti" target="_blank" rel="noopener">WTI Crude Oil Futures Contracts</a>&rdquo;, curve prices, 29 September 2026.</li>
+      <li>CME Group, &ldquo;<a href="https://www.cmegroup.com/markets/energy/crude-oil/light-sweet-crude.quotes.html" target="_blank" rel="noopener">Crude Oil Futures quotes</a>&rdquo;, prices and volume by contract month, 29 September 2026, 04:17 CT.</li>
+      <li>Trading Economics, &ldquo;<a href="https://tradingeconomics.com/commodity/brent-crude-oil" target="_blank" rel="noopener">Brent crude oil</a>&rdquo;, 29 September 2026.</li>
+      <li>CFTC, &ldquo;<a href="https://www.cftc.gov/PressRoom/PressReleases/8315-20" target="_blank" rel="noopener">CFTC Staff Publishes Interim Report on NYMEX WTI Crude Contract Trading on and around April 20, 2020</a>&rdquo;.</li>
+      <li>Morgan Downey, <em>Oil 101</em>, &ldquo;<a href="https://oil101.morgandowney.com/chapters/negative-prices" target="_blank" rel="noopener">When Oil Went Negative</a>&rdquo;.</li>
+      <li>CME Group, &ldquo;<a href="https://www.cmegroup.com/markets/metals/base/copper.quotes.html" target="_blank" rel="noopener">Copper Futures quotes</a>&rdquo;, prices, prior settlements and volume by contract month, 28&ndash;29 September 2026.</li>
+      <li>London Metal Exchange, &ldquo;<a href="https://www.lme.com/metals/non-ferrous/lme-copper#Trading+summary" target="_blank" rel="noopener">LME Copper: trading summary</a>&rdquo;, official and closing prices, 28 September 2026.</li>
+      <li>MINING.COM, &ldquo;<a href="https://www.mining.com/copper-price-holds-near-record-as-london-warehouse-bidding-war-looms/" target="_blank" rel="noopener">Copper price holds near record as London warehouse bidding war looms</a>&rdquo;, 14 August 2026.</li>
+      <li>Discovery Alert, &ldquo;<a href="https://discoveryalert.com/news/lme-copper-record-tariff-arbitrage-september-2026/" target="_blank" rel="noopener">Copper hits $14,533/t record as tariff arbitrage drains LME stocks</a>&rdquo; and &ldquo;<a href="https://discoveryalert.com/news/copper-price-lme-stocks-september-2026/" target="_blank" rel="noopener">Copper price signals tightening as LME stocks fall</a>&rdquo;, September 2026.</li>
+      <li>Trading Economics, &ldquo;<a href="https://tradingeconomics.com/commodity/copper" target="_blank" rel="noopener">Copper</a>&rdquo;, 29 September 2026.</li>
+    </ul>
+    <p style="font:13px Arial,sans-serif">Prices are as reported at the time of writing and move quickly. Expiry dates follow the exchange rules; check the official ICE and CME expiry calendars before trading, as holidays can shift them. Educational content to support your own research and decisions. Not financial advice.</p>
+
+    <p><a class="button" href="/insights-and-partners.html#insights">&larr; Back to Insights</a></p>
+
+  </main>
+
+  <aside class="side">
+    <h3>This piece in brief</h3>
+    <dl>
+      <dt>The event</dt>
+      <dd>Brent November expires Wed 30 Sep. Headline Brent becomes December, about $7.50 lower.</dd>
+      <dt>The curve</dt>
+      <dd>Steep backwardation: $106.31 for November, $98.79 for December, $80.58 for December 2027.</dd>
+      <dt>Backwardation</dt>
+      <dd>Oil now costs more than oil later: supply is tight today.</dd>
+      <dt>Contango</dt>
+      <dd>Oil later costs more: plenty now, storage filling. April 2020 was the extreme.</dd>
+      <dt>Expiry week</dt>
+      <dd>Volume leaves the expiring contract 4&ndash;5 days early. Options expire first.</dd>
+      <dt>The spread</dt>
+      <dd>Brent&ndash;WTI: about $13.60 like for like today, $9.70 December vs December, $6.10 on Thursday&rsquo;s mismatched headline.</dd>
+      <dt>For ETF holders</dt>
+      <dd>Backwardation helps the monthly roll, contango costs you.</dd>
+      <dt>Copper</dt>
+      <dd>Two curves: London mildly backwardated, New York in near-full contango. COMEX premium $33 in October, $429 by March.</dd>
+      <dt>Watch</dt>
+      <dd>The gap between the first two months: the market&rsquo;s live scarcity gauge.</dd>
+    </dl>
+    <p style="margin-top:24px"><a class="button" href="/commodity-etf-guide.html">ETF guide &rarr;</a></p>
+  </aside>
+</div>
+
+<footer>
+  <div class="wrap">&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">Contact</a></div>
+</footer>
+<script>
+(function(){
+  document.querySelectorAll('form[action*="app.kit.com/forms/9913050"]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button'), input=form.querySelector('input[name=email_address]');
+      var msg=form.parentNode.querySelector('.df-msg');
+      if(!msg){msg=document.createElement('p');msg.className='df-msg';msg.setAttribute('role','status');msg.style.cssText='margin:14px 0 0;color:#e2c887;font:15px/1.6 Arial,sans-serif';form.parentNode.insertBefore(msg,form.nextSibling);}
+      var fd=new FormData();
+      fd.append('email_address',input.value.trim());
+      fd.append('token','');
+      fd.append('referrer',document.referrer||'');
+      fd.append('host',location.href);
+      fd.append('search',location.search||'');
+      fd.append('user',(window.crypto&&crypto.randomUUID)?crypto.randomUUID():String(Date.now()));
+      fd.append('ckjs_version','6');
+      btn.disabled=true; var old=btn.textContent; btn.textContent='Sending…';
+      fetch(form.action,{method:'POST',body:fd,headers:{'Accept':'application/json','X-CKJS-Version':'6'}})
+        .then(function(r){return r.json().catch(function(){return {};}).then(function(d){return {ok:r.ok,d:d};});})
+        .then(function(res){
+          if(res.ok && (!res.d.status || res.d.status==='success')){
+            form.style.display='none';
+            msg.textContent='Almost there! Check your inbox and confirm your subscription to get the free preview in your language and your €35 code. Not there? Check your spam folder.';
+          } else {
+            btn.disabled=false; btn.textContent=old;
+            msg.textContent=(res.d && res.d.errors && res.d.errors.messages && res.d.errors.messages.join(' ')) || 'Something went wrong. Please check your email address and try again.';
+          }
+        })
+        .catch(function(){ btn.disabled=false; btn.textContent=old; msg.textContent='Connection problem. Please try again in a moment.'; });
+    });
+  });
+})();
+</script>
+</body>
+</html>
