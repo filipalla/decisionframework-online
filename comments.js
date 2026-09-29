@@ -1,6 +1,6 @@
 /* DecisionFramework article comments. Inactive until DF_COMMENTS_API is set. */
 (function () {
-  var API = 'REPLACE_WITH_WORKER_URL';          // e.g. https://df-comments.yourname.workers.dev
+  var API = 'https://flat-firefly-4a1ddf-comments.filipallaert.workers.dev';          // e.g. https://df-comments.yourname.workers.dev
   var TURNSTILE_SITEKEY = '';                    // optional Cloudflare Turnstile site key
   if (!API || API.indexOf('REPLACE_') === 0) return;
   var host = document.getElementById('df-comments'); if (!host) return;
