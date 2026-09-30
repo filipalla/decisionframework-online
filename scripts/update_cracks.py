@@ -39,10 +39,10 @@ EIA_KEY = os.environ.get("EIA_API_KEY", "").strip()
 log = []
 
 
-def get(url, timeout=40):
+def get(url, timeout=40, tries=3):
     req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
     last = None
-    for attempt in range(3):
+    for attempt in range(tries):
         try:
             with urllib.request.urlopen(req, timeout=timeout) as r:
                 return r.read().decode("utf-8")
@@ -75,7 +75,7 @@ def eia_api(sid):
 
 
 def fred_csv(sid):
-    text = get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={START}", timeout=60)
+    text = get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={START}", timeout=25, tries=1)
     rows = csv.reader(io.StringIO(text))
     next(rows)
     return {r[0]: num(r[1]) for r in rows if len(r) > 1 and num(r[1]) is not None}
