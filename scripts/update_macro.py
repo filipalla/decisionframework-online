@@ -92,8 +92,8 @@ def fetch(name, sid):
 MONTHLY = {
     "pce":      ["PCEPI"],
     "pce_core": ["PCEPILFE"],
-    "ea":       ["CP0000EZ20M086NEST", "CP0000EZ19M086NEST"],
-    "ea_core":  ["CP00XEFDEZ20M086NEST", "00XEFDEZ20M086NEST", "CP00XEFDEZ19M086NEST", "00XEFDEZ19M086NEST"],
+    "ea":       ["CP0000EZ19M086NEST"],
+    "ea_core":  ["00XEFDEZ19M086NEST"],
 }
 
 
