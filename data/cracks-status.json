@@ -1,0 +1,11 @@
+{
+ "checked": "2026-09-30 08:05 UTC",
+ "ok": false,
+ "log": [
+  "ulsd: fred-csv failed: TimeoutError: The read operation timed out",
+  "gas: fred-csv failed: TimeoutError: The read operation timed out",
+  "wti: fred-csv failed: TimeoutError: The read operation timed out",
+  "brent: fred-csv failed: TimeoutError: The read operation timed out",
+  "no overlapping dates; data/cracks.json left unchanged"
+ ]
+}
