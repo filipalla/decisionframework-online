@@ -19,6 +19,14 @@
 .legend{font:12.5px Arial,sans-serif;color:var(--muted);display:flex;gap:18px;flex-wrap:wrap;margin-top:-14px}.legend span{display:inline-flex;align-items:center;gap:6px}.legend i{width:10px;height:10px;border-radius:50%;display:inline-block}
 .sources{font:14px/1.7 Arial,sans-serif;color:var(--muted)}.sources li{margin-bottom:6px}
 @media(max-width:640px){.stats{grid-template-columns:1fr 1fr}}
+a.zoom{display:block;cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:50;background:#0e0e0f;display:none;flex-direction:column}
+.lb.open{display:flex}
+.lb .bar{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 14px;font:13px Arial,sans-serif;color:var(--muted);border-bottom:1px solid var(--line)}
+.lb .bar button{background:transparent;color:var(--light);border:1px solid var(--line);padding:7px 12px;font:13px Arial,sans-serif;cursor:pointer;min-width:40px}
+.lb .bar button:focus-visible{outline:2px solid var(--light);outline-offset:2px}
+.lb .view{flex:1;overflow:auto;touch-action:pan-x pan-y pinch-zoom;cursor:grab}
+.lb .view img{display:block;max-width:none;margin:auto;transform-origin:0 0}
 </style>
 </head>
 <body>
@@ -51,8 +59,17 @@
     <p>In 2025 the floor broke, and the dollar has since spent eighteen months in a box between about 96 and 101. The old floor became the lid: the highs of June and July 2026 stopped there, and on 30 September the dollar was back against it at 100.9. A level that was support three times and has now been resistance twice is what traders call a polarity zone. The longer a level has mattered, the harder its flip tends to hold.</p>
 
     <div class="fig">
-      <img src="/images/dollar-weekly-count-2026-09-30.png" alt="Weekly chart of US Dollar Index futures from 2022 to September 2026 with Ichimoku cloud, the 100 to 101 zone marked as a box, and the swing points of the 2023-24 and 2025-26 ranges numbered 1 to 6" width="1531" height="899" loading="lazy">
-      <div class="cap">U.S. Dollar Index futures (ICE), weekly, with Ichimoku. The box marks the 100&ndash;101 zone. Numbers mark the swing points of each range; in 2025&ndash;26 point 6 is a projection. Chart: the author, via TradingView, 30 September 2026.</div>
+      <a class="zoom" href="/images/dollar-weekly-count-2026-09-30.png"><img src="/images/dollar-weekly-count-2026-09-30.png" alt="Weekly chart of US Dollar Index futures from 2022 to September 2026 with Ichimoku cloud, the 100 to 101 zone marked as a box, and the swing points of the 2023-24 and 2025-26 ranges numbered 1 to 6" width="1531" height="899" loading="lazy"></a>
+      <div class="cap">U.S. Dollar Index futures (ICE), weekly, with Ichimoku. The box marks the 100&ndash;101 zone. Numbers mark the swing points of each range; in 2025&ndash;26 point 6 is a projection. Tap or click to zoom. Chart: the author, via TradingView, 30 September 2026.</div>
+    </div>
+
+    <h2>The bigger map</h2>
+    <p>Zoom out further and the two ranges sit inside one larger structure. Measure the dollar&rsquo;s rally from its 2021 low near 89.3 to its 2022 high near 114.8, and the Fibonacci retracements of that move frame both boxes. The 2023&ndash;24 range traded between the 38.2% level (about 105.0) and the 61.8% level (about 99.0). Since 2025 the box has sat one floor lower, between 61.8% and 76.4% (about 95.3), where the lows of 2025 and early 2026 stopped.</p>
+    <p>That puts the 61.8% retracement near 99.0 on the higher timeframe right next to the weekly Kijun at 99.5 and the bottom of the weekly cloud at 98.5. Three measures from three methods, one zone. If the lid holds, that is the first real floor the dollar has to deal with on the way to point six.</p>
+
+    <div class="fig">
+      <a class="zoom" href="/images/dollar-fib-2021-2026.png"><img src="/images/dollar-fib-2021-2026.png" alt="Weekly chart of US Dollar Index futures from 2016 to September 2026 with Fibonacci retracements of the 2021 to 2022 rally: 38.2% at 105.0, 50% at 102.0, 61.8% at 99.0, 76.4% at 95.3 and 88.6% at 92.2, and the swing points of both ranges numbered" width="1531" height="899" loading="lazy"></a>
+      <div class="cap">U.S. Dollar Index futures (ICE), weekly, 2016&ndash;2026, with Fibonacci retracements of the 2021&ndash;22 rally (89.275 to 114.755). Tap or click to zoom. Chart: the author, via TradingView, 30 September 2026.</div>
     </div>
 
     <h2>Six points in a box</h2>
@@ -69,8 +86,9 @@
         <tr><td class="n"><strong>101.0&ndash;101.1</strong></td><td>The kiss: old neckline and the lid of the weekly box.</td></tr>
         <tr><td class="n"><strong>100.6&ndash;100.7</strong></td><td>Neckline of the wider pattern, lows of 25 and 29 September.</td></tr>
         <tr><td class="n"><strong>99.9 / 99.5</strong></td><td>Weekly Tenkan and Kijun lines.</td></tr>
+        <tr><td class="n"><strong>99.0</strong></td><td>61.8% retracement of the 2021&ndash;22 rally.</td></tr>
         <tr><td class="n"><strong>98.5</strong></td><td>Bottom of the weekly cloud.</td></tr>
-        <tr><td class="n"><strong>~96</strong></td><td>Bottom of the box, projected point six.</td></tr>
+        <tr><td class="n"><strong>~96 / 95.3</strong></td><td>Bottom of the box, projected point six; 76.4% retracement.</td></tr>
       </tbody>
     </table></div>
 
@@ -134,6 +152,8 @@
       <dd>100&ndash;101 on the dollar index: the floor of 2023&ndash;24, the lid since 2025. The dollar is back at it.</dd>
       <dt>The count</dt>
       <dd>Point 5 of the 2025&ndash;26 box at the lid now; point 6 projected near 96 between November and year-end.</dd>
+      <dt>The big map</dt>
+      <dd>Fibonacci of the 2021&ndash;22 rally: the box sits between 61.8% (99.0) and 76.4% (95.3).</dd>
       <dt>Invalidation</dt>
       <dd>A weekly close above 101.35.</dd>
       <dt>The lights</dt>
@@ -149,5 +169,41 @@
 <footer>
   <div class="wrap">&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">Contact</a></div>
 </footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Zoomed chart">
+  <div class="bar">
+    <span>Drag to move &middot; pinch or +/&minus; to zoom</span>
+    <span><button type="button" data-z="-1" aria-label="Zoom out">&minus;</button> <button type="button" data-z="0">Fit</button> <button type="button" data-z="1" aria-label="Zoom in">+</button> <button type="button" id="lb-close" aria-label="Close">&times;</button></span>
+  </div>
+  <div class="view" id="lb-view"><img id="lb-img" alt=""></div>
+</div>
+<script>
+(function(){
+  var lb = document.getElementById('lb'), view = document.getElementById('lb-view'), img = document.getElementById('lb-img');
+  var scale = 1, last = null;
+  function fit(){ return Math.min(view.clientWidth / img.naturalWidth, view.clientHeight / img.naturalHeight, 1); }
+  function set(s){ scale = Math.max(fit(), Math.min(s, 4)); img.style.width = Math.round(img.naturalWidth * scale) + 'px'; }
+  function open(a){
+    last = a; img.alt = a.querySelector('img').alt; lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    img.onload = function(){ set(Math.max(fit(), Math.min(1, view.clientWidth / img.naturalWidth * 1.8))); view.scrollLeft = view.scrollWidth; view.scrollTop = Math.max(0, (view.scrollHeight - view.clientHeight) / 2); };
+    img.src = a.getAttribute('href'); if (img.complete && img.naturalWidth) img.onload();
+    document.getElementById('lb-close').focus();
+  }
+  function close(){ lb.classList.remove('open'); document.body.style.overflow = ''; if (last) last.focus(); }
+  Array.prototype.forEach.call(document.querySelectorAll('a.zoom'), function(a){
+    a.addEventListener('click', function(e){ e.preventDefault(); open(a); });
+  });
+  Array.prototype.forEach.call(lb.querySelectorAll('[data-z]'), function(b){
+    b.addEventListener('click', function(){ var z = +b.getAttribute('data-z'); set(z === 0 ? fit() : scale * (z > 0 ? 1.4 : 1 / 1.4)); });
+  });
+  document.getElementById('lb-close').addEventListener('click', close);
+  document.addEventListener('keydown', function(e){ if (lb.classList.contains('open') && e.key === 'Escape') close(); });
+  view.addEventListener('wheel', function(e){ if (e.ctrlKey || e.metaKey){ e.preventDefault(); set(scale * (e.deltaY < 0 ? 1.15 : 1 / 1.15)); } }, { passive: false });
+  var drag = null;
+  view.addEventListener('mousedown', function(e){ drag = { x: e.clientX, y: e.clientY, l: view.scrollLeft, t: view.scrollTop }; view.style.cursor = 'grabbing'; e.preventDefault(); });
+  window.addEventListener('mousemove', function(e){ if (drag){ view.scrollLeft = drag.l - (e.clientX - drag.x); view.scrollTop = drag.t - (e.clientY - drag.y); } });
+  window.addEventListener('mouseup', function(){ drag = null; view.style.cursor = ''; });
+})();
+</script>
 </body>
 </html>
