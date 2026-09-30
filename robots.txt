@@ -6,5 +6,6 @@ Disallow: /welcome.html
 Disallow: /indicators-teaser-snippet.html
 Disallow: /data/
 Disallow: /scripts/
+Disallow: /ratio-widget-test.html
 
 Sitemap: https://decisionframework.online/sitemap.xml

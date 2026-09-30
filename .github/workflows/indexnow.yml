@@ -35,7 +35,7 @@ jobs:
           host = "decisionframework.online"
           base = f"https://{host}"
           key = open(next(f for f in os.listdir(".") if re.fullmatch(r"[0-9a-f]{32}\.txt", f))).read().strip()
-          skip = ("license/", "license-order/", "welcome.html", "indicators-teaser-snippet.html")
+          skip = ("license/", "license-order/", "welcome.html", "indicators-teaser-snippet.html", "ratio-widget-test.html")
           def to_url(p):
               if p == "index.html": return base + "/"
               if p.endswith("/index.html"): return f"{base}/{p[:-10]}"
