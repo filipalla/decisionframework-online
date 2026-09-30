@@ -1,10 +1,16 @@
-"""Fetch daily spot prices from FRED (EIA data) and write crack spreads to data/cracks.json.
+"""Fetch daily spot prices (U.S. EIA data) and write crack spreads to data/cracks.json.
 
-Series (all daily spot, public, no API key needed):
-  DDFUELNYH    NY Harbor ultra-low-sulfur No.2 diesel, $/gal
-  DGASNYH      NY Harbor conventional gasoline (regular), $/gal
-  DCOILWTICO   WTI Cushing crude, $/bbl
-  DCOILBRENTEU Brent Europe crude, $/bbl
+Series:
+  NY Harbor ultra-low-sulfur No.2 diesel, $/gal   FRED DDFUELNYH  | EIA EER_EPD2DXL0_PF4_Y35NY_DPG
+  NY Harbor conventional gasoline (regular), $/gal FRED DGASNYH    | EIA EER_EPMRU_PF4_Y35NY_DPG
+  WTI Cushing crude, $/bbl                        FRED DCOILWTICO | EIA RWTC
+  Brent Europe crude, $/bbl                       FRED DCOILBRENTEU | EIA RBRTE
+
+Sources are tried in order; the first that works for a series is used:
+  1. FRED API        (needs repo secret FRED_API_KEY, free at fred.stlouisfed.org)
+  2. EIA API v2      (needs repo secret EIA_API_KEY, free at eia.gov/opendata)
+  3. FRED graph CSV  (no key)
+Every run also writes data/cracks-status.json so a failed run can be diagnosed.
 """
 import csv
 import io
@@ -12,76 +18,120 @@ import json
 import os
 import sys
 import time
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
 START = "2019-01-01"
-SERIES = ["DDFUELNYH", "DGASNYH", "DCOILWTICO", "DCOILBRENTEU"]
-URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={start}"
-OUT = os.path.join(os.path.dirname(__file__), "..", "data", "cracks.json")
+SERIES = {
+    "ulsd":  {"fred": "DDFUELNYH",    "eia": "EER_EPD2DXL0_PF4_Y35NY_DPG"},
+    "gas":   {"fred": "DGASNYH",      "eia": "EER_EPMRU_PF4_Y35NY_DPG"},
+    "wti":   {"fred": "DCOILWTICO",   "eia": "RWTC"},
+    "brent": {"fred": "DCOILBRENTEU", "eia": "RBRTE"},
+}
+HERE = os.path.dirname(os.path.abspath(__file__))
+OUT = os.path.join(HERE, "..", "data", "cracks.json")
+STATUS = os.path.join(HERE, "..", "data", "cracks-status.json")
+UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
+      "Chrome/126.0 Safari/537.36 decisionframework.online")
+FRED_KEY = os.environ.get("FRED_API_KEY", "").strip()
+EIA_KEY = os.environ.get("EIA_API_KEY", "").strip()
+log = []
 
 
-def fetch(sid):
-    req = urllib.request.Request(URL.format(sid=sid, start=START),
-                                 headers={"User-Agent": "decisionframework-crack-updater"})
+def get(url, timeout=40):
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "*/*"})
+    last = None
     for attempt in range(3):
         try:
-            with urllib.request.urlopen(req, timeout=60) as r:
-                text = r.read().decode("utf-8")
-            break
-        except Exception as e:  # retry transient errors
-            if attempt == 2:
-                raise
-            print(f"retry {sid}: {e}", file=sys.stderr)
-            time.sleep(5)
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read().decode("utf-8")
+        except Exception as e:
+            last = e
+            time.sleep(4 * (attempt + 1))
+    raise last
+
+
+def num(v):
+    try:
+        return float(v)
+    except (TypeError, ValueError):
+        return None
+
+
+def fred_api(sid):
+    q = urllib.parse.urlencode({"series_id": sid, "api_key": FRED_KEY, "file_type": "json",
+                                "observation_start": START})
+    j = json.loads(get("https://api.stlouisfed.org/fred/series/observations?" + q))
+    return {o["date"]: num(o["value"]) for o in j.get("observations", []) if num(o["value"]) is not None}
+
+
+def eia_api(sid):
+    q = urllib.parse.urlencode({"api_key": EIA_KEY, "frequency": "daily", "data[0]": "value",
+                                "facets[series][]": sid, "start": START, "length": 5000,
+                                "sort[0][column]": "period", "sort[0][direction]": "asc"})
+    j = json.loads(get("https://api.eia.gov/v2/petroleum/pri/spt/data/?" + q))
+    return {r["period"]: num(r["value"]) for r in j["response"]["data"] if num(r["value"]) is not None}
+
+
+def fred_csv(sid):
+    text = get(f"https://fred.stlouisfed.org/graph/fredgraph.csv?id={sid}&cosd={START}", timeout=60)
     rows = csv.reader(io.StringIO(text))
-    next(rows)  # header (DATE or observation_date)
-    out = {}
-    for row in rows:
-        if len(row) < 2:
-            continue
-        d, v = row[0], row[1].strip()
-        if v in ("", "."):
-            continue
+    next(rows)
+    return {r[0]: num(r[1]) for r in rows if len(r) > 1 and num(r[1]) is not None}
+
+
+def fetch(name, ids):
+    methods = []
+    if FRED_KEY:
+        methods.append(("fred-api", lambda: fred_api(ids["fred"])))
+    if EIA_KEY:
+        methods.append(("eia-api", lambda: eia_api(ids["eia"])))
+    methods.append(("fred-csv", lambda: fred_csv(ids["fred"])))
+    for label, fn in methods:
         try:
-            out[d] = float(v)
-        except ValueError:
-            continue
-    return out
+            data = fn()
+            if data:
+                log.append(f"{name}: {label} ok, {len(data)} points, last {max(data)}")
+                return data
+            log.append(f"{name}: {label} returned no data")
+        except Exception as e:
+            log.append(f"{name}: {label} failed: {type(e).__name__}: {e}")
+    return {}
+
+
+def write_status(ok):
+    os.makedirs(os.path.dirname(STATUS), exist_ok=True)
+    with open(STATUS, "w") as f:
+        json.dump({"checked": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+                   "ok": ok, "log": log}, f, indent=1)
 
 
 def main():
-    data = {sid: fetch(sid) for sid in SERIES}
-    ulsd, gas, wti, brent = (data[s] for s in SERIES)
+    d = {k: fetch(k, v) for k, v in SERIES.items()}
+    dates = sorted(set(d["ulsd"]) & set(d["gas"]) & set(d["wti"]) & set(d["brent"]))
+    if not dates:
+        log.append("no overlapping dates; data/cracks.json left unchanged")
+        write_status(False)
+        print("\n".join(log))
+        return 0  # keep the workflow green so the status file gets committed
 
-    dates = sorted(set(ulsd) & set(gas) & set(wti) & set(brent))
     rows = []
-    for d in dates:
-        u, g, w, b = ulsd[d] * 42, gas[d] * 42, wti[d], brent[d]
-        rows.append({
-            "d": d,
-            "diesel_brent": round(u - b, 2),
-            "diesel_wti": round(u - w, 2),
-            "gasoline_wti": round(g - w, 2),
-            "c321": round((2 * g + u - 3 * w) / 3, 2),
-            "brent": round(b, 2),
-            "wti": round(w, 2),
-        })
-
-    if not rows:
-        print("no overlapping data, keeping old file", file=sys.stderr)
-        sys.exit(1)
-
-    payload = {
-        "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
-        "source": "FRED / U.S. EIA daily spot prices (NY Harbor ULSD, NY Harbor gasoline, WTI, Brent)",
-        "rows": rows,
-    }
-    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    for day in dates:
+        u, g, w, b = d["ulsd"][day] * 42, d["gas"][day] * 42, d["wti"][day], d["brent"][day]
+        rows.append({"d": day,
+                     "diesel_brent": round(u - b, 2), "diesel_wti": round(u - w, 2),
+                     "gasoline_wti": round(g - w, 2), "c321": round((2 * g + u - 3 * w) / 3, 2),
+                     "brent": round(b, 2), "wti": round(w, 2)})
     with open(OUT, "w") as f:
-        json.dump(payload, f, separators=(",", ":"))
-    print(f"wrote {len(rows)} rows, last {rows[-1]['d']}")
+        json.dump({"updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+                   "source": "U.S. EIA daily spot prices (NY Harbor ULSD, NY Harbor gasoline, WTI, Brent)",
+                   "rows": rows}, f, separators=(",", ":"))
+    log.append(f"wrote {len(rows)} rows, last {rows[-1]['d']}")
+    write_status(True)
+    print("\n".join(log))
+    return 0
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
