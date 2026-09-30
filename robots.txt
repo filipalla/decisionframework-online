@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /license/
+Disallow: /license-order/
+Disallow: /welcome.html
+Disallow: /indicators-teaser-snippet.html
+Disallow: /data/
+Disallow: /scripts/
+
+Sitemap: https://decisionframework.online/sitemap.xml
