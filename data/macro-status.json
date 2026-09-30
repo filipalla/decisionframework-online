@@ -1,5 +1,5 @@
 {
- "checked": "2026-09-30 13:07 UTC",
+ "checked": "2026-09-30 17:49 UTC",
  "ok": true,
  "log": [
   "usd (DTWEXBGS): fred-api ok, 1932 points, last 2026-09-25",
@@ -12,9 +12,21 @@
   "t30 (DGS30): fred-api ok, 1936 points, last 2026-09-28",
   "real10 (DFII10): fred-api ok, 1936 points, last 2026-09-28",
   "s2s10 (T10Y2Y): fred-api ok, 1937 points, last 2026-09-29",
-  "vix (VIXCLS): fred-api ok, 1978 points, last 2026-09-28",
-  "gvz (GVZCLS): fred-api ok, 1947 points, last 2026-09-28",
-  "hyoas (BAMLH0A0HYM2): fred-api ok, 785 points, last 2026-09-28",
-  "wrote 2000 dates, last 2026-09-29"
+  "vix (VIXCLS): fred-api ok, 1979 points, last 2026-09-29",
+  "gvz (GVZCLS): fred-api ok, 1948 points, last 2026-09-29",
+  "hyoas (BAMLH0A0HYM2): fred-api ok, 785 points, last 2026-09-29",
+  "pce (PCEPI): fred-api ok, 92 points, last 2026-08-01",
+  "pce_core (PCEPILFE): fred-api ok, 92 points, last 2026-08-01",
+  "ea (CP0000EZ20M086NEST): fred-api failed: HTTPError",
+  "ea (CP0000EZ20M086NEST): fred-csv failed: TimeoutError",
+  "ea (CP0000EZ19M086NEST): fred-api ok, 92 points, last 2026-08-01",
+  "ea_core (CP00XEFDEZ20M086NEST): fred-api failed: HTTPError",
+  "ea_core (CP00XEFDEZ20M086NEST): fred-csv failed: TimeoutError",
+  "ea_core (00XEFDEZ20M086NEST): fred-api failed: HTTPError",
+  "ea_core (00XEFDEZ20M086NEST): fred-csv failed: TimeoutError",
+  "ea_core (CP00XEFDEZ19M086NEST): fred-api failed: HTTPError",
+  "ea_core (CP00XEFDEZ19M086NEST): fred-csv failed: TimeoutError",
+  "ea_core (00XEFDEZ19M086NEST): fred-api ok, 92 points, last 2026-08-01",
+  "wrote 1999 dates, last 2026-09-29"
  ]
 }
