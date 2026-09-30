@@ -93,6 +93,12 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
       <canvas id="curve-chart" aria-label="US Treasury yield curve from 3 months to 30 years"></canvas>
       <div class="chartmsg" id="msg-curve">Loading data&hellip;</div>
     </div>
+    <h3 class="chart-t">Headline vs core inflation, year on year</h3>
+    <div class="chartbox" style="height:320px">
+      <canvas id="infl-chart" aria-label="US PCE headline and core inflation, and euro area HICP headline and core inflation, year on year"></canvas>
+      <div class="chartmsg" id="msg-infl">Loading data&hellip;</div>
+    </div>
+    <p class="note">The gap between headline and core is mostly energy. US: PCE price index and core PCE (BEA). Euro area: HICP and HICP excluding energy, food, alcohol and tobacco (Eurostat), shown when FRED carries current data. Monthly, updated as released.</p>
     <p class="note" id="data-note">Source: Federal Reserve (H.10 broad dollar index, H.15 Treasury yields) via FRED. The broad dollar index is the Fed&rsquo;s trade-weighted index against 26 currencies, not the ICE dollar index (DXY), which is about 58% euro. They usually move together. FRED publishes with a lag of one to several days.</p>
 
     <h2>How the balance works</h2>
@@ -265,6 +271,20 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
     ], labels, baseOpts(function(v){ return v + '%'; }, function(v){ return Math.round(v * 100) + ' bp'; }));
   }
 
+  function drawInfl(){
+    var M = D.monthly, el = document.getElementById('msg-infl');
+    if (!M || !M.dates || !M.dates.length){ el.textContent = 'Inflation data will appear after the next nightly update.'; return; }
+    el.hidden = true;
+    var defs = [['US PCE headline', 'pce', '--light', 2.2, []], ['US core PCE', 'pce_core', '--light', 1.6, [5,4]],
+                ['Euro area HICP', 'ea', '--blue', 2.2, []], ['Euro area core', 'ea_core', '--blue', 1.6, [5,4]]];
+    var sets = defs.filter(function(x){ return M.series[x[1]]; }).map(function(x){ return {
+      label: x[0], data: M.series[x[1]], borderColor: c(x[2]), backgroundColor: c(x[2]), borderWidth: x[3],
+      borderDash: x[4], pointRadius: 0, pointHoverRadius: 3, tension: 0.2, spanGaps: true }; });
+    var o = baseOpts(function(v){ return v + '%'; });
+    o.plugins.tooltip = { callbacks: { label: function(x){ return ' ' + x.dataset.label + ': ' + (x.parsed.y === null ? '-' : x.parsed.y.toFixed(1) + '%'); } } };
+    new Chart(document.getElementById('infl-chart'), { type: 'line', data: { labels: M.dates.map(function(x){ return x.slice(0, 7); }), datasets: sets }, options: o });
+  }
+
   function curveAt(days){
     var keys = ['t3m', 't2', 't5', 't10', 't30'];
     return keys.map(function(k){ return valAt(k, days); });
@@ -290,7 +310,7 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
     });
   });
 
-  function fail(t){ ['msg-usd', 'msg-yld', 'msg-curve'].forEach(function(id){ document.getElementById(id).textContent = t; }); }
+  function fail(t){ ['msg-usd', 'msg-yld', 'msg-curve', 'msg-infl'].forEach(function(id){ document.getElementById(id).textContent = t; }); }
   fetch('/data/macro.json', { cache: 'no-cache' })
     .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function(j){
@@ -298,7 +318,7 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
       if (!D.dates || !D.dates.length) throw new Error('empty');
       if (typeof Chart === 'undefined') { fail('The chart library did not load. Try reloading the page.'); return; }
       ['msg-usd', 'msg-yld', 'msg-curve'].forEach(function(id){ document.getElementById(id).hidden = true; });
-      renderTiles(); draw(12); drawCurve();
+      renderTiles(); draw(12); drawCurve(); drawInfl();
       document.getElementById('data-note').innerHTML += ' Latest close: ' + D.dates[lastIdx('t10')] + '. Data refreshed ' + D.updated + '.';
     })
     .catch(function(){ fail('Data is not available right now. It refreshes every night; try again later.'); });

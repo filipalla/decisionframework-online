@@ -89,6 +89,38 @@ def fetch(name, sid):
     return {}
 
 
+MONTHLY = {
+    "pce":      ["PCEPI"],
+    "pce_core": ["PCEPILFE"],
+    "ea":       ["CP0000EZ20M086NEST", "CP0000EZ19M086NEST"],
+    "ea_core":  ["CP00XEFDEZ20M086NEST", "00XEFDEZ20M086NEST", "CP00XEFDEZ19M086NEST", "00XEFDEZ19M086NEST"],
+}
+
+
+def yoy(d):
+    out = {}
+    for k in sorted(d):
+        y, m = int(k[:4]), k[5:7]
+        prev = f"{y - 1}-{m}-01"
+        if prev in d and d[prev]:
+            out[k] = round((d[k] / d[prev] - 1) * 100, 2)
+    return out
+
+
+def monthly():
+    res, used = {}, {}
+    for name, ids in MONTHLY.items():
+        for sid in ids:
+            data = fetch(name, sid)
+            if data:
+                res[name], used[name] = yoy(data), sid
+                break
+    dates = sorted(set().union(*[set(v) for v in res.values()])) if res else []
+    dates = [x for x in dates if x >= "2020-01-01"]
+    return {"ids": used, "dates": dates,
+            "series": {k: [v.get(x) for x in dates] for k, v in res.items()}}
+
+
 def write_status(ok):
     os.makedirs(os.path.dirname(STATUS), exist_ok=True)
     with open(STATUS, "w") as f:
@@ -109,7 +141,8 @@ def main():
     with open(OUT, "w") as f:
         json.dump({"updated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
                    "source": "FRED, Federal Reserve Bank of St. Louis",
-                   "ids": SERIES, "dates": dates, "series": series}, f, separators=(",", ":"))
+                   "ids": SERIES, "dates": dates, "series": series,
+                   "monthly": monthly()}, f, separators=(",", ":"))
     log.append(f"wrote {len(dates)} dates, last {dates[-1]}")
     write_status(True)
     print("\n".join(log))
