@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Dollar Balance: Dollar, Yields and Inflation Day | DecisionFramework</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Where global inflation gets weighed: the dollar, the US Treasury curve and real yields, updated every night, with the inflation calendar and what each release did to gold and silver.">
+<style>
+:root{--bg:#111214;--surface:#1b1b1d;--gold:#c6a15b;--light:#e2c887;--text:#f1eadb;--muted:#b8b0a1;--line:rgba(198,161,91,.45);--blue:#8fb3c9;--grey:#6f6a62;--red:#d98a7a}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--bg) 38%);color:var(--text);font:17px/1.75 Georgia,serif}a{color:var(--light)}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}nav{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);font:12px Arial;letter-spacing:.1em;text-transform:uppercase}nav a{text-decoration:none;color:var(--muted)}header{text-align:center;padding:100px 0 70px}header .eyebrow{color:var(--light);font:12px Arial;letter-spacing:.22em;text-transform:uppercase}h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:400;line-height:1.05;margin:28px auto;max-width:900px}.subtitle{color:var(--light);font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;max-width:760px;margin:auto}.caption{text-align:center;color:var(--muted);font:13px Arial;letter-spacing:.05em;margin-top:12px}.article{display:grid;grid-template-columns:minmax(0,760px) 280px;gap:60px;padding:70px 0 100px;border-top:1px solid var(--line)}.article>main{min-width:0}h2{color:var(--light);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:64px 0 18px}h2:first-child{margin-top:0}h3.chart-t{color:var(--text);font:13px Arial;letter-spacing:.12em;text-transform:uppercase;margin:34px 0 10px}p{color:var(--muted)}.lead{font-size:1.25rem;color:var(--text)}.chain{padding:24px;margin:30px 0;background:rgba(198,161,91,.1);border-left:3px solid var(--gold);color:var(--light);font-size:1.2rem}.side{align-self:start;position:sticky;top:24px;padding:24px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}.side h3{margin-top:0;color:var(--light);font-size:1.05rem;font-weight:400}.side dl{margin:0}.side dt{color:var(--text);font:12px Arial;letter-spacing:.05em;text-transform:uppercase;margin-top:16px}.side dt:first-child{margin-top:0}.side dd{margin:4px 0 0;font-size:.95rem}.button{display:inline-block;padding:11px 18px;border:1px solid var(--gold);text-decoration:none;font:12px Arial;letter-spacing:.1em;text-transform:uppercase}footer{padding:30px 0;border-top:1px solid var(--line);font:13px Arial;color:var(--muted)}@media(max-width:800px){.article{grid-template-columns:1fr}.side{position:static}.wrap{width:min(100% - 28px,760px)}nav{flex-direction:column}}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:0 0 22px}
+.tile{padding:14px 16px;background:var(--surface);border:1px solid var(--line)}
+.tile .k{font:11px Arial;letter-spacing:.1em;text-transform:uppercase;color:var(--light)}
+.tile .v{font-size:1.7rem;line-height:1.2;color:var(--text);font-variant-numeric:tabular-nums;margin-top:6px}
+.tile .s{font:12px Arial;color:var(--muted);font-variant-numeric:tabular-nums}
+.pos{color:#8fbf8a}.neg{color:var(--red)}
+.ranges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ranges button{background:transparent;color:var(--muted);border:1px solid var(--line);padding:7px 14px;font:12px Arial;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.ranges button[aria-pressed="true"]{color:var(--light);border-color:var(--light);background:rgba(198,161,91,.12)}
+.ranges button:focus-visible{outline:2px solid var(--light);outline-offset:2px}
+.chartbox{position:relative;height:380px;padding:12px;background:var(--surface);border:1px solid var(--line)}
+.chartmsg[hidden]{display:none}
+.chartmsg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font:14px Arial;color:var(--muted)}
+.note{font:12px/1.6 Arial;color:var(--muted);margin-top:10px}
+.tbl{overflow-x:auto;margin:18px 0;border:1px solid var(--line)}
+table{width:100%;border-collapse:collapse;font:13px/1.45 Arial;color:var(--muted);min-width:620px}
+th{color:var(--light);text-align:left;font-weight:normal;letter-spacing:.06em;text-transform:uppercase;font-size:11px;padding:10px;background:var(--surface);border-bottom:1px solid var(--line)}
+td{padding:9px 10px;border-bottom:1px solid rgba(198,161,91,.15);vertical-align:top}
+td.n{font-variant-numeric:tabular-nums;white-space:nowrap}td b{color:var(--text);font-weight:normal}
+tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
+@media(max-width:600px){.chartbox{height:320px}}
+</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <a href="/">DecisionFramework.online</a>
+  <span><a href="/insights-and-partners.html#insights">Insights</a> &middot; <a href="/real-rates-and-the-dollar.html">Real rates</a> &middot; <a href="/crack-spreads.html">Crack spreads</a></span>
+</nav>
+
+<header class="wrap">
+  <div class="eyebrow">Live indicator &middot; Dollar &amp; rates</div>
+  <h1>The Dollar Balance</h1>
+  <p class="subtitle">Every inflation number in the world ends up weighed in three places: interest rates, the dollar, and gold and commodities.</p>
+  <p class="caption">Daily closes from FRED, updated every night &middot; inflation calendar updated on release days</p>
+</header>
+
+<div class="wrap article">
+  <main>
+
+    <div class="tiles" id="tiles" aria-live="polite"></div>
+
+    <div class="ranges" role="group" aria-label="Time range">
+      <button type="button" data-range="3" aria-pressed="false">3 months</button>
+      <button type="button" data-range="12" aria-pressed="true">1 year</button>
+      <button type="button" data-range="36" aria-pressed="false">3 years</button>
+      <button type="button" data-range="0" aria-pressed="false">Since 2019</button>
+    </div>
+
+    <h3 class="chart-t">The dollar</h3>
+    <div class="chartbox">
+      <canvas id="usd-chart" aria-label="Broad dollar index and euro-dollar exchange rate"></canvas>
+      <div class="chartmsg" id="msg-usd">Loading data&hellip;</div>
+    </div>
+
+    <h3 class="chart-t">US Treasury yields</h3>
+    <div class="chartbox">
+      <canvas id="yld-chart" aria-label="US 2-year, 10-year and 30-year Treasury yields and the 10-year real yield"></canvas>
+      <div class="chartmsg" id="msg-yld">Loading data&hellip;</div>
+    </div>
+
+    <h3 class="chart-t">The curve: today, a month ago, a year ago</h3>
+    <div class="chartbox" style="height:300px">
+      <canvas id="curve-chart" aria-label="US Treasury yield curve from 3 months to 30 years"></canvas>
+      <div class="chartmsg" id="msg-curve">Loading data&hellip;</div>
+    </div>
+    <p class="note" id="data-note">Source: Federal Reserve (H.10 broad dollar index, H.15 Treasury yields) via FRED. The broad dollar index is the Fed&rsquo;s trade-weighted index against 26 currencies, not the ICE dollar index (DXY), which is about 58% euro. They usually move together. FRED publishes with a lag of one to several days.</p>
+
+    <h2>How the balance works</h2>
+    <p class="lead">An inflation number moves a market only through what it changes about interest rates. Hot inflation means a central bank has to stay tight; soft inflation lets it ease.</p>
+    <p>The difference between those rate expectations moves currencies. When Europe runs hot and the US runs soft, the euro rises and the dollar falls. The dollar index is the net sum of all of those moves, the needle on the scale. Gold and most commodities are priced in dollars, so when the needle moves, they move the other way. Gold also answers to the US real yield, the 10-year rate minus inflation expectations: when it falls, holding a metal that pays nothing costs less.</p>
+    <p>The balance does not explain everything. Central-bank buying, war risk and physical demand, such as Indian buyers switching from gold to silver as prices climb, move gold regardless of the inflation calendar. On a quiet day the balance explains most of the move. On a day with Hormuz headlines, the other forces add to it.</p>
+
+    <div class="chain">Watch three needles: the 2-year yield for what the Fed will do, the 10-year real yield for gold&rsquo;s opportunity cost, and the dollar for the net verdict. Whatever does not show up in one of them shows up in another.</div>
+
+    <h2>30 September 2026: inflation day</h2>
+    <p>One day, seven countries, and a US data dump on the day the Bureau of Economic Analysis revised its history back to 2021. Times are Brussels time. Market reactions are from the author&rsquo;s trading screen.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Time</th><th>Release</th><th>Actual</th><th>Forecast</th><th>Previous</th><th>Market reaction</th></tr></thead>
+      <tbody>
+        <tr class="hot"><td class="n">03:30</td><td>Australia CPI y/y (Aug)</td><td class="n"><b>4.0%</b></td><td class="n">&ndash;</td><td class="n">3.5%</td><td>Headline jump on fuel (+14.8% m/m, end of fuel tax relief), but trimmed-mean core flat at 3.6% for a third month. AUD/USD fell from about 0.6997 to 0.6960 in one candle.</td></tr>
+        <tr class="hot"><td class="n">29 Sep</td><td>Spain CPI y/y flash</td><td class="n"><b>4.9%</b></td><td class="n">&ndash;</td><td class="n">4.3%</td><td>HICP 5.0%, core 3.1%. Fuel the main driver.</td></tr>
+        <tr class="hot"><td class="n">08:45</td><td>France CPI y/y prelim</td><td class="n"><b>3.0%</b></td><td class="n">2.8%</td><td class="n">2.4%</td><td>HICP 3.4%. Silver resumed its opening flow in a small upward channel.</td></tr>
+        <tr class="hot"><td class="n">~10:00</td><td>German states CPI y/y</td><td class="n"><b>2.9&ndash;3.3%</b></td><td class="n">&ndash;</td><td class="n">2.6&ndash;2.9%</td><td>Bavaria 3.2, Saxony 3.3, NRW 3.3, Baden-W&uuml;rttemberg 2.9. All up 0.3 to 0.4 points.</td></tr>
+        <tr class="hot"><td class="n">11:00</td><td>Italy CPI y/y flash</td><td class="n"><b>4.2%</b></td><td class="n">3.8%</td><td class="n">3.3%</td><td>Gold recovering. By 11:25 silver had given back its whole morning rally.</td></tr>
+        <tr class="hot"><td class="n">14:00</td><td>Germany CPI y/y prelim</td><td class="n"><b>3.3%</b></td><td class="n">3.1%</td><td class="n">2.9%</td><td>Euro-area yields stay high. Gold holds, silver sideways from one fix to the next.</td></tr>
+        <tr class="soft"><td class="n">14:30</td><td>US core PCE m/m (Aug)</td><td class="n"><b>0.2%</b></td><td class="n">0.3%</td><td class="n">0.2%</td><td>Soft. Silver back to 61.65 and higher, EUR +0.24%, AUD recovered most of its morning loss.</td></tr>
+        <tr><td class="n">14:30</td><td>US GDP q/q (final)</td><td class="n"><b>2.2%</b></td><td class="n">1.5%</td><td class="n">1.5%</td><td>Revised up on the annual revision. GDP price index 6.1% (forecast 6.4%).</td></tr>
+        <tr><td class="n">14:30</td><td>US personal income / spending m/m</td><td class="n"><b>0.2% / 0.9%</b></td><td class="n">0.5% / 0.8%</td><td class="n">0.3% / 0.1%</td><td>Spending far ahead of income.</td></tr>
+        <tr><td class="n">14:30</td><td>US goods trade balance</td><td class="n"><b>&minus;$132.6B</b></td><td class="n">&minus;$116.3B</td><td class="n">&minus;$118.9B</td><td>Third wider month in a row, the widest since early 2025.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2>What the day said</h2>
+    <p class="lead">Fuel pushes the headline; core decides the market.</p>
+    <p>Everywhere the story was the same: fuel. Spain, Australia and the euro-area countries all printed higher headline inflation on diesel and gasoline, the channel explained on the <a href="/crack-spreads.html">crack spreads page</a>. Where core stayed calm, as in Australia, the currency was sold anyway: the market trades what the central bank will do, not the headline.</p>
+    <p>Then one US number undid most of that. A core PCE print one tenth below forecast lifted the Australian dollar back to within a few pips of where it stood before its own inflation data. The Fed is still the world&rsquo;s central bank.</p>
+    <p>Hot Europe and soft America press on the dollar from both sides, because the euro is the largest weight in the dollar index. A widening US trade deficit adds to that, with one caveat: in early 2025 the record deficits were partly gold bars flown to New York ahead of tariffs, and refined copper faces a tariff from 2027. A bigger deficit can mean stockpiling as much as weakness. The detailed trade report will tell.</p>
+    <p>One more detail for the record: 30 September was the Bureau of Economic Analysis&rsquo;s annual revision day, with new methods for pricing software, legal services and portfolio management fees. On the day US inflation came in, the ruler used to measure it also changed.</p>
+
+    <h2>Into the jobs report</h2>
+    <p>The next weights go on the scale this week. China is closed for Golden Week from 1 to 7 October, so price discovery in metals runs through London and New York only, and Shanghai reopens on 8 October with a week to catch up.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>When</th><th>Release</th><th>Forecast</th><th>Previous</th><th>Why it matters</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Thu 1 Oct, 14:30</td><td>US initial jobless claims</td><td class="n">201K</td><td class="n">197K</td><td>Layoffs, not hiring. Continuing claims say more about how hard it is to find a new job.</td></tr>
+        <tr><td class="n">Fri 2 Oct, 01:30</td><td>Tokyo CPI</td><td class="n">&ndash;</td><td class="n">&ndash;</td><td>A lead for Japan, the yen and so the dollar.</td></tr>
+        <tr><td class="n">Fri 2 Oct, 11:00</td><td>Euro area HICP flash (Sep)</td><td class="n">&ndash;</td><td class="n">3.2%</td><td>The country prints point higher. A hot number keeps the ECB under pressure and the euro bid.</td></tr>
+        <tr><td class="n">Fri 2 Oct, 14:30</td><td>US nonfarm payrolls (Sep)</td><td class="n">&ndash;</td><td class="n">&ndash;</td><td>The verdict on an October Fed hike. A weak report plus a hot euro area presses the dollar from both sides.</td></tr>
+      </tbody>
+    </table></div>
+    <p>A weak jobs report after a soft PCE would take an October hike off the table and push the dollar toward a break. A strong one could revive the hike case and turn the dollar back up. The diesel crack stays the transmission belt either way: as long as diesel stays high, headline inflation stays high everywhere, whatever core does.</p>
+
+    <h2>Sources</h2>
+    <ul style="color:var(--muted);font-size:.95rem">
+      <li>Federal Reserve Bank of St. Louis, FRED: DTWEXBGS, DEXUSEU, DEXUSAL, DGS3MO, DGS2, DGS5, DGS10, DGS30, DFII10, T10Y2Y.</li>
+      <li>Australian Bureau of Statistics, &ldquo;<a href="https://www.abs.gov.au/media-centre/media-releases/cpi-rose-40-year-august-2026" target="_blank" rel="noopener">CPI rose 4.0% in the year to August 2026</a>&rdquo;, 30 September 2026.</li>
+      <li>INE, &ldquo;<a href="https://www.ine.es/dyngs/Prensa/en/adIPC0926.htm" target="_blank" rel="noopener">Flash estimate of the CPI and HICP, September 2026</a>&rdquo;, 29 September 2026.</li>
+      <li>investingLive, &ldquo;<a href="https://investinglive.com/news/french-inflation-jumps-in-september-as-hicp-rises-to-3-4/" target="_blank" rel="noopener">French inflation jumps in September as HICP rises to 3.4%</a>&rdquo;, 30 September 2026.</li>
+      <li>Eurostat, &ldquo;<a href="https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-17092026-ap" target="_blank" rel="noopener">Annual inflation up to 3.2% in the euro area</a>&rdquo;, 17 September 2026.</li>
+      <li>U.S. Bureau of Economic Analysis, &ldquo;<a href="https://bea.gov/news/blog/2026-08-17/annual-update-gdp-industry-and-state-stats-publicly-available-starting-sept-30" target="_blank" rel="noopener">Annual update of GDP, industry and state statistics publicly available starting Sept. 30</a>&rdquo;.</li>
+      <li>U.S. Bureau of Labor Statistics, <a href="https://www.bls.gov/schedule/2026/10_sched_list.htm" target="_blank" rel="noopener">schedule of releases for October 2026</a>.</li>
+      <li>SMM, &ldquo;<a href="https://news.metal.com/newscontent/104126900-shfe-releases-work-arrangements-for-the-2026-mid-autumn-festival-and-national-day-holidays" target="_blank" rel="noopener">SHFE work arrangements for the 2026 Mid-Autumn Festival and National Day holidays</a>&rdquo;.</li>
+      <li>Release figures for France, Germany, Italy and the US as published on the ForexFactory economic calendar, 30 September 2026.</li>
+    </ul>
+    <p style="font:13px Arial,sans-serif">Market reactions are the author&rsquo;s own observations. Educational content to support your own research and decisions. Not financial advice.</p>
+
+  </main>
+
+  <aside class="side">
+    <h3>Reading the panel</h3>
+    <dl>
+      <dt>Broad dollar</dt>
+      <dd>The Fed&rsquo;s trade-weighted index. Up means a stronger dollar, usually a headwind for gold in dollars.</dd>
+      <dt>2-year yield</dt>
+      <dd>The market&rsquo;s best guess at Fed policy over the next two years. It reacts first to inflation and jobs data.</dd>
+      <dt>10-year real yield</dt>
+      <dd>The return on inflation-protected Treasuries. Gold&rsquo;s opportunity cost.</dd>
+      <dt>2s10s</dt>
+      <dd>10-year minus 2-year. Negative is an inverted curve; a curve steepening from the long end means markets want more to lend long, often a debt and inflation worry.</dd>
+      <dt>Data</dt>
+      <dd>Daily closes, not intraday. Market data, not investment advice.</dd>
+    </dl>
+    <p style="margin-top:24px"><a class="button" href="/real-rates-and-the-dollar.html">Real rates panel &rarr;</a></p>
+    <p style="margin-top:10px"><a class="button" href="/crack-spreads.html">Crack spreads &rarr;</a></p>
+    <p style="margin-top:10px"><a class="button" href="/insights-and-partners.html#insights">&larr; Back to Insights</a></p>
+  </aside>
+</div>
+
+<footer>
+  <div class="wrap">&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">Contact</a> &middot; Data: Federal Reserve via FRED</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  var css = getComputedStyle(document.documentElement);
+  function c(n){ return css.getPropertyValue(n).trim(); }
+  var D = null, charts = {};
+  var grid = 'rgba(198,161,91,.12)';
+  var tick = function(){ return { color: c('--muted'), font: { family: 'Arial', size: 11 } }; };
+
+  function col(k){ return D.series[k] || []; }
+  function lastIdx(k){ var s = col(k); for (var i = s.length-1; i >= 0; i--) if (s[i] !== null) return i; return -1; }
+  function valAt(k, days){
+    var i = lastIdx(k); if (i < 0) return null;
+    if (!days) return col(k)[i];
+    var t = new Date(D.dates[i]); t.setDate(t.getDate()-days);
+    for (var j = i; j >= 0; j--) if (new Date(D.dates[j]) <= t && col(k)[j] !== null) return col(k)[j];
+    return null;
+  }
+  function tile(k, v, s){ return '<div class="tile"><div class="k">'+k+'</div><div class="v">'+v+'</div><div class="s">'+s+'</div></div>'; }
+  function chg(k, bp, dec){
+    var a = valAt(k), b = valAt(k, 30); if (a === null || b === null) return '';
+    var x = bp ? (a-b)*100 : (a-b), up = x >= 0;
+    var txt = bp ? Math.abs(x).toFixed(0) + ' bp' : Math.abs(x).toFixed(dec);
+    return '30 days: <span class="' + (up ? 'pos' : 'neg') + '">' + (up ? '+' : '&minus;') + txt + '</span>';
+  }
+  function pct(v){ return v === null ? '&ndash;' : v.toFixed(2) + '%'; }
+
+  function renderTiles(){
+    var s2 = valAt('s2s10');
+    document.getElementById('tiles').innerHTML =
+      tile('Broad dollar', valAt('usd') === null ? '&ndash;' : valAt('usd').toFixed(2), chg('usd', false, 2)) +
+      tile('EUR/USD', valAt('eurusd') === null ? '&ndash;' : valAt('eurusd').toFixed(4), chg('eurusd', false, 4)) +
+      tile('US 2-year', pct(valAt('t2')), chg('t2', true)) +
+      tile('US 10-year', pct(valAt('t10')), chg('t10', true)) +
+      tile('US 30-year', pct(valAt('t30')), chg('t30', true)) +
+      tile('2s10s', s2 === null ? '&ndash;' : (s2 >= 0 ? '+' : '&minus;') + Math.abs(s2*100).toFixed(0) + ' bp', chg('s2s10', true)) +
+      tile('10-year real', pct(valAt('real10')), chg('real10', true));
+  }
+
+  function range(months){
+    var n = D.dates.length, from = 0;
+    if (months){ var t = new Date(D.dates[n-1]); t.setMonth(t.getMonth()-months);
+      while (from < n && new Date(D.dates[from]) < t) from++; }
+    return [from, n];
+  }
+  function ds(label, key, color, width, axis, r, extra){
+    var o = { label: label, data: col(key).slice(r[0], r[1]), borderColor: c(color), backgroundColor: c(color),
+      borderWidth: width, pointRadius: 0, pointHoverRadius: 3, tension: 0.1, spanGaps: true, yAxisID: axis };
+    for (var p in (extra || {})) o[p] = extra[p];
+    return o;
+  }
+  function baseOpts(fmtL, fmtR){
+    var o = { responsive: true, maintainAspectRatio: false, animation: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { labels: { color: c('--text'), boxWidth: 14, font: { family: 'Arial', size: 12 } } } },
+      scales: { x: { ticks: Object.assign(tick(), { maxTicksLimit: 7, maxRotation: 0 }), grid: { color: grid } },
+                y: { position: 'left', ticks: Object.assign(tick(), { callback: fmtL }), grid: { color: grid } } } };
+    if (fmtR) o.scales.y2 = { position: 'right', ticks: Object.assign(tick(), { callback: fmtR }), grid: { display: false } };
+    return o;
+  }
+  function make(id, datasets, labels, opts){
+    if (charts[id]) { charts[id].data.labels = labels; charts[id].data.datasets = datasets; charts[id].update(); return; }
+    charts[id] = new Chart(document.getElementById(id), { type: 'line', data: { labels: labels, datasets: datasets }, options: opts });
+  }
+
+  function draw(months){
+    var r = range(months), labels = D.dates.slice(r[0], r[1]);
+    make('usd-chart', [
+      ds('Broad dollar index (left)', 'usd', '--light', 2.2, 'y', r),
+      ds('EUR/USD (right)', 'eurusd', '--blue', 1.5, 'y2', r)
+    ], labels, baseOpts(function(v){ return v; }, function(v){ return v.toFixed(2); }));
+    make('yld-chart', [
+      ds('2-year', 't2', '--blue', 1.6, 'y', r),
+      ds('10-year', 't10', '--light', 2.2, 'y', r),
+      ds('30-year', 't30', '--muted', 1.4, 'y', r),
+      ds('10-year real', 'real10', '--red', 1.4, 'y', r, { borderDash: [5, 4] }),
+      ds('2s10s spread', 's2s10', '--grey', 1.2, 'y', r, { hidden: true })
+    ], labels, baseOpts(function(v){ return v + '%'; }));
+  }
+
+  function curveAt(days){
+    var keys = ['t3m', 't2', 't5', 't10', 't30'];
+    return keys.map(function(k){ return valAt(k, days); });
+  }
+  function drawCurve(){
+    var labels = ['3m', '2y', '5y', '10y', '30y'];
+    var sets = [['Latest', 0, '--light', 2.4], ['1 month ago', 30, '--blue', 1.5], ['1 year ago', 365, '--grey', 1.5]];
+    charts.curve = new Chart(document.getElementById('curve-chart'), { type: 'line',
+      data: { labels: labels, datasets: sets.map(function(s){ return { label: s[0], data: curveAt(s[1]),
+        borderColor: c(s[2]), backgroundColor: c(s[2]), borderWidth: s[3], pointRadius: 3, tension: 0.2 }; }) },
+      options: { responsive: true, maintainAspectRatio: false, animation: false,
+        plugins: { legend: { labels: { color: c('--text'), boxWidth: 14, font: { family: 'Arial', size: 12 } } },
+                   tooltip: { callbacks: { label: function(x){ return ' ' + x.dataset.label + ': ' + x.parsed.y.toFixed(2) + '%'; } } } },
+        scales: { x: { ticks: tick(), grid: { color: grid } },
+                  y: { ticks: Object.assign(tick(), { callback: function(v){ return v + '%'; } }), grid: { color: grid } } } } });
+  }
+
+  Array.prototype.forEach.call(document.querySelectorAll('[data-range]'), function(b){
+    b.addEventListener('click', function(){
+      Array.prototype.forEach.call(document.querySelectorAll('[data-range]'), function(x){ x.setAttribute('aria-pressed', 'false'); });
+      b.setAttribute('aria-pressed', 'true');
+      if (D) draw(+b.getAttribute('data-range'));
+    });
+  });
+
+  function fail(t){ ['msg-usd', 'msg-yld', 'msg-curve'].forEach(function(id){ document.getElementById(id).textContent = t; }); }
+  fetch('/data/macro.json', { cache: 'no-cache' })
+    .then(function(r){ if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function(j){
+      D = j;
+      if (!D.dates || !D.dates.length) throw new Error('empty');
+      if (typeof Chart === 'undefined') { fail('The chart library did not load. Try reloading the page.'); return; }
+      ['msg-usd', 'msg-yld', 'msg-curve'].forEach(function(id){ document.getElementById(id).hidden = true; });
+      renderTiles(); draw(12); drawCurve();
+      document.getElementById('data-note').innerHTML += ' Latest close: ' + D.dates[lastIdx('t10')] + '. Data refreshed ' + D.updated + '.';
+    })
+    .catch(function(){ fail('Data is not available right now. It refreshes every night; try again later.'); });
+})();
+</script>
+</body>
+</html>
