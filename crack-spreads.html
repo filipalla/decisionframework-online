@@ -128,7 +128,7 @@
       tile('Diesel crack', money(l.diesel_brent), delta('diesel_brent')) +
       tile('Gasoline crack', money(l.gasoline_wti), delta('gasoline_wti')) +
       tile('3-2-1 crack', money(l.c321), delta('c321')) +
-      tile('Brent', money(l.brent), 'close ' + l.d);
+      tile('Brent crude (physical spot)', money(l.brent), 'EIA close ' + l.d);
   }
 
   function slice(months){
@@ -141,7 +141,7 @@
     {label:'Diesel crack (vs Brent)', key:'diesel_brent', color:'--light', width:2.2},
     {label:'Gasoline crack (vs WTI)', key:'gasoline_wti', color:'--gas', width:1.6},
     {label:'3-2-1 crack', key:'c321', color:'--muted', width:1.3, dash:[5,4]},
-    {label:'Brent crude', key:'brent', color:'--crude', width:1.2, hidden:true}
+    {label:'Brent crude (physical spot)', key:'brent', color:'--crude', width:1.2, hidden:true}
   ];
 
   function draw(months){
