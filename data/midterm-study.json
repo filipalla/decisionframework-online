@@ -1,0 +1,139 @@
+{
+ "note": "percent change of the dollar index; positive = stronger dollar",
+ "rows": [
+  {
+   "election": "1974-11-05",
+   "index": "DTWEXM",
+   "3m_before": 0.53,
+   "1m_before": -0.51,
+   "4w_from_late_sep": -0.79,
+   "1m_after": -0.75,
+   "3m_after": -2.19,
+   "6m_after": -2.3
+  },
+  {
+   "election": "1978-11-07",
+   "index": "DTWEXM",
+   "3m_before": -0.15,
+   "1m_before": 0.2,
+   "4w_from_late_sep": -0.34,
+   "1m_after": 1.86,
+   "3m_after": 1.28,
+   "6m_after": 2.49
+  },
+  {
+   "election": "1982-11-02",
+   "index": "DTWEXM",
+   "3m_before": 4.03,
+   "1m_before": 1.52,
+   "4w_from_late_sep": 1.51,
+   "1m_after": -3.37,
+   "3m_after": -3.49,
+   "6m_after": -3.23
+  },
+  {
+   "election": "1986-11-04",
+   "index": "DTWEXM",
+   "3m_before": 1.95,
+   "1m_before": 3.11,
+   "4w_from_late_sep": 2.57,
+   "1m_after": -1.49,
+   "3m_after": -7.7,
+   "6m_after": -11.69
+  },
+  {
+   "election": "1990-11-06",
+   "index": "DTWEXM",
+   "3m_before": -6.45,
+   "1m_before": -2.19,
+   "4w_from_late_sep": -4.2,
+   "1m_after": 1.62,
+   "3m_after": 0.05,
+   "6m_after": 8.61
+  },
+  {
+   "election": "1994-11-08",
+   "index": "DTWEXM",
+   "3m_before": -3.54,
+   "1m_before": -1.69,
+   "4w_from_late_sep": -1.32,
+   "1m_after": 3.37,
+   "3m_after": 2.78,
+   "6m_after": -5.9
+  },
+  {
+   "election": "1998-11-03",
+   "index": "DTWEXM",
+   "3m_before": -7.36,
+   "1m_before": -3.59,
+   "4w_from_late_sep": -3.89,
+   "1m_after": 1.12,
+   "3m_after": 0.49,
+   "6m_after": 3.57
+  },
+  {
+   "election": "2002-11-05",
+   "index": "DTWEXM",
+   "3m_before": -2.27,
+   "1m_before": -1.58,
+   "4w_from_late_sep": -1.02,
+   "1m_after": 0.58,
+   "3m_after": -4.9,
+   "6m_after": -8.72
+  },
+  {
+   "election": "2006-11-07",
+   "index": "DTWEXM",
+   "3m_before": 0.66,
+   "1m_before": -1.11,
+   "4w_from_late_sep": -0.39,
+   "1m_after": -1.59,
+   "3m_after": 1.18,
+   "6m_after": -2.81,
+   "broad_sep30_to_election": -0.67
+  },
+  {
+   "election": "2010-11-02",
+   "index": "DTWEXM",
+   "3m_before": -4.07,
+   "1m_before": -1.75,
+   "4w_from_late_sep": -2.52,
+   "1m_after": 2.99,
+   "3m_after": -0.12,
+   "6m_after": -5.1,
+   "broad_sep30_to_election": -1.81
+  },
+  {
+   "election": "2014-11-04",
+   "index": "DTWEXM",
+   "3m_before": 6.16,
+   "1m_before": 0.71,
+   "4w_from_late_sep": 1.4,
+   "1m_after": 1.43,
+   "3m_after": 7.68,
+   "6m_after": 8.01,
+   "broad_sep30_to_election": 1.06
+  },
+  {
+   "election": "2018-11-06",
+   "index": "DTWEXM",
+   "3m_before": 1.26,
+   "1m_before": 0.69,
+   "4w_from_late_sep": 1.34,
+   "1m_after": 0.73,
+   "3m_after": -0.37,
+   "6m_after": 1.4,
+   "broad_sep30_to_election": 1.54
+  },
+  {
+   "election": "2022-11-08",
+   "index": "DTWEXBGS",
+   "3m_before": 3.09,
+   "1m_before": -1.32,
+   "4w_from_late_sep": -1.48,
+   "1m_after": -2.56,
+   "3m_after": -4.21,
+   "6m_after": -5.42
+  }
+ ]
+}
