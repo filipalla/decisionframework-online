@@ -1,24 +1,24 @@
 {
- "checked": "2026-10-01 00:48 UTC",
+ "checked": "2026-10-02 01:04 UTC",
  "ok": true,
  "log": [
   "usd (DTWEXBGS): fred-api ok, 1932 points, last 2026-09-25",
   "eurusd (DEXUSEU): fred-api ok, 1933 points, last 2026-09-25",
   "audusd (DEXUSAL): fred-api ok, 1933 points, last 2026-09-25",
-  "t3m (DGS3MO): fred-api ok, 1937 points, last 2026-09-29",
-  "t2 (DGS2): fred-api ok, 1937 points, last 2026-09-29",
-  "t5 (DGS5): fred-api ok, 1937 points, last 2026-09-29",
-  "t10 (DGS10): fred-api ok, 1937 points, last 2026-09-29",
-  "t30 (DGS30): fred-api ok, 1937 points, last 2026-09-29",
-  "real10 (DFII10): fred-api ok, 1937 points, last 2026-09-29",
-  "s2s10 (T10Y2Y): fred-api ok, 1938 points, last 2026-09-30",
-  "vix (VIXCLS): fred-api ok, 1979 points, last 2026-09-29",
-  "gvz (GVZCLS): fred-api ok, 1948 points, last 2026-09-29",
-  "hyoas (BAMLH0A0HYM2): fred-api ok, 785 points, last 2026-09-29",
+  "t3m (DGS3MO): fred-api ok, 1938 points, last 2026-09-30",
+  "t2 (DGS2): fred-api ok, 1938 points, last 2026-09-30",
+  "t5 (DGS5): fred-api ok, 1938 points, last 2026-09-30",
+  "t10 (DGS10): fred-api ok, 1938 points, last 2026-09-30",
+  "t30 (DGS30): fred-api ok, 1938 points, last 2026-09-30",
+  "real10 (DFII10): fred-api ok, 1938 points, last 2026-09-30",
+  "s2s10 (T10Y2Y): fred-api ok, 1939 points, last 2026-10-01",
+  "vix (VIXCLS): fred-api ok, 1980 points, last 2026-09-30",
+  "gvz (GVZCLS): fred-api ok, 1949 points, last 2026-09-30",
+  "hyoas (BAMLH0A0HYM2): fred-api ok, 786 points, last 2026-09-30",
   "pce (PCEPI): fred-api ok, 92 points, last 2026-08-01",
   "pce_core (PCEPILFE): fred-api ok, 92 points, last 2026-08-01",
   "ea (CP0000EZ19M086NEST): fred-api ok, 92 points, last 2026-08-01",
   "ea_core (00XEFDEZ19M086NEST): fred-api ok, 92 points, last 2026-08-01",
-  "wrote 2000 dates, last 2026-09-30"
+  "wrote 2001 dates, last 2026-10-01"
  ]
 }
