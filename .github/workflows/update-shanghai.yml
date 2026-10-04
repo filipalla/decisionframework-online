@@ -2,8 +2,7 @@ name: Record Shanghai premium
 
 on:
   schedule:
-    - cron: "10 8 * * 1-5"    # after the SGE day session closes (07:30 UTC)
-    - cron: "45 18 * * 1-5"   # after the SGE/SHFE night session closes (18:30 UTC)
+    - cron: "25 6 * * 1-5"    # just after the SGE PM benchmark (06:15 UTC)
   workflow_dispatch:
   push:
     branches: [main]
@@ -26,10 +25,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Fetch Shanghai premium from MetalCharts
+      - name: Fetch SGE benchmark, LBMA price and exchange rate
         run: python scripts/update_shanghai.py
         env:
           METALCHARTS_API_KEY: ${{ secrets.METALCHARTS_API_KEY }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
       - name: Commit if changed
         run: |
           git config user.name "macro-bot"

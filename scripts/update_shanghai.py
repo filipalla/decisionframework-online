@@ -1,93 +1,178 @@
-"""Record the Shanghai gold and silver premium from the MetalCharts API.
+"""Shanghai gold premium: SGE benchmark price versus the Western price, in USD per troy ounce.
 
-Needs repo secret METALCHARTS_API_KEY. Each run appends one snapshot per metal to
-data/shanghai-premium.json and writes data/shanghai-status.json (HTTP status and message,
-never the key) so a failed run can be diagnosed. Shanghai premium data by MetalCharts
-(https://metalcharts.org).
+History (back to 2016): SGE Shanghai Gold Benchmark PM (14:15 Beijing) against the LBMA gold
+price AM (10:30 London) on the same date, converted at the Fed's CNY/USD rate (FRED DEXCHUS,
+last available value). Live reading (each weekday run after 06:15 UTC): today's SGE PM benchmark
+against MetalCharts live gold spot and USD/CNY at the moment of the run.
+
+Only derived values are stored (SGE USD price and the premium), not raw LBMA prices.
+Secrets: FRED_API_KEY (exchange rate history), METALCHARTS_API_KEY (live spot and FX, free tier).
+Writes data/shanghai-premium.json and data/shanghai-status.json (sources and HTTP results, never keys).
 """
 import json
 import os
 import sys
-import urllib.error
+import time
+import urllib.parse
 import urllib.request
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "data", "shanghai-premium.json")
 STATUS = os.path.join(HERE, "..", "data", "shanghai-status.json")
-URL = "https://api.metalcharts.org/v1/shanghai/?symbols=XAU,XAG"
-KEY = os.environ.get("METALCHARTS_API_KEY", "").strip()
-FIELDS = ["price", "priceCNY", "exchangeRate", "premiumPercent", "premiumPercentExVat",
-          "priceExVat", "vatInclusive", "timestamp", "exchange", "marketType", "source"]
+OZ = 31.1034768
+FRED = os.environ.get("FRED_API_KEY", "").strip()
+MC = os.environ.get("METALCHARTS_API_KEY", "").strip()
+UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36")
+log = []
 
 
 def now():
     return datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
 
 
-def status(ok, http, msg, extra=None):
-    os.makedirs(os.path.dirname(STATUS), exist_ok=True)
-    d = {"checked": now(), "ok": ok, "http": http, "message": msg[:500]}
-    if extra:
-        d.update(extra)
-    with open(STATUS, "w") as f:
-        json.dump(d, f, indent=1)
-    print(json.dumps(d, indent=1))
+def get(url, data=None, headers=None, timeout=40, tries=3):
+    h = {"User-Agent": UA, "Accept": "application/json, text/plain, */*"}
+    h.update(headers or {})
+    body = urllib.parse.urlencode(data).encode() if data else None
+    last = None
+    for i in range(tries):
+        try:
+            req = urllib.request.Request(url, data=body, headers=h)
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read().decode("utf-8")
+        except Exception as e:
+            last = e
+            time.sleep(3 * (i + 1))
+    raise last
+
+
+def sge():
+    txt = get("https://www.sge.com.cn/graph/DayilyJzj", data={"start": "2016-01-01", "end": "2099-12-31"},
+              headers={"Referer": "https://www.sge.com.cn/sjzx/jzj", "X-Requested-With": "XMLHttpRequest"})
+    j = json.loads(txt)
+    out = {}
+    for key in ("zp", "wp"):
+        for ts, v in j.get(key, []):
+            d = (datetime.fromtimestamp(ts / 1000, timezone.utc) + timedelta(hours=8)).strftime("%Y-%m-%d")
+            out.setdefault(d, {})["am" if key == "zp" else "pm"] = v
+    return out
+
+
+def lbma_am():
+    j = json.loads(get("https://prices.lbma.org.uk/json/gold_am.json",
+                       headers={"Referer": "https://www.lbma.org.uk/prices-and-data/precious-metal-prices"}))
+    out = {}
+    for row in j:
+        d, v = row.get("d"), row.get("v") or []
+        if d and v and v[0]:
+            out[d] = float(v[0])
+    return out
+
+
+def fred_cny():
+    q = urllib.parse.urlencode({"series_id": "DEXCHUS", "api_key": FRED, "file_type": "json",
+                                "observation_start": "2016-01-01"})
+    j = json.loads(get("https://api.stlouisfed.org/fred/series/observations?" + q))
+    out = {}
+    for o in j.get("observations", []):
+        try:
+            out[o["date"]] = float(o["value"])
+        except ValueError:
+            pass
+    return out
+
+
+def mc(path):
+    return json.loads(get("https://api.metalcharts.org" + path, headers={"Authorization": "Bearer " + MC}))
+
+
+def step(name, fn):
+    try:
+        r = fn()
+        log.append(f"{name}: ok, {len(r) if hasattr(r, '__len__') else 1} items")
+        return r
+    except Exception as e:
+        msg = str(e)
+        if hasattr(e, "read"):
+            try:
+                msg += " " + e.read().decode("utf-8", "replace")[:200]
+            except Exception:
+                pass
+        log.append(f"{name}: failed: {type(e).__name__} {msg[:250]}")
+        return None
+
+
+def ffill(series, d):
+    if not series:
+        return None
+    for i in range(8):
+        k = (datetime.strptime(d, "%Y-%m-%d") - timedelta(days=i)).strftime("%Y-%m-%d")
+        if k in series:
+            return series[k]
+    return None
 
 
 def main():
-    if not KEY:
-        status(False, None, "METALCHARTS_API_KEY secret is not set")
-        return 0
-    req = urllib.request.Request(URL, headers={"Authorization": "Bearer " + KEY, "Accept": "application/json",
-                                               "User-Agent": "decisionframework.online shanghai-premium"})
-    try:
-        with urllib.request.urlopen(req, timeout=40) as r:
-            body, http, attribution = r.read().decode("utf-8"), r.status, r.headers.get("X-Attribution", "")
-    except urllib.error.HTTPError as e:
-        status(False, e.code, e.read().decode("utf-8", "replace"))
-        return 0
-    except Exception as e:
-        status(False, None, type(e).__name__ + ": " + str(e))
-        return 0
-    try:
-        j = json.loads(body)
-    except ValueError:
-        status(False, http, "Response was not JSON: " + body[:300])
-        return 0
-    data = j.get("data") or {}
-    if not j.get("success") or not data:
-        status(False, http, "No data in response: " + body[:300])
-        return 0
-
     try:
         with open(OUT) as f:
             store = json.load(f)
     except (OSError, ValueError):
-        store = {"source": "MetalCharts API, /v1/shanghai/", "credit": "Shanghai premium data by MetalCharts (https://metalcharts.org)",
-                 "note": "One snapshot per run. premiumUsd = price - price / (1 + premiumPercent/100), USD per troy ounce.",
-                 "rows": []}
-    added = 0
-    for sym, d in data.items():
-        if not isinstance(d, dict) or d.get("price") is None:
-            continue
-        row = {"run": now(), "symbol": sym}
-        for k in FIELDS:
-            if k in d:
-                row[k] = d[k]
-        p, pct = d.get("price"), d.get("premiumPercentExVat", d.get("premiumPercent"))
-        if p is not None and pct is not None:
-            row["premiumUsd"] = round(p - p / (1 + pct / 100.0), 2)
-        key = (sym, row.get("timestamp"))
-        if any((r.get("symbol"), r.get("timestamp")) == key for r in store["rows"]):
-            continue  # same quote as an earlier run (market closed): skip
-        store["rows"].append(row)
-        added += 1
-    store["updated"] = now()
-    with open(OUT, "w") as f:
-        json.dump(store, f, indent=1)
-    status(True, http, "ok", {"added": added, "symbols": list(data.keys()), "cacheAge": j.get("cacheAge"),
-                              "isStale": j.get("isStale"), "attribution": attribution})
+        store = {}
+    store.setdefault("live", [])
+    s = step("SGE benchmark (sge.com.cn)", sge)
+    lb = step("LBMA gold AM (prices.lbma.org.uk)", lbma_am)
+    fx = step("FRED DEXCHUS", fred_cny) if FRED else None
+    if not FRED:
+        log.append("FRED_API_KEY not set")
+
+    if s and lb and fx:
+        daily = []
+        for d in sorted(s):
+            pm, west, rate = s[d].get("pm"), lb.get(d), ffill(fx, d)
+            if pm is None or west is None or rate is None:
+                continue
+            usd = pm * OZ / rate
+            daily.append({"date": d, "sge": round(usd, 2), "prem": round(usd - west, 2),
+                          "pct": round((usd / west - 1) * 100, 3)})
+        store["daily"] = daily
+        log.append(f"daily history: {len(daily)} days, last {daily[-1]['date'] if daily else '-'}")
+
+    # live reading, only on a weekday run after the SGE PM benchmark (06:15 UTC)
+    t = datetime.now(timezone.utc)
+    if s and MC and t.weekday() < 5 and t.hour >= 6:
+        today = (t + timedelta(hours=8)).strftime("%Y-%m-%d")
+        pm = (s.get(today) or {}).get("pm")
+        if pm is None:
+            log.append(f"live: no SGE PM benchmark for {today} (holiday or not yet published)")
+        else:
+            px = step("MetalCharts prices", lambda: mc("/v1/prices/?symbols=XAU"))
+            cur = step("MetalCharts currency", lambda: mc("/v1/currency/"))
+            try:
+                spot = float(px["data"]["XAU"]["price"])
+                rates = cur.get("data") or cur.get("rates") or {}
+                rates = rates.get("rates", rates)
+                cny = float(rates["CNY"])
+                usd = pm * OZ / cny
+                if not any(r.get("date") == today for r in store["live"]):
+                    store["live"].append({"date": today, "run": now(), "sge": round(usd, 2), "spot": round(spot, 2),
+                                          "fx": cny, "prem": round(usd - spot, 2), "pct": round((usd / spot - 1) * 100, 3)})
+                log.append(f"live: {today} premium {usd - spot:.2f} USD/oz")
+            except Exception as e:
+                log.append(f"live: could not read MetalCharts response ({type(e).__name__}: {str(e)[:120]}); "
+                           f"prices keys {list((px or {}).keys())[:5]}, currency keys {list((cur or {}).keys())[:5]}")
+
+    store.update({"updated": now(), "unit": "USD per troy ounce",
+                  "method": "History: SGE Shanghai Gold Benchmark PM vs LBMA gold AM (USD), same date, at FRED DEXCHUS. "
+                            "Live: SGE PM benchmark vs MetalCharts live spot and USD/CNY at run time.",
+                  "credit": "Live gold spot and USD/CNY by MetalCharts (https://metalcharts.org)"})
+    os.makedirs(os.path.dirname(OUT), exist_ok=True)
+    if store.get("daily") or store.get("live"):
+        with open(OUT, "w") as f:
+            json.dump(store, f, separators=(",", ":"))
+    with open(STATUS, "w") as f:
+        json.dump({"checked": now(), "log": log}, f, indent=1)
+    print("\n".join(log))
     return 0
 
 
