@@ -383,6 +383,10 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
     var P = O.points, labels = P.map(function(p){ return p.label; });
     var o = baseOpts(function(v){ return v + '%'; }, function(v){ return v.toFixed(2) + '%'; });
     o.scales.y.min = 0; o.scales.y.max = 100;
+    o.scales.y2.title = { display: true, text: '2-year', color: c('--blue'), font: { family: 'Arial', size: 11 } };
+    o.scales.y3 = { position: 'right', grid: { display: false },
+      title: { display: true, text: 'Real 10-year', color: c('--red'), font: { family: 'Arial', size: 11 } },
+      ticks: Object.assign(tick(), { callback: function(v){ return v.toFixed(2) + '%'; } }) };
     o.scales.x.ticks.maxTicksLimit = 12; o.scales.x.ticks.autoSkip = false;
     o.scales.x.ticks.callback = function(v){ var l = labels[v] || ''; return l.split(', '); };
     o.plugins.tooltip = { callbacks: {
@@ -394,8 +398,8 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
         borderWidth: 2.4, pointRadius: 5, pointHoverRadius: 7, tension: 0, yAxisID: 'y' },
       { label: '2-year yield (right)', data: P.map(function(p){ return close('t2', p.date); }), borderColor: c('--blue'), backgroundColor: c('--blue'),
         borderWidth: 1.6, pointRadius: 3, tension: 0, spanGaps: true, yAxisID: 'y2' },
-      { label: '10-year real yield (right)', data: P.map(function(p){ return close('real10', p.date); }), borderColor: c('--red'), backgroundColor: c('--red'),
-        borderWidth: 1.6, borderDash: [5, 4], pointRadius: 3, tension: 0, spanGaps: true, yAxisID: 'y2' }
+      { label: '10-year real yield (far right)', data: P.map(function(p){ return close('real10', p.date); }), borderColor: c('--red'), backgroundColor: c('--red'),
+        borderWidth: 1.6, borderDash: [5, 4], pointRadius: 3, tension: 0, spanGaps: true, yAxisID: 'y3' }
     ] }, options: o });
   }
 
