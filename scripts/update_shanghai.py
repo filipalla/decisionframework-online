@@ -161,27 +161,8 @@ def main():
         store = {}
     store.setdefault("live", [])
     s = step("SGE benchmark (sge.com.cn)", sge)
-    lb, west_name = step("LBMA gold AM (prices.lbma.org.uk)", lbma_am), "LBMA gold AM (10:30 London)"
-    if not lb:
-        lb, west_name = step("Stooq XAU/USD daily open", stooq_open), "XAU/USD spot, daily open (Stooq)"
-    if not lb:
-        lb, west_name = step("Yahoo GC=F daily open", yahoo_open), "COMEX gold front month, daily open (Yahoo Finance)"
-    fx = step("FRED DEXCHUS", fred_cny) if FRED else None
-    if not FRED:
-        log.append("FRED_API_KEY not set")
-
-    if s and lb and fx:
-        daily = []
-        for d in sorted(s):
-            pm, west, rate = s[d].get("pm"), lb.get(d), ffill(fx, d)
-            if pm is None or west is None or rate is None:
-                continue
-            usd = pm * OZ / rate
-            daily.append({"date": d, "sge": round(usd, 2), "prem": round(usd - west, 2),
-                          "pct": round((usd / west - 1) * 100, 3)})
-        store["daily"] = daily
-        log.append(f"daily history: {len(daily)} days, last {daily[-1]['date'] if daily else '-'}")
-
+    # History is a one-off backfill kept in the file (see "method"); free Western gold prices refuse
+    # GitHub's servers, so this job only adds the live reading.
     # live reading, only on a weekday run after the SGE PM benchmark (06:15 UTC)
     t = datetime.now(timezone.utc)
     if s and MC and t.weekday() < 5 and t.hour >= 6:
@@ -207,9 +188,6 @@ def main():
                            f"prices keys {list((px or {}).keys())[:5]}, currency keys {list((cur or {}).keys())[:5]}")
 
     store.update({"updated": now(), "unit": "USD per troy ounce",
-                  "western": west_name if lb else store.get("western"),
-                  "method": "History: SGE Shanghai Gold Benchmark PM vs the Western gold price named in 'western', same date, at FRED DEXCHUS. "
-                            "Live: SGE PM benchmark vs MetalCharts live spot and USD/CNY at run time.",
                   "credit": "Live gold spot and USD/CNY by MetalCharts (https://metalcharts.org)"})
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     if store.get("daily") or store.get("live"):
