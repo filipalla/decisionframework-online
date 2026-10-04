@@ -1,0 +1,6 @@
+{
+ "checked": "2026-10-04 04:15 UTC",
+ "ok": false,
+ "http": null,
+ "message": "METALCHARTS_API_KEY secret is not set"
+}
