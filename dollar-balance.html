@@ -386,10 +386,11 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
     var P = O.points, labels = P.map(function(p){ return p.label; });
     var o = baseOpts(function(v){ return v + '%'; }, function(v){ return v.toFixed(2) + '%'; });
     o.scales.y.min = 0; o.scales.y.max = 100;
+    o.scales.y2.ticks.stepSize = 0.01; o.scales.y2.ticks.maxTicksLimit = 8;
     o.scales.y2.title = { display: true, text: '2-year', color: c('--blue'), font: { family: 'Arial', size: 11 } };
     o.scales.y3 = { position: 'right', grid: { display: false },
       title: { display: true, text: 'Real 10-year', color: c('--red'), font: { family: 'Arial', size: 11 } },
-      ticks: Object.assign(tick(), { callback: function(v){ return v.toFixed(2) + '%'; } }) };
+      ticks: Object.assign(tick(), { stepSize: 0.01, maxTicksLimit: 8, callback: function(v){ return v.toFixed(2) + '%'; } }) };
     o.scales.x.ticks.maxTicksLimit = 12; o.scales.x.ticks.autoSkip = false;
     o.scales.x.ticks.callback = function(v){ var l = labels[v] || ''; return l.split(', '); };
     o.plugins.tooltip = { callbacks: {
