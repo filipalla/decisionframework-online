@@ -1,0 +1,42 @@
+name: Update futures cracks (daily closes)
+
+on:
+  schedule:
+    - cron: "50 20 * * 1-5"   # after NYMEX/ICE settlement, before Globex reopens
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: "Also store this many previous closes (1 = today only)"
+        default: "1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-futures
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch daily closes and compute cracks
+        run: python scripts/update_futures.py
+        env:
+          BACKFILL: ${{ github.event.inputs.backfill }}
+      - name: Commit if changed
+        run: |
+          git config user.name "macro-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/futures-cracks.json data/futures-status.json 2>/dev/null || git add data/futures-status.json
+          if git diff --cached --quiet; then
+            echo "No change"
+          else
+            git commit -m "Update futures cracks"
+            git pull --rebase origin main
+            git push
+          fi

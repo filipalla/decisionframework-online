@@ -26,7 +26,7 @@
 <meta name="description" content="Diesel and gasoline crack spreads from daily U.S. EIA spot prices: what refiners earn turning crude into fuel, and why it matters for inflation and gold.">
 <style>
 :root{--bg:#111214;--surface:#1b1b1d;--gold:#c6a15b;--light:#e2c887;--text:#f1eadb;--muted:#b8b0a1;--line:rgba(198,161,91,.45);--gas:#8fb3c9;--crude:#6f6a62}
-*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--bg) 38%);color:var(--text);font:17px/1.75 Georgia,serif}a{color:var(--light)}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}nav{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);font:12px Arial;letter-spacing:.1em;text-transform:uppercase}nav a{text-decoration:none;color:var(--muted)}header{text-align:center;padding:100px 0 70px}header .eyebrow,.label{color:var(--light);font:12px Arial;letter-spacing:.22em;text-transform:uppercase}h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:400;line-height:1.05;margin:28px auto;max-width:900px}.subtitle{color:var(--light);font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;max-width:760px;margin:auto}.caption{text-align:center;color:var(--muted);font:13px Arial;letter-spacing:.05em;margin-top:12px}.article{display:grid;grid-template-columns:minmax(0,760px) 280px;gap:60px;padding:70px 0 100px;border-top:1px solid var(--line)}h2{color:var(--light);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:64px 0 18px}h2:first-child{margin-top:0}p{color:var(--muted)}.lead{font-size:1.25rem;color:var(--text)}.chain{padding:24px;margin:30px 0;background:rgba(198,161,91,.1);border-left:3px solid var(--gold);color:var(--light);font-size:1.2rem}.side{align-self:start;position:sticky;top:24px;padding:24px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}.side h3{margin-top:0;color:var(--light);font-size:1.05rem;font-weight:400}.side dl{margin:0}.side dt{color:var(--text);font:12px Arial;letter-spacing:.05em;text-transform:uppercase;margin-top:16px}.side dt:first-child{margin-top:0}.side dd{margin:4px 0 0;font-size:.95rem}.button{display:inline-block;padding:11px 18px;border:1px solid var(--gold);text-decoration:none;font:12px Arial;letter-spacing:.1em;text-transform:uppercase}footer{padding:30px 0;border-top:1px solid var(--line);font:13px Arial;color:var(--muted)}@media(max-width:800px){.article{grid-template-columns:1fr}.side{position:static}.wrap{width:min(100% - 28px,760px)}nav{flex-direction:column}}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--bg) 38%);color:var(--text);font:17px/1.75 Georgia,serif}a{color:var(--light)}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}nav{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);font:12px Arial;letter-spacing:.1em;text-transform:uppercase}nav a{text-decoration:none;color:var(--muted)}header{text-align:center;padding:100px 0 70px}header .eyebrow,.label{color:var(--light);font:12px Arial;letter-spacing:.22em;text-transform:uppercase}h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:400;line-height:1.05;margin:28px auto;max-width:900px}.subtitle{color:var(--light);font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;max-width:760px;margin:auto}.caption{text-align:center;color:var(--muted);font:13px Arial;letter-spacing:.05em;margin-top:12px}.article{display:grid;grid-template-columns:minmax(0,760px) 280px;gap:60px;padding:70px 0 100px;border-top:1px solid var(--line)}h2{color:var(--light);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:64px 0 18px}h2:first-child{margin-top:0}p{color:var(--muted)}.lead{font-size:1.25rem;color:var(--text)}.chain{padding:24px;margin:30px 0;background:rgba(198,161,91,.1);border-left:3px solid var(--gold);color:var(--light);font-size:1.2rem}.side{align-self:start;position:sticky;top:24px;padding:24px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}.side h3{margin-top:0;color:var(--light);font-size:1.05rem;font-weight:400}.side dl{margin:0}.side dt{color:var(--text);font:12px Arial;letter-spacing:.05em;text-transform:uppercase;margin-top:16px}.side dt:first-child{margin-top:0}.side dd{margin:4px 0 0;font-size:.95rem}.button{display:inline-block;padding:11px 18px;border:1px solid var(--gold);text-decoration:none;font:12px Arial;letter-spacing:.1em;text-transform:uppercase}footer{padding:30px 0;border-top:1px solid var(--line);font:13px Arial;color:var(--muted)}@media(max-width:800px){.article{grid-template-columns:minmax(0,1fr)}.side{position:static}.wrap{width:min(100% - 28px,760px)}nav{flex-direction:column}}
 .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:0 0 22px}
 .tile{padding:14px 16px;background:var(--surface);border:1px solid var(--line)}
 .tile .k{font:11px Arial;letter-spacing:.1em;text-transform:uppercase;color:var(--light)}
@@ -42,25 +42,59 @@
 .chartmsg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font:14px Arial;color:var(--muted)}
 .note{font:12px/1.6 Arial;color:var(--muted);margin-top:10px}
 .formula{font:14px/1.6 "Courier New",monospace;color:var(--text);background:rgba(198,161,91,.08);padding:12px 14px;border:1px solid rgba(198,161,91,.25);overflow-x:auto;white-space:nowrap}
-@media(max-width:600px){.chartbox{height:360px}}
+.cycle{margin:0 0 56px;padding:26px 26px 22px;background:linear-gradient(180deg,rgba(198,161,91,.10),rgba(198,161,91,.02));border:1px solid var(--line)}
+.cycle .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.cycle .lbl{font:11px Arial;letter-spacing:.18em;text-transform:uppercase;color:var(--light)}
+.cycle .live{font:12px Arial;color:var(--muted)}.cycle .live i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--light);margin-right:6px;vertical-align:1px}
+.cycle h2{margin:10px 0 6px;font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.cycle .sub{margin:0 0 18px;color:var(--muted)}
+.tbl{overflow-x:auto;margin:6px 0 14px;border:1px solid rgba(198,161,91,.25)}
+.tbl table{width:100%;border-collapse:collapse;font:13px/1.4 Arial;font-variant-numeric:tabular-nums;min-width:600px}
+.tbl th,.tbl td{padding:8px 7px;text-align:right;border-bottom:1px solid rgba(198,161,91,.15);white-space:nowrap}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl th{font-weight:normal;color:var(--light);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(198,161,91,.06)}
+.tbl td{color:var(--text)}.tbl tr.eia td{color:var(--muted);font-style:italic}
+.tbl .grp{border-left:1px solid rgba(198,161,91,.3)}
+.roll{display:inline-block;margin-left:6px;padding:1px 6px;font:10px Arial;letter-spacing:.06em;color:var(--bg);background:var(--light)}
+.cnote{margin-top:18px;padding-top:16px;border-top:1px solid rgba(198,161,91,.25)}
+.cnote h3{margin:0 0 6px;font-weight:400;color:var(--light);font-size:1.2rem}
+.cnote p{margin:8px 0}.cnote .by{font:12px Arial;color:var(--muted)}
+.divider{display:flex;align-items:center;gap:14px;margin:0 0 18px;font:11px Arial;letter-spacing:.18em;text-transform:uppercase;color:var(--light)}
+.divider:after{content:"";flex:1;height:1px;background:var(--line)}
+@media(max-width:600px){.chartbox{height:360px}.cycle{padding:20px 16px}}
 </style>
 </head>
 <body>
 
 <nav class="wrap">
-  <a href="/">DecisionFramework.online</a>
-  <span><a href="/insights-and-partners.html#insights">Insights</a> &middot; <a href="/real-rates-and-the-dollar.html">Real rates</a> &middot; <a href="/private-client.html" style="color:var(--light)">&#10022; Private Client</a></span>
+  <a href="https://decisionframework.online/">DecisionFramework.online</a>
+  <span><a href="https://decisionframework.online/insights-and-partners.html#insights">Insights</a> &middot; <a href="https://decisionframework.online/private-client.html" style="color:var(--light)">&#10022; Private Client</a></span>
 </nav>
 
 <header class="wrap">
-  <div class="eyebrow">Live indicator &middot; Energy &amp; inflation</div>
+  <div class="eyebrow"><span style="display:inline-block;margin-right:10px;padding:2px 9px;border:1px solid var(--light);color:var(--light)">&#10022; Private Client</span>Live indicator &middot; Energy &amp; inflation</div>
   <h1>Crack Spreads</h1>
   <p class="subtitle">What refiners earn turning crude into diesel and gasoline, and why it can matter more for inflation than the price of oil itself.</p>
-  <p class="caption">Daily closes from U.S. EIA spot prices, updated every night</p>
+  <p class="caption">Futures closes every evening on top; official EIA physical prices below, published weekly on Wednesdays.</p>
 </header>
 
 <div class="wrap article">
   <main>
+
+    <section class="cycle" aria-labelledby="h-cycle">
+      <div class="top"><span class="lbl">This EIA cycle &middot; NYMEX &amp; ICE daily closes</span><span class="live"><i aria-hidden="true"></i>Updated every evening after settlement</span></div>
+      <h2 id="h-cycle">What the futures did since the last EIA price</h2>
+      <p class="sub" id="cycle-sub">Loading&hellip;</p>
+      <div class="tiles" id="ftiles" aria-live="polite"></div>
+      <div class="tbl"><table aria-describedby="cycle-sub">
+        <thead><tr><th>Close</th><th>Diesel HO<br>$/gal</th><th>Gasoline RB<br>$/gal</th><th>WTI<br>$/bbl</th><th>Brent<br>$/bbl</th><th class="grp">Diesel<br>crack</th><th>Gasoline<br>crack</th><th>3-2-1<br>crack</th></tr></thead>
+        <tbody id="ftable"></tbody>
+      </table></div>
+      <p class="note" id="fnote"></p>
+      <div class="cnote" id="cnote" hidden></div>
+    </section>
+
+    <div class="divider">Official weekly history &middot; EIA physical spot</div>
 
     <div class="tiles" id="tiles" aria-live="polite"></div>
 
@@ -96,7 +130,7 @@
   <div class="df-l">Free preview · 33 languages</div>
   <h3>The framework behind this analysis</h3>
   <p><em>The Gold Investor</em> shows how to turn signals like these into your own gold thesis. Read the free preview in your language. Newsletter subscribers get the full book for €35.</p>
-  <a class="df-b" href="/free-preview.html">Read the free preview →</a>
+  <a class="df-b" href="https://decisionframework.online/free-preview.html">Read the free preview →</a>
 </div>
   </main>
 
@@ -108,17 +142,17 @@
       <dt>Gasoline crack</dt>
       <dd>NY Harbor gasoline against WTI. Strongly seasonal; watch for moves that break the season.</dd>
       <dt>Data</dt>
-      <dd>Daily EIA spot prices, not futures, so levels differ slightly from futures-based cracks on trading platforms. The direction is the same.</dd>
+      <dd>Top: NYMEX and ICE futures closes, every evening. Below: EIA physical spot prices, the official record, published weekly. Levels differ between the two; the direction is what to compare.</dd>
       <dt>Reading this page</dt>
       <dd>Market data, not investment advice.</dd>
     </dl>
     <p style="margin-top:24px"><a class="button" href="/real-rates-and-the-dollar.html">Real rates panel &rarr;</a></p>
-    <p style="margin-top:10px"><a class="button" href="/insights-and-partners.html#insights">&larr; Back to Insights</a></p>
+    <p style="margin-top:10px"><a class="button" href="https://decisionframework.online/insights-and-partners.html#insights">&larr; Back to Insights</a></p>
   </aside>
 </div>
 
 <footer>
-  <div class="wrap">&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">Contact</a> &middot; Data: U.S. EIA via FRED</div>
+  <div class="wrap">&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">Contact</a> &middot; Data: NYMEX and ICE closes via TradingView; U.S. EIA via FRED</div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -216,6 +250,48 @@
       document.getElementById('data-note').innerHTML += ' Latest EIA close: ' + rows[rows.length-1].d + '. Data refreshed ' + j.updated + '.';
     })
     .catch(function(){ msg.textContent = 'Data is not available right now. It refreshes every night; try again later.'; });
+})();
+</script>
+
+<script>
+(function(){
+  var MON = {F:'Jan',G:'Feb',H:'Mar',J:'Apr',K:'May',M:'Jun',N:'Jul',Q:'Aug',U:'Sep',V:'Oct',X:'Nov',Z:'Dec'};
+  var NAME = {ho:'Diesel', rb:'Gasoline', cl:'WTI', brn:'Brent'};
+  function cm(c){ var m = c.match(/^([A-Z]+)([FGHJKMNQUVXZ])(\d{4})$/); return m ? MON[m[2]] + " '" + m[3].slice(2) : c; }
+  function day(d){ return new Date(d + 'T12:00:00Z').toLocaleDateString('en-GB', {weekday:'short', day:'numeric', month:'short', timeZone:'UTC'}); }
+  function usd(v, n){ return '$' + v.toFixed(n == null ? 2 : n); }
+  function chg(v){ var s = v >= 0 ? '+' : '&minus;'; return '<span class="' + (v >= 0 ? 'pos' : 'neg') + '">' + s + '$' + Math.abs(v).toFixed(2) + '</span>'; }
+  function tile(k, v, s){ return '<div class="tile"><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="s">' + s + '</div></div>'; }
+  Promise.all([
+    fetch('/data/futures-cracks.json', {cache:'no-cache'}).then(function(r){ return r.json(); }),
+    fetch('/data/cracks.json', {cache:'no-cache'}).then(function(r){ return r.json(); }),
+    fetch('/data/cycle-note.json', {cache:'no-cache'}).then(function(r){ return r.ok ? r.json() : null; }).catch(function(){ return null; })
+  ]).then(function(res){
+    var f = res[0].rows, e = res[1].rows, note = res[2];
+    var le = e[e.length - 1];
+    var cyc = f.filter(function(r){ return r.d > le.d; });
+    if (!cyc.length) cyc = f.slice(-1);
+    var a = cyc[0], z = cyc[cyc.length - 1], k = z.contracts;
+    document.getElementById('cycle-sub').innerHTML = 'Last EIA physical price: <b>' + day(le.d) + '</b>. Since then, ' + cyc.length + ' trading day' + (cyc.length > 1 ? 's' : '') + ' on the front-month contracts: diesel and gasoline ' + cm(k.ho) + ', WTI ' + cm(k.cl) + ', Brent ' + cm(k.brn) + '.';
+    var since = cyc.length > 1 ? ' since ' + day(a.d) : '';
+    document.getElementById('ftiles').innerHTML =
+      tile('Diesel crack', usd(z.diesel), (cyc.length > 1 ? chg(z.diesel - a.diesel) + since : day(z.d))) +
+      tile('Gasoline crack', usd(z.gasoline), (cyc.length > 1 ? chg(z.gasoline - a.gasoline) + since : day(z.d))) +
+      tile('3-2-1 crack', usd(z.c321), (cyc.length > 1 ? chg(z.c321 - a.c321) + since : day(z.d))) +
+      tile('Brent futures (' + cm(k.brn) + ')', usd(z.brn), 'EIA physical ' + usd(le.brent) + ' on ' + day(le.d));
+    var h = '<tr class="eia"><td>' + day(le.d) + '<br><small>EIA physical</small></td><td>&ndash;</td><td>&ndash;</td><td>' + usd(le.wti) + '</td><td>' + usd(le.brent) + '</td><td class="grp">' + usd(le.diesel_brent) + '</td><td>' + usd(le.gasoline_wti) + '</td><td>' + usd(le.c321) + '</td></tr>';
+    cyc.forEach(function(r){
+      var roll = (r.roll || []).map(function(x){ return '<span class="roll" title="' + NAME[x] + ' rolled to ' + cm(r.contracts[x]) + '">' + NAME[x] + ' roll</span>'; }).join('');
+      h += '<tr><td>' + day(r.d) + roll + '</td><td>' + usd(r.ho, 4) + '</td><td>' + usd(r.rb, 4) + '</td><td>' + usd(r.cl) + '</td><td>' + usd(r.brn) + '</td><td class="grp">' + usd(r.diesel) + '</td><td>' + usd(r.gasoline) + '</td><td>' + usd(r.c321) + '</td></tr>';
+    });
+    document.getElementById('ftable').innerHTML = h;
+    document.getElementById('fnote').innerHTML = 'Daily settlement closes of the front-month NYMEX contracts and ICE Brent, via TradingView market data; cracks in dollars per barrel (fuel &times; 42 minus crude). Futures and EIA physical prices are different markets: in a backwardated market prompt physical oil trades above the futures, so compare the direction, not the level. A contract roll is marked in the table; on that day the line can jump without the market moving. When EIA publishes the next batch, this table starts a new cycle.';
+    if (note && note.cycle_after === le.d && note.paragraphs) {
+      var c = document.getElementById('cnote');
+      c.innerHTML = '<h3>' + note.title + '</h3>' + note.paragraphs.map(function(p){ return '<p>' + p + '</p>'; }).join('') + '<p class="by">Desk note, ' + note.written + '</p>';
+      c.hidden = false;
+    }
+  }).catch(function(){ document.getElementById('cycle-sub').textContent = 'Futures data is not available right now. It refreshes every evening; try again later.'; });
 })();
 </script>
 </body>
