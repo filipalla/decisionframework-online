@@ -202,7 +202,7 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
       .then(function(res){
         if (res.ok && (!res.d.status || res.d.status === 'success')){
           form.querySelectorAll('input,button,label').forEach(function(x){ x.style.display = 'none'; });
-          msg.textContent = 'Your founding seat is reserved. Check your inbox and confirm your email address; when the Client Area opens, your invitation and founding rate come first.';
+          msg.textContent = 'Your founding seat is reserved. Check your inbox and confirm your email address. No email within a few minutes? Look in your spam or junk folder, and add hello@decisionframework.online to your contacts. When the Client Area opens, your invitation and founding rate come first.';
         } else {
           btn.disabled = false; btn.textContent = old; msg.className = 'msg err';
           msg.textContent = (res.d && res.d.errors && res.d.errors.messages && res.d.errors.messages.join(' ')) || 'Something went wrong. Please check your details and try again.';
