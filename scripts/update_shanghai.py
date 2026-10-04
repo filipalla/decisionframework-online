@@ -1,7 +1,8 @@
 """Shanghai gold premium: SGE benchmark price versus the Western price, in USD per troy ounce.
 
 History (back to 2016): SGE Shanghai Gold Benchmark PM (14:15 Beijing) against the LBMA gold
-price AM (10:30 London) on the same date, converted at the Fed's CNY/USD rate (FRED DEXCHUS,
+price AM (10:30 London), or, when LBMA blocks the request, the XAU/USD daily open (Stooq) or the
+COMEX front-month daily open (Yahoo), on the same date, converted at the Fed's CNY/USD rate (FRED DEXCHUS,
 last available value). Live reading (each weekday run after 06:15 UTC): today's SGE PM benchmark
 against MetalCharts live gold spot and USD/CNY at the moment of the run.
 
@@ -70,6 +71,35 @@ def lbma_am():
     return out
 
 
+def stooq_open():
+    """XAU/USD spot daily bars from Stooq; the day's open (about 22:00-00:00 UTC) is the bar edge nearest
+    the SGE PM benchmark at 06:15 UTC, roughly six to eight hours earlier."""
+    txt = get("https://stooq.com/q/d/l/?s=xauusd&i=d", headers={"Accept": "text/csv"})
+    out = {}
+    lines = txt.strip().splitlines()
+    if not lines or not lines[0].lower().startswith("date"):
+        raise ValueError("unexpected Stooq response: " + txt[:80])
+    for ln in lines[1:]:
+        c = ln.split(",")
+        try:
+            out[c[0]] = float(c[1])
+        except (IndexError, ValueError):
+            pass
+    return out
+
+
+def yahoo_open():
+    """COMEX gold front-month (GC=F) daily open from Yahoo Finance chart data, as a fallback."""
+    j = json.loads(get("https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=10y&interval=1d"))
+    r = j["chart"]["result"][0]
+    opens = r["indicators"]["quote"][0]["open"]
+    out = {}
+    for ts, v in zip(r["timestamp"], opens):
+        if v:
+            out[datetime.fromtimestamp(ts, timezone.utc).strftime("%Y-%m-%d")] = float(v)
+    return out
+
+
 def fred_cny():
     q = urllib.parse.urlencode({"series_id": "DEXCHUS", "api_key": FRED, "file_type": "json",
                                 "observation_start": "2016-01-01"})
@@ -121,7 +151,11 @@ def main():
         store = {}
     store.setdefault("live", [])
     s = step("SGE benchmark (sge.com.cn)", sge)
-    lb = step("LBMA gold AM (prices.lbma.org.uk)", lbma_am)
+    lb, west_name = step("LBMA gold AM (prices.lbma.org.uk)", lbma_am), "LBMA gold AM (10:30 London)"
+    if not lb:
+        lb, west_name = step("Stooq XAU/USD daily open", stooq_open), "XAU/USD spot, daily open (Stooq)"
+    if not lb:
+        lb, west_name = step("Yahoo GC=F daily open", yahoo_open), "COMEX gold front month, daily open (Yahoo Finance)"
     fx = step("FRED DEXCHUS", fred_cny) if FRED else None
     if not FRED:
         log.append("FRED_API_KEY not set")
@@ -163,7 +197,8 @@ def main():
                            f"prices keys {list((px or {}).keys())[:5]}, currency keys {list((cur or {}).keys())[:5]}")
 
     store.update({"updated": now(), "unit": "USD per troy ounce",
-                  "method": "History: SGE Shanghai Gold Benchmark PM vs LBMA gold AM (USD), same date, at FRED DEXCHUS. "
+                  "western": west_name if lb else store.get("western"),
+                  "method": "History: SGE Shanghai Gold Benchmark PM vs the Western gold price named in 'western', same date, at FRED DEXCHUS. "
                             "Live: SGE PM benchmark vs MetalCharts live spot and USD/CNY at run time.",
                   "credit": "Live gold spot and USD/CNY by MetalCharts (https://metalcharts.org)"})
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
