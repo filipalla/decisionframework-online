@@ -105,9 +105,26 @@
     <h2>Why the commodity indexes are there too</h2>
     <p>The third and fourth lines are two broad commodity indexes (energy, industrial and agricultural commodities together, not just metals), shown through the funds that track them. DBC follows an energy-heavy index of 14 commodities; BCI follows the Bloomberg Commodity Index, where no sector may exceed a third of the weight. Two reference points rather than one: the truth about &ldquo;commodities&rdquo; usually sits somewhere between them. It's on the panel to answer one question: is gold moving because commodities generally are moving &mdash; a demand or inflation story &mdash; or is gold moving on its own, decoupled from the broader complex? Gold rising while the index doesn't tends to point toward the monetary and confidence story this page is about, rather than a commodity supercycle.</p>
 
+    <h3 style="font:13px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--text,#f1eadb);margin:48px 0 10px">US Dollar Index (DXY), live</h3>
+    <div id="dxychart" style="height:560px;border:1px solid rgba(198,161,91,.45);background:#1b1b1d" aria-label="Live US Dollar Index chart with Ichimoku cloud and RSI"></div>
+    <p style="font:12.5px/1.6 Arial,sans-serif;margin:10px 0 0">The ICE US Dollar Index (TVC:DXY), daily, with the Ichimoku cloud on price and RSI (14) below. Change the timeframe in the chart's toolbar. If the chart does not load, <a href="https://www.tradingview.com/symbols/TVC-DXY/" target="_blank" rel="noopener">open DXY on TradingView</a>.</p>
+    <script>
+    (function(){
+      var el=document.getElementById('dxychart'); if(!el) return;
+      var c=document.createElement('div'); c.className='tradingview-widget-container'; c.style.height='100%';
+      var w=document.createElement('div'); w.className='tradingview-widget-container__widget'; w.style.height='100%'; c.appendChild(w);
+      var sc=document.createElement('script'); sc.type='text/javascript'; sc.async=true;
+      sc.src='https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js';
+      sc.text=JSON.stringify({autosize:true,symbol:'TVC:DXY',interval:'D',timezone:'Europe/Brussels',theme:'dark',style:'1',locale:'en',
+        backgroundColor:'rgba(27,27,29,1)',gridColor:'rgba(198,161,91,0.08)',hide_side_toolbar:false,allow_symbol_change:false,
+        save_image:false,calendar:false,studies:['STD;Ichimoku%1Cloud','STD;RSI'],support_host:'https://www.tradingview.com'});
+      c.appendChild(sc); el.appendChild(c);
+    })();
+    </script>
+
     <h2>Why the dollar matters</h2>
     <p>Gold is priced globally in dollars. A weaker dollar tends to make gold cheaper for buyers holding other currencies, which has tended to support demand independent of what's happening to rates; a stronger dollar tends to work the other way. The two forces don't always point the same direction &mdash; a rate hike that also strengthens the dollar can squeeze gold from both sides, while a rate hike that comes with dollar weakness (a divergence worth watching for) can leave gold closer to unmoved than either variable alone would suggest.</p>
-    <p>A single dollar-index line turned out to be the wrong tool for showing this &mdash; the table below carries that story instead: every ECB-tracked currency against the dollar, and gold against the dollar, across six timeframes.</p>
+    <p>The chart above shows the index itself: about 58% euro, then the yen, the pound, the Canadian dollar, the Swedish krona and the Swiss franc. The table below shows what sits behind the move: every ECB-tracked currency against the dollar, and gold against the dollar, across six timeframes.</p>
 
     <div class="chain">Watch the relationship, not just the level. Gold occasionally rising alongside both a stronger dollar and higher real yields &mdash; the textbook headwinds &mdash; is usually a sign that a third variable, typically confidence in a government's ability to service its own debt, has started to dominate the other two.</div>
 
