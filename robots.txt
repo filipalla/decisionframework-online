@@ -3,6 +3,7 @@ Allow: /
 Disallow: /license/
 Disallow: /license-order/
 Disallow: /welcome.html
+Disallow: /founding-reader.html
 Disallow: /indicators-teaser-snippet.html
 Disallow: /data/
 Disallow: /scripts/
