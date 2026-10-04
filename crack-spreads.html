@@ -273,12 +273,12 @@
     if (!cyc.length) cyc = f.slice(-1);
     var a = cyc[0], z = cyc[cyc.length - 1], k = z.contracts;
     document.getElementById('cycle-sub').innerHTML = 'Last EIA physical price: <b>' + day(le.d) + '</b>. Since then, ' + cyc.length + ' trading day' + (cyc.length > 1 ? 's' : '') + ' on the front-month contracts: diesel and gasoline ' + cm(k.ho) + ', WTI ' + cm(k.cl) + ', Brent ' + cm(k.brn) + '.';
-    var since = cyc.length > 1 ? ' since ' + day(a.d) : '';
+    function sub(key){ return day(z.d) + ' close' + (cyc.length > 1 ? '<br>' + chg(z[key] - a[key]) + ' vs ' + day(a.d) : ''); }
     document.getElementById('ftiles').innerHTML =
-      tile('Diesel crack', usd(z.diesel), (cyc.length > 1 ? chg(z.diesel - a.diesel) + since : day(z.d))) +
-      tile('Gasoline crack', usd(z.gasoline), (cyc.length > 1 ? chg(z.gasoline - a.gasoline) + since : day(z.d))) +
-      tile('3-2-1 crack', usd(z.c321), (cyc.length > 1 ? chg(z.c321 - a.c321) + since : day(z.d))) +
-      tile('Brent futures (' + cm(k.brn) + ')', usd(z.brn), 'EIA physical ' + usd(le.brent) + ' on ' + day(le.d));
+      tile('Diesel crack', usd(z.diesel), sub('diesel')) +
+      tile('Gasoline crack', usd(z.gasoline), sub('gasoline')) +
+      tile('3-2-1 crack', usd(z.c321), sub('c321')) +
+      tile('Brent futures (' + cm(k.brn) + ')', usd(z.brn), day(z.d) + ' close<br>EIA physical ' + usd(le.brent) + ' on ' + day(le.d));
     var h = '<tr class="eia"><td>' + day(le.d) + '<br><small>EIA physical</small></td><td>&ndash;</td><td>&ndash;</td><td>' + usd(le.wti) + '</td><td>' + usd(le.brent) + '</td><td class="grp">' + usd(le.diesel_brent) + '</td><td>' + usd(le.gasoline_wti) + '</td><td>' + usd(le.c321) + '</td></tr>';
     cyc.forEach(function(r){
       var roll = (r.roll || []).map(function(x){ return '<span class="roll" title="' + NAME[x] + ' rolled to ' + cm(r.contracts[x]) + '">' + NAME[x] + ' roll</span>'; }).join('');
