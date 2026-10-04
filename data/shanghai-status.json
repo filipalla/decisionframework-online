@@ -1,10 +1,6 @@
 {
- "checked": "2026-10-04 04:28 UTC",
+ "checked": "2026-10-04 04:32 UTC",
  "log": [
-  "SGE benchmark (sge.com.cn): ok, 2541 items",
-  "LBMA gold AM (prices.lbma.org.uk): failed: HTTPError HTTP Error 403: Forbidden <!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-",
-  "Stooq XAU/USD daily open: failed: ValueError unexpected Stooq response: <!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"no",
-  "Yahoo GC=F daily open: failed: HTTPError HTTP Error 429: Too Many Requests Too Many Requests\r\n",
-  "FRED DEXCHUS: ok, 2682 items"
+  "SGE benchmark (sge.com.cn): ok, 2541 items"
  ]
 }
