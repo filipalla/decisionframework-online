@@ -9,9 +9,9 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#111214">
-<meta name="description" content="The live indicators behind The Gold Decision Framework, open to everyone for now. Readers of The Gold Investor can pre-register their licence code to keep access when the Private Client area closes.">
+<meta name="description" content="The live indicators behind The Gold Decision Framework, open to everyone for now. Readers of The Gold Investor can pre-register their licence code for founding-reader status and rate.">
 <meta property="og:title" content="Private Client | DecisionFramework">
-<meta property="og:description" content="The desk, opened for now. Pre-register your licence code to keep reading.">
+<meta property="og:description" content="The desk, opened for now. Pre-register your licence code for founding-reader status.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://decisionframework.online/private-client.html">
 <meta property="og:site_name" content="DecisionFramework">
@@ -53,6 +53,15 @@ p{color:var(--muted)}
 .card.soon:hover{transform:none;border-color:var(--hair)}
 .tag{position:absolute;top:18px;right:18px;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--bg);background:var(--light);padding:3px 8px}
 .tag.o{background:transparent;color:var(--light);border:1px solid var(--line)}
+.price{border-top:1px solid var(--line);padding-top:56px}
+.tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px;margin-top:22px}
+.tier{position:relative;display:flex;flex-direction:column;gap:4px;padding:22px 20px;background:var(--surface);border:1px solid var(--hair)}
+.tier .k{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--light)}
+.tier .p{font-size:2.3rem;line-height:1.15;color:var(--text);font-variant-numeric:tabular-nums}
+.tier .m{font:13px Arial,sans-serif;color:var(--muted)}
+.tier.best{border-color:var(--line)}
+.tier.founder{border-color:var(--light);background:linear-gradient(180deg,rgba(198,161,91,.14),var(--surface));padding-top:34px}
+.tier.founder .tag{top:10px;right:10px}
 .reg{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:start;border-top:1px solid var(--line);padding-top:56px}
 .reg ol{margin:16px 0 0;padding-left:20px;color:var(--muted)}.reg li{margin:8px 0}
 form{background:var(--surface);border:1px solid var(--line);padding:30px;display:grid;gap:14px}
@@ -92,7 +101,7 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
     <span class="dot" aria-hidden="true"></span>
     <div>
       <b>Open access, for now.</b>
-      <p>These indicators may move into the private Client Area at any moment, without announcement. Readers who pre-register their licence code keep reading when the doors close. Everyone else will see a summary.</p>
+      <p>These indicators may move into the private Client Area at any moment, without announcement. Readers who pre-register their licence code become founding readers: first in, at the founding rate.</p>
     </div>
   </div>
 
@@ -131,21 +140,32 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
     </div>
   </section>
 
+  <section class="price" aria-labelledby="h-price">
+    <h2 id="h-price">When the doors close</h2>
+    <p class="lead">The book is the method. The desk is the method applied, every evening. When the Client Area opens, access is by subscription.</p>
+    <div class="tiers">
+      <div class="tier"><span class="k">1 month</span><span class="p">&euro;19</span><span class="m">&euro;19 a month</span></div>
+      <div class="tier"><span class="k">3 months</span><span class="p">&euro;45</span><span class="m">&euro;15 a month</span></div>
+      <div class="tier best"><span class="k">12 months</span><span class="p">&euro;144</span><span class="m">&euro;12 a month</span></div>
+      <div class="tier founder"><span class="tag">Founding reader</span><span class="k">12 months, licence holders</span><span class="p">&euro;120</span><span class="m">&euro;10 a month &middot; pre-registered licence code</span></div>
+    </div>
+  </section>
+
   <section class="reg" id="register" aria-labelledby="h-reg">
     <div>
-      <h2 id="h-reg">Pre-register your licence</h2>
-      <p class="lead">Every licence of <em>The Gold Investor</em> includes 12 months in the private Client Area. Reserve your seat now, and your access is ready the day it opens.</p>
+      <h2 id="h-reg">Claim founding-reader status</h2>
+      <p class="lead">Your licence code of <em>The Gold Investor</em> is your key. Pre-register it now and you become a founding reader.</p>
       <ol>
-        <li>Enter the licence code from your purchase email, and your email address.</li>
-        <li>Confirm your email when the confirmation arrives.</li>
-        <li>When the Client Area opens, you receive your sign-in link first.</li>
+        <li><b style="color:var(--text);font-weight:normal">First in.</b> When the Client Area opens, founding readers receive their invitation before anyone else.</li>
+        <li><b style="color:var(--text);font-weight:normal">Founding rate.</b> Your first 12 months at &euro;120 instead of &euro;144.</li>
+        <li><b style="color:var(--text);font-weight:normal">Open now.</b> Until the doors close, every indicator on the desk stays open to you.</li>
       </ol>
-      <p class="small" style="margin-top:18px">One code is one seat. Your 12 months run from the day the code was activated. Haven't activated your book yet? <a href="/license/">Activate it here</a> first. No code yet? <a href="/#get-the-book">Get the book</a>, or <a href="/license-order/">licence it for a team</a>.</p>
+      <p class="small" style="margin-top:18px">One code is one founding seat. Enter the code from your purchase email and confirm your email address when the confirmation arrives. Haven't activated your book yet? <a href="/license/">Activate it here</a> first. No code yet? <a href="/#get-the-book">Get the book</a>, or <a href="/license-order/">licence it for a team</a>.</p>
     </div>
     <form id="pre" novalidate>
       <div style="display:grid;gap:6px"><label for="code">Licence code</label><input id="code" name="code" autocomplete="off" spellcheck="false" placeholder="Your licence code" required></div>
       <div style="display:grid;gap:6px"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
-      <button type="submit" id="btn">Reserve my seat</button>
+      <button type="submit" id="btn">Claim my founding seat</button>
       <p class="msg" id="msg" role="status" aria-live="polite"></p>
       <p class="small">We check every code against our licence records before access is granted. You'll also receive the DecisionFramework Brief by email; unsubscribe anytime.</p>
     </form>
@@ -176,13 +196,13 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
     fd.append('host', location.href);
     fd.append('user', (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now()));
     fd.append('ckjs_version', '6');
-    btn.disabled = true; var old = btn.textContent; btn.textContent = 'Reserving…';
+    btn.disabled = true; var old = btn.textContent; btn.textContent = 'Claiming…';
     fetch('https://app.kit.com/forms/9913050/subscriptions', { method: 'POST', body: fd, headers: { 'Accept': 'application/json', 'X-CKJS-Version': '6' } })
       .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(d){ return { ok: r.ok, d: d }; }); })
       .then(function(res){
         if (res.ok && (!res.d.status || res.d.status === 'success')){
           form.querySelectorAll('input,button,label').forEach(function(x){ x.style.display = 'none'; });
-          msg.textContent = 'Your seat is reserved. Check your inbox and confirm your email address; when the Client Area opens, your sign-in link comes first.';
+          msg.textContent = 'Your founding seat is reserved. Check your inbox and confirm your email address; when the Client Area opens, your invitation and founding rate come first.';
         } else {
           btn.disabled = false; btn.textContent = old; msg.className = 'msg err';
           msg.textContent = (res.d && res.d.errors && res.d.errors.messages && res.d.errors.messages.join(' ')) || 'Something went wrong. Please check your details and try again.';
