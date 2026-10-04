@@ -197,7 +197,7 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
     fd.append('user', (window.crypto && crypto.randomUUID) ? crypto.randomUUID() : String(Date.now()));
     fd.append('ckjs_version', '6');
     btn.disabled = true; var old = btn.textContent; btn.textContent = 'Claiming…';
-    fetch('https://app.kit.com/forms/9913050/subscriptions', { method: 'POST', body: fd, headers: { 'Accept': 'application/json', 'X-CKJS-Version': '6' } })
+    fetch('https://app.kit.com/forms/10000249/subscriptions', { method: 'POST', body: fd, headers: { 'Accept': 'application/json', 'X-CKJS-Version': '6' } })
       .then(function(r){ return r.json().catch(function(){ return {}; }).then(function(d){ return { ok: r.ok, d: d }; }); })
       .then(function(res){
         if (res.ok && (!res.d.status || res.d.status === 'success')){
