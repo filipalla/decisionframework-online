@@ -1,6 +1,10 @@
 {
  "checked": "2026-10-04 04:34 UTC",
  "log": [
-  "SGE benchmark (sge.com.cn): ok, 2541 items"
+  "SGE benchmark (sge.com.cn): ok, 2541 items",
+  "probe MetalCharts prices: ok, 8 items",
+  "probe MetalCharts currency: ok, 7 items",
+  "probe prices: {\"success\": true, \"data\": {\"XAU\": {\"symbol\": \"XAU\", \"price\": 4137.62859, \"change24h\": 0.01714, \"changePercent24h\": 0.0004, \"high24h\": 4137.72448, \"low24h\": 4137.47291, \"exchange\": \"SPOT\", \"marketType\": \"spot\", \"timestamp\": \"2026-10-04T04:34:36.813Z\", \"bid\": 4123.146889935, \"ask\": 4152.110290065, \"st",
+  "probe currency keys: ['success', 'base', 'date', 'rates', 'timestamp', 'source'] ... \"AUD\": 1.4411, \"BRL\": 5.2214, \"CAD\": 1.424, \"CHF\": 0.82664, \"CNY\": 6.7046, \"CZK\": 21.8, \"DKK\": 6.658"
  ]
 }
