@@ -90,7 +90,17 @@ def stooq_open():
 
 def yahoo_open():
     """COMEX gold front-month (GC=F) daily open from Yahoo Finance chart data, as a fallback."""
-    j = json.loads(get("https://query1.finance.yahoo.com/v8/finance/chart/GC=F?range=10y&interval=1d"))
+    last = None
+    for host in ("query2", "query1", "query2"):
+        try:
+            j = json.loads(get(f"https://{host}.finance.yahoo.com/v8/finance/chart/GC%3DF?range=10y&interval=1d",
+                               headers={"Accept": "application/json"}, tries=2))
+            break
+        except Exception as e:
+            last = e
+            time.sleep(20)
+    else:
+        raise last
     r = j["chart"]["result"][0]
     opens = r["indicators"]["quote"][0]["open"]
     out = {}
