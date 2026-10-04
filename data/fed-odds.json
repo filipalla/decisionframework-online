@@ -3,23 +3,58 @@
  "meeting": "2026-10-28",
  "note": "Logged by hand from published reports after each event. Odds are as reported at the time; sources differ by a few points depending on the hour and the feed.",
  "points": [
-  {"date": "2026-09-28", "label": "Mon 28 Sep", "odds": 70,
+  {
+   "date": "2026-09-28",
+   "label": "Mon 28 Sep",
+   "odds": 70,
    "event": "Brent above $100, Hormuz talks stalled; start of the week",
-   "source": "investingLive, How have interest rate expectations changed after this week's events? (2 Oct)"},
-  {"date": "2026-09-29", "label": "Tue 29 Sep, before Williams", "odds": 64,
+   "source": "investingLive, How have interest rate expectations changed after this week's events? (2 Oct)",
+   "dxy": 101.2
+  },
+  {
+   "date": "2026-09-29",
+   "label": "Tue 29 Sep, before Williams",
+   "odds": 64,
    "event": "Barr and Goolsbee lean hawkish",
-   "source": "investingLive, Goldman Sachs moves its call for the next Fed rate hike to December (30 Sep)"},
-  {"date": "2026-09-29", "label": "Tue 29 Sep, after Williams", "odds": 54,
+   "source": "investingLive, Goldman Sachs moves its call for the next Fed rate hike to December (30 Sep)",
+   "dxy": 101.37
+  },
+  {
+   "date": "2026-09-29",
+   "label": "Tue 29 Sep, after Williams",
+   "odds": 54,
    "event": "Williams: no need to rush, one more hike late this year may be appropriate",
-   "source": "investingLive, Goldman Sachs moves its call for the next Fed rate hike to December (30 Sep)"},
-  {"date": "2026-09-30", "label": "Wed 30 Sep", "odds": 40,
+   "source": "investingLive, Goldman Sachs moves its call for the next Fed rate hike to December (30 Sep)",
+   "dxy": 101.37
+  },
+  {
+   "date": "2026-09-30",
+   "label": "Wed 30 Sep",
+   "odds": 40,
    "event": "Soft core PCE; Goldman moves its hike call from October to December",
-   "source": "investingLive, Goldman Sachs moves its call for the next Fed rate hike to December (30 Sep)"},
-  {"date": "2026-10-02", "label": "Fri 2 Oct, before NFP", "odds": 28,
+   "source": "investingLive, Goldman Sachs moves its call for the next Fed rate hike to December (30 Sep)",
+   "dxy": 101.45
+  },
+  {
+   "date": "2026-10-02",
+   "label": "Fri 2 Oct, before NFP",
+   "odds": 28,
    "event": "Jefferson and Williams dovish; hot euro-area flash inflation at 11:00",
-   "source": "investingLive, US September non-farm payrolls +29K vs +90K expected (2 Oct)"},
-  {"date": "2026-10-02", "label": "Fri 2 Oct, after NFP", "odds": 15,
+   "source": "investingLive, US September non-farm payrolls +29K vs +90K expected (2 Oct)",
+   "dxy": 101.93
+  },
+  {
+   "date": "2026-10-02",
+   "label": "Fri 2 Oct, after NFP",
+   "odds": 15,
    "event": "Payrolls +29K vs +90K, unemployment 4.2%, wages +0.1% m/m",
-   "source": "investingLive, US September non-farm payrolls +29K vs +90K expected (2 Oct)"}
- ]
+   "source": "investingLive, US September non-farm payrolls +29K vs +90K expected (2 Oct)",
+   "dxy": 101.93
+  }
+ ],
+ "dxy_note": "US Dollar Index (DXY, spot) daily close for the date, Investing.com historical data",
+ "dxy_extra": {
+  "2026-09-25": 100.97,
+  "2026-10-01": 102.1
+ }
 }

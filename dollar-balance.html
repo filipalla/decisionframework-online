@@ -62,7 +62,7 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
   <div class="eyebrow">Live indicator &middot; Dollar &amp; rates</div>
   <h1>The Dollar Balance</h1>
   <p class="subtitle">Every inflation number in the world ends up weighed in three places: interest rates, the dollar, and gold and commodities.</p>
-  <p class="caption">Daily closes from FRED, updated every night &middot; inflation calendar and Fed hike odds updated on release days &middot; <a href="#hike-odds">Hike expectations</a> &middot; <a href="#divergence">The divergence</a></p>
+  <p class="caption">Daily closes from FRED, updated every night &middot; inflation calendar and Fed hike odds updated on release days &middot; <a href="#hike-odds">Hike expectations</a> &middot; <a href="#divergence">The divergence</a> &middot; <a href="#next-week">Next week</a></p>
 </header>
 
 <div class="wrap article">
@@ -161,21 +161,21 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
         <tr class="soft"><td class="n">14:30</td><td>US nonfarm payrolls (Sep)</td><td class="n"><b>+29K</b></td><td class="n">+90K</td><td class="n">+133K</td><td>August revised down from +162K; the two prior months lost 60K together. Private payrolls only +46K. Odds of an October hike fell from 28% to 15%. 2-year 4.78% to 4.72%, 10-year 5.23% to 5.17%, USD/JPY 157.60 to 157.15.</td></tr>
         <tr class="soft"><td class="n">14:30</td><td>US unemployment rate</td><td class="n"><b>4.2%</b></td><td class="n">4.1%</td><td class="n">4.1%</td><td>Up a tenth.</td></tr>
         <tr class="soft"><td class="n">14:30</td><td>US average hourly earnings m/m / y/y</td><td class="n"><b>0.1% / 3.0%</b></td><td class="n">0.3% / 3.2%</td><td class="n">&ndash;</td><td>The weakest part of the report: soft wages take pressure off services inflation.</td></tr>
-        <tr><td class="n">Close</td><td>US dollar index futures (Dec)</td><td class="n"><b>~101.70</b></td><td class="n">&ndash;</td><td class="n">101.72</td><td>Day range 101.43 to 101.92 against a 52-week high of 101.995. The dollar dipped on the data and was bought back: it closed the week a whisker below its yearly high.</td></tr>
+        <tr><td class="n">Close</td><td>US dollar index (DXY)</td><td class="n"><b>101.93</b></td><td class="n">&ndash;</td><td class="n">102.10</td><td>Day range 101.67 to 102.13. Thursday had closed at 102.10 after touching 102.21, the 52-week high. The dollar dipped on the data and held most of the week&rsquo;s gain: +0.95% from 100.97 the Friday before.</td></tr>
       </tbody>
     </table></div>
 
     <h2 id="hike-odds">Hike expectations</h2>
     <p class="wip">In development &middot; updated as data arrives</p>
     <p class="lead">Between the data and the dollar sits one number: what the market thinks the Fed will do next.</p>
-    <p>The Fed raised rates in September. Coming into this week, the market priced roughly a 70% chance of another hike at the 27&ndash;28 October meeting. Four trading days later it was 15%. The chart logs each step, with the 2-year yield and the 10-year real yield on the same days.</p>
+    <p>The Fed raised rates in September. Coming into this week, the market priced roughly a 70% chance of another hike at the 27&ndash;28 October meeting. Four trading days later it was 15%. The chart logs each step, with the dollar index and the 10-year real yield on the same days.</p>
 
     <h3 class="chart-t">Odds of an October hike, logged event by event</h3>
     <div class="chartbox" style="height:340px">
-      <canvas id="odds-chart" aria-label="Logged probability of an October Fed hike with the 2-year yield and the 10-year real yield"></canvas>
+      <canvas id="odds-chart" aria-label="Logged probability of an October Fed hike with the dollar index and the 10-year real yield"></canvas>
       <div class="chartmsg" id="msg-odds">Loading data&hellip;</div>
     </div>
-    <p class="note">Odds as reported after each event (sources below), logged by hand. Yields are FRED daily closes for the same date, so two events on one day share a close; Friday&rsquo;s closes appear after FRED publishes them.</p>
+    <p class="note">Odds as reported after each event (sources below), logged by hand. The dollar index (DXY, spot) and the real yield are daily closes for the same date, so two events on one day share a close; Friday&rsquo;s real yield appears after FRED publishes it.</p>
 
     <h3 class="chart-t">Market pricing every night: 2-year yield minus fed funds</h3>
     <div class="chartbox" style="height:340px">
@@ -188,10 +188,33 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
     <p class="wip">In development &middot; updated as data arrives</p>
     <p class="lead">The US inflation and jobs numbers this week all came in soft. The dollar did not fall.</p>
     <p>Core PCE missed by three tenths on Wednesday. Payrolls missed by 61,000 on Friday, with downward revisions, higher unemployment and weak wages. Q2 GDP did beat, at 2.2% against 1.5%, but partly on the price deflator: inflation revised lower turns the same spending into higher real growth. Europe, meanwhile, printed 3.8% headline inflation. By the textbook, soft America and hot Europe press the dollar from both sides.</p>
-    <p>The hike odds followed the textbook, from 70% to 15%. The dollar did not: it ended the week near its yearly high.</p>
+    <p>The hike odds followed the textbook, from 70% to 15%. The dollar did not. The DXY closed every day of the week higher than the Friday before, from 100.97 to 101.93, and on Thursday it touched 102.21, its highest in a year, while the odds of a hike were already below 40%.</p>
     <p>The second divergence is the one that matters most for gold. From Monday to Wednesday, while the hike odds fell from 70% to 40%, the 10-year real yield rose from 2.90% to 2.93% and the 10-year from 5.24% to 5.29%. The front end priced a gentler Fed; the long end pushed rates higher anyway. A high real yield keeps money in dollars and keeps the cost of holding gold high, whatever the Fed does in October.</p>
 
     <div class="chain">Two readings, one test. A true divergence: the weak US data is right and the dollar is late, so it falls back below 101.1 once quarter-end flows pass. A regime change: the dollar now trades on the long end and on weakness elsewhere (France, the yen, Hormuz), so it holds above 101.35 even after the next soft print. The test is US CPI on Wednesday 14 October, 14:30 Brussels time.</div>
+
+    <h2 id="next-week">Next week: the test before the test</h2>
+    <p class="wip">In development &middot; updated as data arrives</p>
+    <p class="lead">CPI on 14 October is the verdict. Wednesday&rsquo;s Fed minutes are the one release that can move the hike odds before it.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>When (Brussels)</th><th>Event</th><th>Why it matters for this story</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Mon 5 Oct, 16:00</td><td>US ISM services PMI</td><td>Watch prices paid. After Friday&rsquo;s weak wages, a soft services price index supports the 15%; a hot one questions it.</td></tr>
+        <tr><td class="n">Wed 7 Oct</td><td>LBMA trial opens, High Court, London</td><td>Not a data release. Families of two Tanzanian miners claim the LBMA was negligent in re-certifying a refinery that processed gold from the North Mara mine. The LBMA calls a duty of care an existential issue: it is a test of the Good Delivery system behind London&rsquo;s gold market.</td></tr>
+        <tr class="hot"><td class="n">Wed 7 Oct, 20:00</td><td><b>FOMC minutes</b> (15&ndash;16 September meeting)</td><td><b>The most watched release of the week for this story.</b> They show how many members wanted another hike. Hawkish minutes are the only scheduled event that can lift the odds from 15% before CPI; if they do and the dollar barely reacts, the divergence was never about the Fed.</td></tr>
+        <tr><td class="n">Thu 8 Oct</td><td>China back from Golden Week</td><td>The Shanghai Gold Exchange and SHFE reopen after 1&ndash;7 October with a week of price moves to catch up. Watch the Shanghai premium on <a href="/gold-three-prices.html">Gold Has Three Prices</a>.</td></tr>
+        <tr><td class="n">Thu 8 Oct, 14:30</td><td>US initial jobless claims</td><td>A first check on whether Friday&rsquo;s weak payrolls show up in layoffs.</td></tr>
+        <tr class="hot"><td class="n">Wed 14 Oct, 14:30</td><td><b>US CPI (September)</b></td><td>The test set above: soft CPI with the DXY still above 101.35 means the dollar is trading on something other than the Fed.</td></tr>
+      </tbody>
+    </table></div>
+
+    <h3 class="chart-t">The dollar levels</h3>
+    <p>The DXY closed the week at 101.93, after 102.21 on Thursday, its highest in a year. Below, 101.35 and 101.1 are the levels from the author&rsquo;s chart where the dollar broke out this week; a weekly close back under 101.1 would say the divergence is resolving the textbook way.</p>
+
+    <h3 class="chart-t">The yen: a crack in the other side of the scale</h3>
+    <p>On the author&rsquo;s chart, Japanese yen futures have made a golden cross: the 50-day average has moved above the 200-day. That is a trend signal for a stronger yen, with USD/JPY still near 157 and the Ministry of Finance having intervened before.</p>
+    <p>It matters twice. The yen is the second-largest weight in the dollar index after the euro, about 13.6%, so a stronger yen pulls the DXY down directly. And the yen funds carry trades: borrowing cheaply in yen to buy higher-yielding assets. A rising yen forces those positions to close, and that selling hits risk assets first. In August 2024 a Bank of Japan hike and a fast yen rally set off exactly that unwind; for a few days metals were sold along with everything else before recovering. For silver, which this week already showed how crowded leverage behaves, that is the scenario to respect.</p>
+    <div class="chain">For gold the yen works both ways: a weaker dollar helps, a forced unwind hurts for days. Watch whether a yen rally comes with falling stocks. If it does, that is carry closing, not dollar weakness.</div>
 
     <h2>Sources</h2>
     <ul style="color:var(--muted);font-size:.95rem">
@@ -212,7 +235,10 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
       <li>investingLive, &ldquo;<a href="https://investinglive.com/central-banks/goldman-sachs-moves-its-call-for-the-next-fed-rate-hike-to-december-from-october/" target="_blank" rel="noopener">Goldman Sachs moves its call for the next Fed rate hike to December from October</a>&rdquo;, 30 September 2026.</li>
       <li>investingLive, &ldquo;<a href="https://investinglive.com/central-banks/how-have-interest-rate-expectations-changed-after-this-week-s-events-5/" target="_blank" rel="noopener">How have interest rate expectations changed after this week&rsquo;s events?</a>&rdquo;, 2 October 2026.</li>
       <li>investingLive, &ldquo;<a href="https://investinglive.com/news/us-gdp-final-for-q2-2-2-vs-1-5-estimate/" target="_blank" rel="noopener">US GDP final for Q2 2.2% vs 1.5% estimate</a>&rdquo;, 30 September 2026.</li>
-      <li>Investing.com, <a href="https://www.investing.com/currencies/us-dollar-index" target="_blank" rel="noopener">US Dollar Index Futures (Dec 26)</a>, close of 2 October 2026.</li>
+      <li>Mining Weekly, &ldquo;<a href="https://www.miningweekly.com/article/centuries-old-london-good-delivery-system-for-gold-faces-modern-accountability-test-2026-09-28" target="_blank" rel="noopener">Centuries-old London Good Delivery system for gold faces modern accountability test</a>&rdquo;, 28 September 2026; LBMA, &ldquo;<a href="https://www.lbma.org.uk/lbma-position-on-the-north-mara-mine-claim" target="_blank" rel="noopener">LBMA position on the North Mara mine claim</a>&rdquo;.</li>
+      <li>FedRateCalc, &ldquo;<a href="https://fedratecalc.com/fomc-minutes-release-schedule/" target="_blank" rel="noopener">FOMC minutes release schedule 2026</a>&rdquo;.</li>
+      <li>ICE, U.S. Dollar Index basket weights: euro 57.6%, yen 13.6%, pound 11.9%, Canadian dollar 9.1%, krona 4.2%, Swiss franc 3.6%.</li>
+      <li>Investing.com, <a href="https://www.investing.com/indices/usdollar-historical-data" target="_blank" rel="noopener">US Dollar Index (DXY) historical data</a>, daily closes 25 September to 2 October 2026.</li>
     </ul>
     <p style="font:13px Arial,sans-serif">Market reactions are the author&rsquo;s own observations. Educational content to support your own research and decisions. Not financial advice.</p>
 
@@ -386,8 +412,8 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
     var P = O.points, labels = P.map(function(p){ return p.label; });
     var o = baseOpts(function(v){ return v + '%'; }, function(v){ return v.toFixed(2) + '%'; });
     o.scales.y.min = 0; o.scales.y.max = 100;
-    o.scales.y2.ticks.stepSize = 0.01; o.scales.y2.ticks.maxTicksLimit = 8;
-    o.scales.y2.title = { display: true, text: '2-year', color: c('--blue'), font: { family: 'Arial', size: 11 } };
+    o.scales.y2.ticks.maxTicksLimit = 8; o.scales.y2.ticks.callback = function(v){ return v.toFixed(2); };
+    o.scales.y2.title = { display: true, text: 'DXY', color: c('--blue'), font: { family: 'Arial', size: 11 } };
     o.scales.y3 = { position: 'right', grid: { display: false },
       title: { display: true, text: 'Real 10-year', color: c('--red'), font: { family: 'Arial', size: 11 } },
       ticks: Object.assign(tick(), { stepSize: 0.01, maxTicksLimit: 8, callback: function(v){ return v.toFixed(2) + '%'; } }) };
@@ -395,13 +421,13 @@ tr.hot td b{color:var(--red)}tr.soft td b{color:#8fbf8a}
     o.scales.x.ticks.callback = function(v){ var l = labels[v] || ''; return l.split(', '); };
     o.plugins.tooltip = { callbacks: {
       label: function(x){ var y = x.parsed.y; if (y === null) return ' ' + x.dataset.label + ': not yet published';
-        return ' ' + x.dataset.label + ': ' + (x.datasetIndex === 0 ? y + '%' : y.toFixed(2) + '%'); },
+        return ' ' + x.dataset.label + ': ' + (x.datasetIndex === 0 ? y + '%' : x.datasetIndex === 1 ? y.toFixed(2) : y.toFixed(2) + '%'); },
       afterBody: function(items){ var p = P[items[0].dataIndex]; return p && p.event ? ['', p.event] : []; } } };
     new Chart(document.getElementById('odds-chart'), { type: 'line', data: { labels: labels, datasets: [
       { label: 'Odds of an October hike (left)', data: P.map(function(p){ return p.odds; }), borderColor: c('--light'), backgroundColor: c('--light'),
         borderWidth: 2.4, pointRadius: 5, pointHoverRadius: 7, tension: 0, yAxisID: 'y' },
-      { label: '2-year yield (right)', data: P.map(function(p){ return close('t2', p.date); }), borderColor: c('--blue'), backgroundColor: c('--blue'),
-        borderWidth: 1.6, pointRadius: 3, tension: 0, spanGaps: true, yAxisID: 'y2' },
+      { label: 'Dollar index, DXY (right)', data: P.map(function(p){ return p.dxy === undefined ? null : p.dxy; }), borderColor: c('--blue'), backgroundColor: c('--blue'),
+        borderWidth: 2, pointRadius: 3, tension: 0, spanGaps: true, yAxisID: 'y2' },
       { label: '10-year real yield (far right)', data: P.map(function(p){ return close('real10', p.date); }), borderColor: c('--red'), backgroundColor: c('--red'),
         borderWidth: 1.6, borderDash: [5, 4], pointRadius: 3, tension: 0, spanGaps: true, yAxisID: 'y3' }
     ] }, options: o });
