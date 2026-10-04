@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: "25 6 * * 1-5"    # just after the SGE PM benchmark (06:15 UTC)
   workflow_dispatch:
+    inputs:
+      probe:
+        description: "Log the MetalCharts response shape"
+        default: "0"
   push:
     branches: [main]
     paths:
@@ -29,7 +33,7 @@ jobs:
         run: python scripts/update_shanghai.py
         env:
           METALCHARTS_API_KEY: ${{ secrets.METALCHARTS_API_KEY }}
-          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
+          MC_PROBE: ${{ github.event.inputs.probe }}
       - name: Commit if changed
         run: |
           git config user.name "macro-bot"

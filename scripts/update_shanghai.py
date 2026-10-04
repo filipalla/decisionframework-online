@@ -161,6 +161,17 @@ def main():
         store = {}
     store.setdefault("live", [])
     s = step("SGE benchmark (sge.com.cn)", sge)
+    if os.environ.get("MC_PROBE") == "1" and MC:
+        px = step("probe MetalCharts prices", lambda: mc("/v1/prices/?symbols=XAU"))
+        cur = step("probe MetalCharts currency", lambda: mc("/v1/currency/"))
+        try:
+            log.append("probe prices: " + json.dumps(px)[:300])
+            c = json.dumps(cur)
+            i = c.find('"CNY"')
+            log.append("probe currency keys: " + str(list(cur.keys())[:6]) + " ... " + c[max(0, i - 60):i + 40])
+        except Exception as e:
+            log.append(f"probe: {type(e).__name__}")
+
     # History is a one-off backfill kept in the file (see "method"); free Western gold prices refuse
     # GitHub's servers, so this job only adds the live reading.
     # live reading, only on a weekday run after the SGE PM benchmark (06:15 UTC)
