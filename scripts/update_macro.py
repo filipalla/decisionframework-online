@@ -28,6 +28,7 @@ SERIES = {
     "vix":    "VIXCLS",
     "gvz":    "GVZCLS",        # Cboe gold volatility index
     "hyoas":  "BAMLH0A0HYM2",  # ICE BofA US high yield option-adjusted spread
+    "effr":   "EFFR",          # Effective federal funds rate (2-year minus this = market pricing of hikes/cuts)
 }
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "data", "macro.json")
