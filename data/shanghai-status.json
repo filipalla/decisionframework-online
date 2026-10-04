@@ -1,6 +1,8 @@
 {
- "checked": "2026-10-04 04:19 UTC",
- "ok": false,
- "http": 403,
- "message": "{\"error\":\"Your plan does not include this data class. Upgrade to pro or higher.\",\"required_plan\":\"pro\",\"upgrade_url\":\"https://metalcharts.org/pricing?tab=api\"}"
+ "checked": "2026-10-04 04:22 UTC",
+ "log": [
+  "SGE benchmark (sge.com.cn): ok, 2541 items",
+  "LBMA gold AM (prices.lbma.org.uk): failed: HTTPError HTTP Error 403: Forbidden <!DOCTYPE html>\n<!--[if lt IE 7]> <html class=\"no-js ie6 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 7]>    <html class=\"no-js ie7 oldie\" lang=\"en-US\"> <![endif]-->\n<!--[if IE 8]>    <html class=\"no-",
+  "FRED DEXCHUS: ok, 2682 items"
+ ]
 }
