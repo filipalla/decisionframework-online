@@ -1,5 +1,5 @@
 {
- "checked": "2026-10-04 00:01 UTC",
+ "checked": "2026-10-04 03:29 UTC",
  "ok": true,
  "log": [
   "usd (DTWEXBGS): fred-api ok, 1932 points, last 2026-09-25",
@@ -15,10 +15,11 @@
   "vix (VIXCLS): fred-api ok, 1981 points, last 2026-10-01",
   "gvz (GVZCLS): fred-api ok, 1950 points, last 2026-10-01",
   "hyoas (BAMLH0A0HYM2): fred-api ok, 786 points, last 2026-10-01",
+  "effr (EFFR): fred-api ok, 1947 points, last 2026-10-01",
   "pce (PCEPI): fred-api ok, 92 points, last 2026-08-01",
   "pce_core (PCEPILFE): fred-api ok, 92 points, last 2026-08-01",
   "ea (CP0000EZ19M086NEST): fred-api ok, 92 points, last 2026-08-01",
   "ea_core (00XEFDEZ19M086NEST): fred-api ok, 92 points, last 2026-08-01",
-  "wrote 2002 dates, last 2026-10-02"
+  "wrote 2003 dates, last 2026-10-02"
  ]
 }
