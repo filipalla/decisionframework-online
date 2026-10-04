@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prop Trading, Explained by a Funded Trader | DecisionFramework</title>
+<link rel="canonical" href="https://decisionframework.online/prop-trading.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#111214">
+<meta name="description" content="How futures prop-firm evaluations work, the rules that fail most traders, and a drawdown calculator for gold, silver and oil futures. Written by a former funded trader.">
+<meta property="og:title" content="Prop Trading, Explained by a Funded Trader">
+<meta property="og:description" content="Trade gold, silver and oil futures with a firm's capital: how evaluations work, the drawdown maths, and a calculator to size your trades.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://decisionframework.online/prop-trading.html">
+<meta property="og:site_name" content="DecisionFramework">
+<meta property="og:image" content="https://decisionframework.online/images/og/index.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@DecisionFW">
+<style>
+:root{--bg:#111214;--surface:#1b1b1d;--gold:#c6a15b;--light:#e2c887;--text:#f1eadb;--muted:#b8b0a1;--line:rgba(198,161,91,.45);--gas:#8fb3c9;--crude:#6f6a62}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--bg) 38%);color:var(--text);font:17px/1.75 Georgia,serif}a{color:var(--light)}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}nav{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);font:12px Arial;letter-spacing:.1em;text-transform:uppercase}nav a{text-decoration:none;color:var(--muted)}header{text-align:center;padding:100px 0 70px}header .eyebrow,.label{color:var(--light);font:12px Arial;letter-spacing:.22em;text-transform:uppercase}h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:400;line-height:1.05;margin:28px auto;max-width:900px}.subtitle{color:var(--light);font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;max-width:760px;margin:auto}.caption{text-align:center;color:var(--muted);font:13px Arial;letter-spacing:.05em;margin-top:12px}.article{display:grid;grid-template-columns:minmax(0,760px) 280px;gap:60px;padding:70px 0 100px;border-top:1px solid var(--line)}h2{color:var(--light);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:64px 0 18px}h2:first-child{margin-top:0}p{color:var(--muted)}.lead{font-size:1.25rem;color:var(--text)}.chain{padding:24px;margin:30px 0;background:rgba(198,161,91,.1);border-left:3px solid var(--gold);color:var(--light);font-size:1.2rem}.side{align-self:start;position:sticky;top:24px;padding:24px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}.side h3{margin-top:0;color:var(--light);font-size:1.05rem;font-weight:400}.side dl{margin:0}.side dt{color:var(--text);font:12px Arial;letter-spacing:.05em;text-transform:uppercase;margin-top:16px}.side dt:first-child{margin-top:0}.side dd{margin:4px 0 0;font-size:.95rem}.button{display:inline-block;padding:11px 18px;border:1px solid var(--gold);text-decoration:none;font:12px Arial;letter-spacing:.1em;text-transform:uppercase}footer{padding:30px 0;border-top:1px solid var(--line);font:13px Arial;color:var(--muted)}@media(max-width:800px){.article{grid-template-columns:minmax(0,1fr)}.side{position:static}.wrap{width:min(100% - 28px,760px)}nav{flex-direction:column}}
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:0 0 22px}
+.tile{padding:14px 16px;background:var(--surface);border:1px solid var(--line)}
+.tile .k{font:11px Arial;letter-spacing:.1em;text-transform:uppercase;color:var(--light)}
+.tile .v{font-size:1.9rem;line-height:1.2;color:var(--text);font-variant-numeric:tabular-nums;margin-top:6px}
+.tile .s{font:12px Arial;color:var(--muted);font-variant-numeric:tabular-nums}
+.tile .s .pos{color:#8fbf8a}.tile .s .neg{color:#d98a7a}
+.ranges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+.ranges button{background:transparent;color:var(--muted);border:1px solid var(--line);padding:7px 14px;font:12px Arial;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+.ranges button[aria-pressed="true"]{color:var(--light);border-color:var(--light);background:rgba(198,161,91,.12)}
+.ranges button:focus-visible{outline:2px solid var(--light);outline-offset:2px}
+.chartbox{position:relative;height:460px;padding:12px;background:var(--surface);border:1px solid var(--line)}
+.chartmsg[hidden]{display:none}
+.chartmsg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;font:14px Arial;color:var(--muted)}
+.note{font:12px/1.6 Arial;color:var(--muted);margin-top:10px}
+.formula{font:14px/1.6 "Courier New",monospace;color:var(--text);background:rgba(198,161,91,.08);padding:12px 14px;border:1px solid rgba(198,161,91,.25);overflow-x:auto;white-space:nowrap}
+.cycle{margin:0 0 56px;padding:26px 26px 22px;background:linear-gradient(180deg,rgba(198,161,91,.10),rgba(198,161,91,.02));border:1px solid var(--line)}
+.cycle .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.cycle .lbl{font:11px Arial;letter-spacing:.18em;text-transform:uppercase;color:var(--light)}
+.cycle .live{font:12px Arial;color:var(--muted)}.cycle .live i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--light);margin-right:6px;vertical-align:1px}
+.cycle h2{margin:10px 0 6px;font-size:clamp(1.6rem,3.4vw,2.3rem)}
+.cycle .sub{margin:0 0 18px;color:var(--muted)}
+.tbl{overflow-x:auto;margin:6px 0 14px;border:1px solid rgba(198,161,91,.25)}
+.tbl table{width:100%;border-collapse:collapse;font:13px/1.4 Arial;font-variant-numeric:tabular-nums;min-width:600px}
+.tbl th,.tbl td{padding:8px 7px;text-align:right;border-bottom:1px solid rgba(198,161,91,.15);white-space:nowrap}
+.tbl th:first-child,.tbl td:first-child{text-align:left}
+.tbl th{font-weight:normal;color:var(--light);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(198,161,91,.06)}
+.tbl td{color:var(--text)}.tbl tr.eia td{color:var(--muted);font-style:italic}
+.tbl .grp{border-left:1px solid rgba(198,161,91,.3)}
+.roll{display:inline-block;margin-left:6px;padding:1px 6px;font:10px Arial;letter-spacing:.06em;color:var(--bg);background:var(--light)}
+.cnote{margin-top:18px;padding-top:16px;border-top:1px solid rgba(198,161,91,.25)}
+.cnote h3{margin:0 0 6px;font-weight:400;color:var(--light);font-size:1.2rem}
+.cnote p{margin:8px 0}.cnote .by{font:12px Arial;color:var(--muted)}
+.divider{display:flex;align-items:center;gap:14px;margin:0 0 18px;font:11px Arial;letter-spacing:.18em;text-transform:uppercase;color:var(--light)}
+.divider:after{content:"";flex:1;height:1px;background:var(--line)}
+@media(max-width:600px){.chartbox{height:360px}.cycle{padding:20px 16px}}
+
+.calc{margin:22px 0 10px;padding:24px;background:var(--surface);border:1px solid var(--line)}
+.calc .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));gap:14px}
+.calc label{display:grid;gap:6px;font:11px Arial;letter-spacing:.12em;text-transform:uppercase;color:var(--light)}
+.calc input,.calc select{width:100%;padding:11px 12px;background:#0f0f11;border:1px solid rgba(198,161,91,.3);color:var(--text);font:16px Arial}
+.calc input:focus,.calc select:focus{outline:2px solid var(--light);outline-offset:1px}
+.calc .hint{font:12px/1.5 Arial;color:var(--muted);text-transform:none;letter-spacing:0}
+.out{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:12px;margin-top:20px}
+.out>div{padding:14px 16px;border:1px solid var(--line);background:rgba(198,161,91,.06)}
+.out .k{font:11px Arial;letter-spacing:.1em;text-transform:uppercase;color:var(--light)}
+.out .v{font-size:1.8rem;line-height:1.25;color:var(--text);font-variant-numeric:tabular-nums}
+.out .s{font:12px/1.5 Arial;color:var(--muted)}
+.verdict2{margin-top:16px;font:14px/1.6 Arial;color:var(--text)}
+.specs{width:100%;border-collapse:collapse;font:13.5px/1.5 Arial;margin:12px 0}.specs th,.specs td{padding:9px 10px;border-bottom:1px solid rgba(198,161,91,.18);text-align:left}.specs th{font-weight:normal;color:var(--light);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(198,161,91,.06)}.specs td{color:var(--muted)}.specs td:first-child{color:var(--text)}
+.check{display:grid;gap:8px;margin:12px 0;padding:0;list-style:none}.check li{padding:12px 14px;background:var(--surface);border:1px solid rgba(198,161,91,.2);font:14px/1.55 Arial;color:var(--muted)}.check b{font-weight:normal;color:var(--text)}
+.firms{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin:14px 0}.firms div{padding:16px;border:1px dashed var(--line);background:var(--surface)}.firms h4{margin:0 0 6px;font-weight:400;color:var(--text);font-size:1.1rem}.firms p{margin:0;font:13px/1.5 Arial}
+.me{margin:30px 0;padding:22px 24px;border:1px solid var(--light);background:linear-gradient(180deg,rgba(198,161,91,.14),rgba(198,161,91,.03))}.me p{margin:8px 0}.me .k{font:11px Arial;letter-spacing:.16em;text-transform:uppercase;color:var(--light)}
+</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <a href="https://decisionframework.online/">DecisionFramework.online</a>
+  <span><a href="/insights-and-partners.html#insights">Insights</a> &middot; <a href="/commodity-etf-guide.html">ETF guide</a> &middot; <a href="/private-client.html" style="color:var(--light)">&#10022; Private Client</a></span>
+</nav>
+
+<header class="wrap">
+  <div class="eyebrow">Trade it &middot; Futures with a firm&rsquo;s capital</div>
+  <h1>Prop Trading</h1>
+  <p class="subtitle">Own gold, hold it through an ETF, or trade it. The third way, explained by someone who has been funded, with the maths most sales pages leave out.</p>
+  <p class="caption">A guide, not an offer &middot; futures are leveraged and most evaluations fail</p>
+</header>
+
+<div class="wrap article">
+  <main>
+
+    <p class="lead">A futures prop firm lets you trade its capital instead of your own. You pay for an evaluation, trade a simulated account under strict rules, and if you pass, you trade a funded account and keep most of the profit. The firm never needs you to be a genius. It needs you to respect the rules, and that is exactly where most traders fail.</p>
+
+    <div class="me">
+      <div class="k">From the author&rsquo;s desk</div>
+      <p>I traded as a funded trader at Topstep in Chicago, and this April I made about $10,000 in profit on a Take Profit Trader account in roughly ten trading days, trading the same metals and oil futures this site covers.</p>
+      <p style="font:13px/1.6 Arial">That is one trader&rsquo;s result, not a typical one, and not a promise. Most traders do not pass an evaluation, and many who pass lose the funded account. The rest of this page is about why, and how to stack the odds in your favour.</p>
+    </div>
+
+    <h2>How an evaluation works</h2>
+    <p>The details differ from firm to firm, but the shape is the same everywhere:</p>
+    <ul class="check">
+      <li><b>You buy an evaluation</b> for an account size, for example $50,000. You trade it in simulation, usually with a monthly fee until you pass.</li>
+      <li><b>You hit a profit target</b>, typically a few thousand dollars on a $50,000 account, without breaking the rules.</li>
+      <li><b>You stay inside the loss limits</b>: a maximum drawdown for the whole account and, at many firms, a daily loss limit.</li>
+      <li><b>You pass, and get funded</b>, sometimes after an activation fee. From then on, profits are paid out under the firm&rsquo;s payout rules, with a profit split in your favour.</li>
+    </ul>
+    <p>The firm&rsquo;s business model rests largely on evaluation fees. That is not a scandal; it is how the industry works. It means the rules are designed so that undisciplined traders pay, and disciplined ones get paid.</p>
+
+    <h2>The rule that fails most traders: the drawdown</h2>
+    <p>Most accounts are not lost to one bad trade. They are lost to the drawdown rule, and above all to the <em>trailing</em> drawdown, which many traders misunderstand.</p>
+    <div class="formula">Account $50,000 &middot; trailing drawdown $2,000<br>Start: the floor sits at $48,000<br>Profit to $51,500: the floor trails up to $49,500<br>Give back $2,000 from the peak: account closed, even though you are still $1,500 up</div>
+    <p style="margin-top:16px">That is the trap: a trailing drawdown follows your best equity, not your starting balance. Some firms trail intraday, counting unrealised profit at its peak; others only at the end of the day; some stop trailing once the floor reaches the starting balance. Know exactly which one you are trading before your first order. A daily loss limit adds a second wall: one bad morning can end the day, even if the account survives.</p>
+    <div class="chain">Your real account size is not $50,000. It is the drawdown: $2,000. Size every trade against that number.</div>
+
+    <h2>The drawdown calculator</h2>
+    <p>Enter your firm&rsquo;s numbers and your stop. The calculator shows how many contracts the rules really allow, and how many losing trades in a row the account survives.</p>
+    <div class="calc" id="calc">
+      <div class="row">
+        <label>Maximum drawdown ($)<input id="dd" type="number" min="100" step="100" value="2000"><span class="hint">The account&rsquo;s total loss limit.</span></label>
+        <label>Daily loss limit ($)<input id="dl" type="number" min="0" step="100" value="1000"><span class="hint">0 if your firm has none.</span></label>
+        <label>Risk per trade (% of drawdown)<input id="rp" type="number" min="1" max="100" step="1" value="10"><span class="hint">10% means ten losers in a row before the account is gone.</span></label>
+      </div>
+      <div class="row" style="margin-top:14px">
+        <label>Contract<select id="ct">
+          <option value="10" data-u="$/oz" data-s="5">Micro gold MGC (10 oz)</option>
+          <option value="100" data-u="$/oz" data-s="5">Gold GC (100 oz)</option>
+          <option value="1000" data-u="$/oz" data-s="0.20">Micro silver SIL (1,000 oz)</option>
+          <option value="5000" data-u="$/oz" data-s="0.20">Silver SI (5,000 oz)</option>
+          <option value="100" data-u="$/bbl" data-s="0.40">Micro crude MCL (100 bbl)</option>
+          <option value="1000" data-u="$/bbl" data-s="0.40">Crude oil CL (1,000 bbl)</option>
+        </select><span class="hint" id="cth">$10 per $1 move in gold.</span></label>
+        <label><span>Stop distance (<span id="unit">$/oz</span>)</span><input id="st" type="number" min="0.01" step="0.01" value="5"><span class="hint">Distance from entry to stop, in price.</span></label>
+      </div>
+      <div class="out" id="out"></div>
+      <p class="verdict2" id="verdict2"></p>
+    </div>
+    <p class="note">Contract sizes: CME Group (COMEX and NYMEX) specifications. Ignores commissions and slippage, which make the real numbers slightly worse. Check your firm&rsquo;s contract limits too: many cap the number of contracts per account size.</p>
+
+    <h2>Why metals and oil suit it, and where they bite</h2>
+    <p>Gold, silver and crude are liquid around the clock and move on scheduled events, which makes them tradeable with a plan. The same events are where accounts die. A CPI print or a payrolls number can move gold $30 to $50 in seconds, and silver twice as hard in percentage terms. Check whether your firm allows trading through major news, and size down when it does.</p>
+    <table class="specs">
+      <thead><tr><th>Contract</th><th>Size</th><th>$1 move is worth</th><th>Same risk as</th></tr></thead>
+      <tbody>
+        <tr><td>Gold GC</td><td>100 oz</td><td>$100</td><td>10 micro gold</td></tr>
+        <tr><td>Micro gold MGC</td><td>10 oz</td><td>$10</td><td>&ndash;</td></tr>
+        <tr><td>Silver SI</td><td>5,000 oz</td><td>$5,000 (1 cent = $50)</td><td>5 micro silver</td></tr>
+        <tr><td>Micro silver SIL</td><td>1,000 oz</td><td>$1,000 (1 cent = $10)</td><td>&ndash;</td></tr>
+        <tr><td>Crude oil CL</td><td>1,000 bbl</td><td>$1,000 (1 cent = $10)</td><td>10 micro crude</td></tr>
+        <tr><td>Micro crude MCL</td><td>100 bbl</td><td>$100 (1 cent = $1)</td><td>&ndash;</td></tr>
+      </tbody>
+    </table>
+    <p>The desk&rsquo;s tools exist for exactly this kind of trading: the session times and settlements in Brussels time, the <a href="/levels-watch.html">Levels Watch</a> for gold and silver, the <a href="/crack-spreads.html">crack spreads</a> with daily NYMEX closes for oil, and the <a href="/dollar-balance.html#hike-odds">Fed hike odds</a> before every release.</p>
+
+    <h2>Choosing a firm: what to compare</h2>
+    <p>Firms change their rules and prices often, sometimes monthly. Compare them on the rules, not on the advertising:</p>
+    <ul class="check">
+      <li><b>Drawdown type.</b> Intraday trailing, end-of-day trailing or static, and whether it stops trailing at the starting balance.</li>
+      <li><b>Daily loss limit.</b> Whether there is one, and whether breaking it ends the day or the account.</li>
+      <li><b>Total cost.</b> Evaluation price, monthly fees until you pass, activation fees, data fees, resets.</li>
+      <li><b>Consistency rules.</b> Limits on how much of your profit may come from one day; they decide how fast you can pass.</li>
+      <li><b>Payout rules.</b> How soon after funding, how often, minimums, buffers and the profit split.</li>
+      <li><b>Contracts and news.</b> Whether metals and energy futures are allowed, including micros, and whether you may hold through CPI, payrolls and Fed decisions.</li>
+    </ul>
+    <div class="firms">
+      <div><h4>Take Profit Trader</h4><p>Where the author made the April result above.</p></div>
+      <div><h4>Topstep</h4><p>Where the author traded funded; one of the longest-running futures prop firms.</p></div>
+      <div><h4>Tradeify</h4><p>Futures evaluations and funded accounts.</p></div>
+      <div><h4>My Funded Futures</h4><p>Futures evaluations and funded accounts.</p></div>
+    </div>
+    <p class="note">A side-by-side table of each firm&rsquo;s current rules and prices is being verified against the firms&rsquo; own pages and will appear here with the date it was checked. Disclosure: this page contains no affiliate links today. If it does in future, every such link will be labelled, and firms will be described on their rules, never on the commission.</p>
+
+    <h2>The trader&rsquo;s rules for an evaluation</h2>
+    <ul class="check">
+      <li><b>Size against the drawdown, not the account.</b> Risk 5&ndash;10% of the drawdown per trade, so one loss never decides the account.</li>
+      <li><b>Start with micros.</b> MGC, SIL and MCL let you size finely; move to full contracts only when the cushion allows it.</li>
+      <li><b>Bank the cushion first.</b> Early profit lifts a trailing floor; it pays to build distance before increasing size.</li>
+      <li><b>Respect the calendar.</b> Know every release and settlement time before the session; flat or small into CPI, payrolls and the Fed.</li>
+      <li><b>Stop for the day after the daily limit&rsquo;s half.</b> The rule that saves the account is the one you set below the firm&rsquo;s.</li>
+    </ul>
+
+    <p class="note" style="margin-top:28px">Educational content to support your own research and decisions. Not financial advice. Futures trading involves substantial risk of loss; prop-firm evaluations are fee-based and most participants do not pass.</p>
+  </main>
+
+  <aside class="side">
+    <h3>In brief</h3>
+    <dl>
+      <dt>What it is</dt>
+      <dd>Trading futures with a firm&rsquo;s capital after passing a paid evaluation.</dd>
+      <dt>The real account size</dt>
+      <dd>The drawdown, not the headline balance.</dd>
+      <dt>The trap</dt>
+      <dd>A trailing drawdown follows your best equity, not your starting balance.</dd>
+      <dt>For metals and oil</dt>
+      <dd>Start with micros; size down into CPI, payrolls and the Fed.</dd>
+    </dl>
+    <p style="margin-top:24px"><a class="button" href="/levels-watch.html">Levels Watch &rarr;</a></p>
+    <p style="margin-top:10px"><a class="button" href="/commodity-etf-guide.html">ETF guide &rarr;</a></p>
+  </aside>
+</div>
+
+<footer>
+  <div class="wrap">&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">Contact</a> &middot; Contract specifications: CME Group</div>
+</footer>
+
+<script>
+(function(){
+  var $ = function(i){ return document.getElementById(i); };
+  var NAMES = {'Micro gold MGC (10 oz)':'gold','Gold GC (100 oz)':'gold','Micro silver SIL (1,000 oz)':'silver','Silver SI (5,000 oz)':'silver','Micro crude MCL (100 bbl)':'oil','Crude oil CL (1,000 bbl)':'oil'};
+  function money(v){ return '$' + Math.round(v).toLocaleString('en-US'); }
+  function box(k, v, s){ return '<div><div class="k">' + k + '</div><div class="v">' + v + '</div><div class="s">' + s + '</div></div>'; }
+  function run(){
+    var dd = +$('dd').value || 0, dl = +$('dl').value || 0, rp = +$('rp').value || 0, st = +$('st').value || 0;
+    var o = $('ct').options[$('ct').selectedIndex], mult = +o.value, unit = o.getAttribute('data-u');
+    $('unit').textContent = unit;
+    $('cth').textContent = '$' + mult.toLocaleString('en-US') + ' per $1 move in ' + NAMES[o.text] + '.';
+    var perC = st * mult, budget = dd * rp / 100, n = perC > 0 ? Math.floor(budget / perC) : 0;
+    var risk = n * perC, losers = risk > 0 ? Math.floor(dd / risk) : 0, daily = (risk > 0 && dl > 0) ? Math.floor(dl / risk) : null;
+    $('out').innerHTML =
+      box('Risk per contract', money(perC), st + ' ' + unit + ' stop') +
+      box('Contracts allowed', String(n), 'at ' + rp + '% of the drawdown (' + money(budget) + ')') +
+      box('Losers in a row', n ? String(losers) : '&ndash;', n ? 'before the drawdown is hit' : 'no trade fits') +
+      box('Losers per day', daily == null ? '&ndash;' : String(daily), dl > 0 ? 'before the daily limit (' + money(dl) + ')' : 'no daily limit set');
+    var v;
+    if (!n) v = 'One contract risks ' + money(perC) + ', more than your ' + money(budget) + ' budget per trade. Use the micro contract, tighten the stop, or skip the trade.';
+    else if (losers < 5) v = 'Thin cushion: ' + losers + ' losing trade' + (losers > 1 ? 's' : '') + ' in a row ends the account. Size down.';
+    else v = 'Workable: ' + n + ' contract' + (n > 1 ? 's' : '') + ', ' + money(risk) + ' at risk per trade, ' + losers + ' losers in a row before the account is gone.';
+    $('verdict2').textContent = v;
+  }
+  $('ct').addEventListener('change', function(){ $('st').value = this.options[this.selectedIndex].getAttribute('data-s'); run(); });
+  ['dd','dl','rp','st'].forEach(function(i){ $(i).addEventListener('input', run); });
+  run();
+})();
+</script>
+</body>
+</html>
