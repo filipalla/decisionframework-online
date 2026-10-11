@@ -73,9 +73,25 @@ footer{padding:34px 0;border-top:1px solid var(--line);font:13px Arial,sans-seri
 a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offset:3px}
 @media(max-width:900px){.feature,.split,.two,.book{grid-template-columns:1fr}.grid3{grid-template-columns:1fr 1fr}.grid4{grid-template-columns:1fr 1fr}.q{grid-template-columns:50px 1fr}.q .go{grid-column:1/-1;justify-content:flex-start}}
 @media(max-width:600px){.wrap{width:calc(100% - 28px)}.grid3,.grid4{grid-template-columns:1fr}nav.top{flex-direction:column;align-items:flex-start}header.hero{padding:70px 0 60px}.book{padding:24px}.door{padding:24px}}
+.dealbar{display:block;text-decoration:none;background:linear-gradient(90deg,#2a2213,#3d2f17 50%,#2a2213);border-bottom:2px solid var(--light)}
+.dealbar .in{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:8px 22px;padding:12px 16px;font:600 15px Arial;color:var(--text)}
+.dealbar .t{font:700 13px Arial;letter-spacing:.16em;text-transform:uppercase;color:var(--light)}
+.dealbar b{color:#8fbf8a;font-size:17px}
+.dealbar .go{padding:7px 16px;background:var(--gold);color:#111214;font:700 13px Arial;letter-spacing:.1em;text-transform:uppercase}
+.dealbar:hover .go{background:var(--light)}
 </style>
 </head>
 <body>
+
+<a class="dealbar" href="/toolkit.html" aria-label="Open the Trader's Toolkit deals">
+  <div class="in">
+    <span class="t">&#9733; Trader&rsquo;s Toolkit</span>
+    <span><b>40% off</b> My Funded Futures</span>
+    <span><b>5g free silver</b> at BullionStar</span>
+    <span><b>$15 off</b> TradingView</span>
+    <span class="go">See all deals &rarr;</span>
+  </div>
+</a>
 
 <nav class="top wrap" aria-label="Main navigation">
   <a class="brand" href="/">DecisionFramework.online</a>
@@ -84,7 +100,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
     <a href="https://desk.decisionframework.online/real-rates-and-the-dollar">Indicators</a>
     <a href="/dealer-directory.html">Physical metal</a>
     <a href="/commodity-etf-guide.html">Financial exposure</a>
-    <a href="/toolkit.html">Toolkit</a>
+    <a href="/toolkit.html" style="color:var(--light);font-weight:bold">&#9733; Toolkit</a>
     <a href="/framework/">The Framework</a>
     <a href="#get-the-book" style="color:var(--light)">Get the book</a>
     <a href="#newsletter">Newsletter</a>
@@ -102,6 +118,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
     <a class="button fill" href="#latest">Latest analysis</a>
     <a class="button" href="#decisions">Start with a question</a>
     <a class="button quiet" href="/free-preview.html">Free book preview</a>
+    <a class="button" href="/toolkit.html">&#9733; Trader&rsquo;s Toolkit</a>
   </div>
   <p class="small">The framework is available in 33 languages. <a href="/framework/#languages">Choose yours</a>.</p>
   <p class="small" style="margin-top:8px">Received a licence code? <a href="/license/" style="color:var(--light)">&#10022; Activate it here</a>.</p>
