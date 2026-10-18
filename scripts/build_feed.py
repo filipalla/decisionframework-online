@@ -23,6 +23,7 @@ ARTICLES = [
     "france-switzerland-gap.html", "hormuz-dark-flows.html",
     "inflation-day-30-september-2026.html", "thirty-year-yields-gold.html",
     "brief-2026-10-11.html", "belgium-france-shadows.html",
+    "sixteen-dealers-six-questions.html",
 ]
 FALLBACK_DATES = {
     "inflation-day-30-september-2026.html": "2026-09-30",
