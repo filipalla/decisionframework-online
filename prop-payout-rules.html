@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prop Payout Rules Compared: Tradeify Select vs MFF Rapid EOD | DecisionFramework</title>
+<link rel="canonical" href="https://decisionframework.online/prop-payout-rules.html">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#111214">
+<meta name="description" content="Payout rules, minimum withdrawals, funded scaling and permitted products for Tradeify Select 50K, 150K and 300K and the MyFundedFutures Rapid EOD 50K, side by side, with a printable PDF.">
+<meta property="og:title" content="Prop Payout Rules Compared: Tradeify Select vs MFF Rapid EOD">
+<meta property="og:description" content="Buffers, caps, minimum withdrawals, scaling from day one and which metals and energy contracts you may trade: four end-of-day accounts side by side.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://decisionframework.online/prop-payout-rules.html">
+<meta property="og:site_name" content="DecisionFramework">
+<meta property="og:image" content="https://decisionframework.online/images/og/index.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@DecisionFW">
+<style>
+:root{--bg:#111214;--surface:#1b1b1d;--gold:#c6a15b;--light:#e2c887;--text:#f1eadb;--muted:#b8b0a1;--line:rgba(198,161,91,.45)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--bg) 38%);color:var(--text);font:17px/1.75 Georgia,serif}a{color:var(--light)}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}nav{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);font:12px Arial;letter-spacing:.1em;text-transform:uppercase}nav a{text-decoration:none;color:var(--muted)}header{text-align:center;padding:100px 0 70px}header .eyebrow{color:var(--light);font:12px Arial;letter-spacing:.22em;text-transform:uppercase}h1{font-size:clamp(2.6rem,7vw,5.4rem);font-weight:400;line-height:1.05;margin:28px auto;max-width:900px}.subtitle{color:var(--light);font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;max-width:760px;margin:auto}.caption{text-align:center;color:var(--muted);font:13px Arial;letter-spacing:.05em;margin-top:12px}.article{display:grid;grid-template-columns:minmax(0,760px) 280px;gap:60px;padding:70px 0 100px;border-top:1px solid var(--line)}h2{color:var(--light);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:64px 0 18px}h3{color:var(--text);font-weight:400;font-size:1.35rem;margin:34px 0 10px}p{color:var(--muted)}.lead{font-size:1.25rem;color:var(--text)}.side{align-self:start;position:sticky;top:24px;padding:24px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}.side h3{margin-top:0;color:var(--light);font-size:1.05rem}.side dl{margin:0}.side dt{color:var(--text);font:12px Arial;letter-spacing:.05em;text-transform:uppercase;margin-top:16px}.side dt:first-child{margin-top:0}.side dd{margin:4px 0 0;font-size:.95rem}.button{display:inline-block;padding:11px 18px;border:1px solid var(--gold);text-decoration:none;font:12px Arial;letter-spacing:.1em;text-transform:uppercase}footer{padding:30px 0;border-top:1px solid var(--line);font:13px Arial;color:var(--muted)}@media(max-width:800px){.article{grid-template-columns:minmax(0,1fr)}.side{position:static}.wrap{width:min(100% - 28px,760px)}nav{flex-direction:column}}
+.note{font:12px/1.6 Arial;color:var(--muted);margin-top:10px}
+.tbl{overflow-x:auto;margin:6px 0 14px;border:1px solid rgba(198,161,91,.25)}
+.tbl table{width:100%;border-collapse:collapse;font:13px/1.45 Arial;font-variant-numeric:tabular-nums;min-width:620px}
+.tbl th,.tbl td{padding:8px 8px;text-align:left;vertical-align:top;border-bottom:1px solid rgba(198,161,91,.15)}
+.tbl th{font-weight:normal;color:var(--light);font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:rgba(198,161,91,.06)}
+.tbl td{color:var(--muted)}.tbl td:first-child{color:var(--text)}.tbl td b{color:var(--light);font-weight:normal}
+.check{display:grid;gap:8px;margin:12px 0;padding:0;list-style:none}.check li{padding:12px 14px;background:var(--surface);border:1px solid rgba(198,161,91,.2);font:14px/1.55 Arial;color:var(--muted)}.check b{font-weight:normal;color:var(--text)}
+.callout{margin:30px 0;padding:22px 24px;border:1px solid var(--light);background:linear-gradient(180deg,rgba(198,161,91,.14),rgba(198,161,91,.03))}.callout p{margin:8px 0}.callout .k{font:11px Arial;letter-spacing:.16em;text-transform:uppercase;color:var(--light)}
+.dl{margin:30px 0;padding:24px;border:1px solid var(--light);background:linear-gradient(180deg,rgba(198,161,91,.16),rgba(198,161,91,.03))}
+.dl .go{display:inline-block;margin-top:10px;padding:15px 26px;background:var(--gold);color:#111214;text-decoration:none;font:14px Arial;letter-spacing:.14em;text-transform:uppercase}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:12px;margin:14px 0}.links a{display:block;padding:16px;border:1px solid var(--line);background:var(--surface);text-decoration:none;font:14px/1.5 Arial;color:var(--muted)}.links a b{display:block;font-weight:normal;color:var(--light);font-size:1.05rem;margin-bottom:4px}
+.tbl s{color:var(--muted);opacity:.75}.tbl b.big{font-size:1.25rem;color:var(--light)}
+.sources{font:13px/1.6 Arial;color:var(--muted);padding-left:18px}
+</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <a href="https://decisionframework.online/">DecisionFramework.online</a>
+  <span><a href="/insights-and-partners.html#insights">Insights</a> &middot; <a href="https://desk.decisionframework.online/">The Desk</a> &middot; <a href="/prop-trading.html">Prop trading</a> &middot; <a href="/private-client.html" style="color:var(--light)">&#10022; Private Client</a></span>
+</nav>
+
+<header class="wrap">
+  <div class="eyebrow">Trade it &middot; The fine print</div>
+  <h1>Getting Paid</h1>
+  <p class="subtitle">Four end-of-day prop accounts, side by side: what you can withdraw, when, how much size you get on day one, and which metals and energy contracts you are actually allowed to trade.</p>
+  <p class="caption">Rules checked 19 October 2026 against the firms&rsquo; own help centers &middot; follow-up to <a href="/mff-rapid-eod-50k.html">My Pick: Rapid EOD 50K</a></p>
+</header>
+
+<div class="wrap article">
+  <main>
+
+    <p class="lead">Passing an evaluation is half the job. The other half is the funded rulebook: buffers, caps, minimum withdrawals, a drawdown that locks or keeps trailing, and contract limits that start far below what you had in the evaluation. This page puts the Tradeify Select 50K, 150K and the limited 300K next to the My Funded Futures Rapid EOD 50K, the plan I explained in <a href="/mff-rapid-eod-50k.html">the previous article</a>.</p>
+
+    <h2>Flex payouts: every five winning days</h2>
+    <p>Tradeify lets you choose a payout path after you pass, and the choice is permanent. Flex pays every five winning days and keeps the wider drawdown.</p>
+    <div class="tbl"><table>
+      <thead><tr><th></th><th>Tradeify 50K</th><th>Tradeify 150K</th><th>Tradeify 300K</th></tr></thead>
+      <tbody>
+        <tr><td>Max drawdown (end of day)</td><td>$2,000</td><td>$4,500</td><td>$8,000</td></tr>
+        <tr><td>Daily loss limit</td><td>None</td><td>None</td><td><b>$4,000</b></td></tr>
+        <tr><td>Winning day counts from</td><td>$150</td><td>$250</td><td>$750</td></tr>
+        <tr><td>Payout size</td><td colspan="3">Up to 50% of total profit (balance minus starting balance)</td></tr>
+        <tr><td>Cap per payout</td><td>$2,500</td><td>$4,500</td><td>$10,000</td></tr>
+        <tr><td>Minimum payout</td><td>$250</td><td>$250</td><td>Not stated</td></tr>
+        <tr><td>Floor locks at</td><td>$50,100</td><td>$150,100</td><td>$300,100</td></tr>
+        <tr><td>&hellip; once end-of-day balance reaches</td><td>$52,100</td><td>$154,600</td><td>$308,100</td></tr>
+      </tbody>
+    </table></div>
+    <ul class="check">
+      <li><b>The 50% is of total profit.</b> A full $10,000 payout on the 300K needs $20,000 of profit, a $320,000 balance. After that first payout, every $10,000 earned back makes another $10,000 withdrawable.</li>
+      <li><b>The early-payout trap.</b> A Flex payout taken before the lock threshold locks the floor at once, at start plus $100. Withdraw $1,000 at +$2,000 profit on a 150K and the floor jumps to $150,100 with the balance at $151,000: $900 of cushion left. Wait for the lock.</li>
+    </ul>
+
+    <h2>Daily payouts: Tradeify Daily and MFF Rapid EOD</h2>
+    <div class="tbl"><table>
+      <thead><tr><th></th><th>Tradeify 50K</th><th>Tradeify 150K</th><th>Tradeify 300K</th><th>MFF Rapid EOD 50K</th></tr></thead>
+      <tbody>
+        <tr><td>Max drawdown (end of day)</td><td>$2,000</td><td>$3,500</td><td>$6,000</td><td>$2,000</td></tr>
+        <tr><td>Daily loss limit</td><td>$1,000</td><td>$1,750</td><td>$3,000</td><td>None</td></tr>
+        <tr><td>Buffer before the first payout</td><td>$2,100</td><td>$3,600</td><td>$6,100</td><td>$2,100</td></tr>
+        <tr><td>Payout rule</td><td>Up to 2&times; profit since last payout</td><td>Up to 2&times; profit since last payout</td><td>Half of each payout must be new profit</td><td>Unlocks per $500 net profit since last payout</td></tr>
+        <tr><td>Cap</td><td>$1,250</td><td>$2,500</td><td>$4,000 a day</td><td><b>None</b></td></tr>
+        <tr><td>Minimum payout</td><td>$250</td><td>$250</td><td>Not stated</td><td><b>$500</b></td></tr>
+      </tbody>
+    </table></div>
+    <p>MFF asks twice Tradeify&rsquo;s minimum withdrawal, but puts no cap on a payout. Tradeify pays smaller amounts sooner and caps every one. Both pay 90% to the trader.</p>
+
+    <h2>Funded size from zero</h2>
+    <p>Tradeify Select funded accounts do not start at the evaluation size. Limits follow the end-of-day profit, rise the next trading day and are kept once reached.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>End-of-day profit</th><th>Tradeify 50K</th><th>Tradeify 150K</th><th>Tradeify 300K</th><th>MFF Rapid EOD 50K</th></tr></thead>
+      <tbody>
+        <tr><td>$0, day one</td><td>2 minis / 20 micros</td><td>3 / 30</td><td>3 / 30</td><td>3 / 30, fixed</td></tr>
+        <tr><td>+$1,500</td><td>3 / 30</td><td>4 / 40</td><td>4 / 40</td><td>3 / 30</td></tr>
+        <tr><td>+$2,000</td><td><b>4 / 40, max</b></td><td>5 / 50</td><td>4 / 40</td><td>3 / 30</td></tr>
+        <tr><td>+$3,000</td><td>4 / 40</td><td>8 / 80</td><td>6 / 60</td><td>3 / 30</td></tr>
+        <tr><td>+$4,500</td><td>4 / 40</td><td><b>12 / 120, max</b></td><td>6 / 60</td><td>3 / 30</td></tr>
+        <tr><td>+$5,000</td><td>4 / 40</td><td>12 / 120</td><td>10 / 100</td><td>3 / 30</td></tr>
+        <tr><td>+$7,000</td><td>4 / 40</td><td>12 / 120</td><td><b>16 / 160, max</b></td><td>3 / 30</td></tr>
+      </tbody>
+    </table></div>
+    <div class="callout">
+      <div class="k">Where it gets funny</div>
+      <p>The 300K looks like two 150Ks. It is not. On day one it gives the same 3 minis as a single 150K, and until it is $5,000 in profit it is a 150K-sized account. Two 150Ks would start at 6 minis together. What the 300K does give is room: $8,000 of drawdown behind those 3 minis, against $4,500 on a 150K. On the 150K, the cushion is the bottleneck; on the 300K, size is.</p>
+    </div>
+
+    <h2>The 300K in one paragraph</h2>
+    <p>A limited release at $349, one time, no subscription; in our test no discount code was accepted. Target $14,000 against $8,000 of drawdown, a better ratio than the 150K&rsquo;s $9,000 against $4,500. The price for that: a $4,000 daily loss limit the smaller Select sizes do not have, no resets at all, identity verification before purchase, at most three per trader. A funded 300K sits on top of the usual five funded accounts.</p>
+
+    <h2 id="price">What it costs</h2>
+    <p>Every plan here is a one-time evaluation fee: no subscription, no activation fee once funded.</p>
+    <div class="tbl"><table>
+      <thead><tr><th></th><th>Tradeify 50K</th><th>Tradeify 150K</th><th>Tradeify 300K</th><th>MFF Rapid EOD 50K</th></tr></thead>
+      <tbody>
+        <tr><td>Full price</td><td><s>$165</s></td><td><s>$369</s></td><td><b>$349</b></td><td><s>$225</s></td></tr>
+        <tr><td>Discounted price</td><td><b class="big">$115.50</b><br>with a 30% code</td><td><b class="big">$258.30</b><br>with a 30% code</td><td><b class="big">$349</b><br>no code accepted</td><td><b class="big">$135</b><br>40% with code CLUB; $112.50 for a first evaluation (new traders, 50%)</td></tr>
+        <tr><td>Reset</td><td>$109</td><td>$239</td><td>Not available</td><td>See the firm&rsquo;s site</td></tr>
+      </tbody>
+    </table></div>
+    <p class="note">Full prices from the Tradeify pricing reference and the MyFundedFutures plan page. Tradeify&rsquo;s public promo codes run 30 to 40% and change often; on the 300K no code was accepted when we tried on 19 October 2026. Always check the total at checkout before paying.</p>
+
+    <h2 id="products">Permitted products: check before you trade</h2>
+    <p>For a metals and energy trader the product list matters as much as the drawdown. The two firms differ exactly where it hurts, and both change their lists without much warning.</p>
+    <div class="tbl"><table>
+      <thead><tr><th>Product</th><th>Tradeify</th><th>MFF</th></tr></thead>
+      <tbody>
+        <tr><td>Gold</td><td>GC, QO, MGC</td><td>GC, MGC</td></tr>
+        <tr><td>Silver</td><td><b>SI only</b>; micro silver (SIL) not supported</td><td><b>SIL only</b>; SI restricted since 7 February</td></tr>
+        <tr><td>Copper, platinum, palladium</td><td>HG, PL, PA</td><td>HG and PL restricted; PA not listed</td></tr>
+        <tr><td>Crude oil</td><td>CL, QM, MCL</td><td>CL, QM, MCL</td></tr>
+        <tr><td>Natural gas</td><td>NG, QG</td><td><b>NG and QG restricted</b></td></tr>
+        <tr><td>Gasoline, heating oil</td><td>Not listed, so not supported</td><td>RB, HO</td></tr>
+        <tr><td>Size rules</td><td>10 micros count as 1 mini; minis and micros may be combined</td><td>Micro metals capped at 5 contracts on a 50K (3, 10 and 15 on 25K, 100K and 150K)</td></tr>
+      </tbody>
+    </table></div>
+    <p>MFF calls its restrictions temporary, due to volatility. A product can be tradable one month and closed the next, so read the live list, not this table:</p>
+    <div class="links">
+      <a href="https://help.tradeify.co/en/articles/10468222-rules-supported-trading-products-assets" rel="noopener" target="_blank"><b>Tradeify: supported products &rarr;</b>The firm&rsquo;s current list of tradable contracts.</a>
+      <a href="https://help.myfundedfutures.com/en/articles/9735811-futures-instrument-list" rel="noopener" target="_blank"><b>MFF: futures instrument list &rarr;</b>Tradable contracts, restrictions and micro limits.</a>
+    </div>
+
+    <h2>The other rules that end accounts</h2>
+    <ul class="check">
+      <li><b>End of day is not end of risk.</b> At both firms the floor only moves at the close, but it is enforced in real time, open profit and loss included. Touch it intraday and the account is gone.</li>
+      <li><b>Flat by the close.</b> Tradeify wants every position closed by 22:45 Brussels time (21:45 in the weeks when only one side of the Atlantic has changed clocks). No overnight holds.</li>
+      <li><b>No hedging.</b> Tradeify bans opposing positions in correlated products, long gold against short silver included, and across accounts.</li>
+      <li><b>Hold longer than ten seconds.</b> On Tradeify funded accounts more than half of your trades and of your profit must come from trades held over ten seconds, or no payout.</li>
+      <li><b>News.</b> Allowed at Tradeify. At MFF allowed in the evaluation, restricted on the funded account.</li>
+      <li><b>Stay active.</b> Tradeify wants at least one trade a week; MFF applies a seven-day inactivity rule.</li>
+    </ul>
+
+    <div class="dl">
+      <div style="font:11px Arial;letter-spacing:.16em;text-transform:uppercase;color:var(--light)">Printable summary</div>
+      <p style="color:var(--text);margin:8px 0 0">All of the above on three landscape pages, with the evaluation rules and room for your own notes.</p>
+      <a class="go" href="/prop-payout-rules.pdf" download>Download the PDF &rarr;</a>
+    </div>
+
+    <h2>Before you buy</h2>
+    <p>Start with the <a href="/prop-trading.html">prop trading guide</a> and its drawdown calculator, then read <a href="/mff-rapid-eod-50k.html">why I pick the Rapid EOD 50K</a>. That page carries my My Funded Futures referral link, labelled as such; this page carries none, and I have no affiliate relationship with Tradeify.</p>
+    <p style="font:13px/1.6 Arial;color:var(--muted)">Educational content to support your own research and decisions. Not financial advice. Futures trading involves substantial risk of loss; prop-firm evaluations are fee-based and most participants do not pass. Firms change their rules often: the firm&rsquo;s own page always wins over this summary.</p>
+
+    <h2>Sources</h2>
+    <ul class="sources">
+      <li>Tradeify Help Center, &ldquo;300K Select Account&rdquo; (V1 and V2), 28 August 2026.</li>
+      <li>Tradeify Help Center, &ldquo;Select Flex and Select Daily Payout Policies&rdquo;, updated October 2026.</li>
+      <li>Tradeify Help Center, &ldquo;Select Evaluation Accounts&rdquo;, October 2026.</li>
+      <li>Tradeify Help Center, &ldquo;Essential Trading Rules Overview&rdquo;, October 2026.</li>
+      <li>Tradeify Help Center, &ldquo;Tradeify Pricing Reference&rdquo;, October 2026.</li>
+      <li>Tradeify Help Center, &ldquo;Rules: Supported Trading Products / Assets&rdquo;, checked 19 October 2026.</li>
+      <li>MyFundedFutures Help Center, &ldquo;Rapid EOD 50k &ndash; A Comprehensive Look&rdquo;, 24 August 2026.</li>
+      <li>MyFundedFutures Help Center, &ldquo;Futures Instrument List&rdquo;, 24 August 2026.</li>
+      <li>MyFundedFutures Help Center, &ldquo;Guide to Your First Payout&rdquo;.</li>
+    </ul>
+
+  </main>
+
+  <aside class="side">
+    <h3>In brief</h3>
+    <dl>
+      <dt>Minimum withdrawal</dt>
+      <dd>Tradeify $250 (300K not stated); MFF Rapid EOD $500.</dd>
+      <dt>Caps</dt>
+      <dd>Tradeify caps every payout; MFF Rapid EOD has none.</dd>
+      <dt>Day-one size</dt>
+      <dd>3 minis on the Tradeify 150K and 300K alike; 2 on the 50K; 3 fixed at MFF.</dd>
+      <dt>Price</dt>
+      <dd>300K: $349 flat. 150K: $258.30 with a 30% code. MFF Rapid EOD: $135 with CLUB. <a href="#price">Full table</a>.</dd>
+      <dt>Silver</dt>
+      <dd>Tradeify: SI only. MFF: SIL only.</dd>
+      <dt>Natural gas</dt>
+      <dd>Allowed at Tradeify, restricted at MFF.</dd>
+    </dl>
+    <p style="margin-top:24px"><a class="button" href="/prop-payout-rules.pdf" download>PDF summary &rarr;</a></p>
+    <p style="margin-top:10px"><a class="button" href="/mff-rapid-eod-50k.html">My pick: Rapid EOD &rarr;</a></p>
+    <p style="margin-top:10px"><a class="button" href="/prop-trading.html">Prop trading guide &rarr;</a></p>
+  </aside>
+</div>
+
+<footer>
+  <div class="wrap">&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">Contact</a> &middot; Rules checked against Tradeify and MyFundedFutures help centers, 19 October 2026</div>
+</footer>
+</body>
+</html>
