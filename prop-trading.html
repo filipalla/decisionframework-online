@@ -76,8 +76,8 @@
 .me{margin:30px 0;padding:22px 24px;border:1px solid var(--light);background:linear-gradient(180deg,rgba(198,161,91,.14),rgba(198,161,91,.03))}.me p{margin:8px 0}.me .k{font:11px Arial;letter-spacing:.16em;text-transform:uppercase;color:var(--light)}
 </style>
 <style id="xmas-sleigh-css">
-.xmas-sleigh{position:absolute;left:0;right:0;top:62px;height:96px;overflow:hidden;pointer-events:none;z-index:4}
-.xmas-sleigh>div{position:absolute;left:0;top:4px;animation:xmas-fly 26s linear infinite;will-change:transform}
+.xmas-sleigh{position:absolute;left:0;right:0;top:62px;height:860px;overflow:hidden;pointer-events:none;z-index:4}
+.xmas-sleigh>div{position:absolute;left:0;top:0;will-change:transform}
 .xmas-sleigh svg{display:block;animation:xmas-bob 2.4s ease-in-out infinite}
 .xmas-sleigh .d{animation:xmas-gallop .7s ease-in-out infinite alternate}
 .xmas-snow{position:absolute;left:0;top:0;width:0;height:0}
@@ -87,7 +87,7 @@
 @keyframes xmas-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 @keyframes xmas-gallop{from{translate:0 0}to{translate:0 -3px}}
 @media(prefers-reduced-motion:reduce){.xmas-snow{display:none}.xmas-sleigh>div{animation:none;left:50%;margin-left:-220px}.xmas-sleigh svg,.xmas-sleigh .d{animation:none}}
-@media(max-width:700px){.xmas-sleigh{top:108px;height:60px}.xmas-sleigh svg{width:270px;height:47px}.xmas-snow{transform:scale(.6);transform-origin:0 0}@keyframes xmas-fly{from{transform:translateX(-290px)}to{transform:translateX(100vw)}}}
+@media(max-width:700px){.xmas-sleigh{top:108px;height:660px}.xmas-sleigh svg{width:270px;height:47px}.xmas-snow{transform:scale(.6);transform-origin:0 0}@keyframes xmas-fly{from{transform:translateX(-290px)}to{transform:translateX(100vw)}}}
 </style>
 </head>
 <body>
@@ -104,7 +104,13 @@
 <circle cx="108" cy="21" r="3" fill="#fff"/><path d="M79 12h18" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
 <path d="M85 17c0 8 3 11 7 11s7-4 7-10z" fill="#fff"/>
 </svg></div></div>
-<script>if(new Date()>=new Date("2027-01-07")){var q=document.getElementById("xmas-sleigh");if(q)q.remove()}</script>
+<script>(function(){var q=document.getElementById("xmas-sleigh");if(!q)return;if(new Date()>=new Date("2027-01-07")){q.remove();return}
+if(matchMedia("(prefers-reduced-motion:reduce)").matches||!q.firstChild.animate)return;
+var el=q.firstChild,an;function fly(){if(an)an.cancel();var W=q.clientWidth,H=q.clientHeight,sw=el.offsetWidth,sh=el.offsetHeight,A=Math.min(170,H*.2),n=2.5,N=120,R=H-sh-A,f=[];
+function pos(t){return [-sw-40+(W+sw+40)*t,A+R*t-A*Math.sin(2*Math.PI*n*t)]}
+for(var i=0;i<=N;i++){var t=i/N,p=pos(t),p2=pos(Math.min(1,t+.004)),p1=pos(Math.max(0,t-.004)),d=Math.atan2(p2[1]-p1[1],p2[0]-p1[0])*180/Math.PI;f.push({transform:"translate("+p[0].toFixed(1)+"px,"+p[1].toFixed(1)+"px) rotate("+Math.max(-32,Math.min(38,d)).toFixed(1)+"deg)"})}
+an=el.animate(f,{duration:26000,iterations:Infinity,easing:"linear"})}
+fly();addEventListener("resize",fly)})();</script>
 
 <nav class="wrap">
   <a href="https://decisionframework.online/">DecisionFramework.online</a>
