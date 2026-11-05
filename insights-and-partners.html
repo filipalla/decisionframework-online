@@ -297,4 +297,33 @@
   });
 })();
 </script>
+<style id="insights-warm-css">
+#insights{position:relative;background:radial-gradient(ellipse at 50% 0,rgba(138,74,28,.28),transparent 60%)}
+#insights h2{color:#f0d27a}
+#insights .featured-article{border-left-width:6px}
+#insights .featured-article:nth-of-type(3n+1){border-color:#d8a93e;background:linear-gradient(115deg,#4a3514,#1f1b14 75%)}
+#insights .featured-article:nth-of-type(3n+2){border-color:#c2413b;background:linear-gradient(115deg,#4d1a18,#1f1716 75%)}
+#insights .featured-article:nth-of-type(3n){border-color:#3f9a68;background:linear-gradient(115deg,#173d2b,#161c18 75%)}
+#insights .featured-article .label{color:#f0d27a}
+#insights .featured-article .button{background:#e2c887;color:#17120a;border-color:#e2c887;font-weight:700}
+#insights .featured-article .button:hover{background:#f4dd9a}
+.xmas-tree{position:absolute;left:-168px;top:42px;bottom:0;width:150px;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22150%22%20height%3D%2266%22%20viewBox%3D%220%200%20150%2066%22%3E%3Cpath%20d%3D%22M52%200%20L98%200%20L140%2058%20Q122%2052%20108%2060%20Q92%2050%2075%2062%20Q58%2050%2042%2060%20Q28%2052%2010%2058%20Z%22%20fill%3D%22%231f6b43%22/%3E%3Cpath%20d%3D%22M98%200%20L140%2058%20Q122%2052%20108%2060%20Q92%2050%2075%2062%20Q58%2050%2042%2060%20Q28%2052%2010%2058%20L52%200%22%20fill%3D%22none%22%20stroke%3D%22%23e2c887%22%20stroke-width%3D%221.1%22%20opacity%3D%22.55%22/%3E%3Cpath%20d%3D%22M34%2036%20Q75%2052%20116%2034%22%20fill%3D%22none%22%20stroke%3D%22%23e2c887%22%20stroke-width%3D%221.6%22%20stroke-dasharray%3D%222%205%22/%3E%3C/svg%3E") repeat-y top center;z-index:2}
+.xmas-tree .star{position:absolute;left:50%;top:-34px;margin-left:-20px;font:40px/40px Georgia,serif;color:#ffd968;text-decoration:none;text-shadow:0 0 14px #ffc93c;animation:xmas-glow 2.6s ease-in-out infinite}
+.xmas-tree .ball{position:absolute;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;box-shadow:0 3px 8px rgba(0,0,0,.55);transition:transform .15s}
+.xmas-tree .ball:hover,.xmas-tree .ball:focus{transform:scale(1.35);z-index:3}
+.xmas-tree .ball span{display:none;position:absolute;left:30px;top:-6px;width:200px;padding:7px 10px;background:#111214;border:1px solid #e2c887;color:#f1eadb;font:13px/1.35 Arial,sans-serif;z-index:4}
+.xmas-tree .ball:hover span,.xmas-tree .ball:focus span{display:block}
+@keyframes xmas-glow{0%,100%{opacity:.8}50%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.xmas-tree .star{animation:none}}
+@media(max-width:1400px){.xmas-tree{left:-20px;width:18px;background-size:18px auto;top:18px}.xmas-tree .star{font-size:22px;line-height:22px;margin-left:-9px;top:-18px}.xmas-tree .ball{width:9px;height:9px;margin:-4px 0 0 -4px;left:50%!important}.xmas-tree .ball span{display:none!important}}
+</style>
+<script>
+(function(){if(new Date()>=new Date("2027-01-07"))return;var sec=document.getElementById("insights");if(!sec)return;
+var t=document.createElement("div");t.className="xmas-tree";t.setAttribute("aria-label","Christmas tree of insights");
+var star=document.createElement("a");star.className="star";star.href="/free-preview.html";star.textContent="\u2605";star.title="Free book preview";star.setAttribute("aria-label","Free book preview");t.appendChild(star);
+var cols=["radial-gradient(circle at 35% 30%,#fff5d0,#e3b23c 55%,#8f6a14)","radial-gradient(circle at 35% 30%,#ffd6d6,#d8313f 55%,#7d0f19)","radial-gradient(circle at 35% 30%,#fff,#c7ccd2 55%,#6f747b)"];
+var items=[];[].forEach.call(sec.querySelectorAll(".featured-article"),function(a,i){var l=a.querySelector("a.button[href]"),h=a.querySelector("h3");if(!l||!h)return;var b=document.createElement("a");b.className="ball";b.href=l.getAttribute("href");b.style.background=cols[i%3];b.style.left=(i%2?"108px":"42px");b.setAttribute("aria-label",h.textContent);var s=document.createElement("span");s.textContent=h.textContent;b.appendChild(s);t.appendChild(b);items.push([b,a])});
+sec.appendChild(t);function place(){var top=t.offsetTop;items.forEach(function(x){x[0].style.top=(x[1].offsetTop-top+70)+"px"})}place();addEventListener("resize",place);addEventListener("load",place);
+})();
+</script>
 </html>
