@@ -75,8 +75,33 @@
 .firms{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin:14px 0}.firms div{padding:16px;border:1px dashed var(--line);background:var(--surface)}.firms h4{margin:0 0 6px;font-weight:400;color:var(--text);font-size:1.1rem}.firms p{margin:0;font:13px/1.5 Arial}
 .me{margin:30px 0;padding:22px 24px;border:1px solid var(--light);background:linear-gradient(180deg,rgba(198,161,91,.14),rgba(198,161,91,.03))}.me p{margin:8px 0}.me .k{font:11px Arial;letter-spacing:.16em;text-transform:uppercase;color:var(--light)}
 </style>
+<style id="xmas-sleigh-css">
+.xmas-sleigh{position:absolute;left:0;right:0;top:62px;height:84px;overflow:hidden;pointer-events:none;z-index:4}
+.xmas-sleigh>div{position:absolute;left:0;top:4px;animation:xmas-fly 26s linear infinite;will-change:transform}
+.xmas-sleigh svg{display:block;animation:xmas-bob 2.4s ease-in-out infinite}
+.xmas-sleigh .d{animation:xmas-gallop .7s ease-in-out infinite alternate}
+@keyframes xmas-fly{from{transform:translateX(-470px)}to{transform:translateX(100vw)}}
+@keyframes xmas-bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes xmas-gallop{from{translate:0 0}to{translate:0 -3px}}
+@media(prefers-reduced-motion:reduce){.xmas-sleigh>div{animation:none;left:50%;margin-left:-220px}.xmas-sleigh svg,.xmas-sleigh .d{animation:none}}
+@media(max-width:700px){.xmas-sleigh{top:108px;height:60px}.xmas-sleigh svg{width:270px;height:47px}@keyframes xmas-fly{from{transform:translateX(-290px)}to{transform:translateX(100vw)}}}
+</style>
 </head>
 <body>
+<div class="xmas-sleigh" id="xmas-sleigh" aria-hidden="true"><div><svg viewBox="0 0 520 90" width="440" height="76" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+<g stroke="#e2c887" stroke-width="1.2" fill="none"><path d="M158 40 L372 28M160 46 L372 34"/></g>
+<g transform="translate(362 0)" class="d"><path d="M0 34c3-6 9-9 18-9h17c4 0 7-2 9-6l4-8 5 2-1 6 6 3-1 5h-8l-5 7c-2 4-3 7-3 11l-4 0-1-9-16 1-5 9-4 0 1-10c-4 0-9-1-12-2z" fill="#cf9c5e"/><path d="M50 12l-3-9m3 9 4-10m-5 5-5-3m8 1 5-3" stroke="#e2c887" stroke-width="2" fill="none" stroke-linecap="round"/></g><g transform="translate(290 0)" class="d"><path d="M0 34c3-6 9-9 18-9h17c4 0 7-2 9-6l4-8 5 2-1 6 6 3-1 5h-8l-5 7c-2 4-3 7-3 11l-4 0-1-9-16 1-5 9-4 0 1-10c-4 0-9-1-12-2z" fill="#cf9c5e"/><path d="M50 12l-3-9m3 9 4-10m-5 5-5-3m8 1 5-3" stroke="#e2c887" stroke-width="2" fill="none" stroke-linecap="round"/></g><g transform="translate(218 0)" class="d"><path d="M0 34c3-6 9-9 18-9h17c4 0 7-2 9-6l4-8 5 2-1 6 6 3-1 5h-8l-5 7c-2 4-3 7-3 11l-4 0-1-9-16 1-5 9-4 0 1-10c-4 0-9-1-12-2z" fill="#cf9c5e"/><path d="M50 12l-3-9m3 9 4-10m-5 5-5-3m8 1 5-3" stroke="#e2c887" stroke-width="2" fill="none" stroke-linecap="round"/></g>
+<path d="M18 40h118c8 0 12-6 16-13l11 3c-6 16-15 27-30 29H52C34 59 22 53 18 40z" fill="#b3202c"/>
+<path d="M18 40h118c1 0 3 0 4-1l-3 6H22z" fill="#e2c887"/>
+<path d="M30 66h108c8 0 13-3 17-8m-108 2-4 6m70-6-4 6" stroke="#e2c887" stroke-width="3" fill="none" stroke-linecap="round"/>
+<path d="M12 41c-4-12 2-22 15-23 11-1 16 8 16 22z" fill="#8a6a2c"/>
+<path d="M68 40c0-12 5-20 14-20h10c9 0 13 8 13 20z" fill="#d8313f"/>
+<circle cx="88" cy="13" r="8" fill="#f2d2b6"/>
+<path d="M80 12c3-9 13-11 17-3 4 1 8 5 10 11-5-3-8-5-12-6-5-1-10-1-15-2z" fill="#d8313f"/>
+<circle cx="108" cy="21" r="3" fill="#fff"/><path d="M79 12h18" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+<path d="M85 17c0 8 3 11 7 11s7-4 7-10z" fill="#fff"/>
+</svg></div></div>
+<script>if(new Date()>=new Date("2027-01-07")){var q=document.getElementById("xmas-sleigh");if(q)q.remove()}</script>
 
 <nav class="wrap">
   <a href="https://decisionframework.online/">DecisionFramework.online</a>
