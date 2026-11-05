@@ -156,12 +156,29 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
         <a class="button lucky" href="/free-preview.html">&#127873; Free book preview</a>
       </div>
     </div>
+    <div class="wrap vid" style="margin-top:36px">
+      <button class="vplay" type="button" data-id="_Eo6wm5P1tQ" aria-label="Play the video: The Gold Book That Doesn't End on the Last Page">
+        <img src="https://i.ytimg.com/vi/_Eo6wm5P1tQ/maxresdefault.jpg" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/_Eo6wm5P1tQ/hqdefault.jpg'" alt="This gold book opens a desk: the digital companion on a phone" loading="lazy" width="1280" height="720">
+        <span class="pb"></span>
+      </button>
+      <div>
+        <div class="label">Watch &middot; 75 seconds</div>
+        <h2>The book gives you the framework. The companion shows you today.</h2>
+        <ul>
+          <li>Asia overnight: what gold and silver did while you slept</li>
+          <li>What China and India are paying for physical gold</li>
+          <li>Real rates, the dollar, oil and the Strait of Hormuz</li>
+          <li>Gold Pulse, the app, by invitation</li>
+        </ul>
+        <a class="button lucky" href="https://desk.decisionframework.online">&#10022; Open the desk</a>
+      </div>
+    </div>
   </section>
 <script>
 document.querySelectorAll('.vplay').forEach(function(b){b.addEventListener('click',function(){
   var f=document.createElement('iframe');
   f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.id+'?autoplay=1&rel=0';
-  f.title='The Gold Investor: free preview in 33 languages';
+  f.title=b.getAttribute('aria-label').replace('Play the video: ','');
   f.allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen';
   f.allowFullscreen=true;b.innerHTML='';b.appendChild(f);b.style.cursor='default';
 },{once:true});});
