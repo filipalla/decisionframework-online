@@ -353,4 +353,19 @@ var b=document.createElement("div");b.className="xmas-stars";b.id="xmas-stars";b
 function fit(){var t=Math.round(a.getBoundingClientRect().top+scrollY),h=Math.round(z.getBoundingClientRect().top+scrollY)-t;b.style.top=t+"px";b.style.height=h+"px"}fit();addEventListener("resize",fit);addEventListener("load",fit);
 })();
 </script>
+<style id="xmas-bigstar-css">
+#media{position:relative}
+.xmas-bigstar{position:absolute;right:10px;top:-52px;width:200px;height:200px;pointer-events:none;z-index:1;animation:xmas-twinkle 3.2s ease-in-out infinite}
+.xmas-bigstar svg{display:block;width:100%;height:100%;filter:drop-shadow(0 0 18px #ffd34d) drop-shadow(0 0 48px #ffb300)}
+@keyframes xmas-twinkle{0%,100%{transform:scale(1) rotate(-3deg);opacity:.9}50%{transform:scale(1.07) rotate(3deg);opacity:1}}
+@media(prefers-reduced-motion:reduce){.xmas-bigstar{animation:none}}
+@media(max-width:800px){.xmas-bigstar{width:74px;height:74px;right:-4px;top:2px}}
+</style>
+<script>
+(function(){if(new Date()>=new Date("2027-01-07"))return;var m=document.getElementById("media");if(!m)return;
+var d=document.createElement("div");d.className="xmas-bigstar";d.setAttribute("aria-hidden","true");
+d.innerHTML='<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"><defs><radialGradient id="xs" cx="50%" cy="45%" r="60%"><stop offset="0" stop-color="#fffbe0"/><stop offset=".45" stop-color="#ffd968"/><stop offset="1" stop-color="#c48a14"/></radialGradient></defs><path d="M100 4 L114 72 L168 32 L128 86 L196 100 L128 114 L168 168 L114 128 L100 196 L86 128 L32 168 L72 114 L4 100 L72 86 L32 32 L86 72 Z" fill="url(#xs)" stroke="#fff1b8" stroke-width="1.5"/></svg>';
+m.appendChild(d);
+})();
+</script>
 </html>
