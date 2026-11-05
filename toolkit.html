@@ -123,8 +123,20 @@
 .tool .lab{font:13px Arial;color:var(--muted)}
 @media(max-width:700px){.tool{padding:24px 20px}.tool h3{font-size:1.7rem}}
 </style>
+<style id="xmas-balls-css">
+.xmas-balls{position:absolute;left:0;right:0;top:0;height:170px;overflow:hidden;z-index:5;pointer-events:none}
+.xmas-balls span{position:absolute;top:0;width:2px;height:var(--d);background:#c9a24e;transform-origin:top center;animation:xmas-sway 5s ease-in-out infinite}
+.xmas-balls span::after{content:"";position:absolute;left:50%;top:100%;width:var(--s);height:var(--s);margin-left:calc(var(--s)/-2);border-radius:50%;background:radial-gradient(circle at 34% 30%,#fff8e6 0 6%,var(--c1) 24%,var(--c2) 100%);box-shadow:0 5px 14px rgba(0,0,0,.5)}
+.xmas-balls span::before{content:"";position:absolute;left:50%;top:calc(100% - 5px);width:10px;height:7px;margin-left:-5px;background:#c9a24e;border-radius:2px;z-index:1}
+@keyframes xmas-sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@media(prefers-reduced-motion:reduce){.xmas-balls span{animation:none}}
+@media(max-width:1180px){.xmas-balls{top:60px}}
+@media(max-width:700px){.xmas-balls{top:107px;height:95px}.xmas-balls span:nth-child(2),.xmas-balls span:nth-child(5){display:none}.xmas-balls span:nth-child(1){left:5%}.xmas-balls span:nth-child(3){left:15%}.xmas-balls span:nth-child(4){left:85%}.xmas-balls span:nth-child(6){left:95%}.xmas-balls span{height:calc(var(--d)*.5)}.xmas-balls span::after{width:calc(var(--s)*.65);height:calc(var(--s)*.65);margin-left:calc(var(--s)*-.325)}}
+</style>
 </head>
 <body>
+<div class="xmas-balls" id="xmas-balls" aria-hidden="true"><span style="left:2.5%;--d:70px;--s:44px;--c1:#f0d27a;--c2:#a97c1e;animation-delay:0s"></span><span style="left:6%;--d:34px;--s:30px;--c1:#d8313f;--c2:#7d0f19;animation-delay:0.6s"></span><span style="left:9.5%;--d:96px;--s:36px;--c1:#d8313f;--c2:#7d0f19;animation-delay:1.1s"></span><span style="left:90.5%;--d:96px;--s:36px;--c1:#f0d27a;--c2:#a97c1e;animation-delay:0.9s"></span><span style="left:94%;--d:34px;--s:30px;--c1:#f0d27a;--c2:#a97c1e;animation-delay:0.3s"></span><span style="left:97.5%;--d:70px;--s:44px;--c1:#d8313f;--c2:#7d0f19;animation-delay:1.4s"></span></div>
+<script>if(new Date()>=new Date("2027-01-07")){var x=document.getElementById("xmas-balls");if(x)x.remove()}</script>
 
 <nav class="wrap">
   <a href="https://decisionframework.online/">DecisionFramework.online</a>
