@@ -114,6 +114,7 @@ svg .b08{fill:#6f8fb3}svg .b22{fill:#c6a15b}.legend .b08{background:#6f8fb3}.leg
 
 <main class="wrap">
 
+  <!-- map:start -->
   <p class="thesis">Gold may be the core. It is not the house.</p>
 
   <p class="lead">Almost everyone is exposed to one of two risks: that money loses its value faster than expected, or that the economy contracts and prices fall. Most portfolios are built for only one of them, usually without the owner knowing which. The question is not whether to protect your savings. It's what you are protecting them against.</p>
@@ -227,9 +228,11 @@ svg .b08{fill:#6f8fb3}svg .b22{fill:#c6a15b}.legend .b08{background:#6f8fb3}.leg
     <div class="box region"><div class="label">Everywhere</div><h3>Physical is separate</h3><p>An ETF is a claim on a fund. For metal in your own hands or your own name, see the <a href="/sixteen-dealers-six-questions.html">dealer comparison</a> and the <a href="/dealer-directory.html">Dealer Directory</a>.</p></div>
   </div>
 
+  <!-- map:end -->
   <section class="cta" id="desk">
     <span class="badge">Which weather are we in?</span>
     <h2>The desk reads the tells every day</h2>
+    <p><strong style="color:var(--light)">On the desk, this map comes with a live reading: which weather the indicators point to today, tell by tell, updated every evening.</strong></p>
     <p>Real yields and the dollar, the Fed path, crack spreads and oil inventories, the gold/silver ratio, the Shanghai premium and Asia Overnight: the desk is where this map comes alive. It's the add-on to <em>The Gold Investor</em>.</p>
     <div class="buys">
       <a class="buy best" href="https://payhip.com/b/yz6ei"><span class="flag">Best value</span>12 months &middot; &euro;199<small>about &euro;16.58 a month</small></a>
@@ -317,7 +320,7 @@ svg .b08{fill:#6f8fb3}svg .b22{fill:#c6a15b}.legend .b08{background:#6f8fb3}.leg
   panel.addEventListener('click',function(ev){var a=ev.target.closest('[data-w]');if(!a)return;ev.preventDefault();wsel.value=a.getAttribute('data-w');render();document.getElementById('build').scrollIntoView({behavior:'smooth'});});
   [wsel,lsel].forEach(function(el){el.addEventListener('change',render);});q.addEventListener('input',render);
   showPanel('stagflation');
-  fetch('protection-etfs.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(d){ALL=d.products||[];NAMES=d.regimes||{};render();})
+  fetch(window.DF_ETF_URL||'protection-etfs.json',{cache:'no-cache'}).then(function(r){return r.json();}).then(function(d){ALL=d.products||[];NAMES=d.regimes||{};render();})
     .catch(function(){list.innerHTML='<div class="empty">The fund list could not be loaded. Please refresh the page.</div>';});
 })();
 
