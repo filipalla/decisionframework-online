@@ -1,9 +1,164 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>The Dollar Balance: Dollar, Yields and Inflation Day | DecisionFramework</title>
-<link rel="canonical" href="https://desk.decisionframework.online/dollar-balance">
-<meta name="robots" content="noindex,follow">
-<meta http-equiv="refresh" content="0; url=https://desk.decisionframework.online/dollar-balance">
-<script>location.replace("https://desk.decisionframework.online/dollar-balance"+location.hash)</script>
-<style>body{margin:0;min-height:100vh;display:grid;place-items:center;background:#111214;color:#f1eadb;font:17px/1.7 Georgia,serif;text-align:center;padding:24px}a{color:#e2c887}</style>
-</head><body><p>This page has moved to the Desk: <a href="https://desk.decisionframework.online/dollar-balance">desk.decisionframework.online/dollar-balance</a></p></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Dollar Balance: Treasury Yields, the Curve and Credit Stress | DecisionFramework</title>
+<link rel="canonical" href="https://decisionframework.online/dollar-balance.html">
+<meta name="description" content="US Treasury yields, the 2s10s curve and credit spreads this week, explained: where every inflation number in the world gets weighed, and what it means for gold.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Dollar Balance: Treasury Yields, the Yield Curve and Credit Stress", "author": {"@type": "Person", "name": "Filip Allaert", "alternateName": "Stonecold", "url": "https://decisionframework.online/"}, "publisher": {"@type": "Organization", "name": "DecisionFramework", "url": "https://decisionframework.online/"}, "mainEntityOfPage": "https://decisionframework.online/dollar-balance.html", "inLanguage": "en", "datePublished": "2026-11-07", "dateModified": "2026-11-07", "image": "https://decisionframework.online/images/dollar-balance-chart.jpg"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What does the 2-year Treasury yield tell you?", "acceptedAnswer": {"@type": "Answer", "text": "The 2-year yield moves with expectations for the Federal Reserve's policy rate over the next two years. It is the market's quickest read on what the Fed will do."}}, {"@type": "Question", "name": "What is the 2s10s yield curve?", "acceptedAnswer": {"@type": "Answer", "text": "The 2s10s is the 10-year Treasury yield minus the 2-year yield. A negative value, an inverted curve, has often preceded recessions; a curve turning positive again means long rates are rising relative to short ones."}}, {"@type": "Question", "name": "What is the high-yield credit spread?", "acceptedAnswer": {"@type": "Answer", "text": "It is the extra yield the riskiest US companies pay over Treasuries. Below about 3% is calm; above 4% signals real stress, when lenders pull back and leveraged positions are cut across markets."}}]}</script>
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#111214">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://decisionframework.online/dollar-balance.html">
+<meta property="og:site_name" content="DecisionFramework">
+<meta property="og:title" content="The Dollar Balance: Treasury Yields, the Yield Curve and Credit Stress">
+<meta property="og:description" content="US Treasury yields, the 2s10s curve and credit spreads this week, explained: where every inflation number in the world gets weighed, and what it means for gold.">
+<meta property="og:image" content="https://decisionframework.online/images/dollar-balance-chart.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@DecisionFW">
+<meta name="twitter:image" content="https://decisionframework.online/images/dollar-balance-chart.jpg">
+<style>
+:root{--bg:#111214;--surface:#1b1b1d;--gold:#c6a15b;--light:#e2c887;--text:#f1eadb;--muted:#b8b0a1;--line:rgba(198,161,91,.45)}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 50% 0%,#49391c 0%,var(--bg) 38%);color:var(--text);font:17px/1.75 Georgia,serif}a{color:var(--light)}.wrap{width:min(1100px,calc(100% - 40px));margin:auto}nav{display:flex;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line);font:12px Arial;letter-spacing:.1em;text-transform:uppercase}nav a{text-decoration:none;color:var(--muted)}header{text-align:center;padding:100px 0 70px}header .eyebrow,.label{color:var(--light);font:12px Arial;letter-spacing:.22em;text-transform:uppercase}h1{font-size:clamp(3rem,8vw,6.2rem);font-weight:400;line-height:1.05;margin:28px auto;max-width:900px}.subtitle{color:var(--light);font-size:clamp(1.2rem,2.5vw,1.7rem);font-style:italic;max-width:760px;margin:auto}.caption{text-align:center;color:var(--muted);font:13px Arial;letter-spacing:.05em;margin-top:12px}.article{display:grid;grid-template-columns:minmax(0,760px) 280px;gap:60px;padding:70px 0 100px;border-top:1px solid var(--line)}h2{color:var(--light);font-size:clamp(2rem,4vw,3rem);font-weight:400;line-height:1.15;margin:64px 0 18px}h2:first-child{margin-top:0}p{color:var(--muted)}.lead{font-size:1.25rem;color:var(--text)}.chain,.quote{padding:24px;margin:30px 0;background:rgba(198,161,91,.1);border-left:3px solid var(--gold);color:var(--light);font-size:1.2rem}.side{align-self:start;position:sticky;top:24px;padding:24px;background:var(--surface);border:1px solid var(--line);color:var(--muted)}.side h3{margin-top:0;color:var(--light);font-size:1.05rem;font-weight:400}.side dl{margin:0}.side dt{color:var(--text);font:12px Arial;letter-spacing:.05em;text-transform:uppercase;margin-top:16px}.side dt:first-child{margin-top:0}.side dd{margin:4px 0 0;font-size:.95rem}.button{display:inline-block;padding:11px 18px;border:1px solid var(--gold);text-decoration:none;font:12px Arial;letter-spacing:.1em;text-transform:uppercase}footer{padding:30px 0;border-top:1px solid var(--line);font:13px Arial;color:var(--muted)}@media(max-width:800px){.article{grid-template-columns:1fr}.side{position:static}.wrap{width:min(100% - 28px,760px)}nav{flex-direction:column}}
+.df-signup{margin:56px 0 0;padding:28px;background:var(--surface);border:1px solid var(--line)}.df-signup h3{margin:0 0 8px;font-weight:400;font-size:1.45rem;color:var(--light);line-height:1.3}.df-signup p{margin:0 0 16px}.df-signup form{display:flex;gap:10px;flex-wrap:wrap}.df-signup input[type=email]{flex:1 1 220px;min-width:0;padding:13px 14px;background:var(--bg);color:var(--text);border:1px solid var(--line);font:16px Arial,sans-serif}.df-signup button{flex:0 0 auto;padding:13px 22px;background:rgba(198,161,91,.14);color:var(--light);border:1px solid var(--light);font:15px Arial,sans-serif;cursor:pointer}.df-signup button:hover{background:var(--light);color:#17120a}.df-signup .df-small{margin:12px 0 0;font:12.5px/1.6 Arial,sans-serif}.sources{font:14px/1.7 Arial,sans-serif}.sources li{margin-bottom:6px}@media(max-width:480px){.df-signup{padding:20px}.df-signup button{flex:1 1 100%}}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:30px 0}.stat{padding:16px 18px;background:var(--surface);border:1px solid var(--line)}.stat .k{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.stat .v{font-size:1.6rem;color:var(--text);line-height:1.2;margin-top:4px}.stat .n{font:12.5px/1.5 Arial,sans-serif;color:var(--muted);margin-top:4px}.levels{margin:30px 0;border:1px solid var(--gold)}.levels .row{display:grid;grid-template-columns:110px 1fr;gap:16px;padding:14px 18px;border-top:1px solid rgba(198,161,91,.2)}.levels .row:first-child{border-top:0}.levels .p{font-size:1.35rem;color:var(--light)}.levels .t{color:var(--muted);font-size:1rem}.levels .t strong{color:var(--text);font-weight:400}.week{padding:22px 24px;margin:30px 0;background:linear-gradient(120deg,#2a2217,#1b1b1d);border:1px solid var(--line)}.week .k{font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--light)}.week p{margin:8px 0 0;color:var(--text)}@media(max-width:640px){.stats{grid-template-columns:1fr 1fr}.levels .row{grid-template-columns:1fr;gap:2px}}main ul{color:var(--muted)}main ul li{margin-bottom:10px}main ul li strong{color:var(--text);font-weight:400}</style><style>.fig{margin:34px 0;padding:22px 22px 14px;background:var(--surface);border:1px solid var(--line)}.fig .cap{font:12.5px/1.6 Arial,sans-serif;color:var(--muted);margin-top:8px}.fig .ttl{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--light);margin-bottom:10px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:30px 0}.two div{padding:18px 20px;background:var(--surface);border:1px solid var(--line)}.two h4{margin:0 0 6px;font-weight:400;color:var(--light);font-size:1.15rem}.two p{margin:0;font-size:.98rem}table.t{width:100%;border-collapse:collapse;margin:26px 0;font:14px/1.5 Arial,sans-serif}table.t th,table.t td{padding:10px 12px;border-bottom:1px solid rgba(198,161,91,.2);text-align:left;color:var(--muted)}table.t th{color:var(--light);font-weight:400;letter-spacing:.06em;text-transform:uppercase;font-size:11px}table.t td strong{color:var(--text);font-weight:400}@media(max-width:640px){.two{grid-template-columns:1fr}table.t{font-size:13px}}</style><style>.article>main{min-width:0}</style>
+<style>
+.cta{margin:40px 0;padding:30px 28px;text-align:center;background:linear-gradient(120deg,#3a2c12,#1b1b1d);border:2px solid var(--light)}
+.cta .badge{display:inline-block;padding:6px 14px;background:var(--light);color:#17120a;font:bold 12px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase}
+.cta h3{margin:16px 0 8px;font-weight:400;font-size:clamp(1.5rem,3vw,2.1rem);color:var(--text);line-height:1.25}
+.cta p{margin:0 auto 20px;max-width:560px;color:var(--muted)}
+.cta .big{display:inline-block;padding:18px 34px;background:var(--light);color:#17120a;text-decoration:none;font:bold 17px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;border:0}
+.cta .big:hover{background:#f1dca6}
+.asof{font:12.5px/1.6 Arial,sans-serif;color:var(--muted);margin:-14px 0 30px}
+.fig img{display:block;width:100%;height:auto}
+.formula{font:15px/1.7 "Courier New",monospace;color:var(--text);background:rgba(198,161,91,.08);padding:14px 16px;border:1px solid rgba(198,161,91,.25);overflow-x:auto;white-space:nowrap;margin:20px 0}
+h2{font-size:clamp(1.7rem,3.4vw,2.4rem)}
+</style>
+<style>.article>main{min-width:0}</style>
+</head>
+<body>
+
+<nav class="wrap">
+  <a href="/">DecisionFramework.online</a>
+  <span><a href="/insights-and-partners.html#insights">Insights</a> &middot; <a href="https://desk.decisionframework.online/">The Desk</a> &middot; <a href="/toolkit.html">Trader&rsquo;s toolkit</a> &middot; <a href="/private-client.html" style="color:var(--light)">&#10022; Private Client</a></span>
+</nav>
+
+<header class="wrap">
+  <div class="eyebrow">Dollar &amp; rates &middot; Where inflation gets weighed</div>
+  <h1>The Dollar Balance</h1>
+  <p class="subtitle">Every inflation number in the world ends up weighed in three places: interest rates, the dollar, and gold and commodities.</p>
+  <p class="caption">Weekly snapshot: closes of Friday 30 October 2026 &middot; updated every week &middot; live on the Desk</p>
+</header>
+
+<div class="wrap article">
+  <main>
+    <div class="stats">
+      <div class="stat"><div class="k">10-year Treasury</div><div class="v">4.94%</div><div class="n">30 October. Down from 5.00% a week earlier; 4.11% a year ago</div></div>
+      <div class="stat"><div class="k">2-year Treasury</div><div class="v">4.56%</div><div class="n">Down from 4.69% a week earlier</div></div>
+      <div class="stat"><div class="k">High-yield spread</div><div class="v">3.44%</div><div class="n">Up from 3.38% a week earlier; calm below about 3%, stress above 4%</div></div>
+    </div>
+    <p class="asof">Closes of Friday 30 October 2026, from FRED (Federal Reserve H.15 yields; ICE BofA high-yield spread). The 30-year yield closed at 5.31% and the 2s10s curve at +0.38 points. Updated weekly here, nightly on the Desk.</p>
+
+    <p class="lead">Long US yields are back above 5% at the 30-year and near it at the 10-year, almost a full point higher than a year ago. The curve is positive again and credit spreads are still calm. The bond market is pricing sticky inflation, not a crisis.</p>
+
+    <div class="fig">
+      <div class="ttl">US Treasury yields since 2019</div>
+      <img src="/images/dollar-balance-chart.jpg" alt="Line chart of US 2-year, 10-year and 30-year Treasury yields from 2019 to October 2026: near zero in 2020 and 2021, above 4% since 2023, and the 30-year above 5% in 2026" width="1600" height="900" loading="lazy">
+      <div class="cap">Static snapshot to 30 October 2026. Source: FRED, series DGS2, DGS10, DGS30.</div>
+    </div>
+
+<div class="cta"><span class="badge">Live on the Desk</span><h3>The dollar balance, updated every night</h3><p>The curve today against a month and a year ago, credit stress, the inflation calendar and the Fed hike odds after every release.</p><a class="big" href="https://desk.decisionframework.online/dollar-balance">Open the live Desk &rarr;</a></div>
+
+    <h2>Why yields, the dollar and gold move together</h2>
+    <p>An inflation number moves a market only through what it changes about interest rates. Hot inflation means a central bank has to stay tight; soft inflation lets it ease. The gap between those expectations moves currencies: when Europe runs hot and the US runs soft, the euro rises and the dollar falls. The dollar is the net sum of all those moves, the needle on the scale.</p>
+
+    <div class="chain">Watch three needles: the 2-year yield for what the Fed will do, the 10-year real yield for gold&rsquo;s opportunity cost, and the dollar for the net verdict. Whatever does not show up in one of them shows up in another.</div>
+
+    <h2>What the yield curve says</h2>
+    <p>The 2s10s, the 10-year yield minus the 2-year, was deeply inverted in 2022 and 2023, the classic warning that markets expected rate cuts and slower growth. It is now positive again at +0.38 points. A curve that steepens because long yields rise, as now, says investors want more pay to hold long debt: a sign of inflation worry and heavy government borrowing rather than recession.</p>
+
+    <h2>Credit stress: the early warning</h2>
+    <p>The high-yield spread is what the riskiest US companies pay above Treasuries. When it widens, lenders pull back and leveraged positions are cut everywhere, metals and oil included. At 3.44% it sits just above calm. A move above 4% would be the first sign that the inflation story is turning into a deflationary squeeze.</p>
+    <p>Related: <a href="/real-rates-and-the-dollar.html">real rates and the dollar</a> &middot; <a href="/crack-spreads.html">crack spreads</a> &middot; <a href="/metal-ratios.html">metal ratios</a> &middot; <a href="/commodity-etf-guide.html">the commodity ETF guide</a></p>
+
+<div class="cta"><span class="badge">Private Client</span><h3>See tonight&rsquo;s balance, not last Friday&rsquo;s</h3><p>The Desk updates the curve, credit stress and Fed hike odds every night, and logs what each inflation release did to gold and silver.</p><a class="big" href="https://desk.decisionframework.online/dollar-balance">Open the live Desk &rarr;</a></div>
+<div class="df-signup" id="signup">
+      <h3>Get market notes like this by email</h3>
+      <p>Short notes on the moves and mechanics that matter, from a trader&rsquo;s point of view. Subscribers also get the free preview of <em>The Gold Investor</em> in their language, and the full book for &euro;35 instead of &euro;38.</p>
+      <form action="https://app.kit.com/forms/9913050/subscriptions" method="post">
+        <label for="df-email" style="position:absolute;left:-9999px">Email address</label>
+        <input id="df-email" type="email" name="email_address" placeholder="Your email address" required autocomplete="email">
+        <button type="submit">Subscribe &amp; get &euro;3 off</button>
+      </form>
+      <p class="df-small">You'll get a confirmation email first. Occasional emails on gold, real rates and the dollar. Unsubscribe anytime. Or <a href="/free-preview.html">read the preview first</a>.</p>
+    </div>
+
+    <h2>Sources</h2>
+    <ul class="sources">
+      <li><a href="https://fred.stlouisfed.org/series/DGS2">FRED: Market Yield on U.S. Treasury Securities at 2-Year Constant Maturity (DGS2)</a></li>
+      <li><a href="https://fred.stlouisfed.org/series/DGS10">FRED: 10-Year Constant Maturity (DGS10)</a></li>
+      <li><a href="https://fred.stlouisfed.org/series/DGS30">FRED: 30-Year Constant Maturity (DGS30)</a></li>
+      <li><a href="https://fred.stlouisfed.org/series/T10Y2Y">FRED: 10-Year Treasury Minus 2-Year Treasury (T10Y2Y)</a></li>
+      <li><a href="https://fred.stlouisfed.org/series/BAMLH0A0HYM2">FRED: ICE BofA US High Yield Index Option-Adjusted Spread (BAMLH0A0HYM2)</a></li>
+    </ul>
+  </main>
+
+  <aside class="side">
+    <h3>This week in brief</h3>
+    <dl>
+      <dt>10-year</dt>
+      <dd>4.94% on 30 October, almost a point above a year ago.</dd>
+      <dt>Curve</dt>
+      <dd>2s10s at +0.38: positive, long yields leading.</dd>
+      <dt>Credit</dt>
+      <dd>High-yield spread 3.44%: calm, but watch 4%.</dd>
+      <dt>Updated</dt>
+      <dd>Weekly here; nightly on the Desk.</dd>
+    </dl>
+    <p style="margin-top:24px"><a class="button" href="https://desk.decisionframework.online/dollar-balance" style="background:var(--light);color:#17120a;font-weight:bold">Live on the Desk &rarr;</a></p>
+    <p style="margin-top:10px"><a class="button" href="/private-client.html">Private Client &rarr;</a></p>
+  </aside>
+</div>
+
+<footer>
+  <div class="wrap">&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">Contact</a> &middot; <a href="/prop-trading.html">Prop trading, explained</a></div>
+</footer>
+<script>
+(function(){
+  document.querySelectorAll('form[action*="app.kit.com/forms/9913050"]').forEach(function(form){
+    form.addEventListener('submit',function(e){
+      e.preventDefault();
+      var btn=form.querySelector('button'), input=form.querySelector('input[name=email_address]');
+      var msg=form.parentNode.querySelector('.df-msg');
+      if(!msg){msg=document.createElement('p');msg.className='df-msg';msg.setAttribute('role','status');msg.style.cssText='margin:14px 0 0;color:#e2c887;font:15px/1.6 Arial,sans-serif';form.parentNode.insertBefore(msg,form.nextSibling);}
+      var fd=new FormData();
+      fd.append('email_address',input.value.trim());
+      fd.append('token','');
+      fd.append('referrer',document.referrer||'');
+      fd.append('host',location.href);
+      fd.append('search',location.search||'');
+      fd.append('user',(window.crypto&&crypto.randomUUID)?crypto.randomUUID():String(Date.now()));
+      fd.append('ckjs_version','6');
+      btn.disabled=true; var old=btn.textContent; btn.textContent='Sending…';
+      fetch(form.action,{method:'POST',body:fd,headers:{'Accept':'application/json','X-CKJS-Version':'6'}})
+        .then(function(r){return r.json().catch(function(){return {};}).then(function(d){return {ok:r.ok,d:d};});})
+        .then(function(res){
+          if(res.ok && (!res.d.status || res.d.status==='success')){
+            form.style.display='none';
+            msg.textContent='Almost there! Check your inbox and confirm your subscription to get the free preview in your language and your €35 code. Not there? Check your spam folder.';
+          } else {
+            btn.disabled=false; btn.textContent=old;
+            msg.textContent=(res.d && res.d.errors && res.d.errors.messages && res.d.errors.messages.join(' ')) || 'Something went wrong. Please check your email address and try again.';
+          }
+        })
+        .catch(function(){ btn.disabled=false; btn.textContent=old; msg.textContent='Connection problem. Please try again in a moment.'; });
+    });
+  });
+})();
+</script>
+<script src="/comments.js" defer></script>
+</body>
+</html>
