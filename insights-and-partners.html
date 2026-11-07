@@ -396,4 +396,5 @@ function pos(t){return [-sw-40+(W+sw+40)*t,A+R*t-A*Math.sin(2*Math.PI*n*t)]}
 for(var i=0;i<=N;i++){var t=i/N,p=pos(t),p2=pos(Math.min(1,t+.004)),p1=pos(Math.max(0,t-.004)),d=Math.atan2(p2[1]-p1[1],p2[0]-p1[0])*180/Math.PI;f.push({transform:"translate("+p[0].toFixed(1)+"px,"+p[1].toFixed(1)+"px) rotate("+Math.max(-32,Math.min(38,d)).toFixed(1)+"deg)"})}
 an=el.animate(f,{duration:26000,iterations:Infinity,easing:"linear"})}
 fly();addEventListener("resize",fly);addEventListener("load",fly)})();</script>
+<script src="/bf.js" defer></script>
 </html>
