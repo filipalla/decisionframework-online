@@ -74,6 +74,17 @@ section .intro{color:var(--muted);max-width:760px;margin:0 0 26px}
 .final .button-row{justify-content:center}
 footer{padding:32px 0;border-top:1px solid var(--line);font:13px/1.6 Arial,sans-serif;color:var(--muted)}
 footer a{color:var(--muted)}
+.deal{margin:0 0 20px;border:2px solid #e2c887;background:linear-gradient(180deg,rgba(198,161,91,.16),rgba(198,161,91,.05))}
+.deal .tag{display:block;padding:8px 14px;background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;font:700 13px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-align:center}
+.deal table{width:100%;border-collapse:collapse;font:15px Arial,sans-serif;color:var(--text)}
+.deal td{padding:7px 14px;border-bottom:1px solid rgba(198,161,91,.25)}.deal td:last-child{text-align:right;white-space:nowrap}
+.deal tr.sum td{color:var(--muted)}.deal tr.pay td{border:0;font-size:1.05rem}.deal tr.pay strong{color:var(--gold-light);font:400 1.9rem Georgia,serif}
+.deal tr.sub td{border:0;padding-top:0;color:var(--gold-light);font-size:13px}
+.bigdeal{display:inline-block;margin-top:24px;padding:16px 26px;background:linear-gradient(180deg,#e2c887,#c6a15b);color:#17120a;border:1px solid #f1eadb;text-decoration:none;font:700 16px Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;text-align:center;box-shadow:0 0 0 3px rgba(226,200,135,.25),0 6px 18px rgba(198,161,91,.4)}
+.bigdeal small{display:block;margin-top:3px;font:600 12px Arial,sans-serif;letter-spacing:.04em;text-transform:none;color:#3a2a0c}
+.bigdeal:hover{filter:brightness(1.08)}
+.bigdeal.red{background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border-color:#e2c887;box-shadow:0 0 0 3px rgba(212,32,47,.18),0 6px 18px rgba(165,15,28,.35)}
+.bigdeal.red small{color:#ffd36a}
 a:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
 @media(max-width:860px){.hero{grid-template-columns:1fr;gap:32px;padding-top:24px}.chapters{grid-template-columns:1fr}.pdf-viewer{height:560px}.signup{padding:22px}}
 .df-form{display:flex;flex-direction:column;gap:10px}.df-form input{padding:13px 14px;background:#111214;color:var(--text);border:1px solid var(--line);font:16px Arial,sans-serif}.df-form input:focus{outline:2px solid var(--gold-light);outline-offset:2px}.df-form button{padding:13px 22px;background:rgba(198,161,91,.14);color:var(--gold-light);border:1px solid var(--gold-light);font:15px Arial,sans-serif;cursor:pointer}.df-form button:hover{background:var(--gold-light);color:#17120a}
@@ -101,18 +112,26 @@ a:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
         <li>Available in 33 languages</li>
       </ul>
       <p class="credit">By Filip Allaert, former systematic trader in precious metals, crude oil and currencies.</p>
+      <a class="bigdeal" href="https://payhip.com/buy?link=7GDAe" target="_blank" rel="noopener">&#9889; Buy the full deal &middot; &euro;38<small>Book + 1 month of the desk (&euro;27) &middot; worth &euro;65 &middot; save 40%</small></a>
     </div>
 
     <aside class="signup" id="signup" aria-labelledby="signup-title">
-      <h2 id="signup-title">Join the newsletter. Get the book for less.</h2>
-      <p>Subscribe to <em>The DecisionFramework Brief</em> and get the preview in your language plus your subscriber code.</p>
-      <div class="price" aria-label="Subscriber price">
-        <s>€38</s><strong>€35</strong><span>book + 1 month desk,<br>subscriber price</span>
+      <h2 id="signup-title">Join the newsletter. Get the full deal for less.</h2>
+      <p>Subscribe to <em>The DecisionFramework Brief</em>: the preview in your language, the Sunday Weather Report, and your &euro;3 code for the full deal.</p>
+      <div class="deal" aria-label="The full deal">
+        <span class="tag">&#9733; The full deal &middot; 40% off</span>
+        <table>
+          <tr><td>The Gold Investor, your language</td><td>&euro;38</td></tr>
+          <tr><td>1 month of the desk + Gold Pulse</td><td>&euro;27</td></tr>
+          <tr class="sum"><td>Worth</td><td><s>&euro;65</s></td></tr>
+          <tr class="pay"><td>You pay</td><td><strong>&euro;38</strong></td></tr>
+          <tr class="sub"><td colspan="2">Newsletter subscribers: <strong>&euro;35</strong>, 46% off</td></tr>
+        </table>
       </div>
       <form action="https://app.kit.com/forms/9913050/subscriptions" method="post" class="df-form">
         <label for="df-email" style="position:absolute;left:-9999px">Email address</label>
         <input id="df-email" type="email" name="email_address" placeholder="Your email address" required autocomplete="email">
-        <button type="submit">Subscribe &amp; get €3 off</button>
+        <button type="submit" style="background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font:700 15px Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase;padding:15px 18px;box-shadow:0 0 0 3px rgba(212,32,47,.18),0 6px 18px rgba(165,15,28,.35)">&#9993; Subscribe &amp; get &euro;3 off</button>
       </form>
       <p class="fineprint">You'll get a confirmation email first. Occasional emails on gold, real rates and the dollar; unsubscribe with one click. The code applies to one single-licence copy.</p>
     </aside>
@@ -187,11 +206,11 @@ a:focus-visible{outline:2px solid var(--gold-light);outline-offset:4px}
 
 <section class="final">
   <div class="container">
-    <h2>Ready for the full framework?</h2>
+    <h2>The full deal: 40% off, plus a month of the desk.</h2>
     <p class="intro">The full deal: the book + 1 month of the desk, worth €65, for €38: you save 40%. Subscribers get it for €35. One licence, the language of your choice, three downloads.</p>
     <div class="button-row">
-      <a class="button store" href="#signup">Subscribe for €35</a>
-      <a class="button secondary" href="https://payhip.com/buy?link=7GDAe" target="_blank" rel="noopener">Buy the full deal at €38</a>
+      <a class="bigdeal" href="https://payhip.com/buy?link=7GDAe" target="_blank" rel="noopener">&#9889; Buy the full deal &middot; &euro;38<small>Book + 1 month of the desk &middot; save 40%</small></a>
+      <a class="bigdeal red" href="#signup">&#9993; Subscribe for &euro;35<small>Extra savings: 46% off</small></a>
     </div>
   </div>
 </section>
