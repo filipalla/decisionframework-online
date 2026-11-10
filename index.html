@@ -245,6 +245,77 @@ document.querySelectorAll('.vplay').forEach(function(b){b.addEventListener('clic
     </div>
   </section>
 
+  <section id="desk-plans">
+    <style>
+      #desk-plans .plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;margin-top:34px}
+      #desk-plans .plan{position:relative;display:flex;flex-direction:column;padding:30px 26px 26px;background:var(--surface);border:1px solid var(--line);color:var(--text);text-decoration:none;transition:.2s}
+      #desk-plans .plan:hover{border-color:var(--light);transform:translateY(-2px)}
+      #desk-plans .plan.best{border:2px solid var(--light);background:linear-gradient(180deg,rgba(198,161,91,.16),var(--surface) 60%);box-shadow:0 10px 30px rgba(0,0,0,.35)}
+      #desk-plans .flag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:5px 14px;background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font:700 12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase}
+      #desk-plans .term{font:12px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--light)}
+      #desk-plans .amt{font-size:52px;line-height:1;margin:14px 0 6px;color:var(--text)}
+      #desk-plans .amt s{font-size:22px;color:var(--muted);margin-left:8px}
+      #desk-plans .per{font:14px Arial,sans-serif;color:var(--light);margin-bottom:16px}
+      #desk-plans .plan p{color:var(--muted);font-size:15px;margin:0 0 22px;flex:1}
+      #desk-plans .cta{display:block;padding:14px 16px;text-align:center;font:700 14px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--gold);color:var(--light)}
+      #desk-plans .best .cta{background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border-color:#e2c887;box-shadow:0 0 0 3px rgba(212,32,47,.18),0 6px 18px rgba(165,15,28,.35)}
+      #desk-plans .inside{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 26px;margin:26px 0 0;padding:0;list-style:none;color:var(--muted);font-size:15px}
+      #desk-plans .inside li{padding-left:18px;position:relative}
+      #desk-plans .inside li::before{content:"\2726";position:absolute;left:0;color:var(--gold);font-size:12px;top:3px}
+      #desk-plans .orbook{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px;margin-top:30px;padding:22px 26px;border:1px dashed var(--line);background:rgba(198,161,91,.06)}
+      #desk-plans .orbook p{margin:0;color:var(--text)}
+      #desk-plans .bfbar{display:none;margin-top:26px;padding:14px 18px;background:linear-gradient(90deg,#a50f1c,#d4202f);color:#ffe08a;font:700 15px Arial,sans-serif;letter-spacing:.04em;text-align:center}
+      @media(max-width:860px){#desk-plans .plans,#desk-plans .inside{grid-template-columns:1fr}#desk-plans .plan.best{order:-1}}
+    </style>
+    <div class="wrap">
+      <div class="label">&#10022; The desk &middot; for members</div>
+      <h2>The method, applied every day.</h2>
+      <p style="max-width:760px;color:var(--muted)">The book gives you the framework. The desk shows you what today&rsquo;s market is saying about it, every morning and every evening, so you decide on evidence instead of headlines.</p>
+      <ul class="inside">
+        <li>Gold Pulse app: Shanghai &amp; India premiums every morning</li>
+        <li>Asia Overnight: what gold and silver did while you slept</li>
+        <li>The Sunday Weather Report, in full</li>
+        <li>The Protection Map: inflation or deflation, and the ETF sleeves</li>
+        <li>Metals, Risk, Softs and Rare Earths watches</li>
+        <li>Session Clock and Chart Wall for timing</li>
+      </ul>
+      <div class="bfbar" id="bf-desk">&#9733; BLACK FRIDAY &middot; 12 months for &euro;144 instead of &euro;199 &middot; code BLACKFRIDAY at checkout &middot; until Monday midnight</div>
+      <div class="plans">
+        <a class="plan" href="https://payhip.com/buy?link=zbK9m" target="_blank" rel="noopener">
+          <span class="term">1 month</span>
+          <span class="amt">&euro;27</span>
+          <span class="per">Try it, no commitment</span>
+          <p>The full desk and Gold Pulse for a month. Renew only if it earns its place.</p>
+          <span class="cta">Start with a month</span>
+        </a>
+        <a class="plan best" href="https://payhip.com/buy?link=yz6ei" target="_blank" rel="noopener">
+          <span class="flag">&#9733; Best value &middot; save 38%</span>
+          <span class="term">12 months</span>
+          <span class="amt">&euro;199<s>&euro;324</s></span>
+          <span class="per">About &euro;16.58 a month</span>
+          <p>A full year of the desk: every Fed meeting, every CPI print, every Sunday Weather Report.</p>
+          <span class="cta">&#9889; Take the year</span>
+        </a>
+        <a class="plan" href="https://payhip.com/buy?link=FR6zL" target="_blank" rel="noopener">
+          <span class="term">6 months</span>
+          <span class="amt">&euro;129<s>&euro;162</s></span>
+          <span class="per">About &euro;21.50 a month &middot; save 20%</span>
+          <p>Half a year: long enough to see the method work through a full cycle of data and central banks.</p>
+          <span class="cta">Take 6 months</span>
+        </a>
+      </div>
+      <div class="orbook">
+        <p><strong style="color:var(--light)">New here?</strong> Get your first month free with the book: the full deal, worth &euro;65, for &euro;38.</p>
+        <a class="button lucky" href="https://payhip.com/buy?link=7GDAe" target="_blank" rel="noopener">&#9889; The full deal &middot; &euro;38</a>
+      </div>
+      <p style="margin-top:18px;font:13px Arial,sans-serif;color:var(--muted)">After purchase, the License Key in your Payhip receipt opens the desk at <a href="https://desk.decisionframework.online/pulse" style="color:var(--light)">desk.decisionframework.online/pulse</a>. Already a member? <a href="https://desk.decisionframework.online/" style="color:var(--light)">Open the desk &rarr;</a></p>
+    </div>
+    <script>
+      (function(){try{var n=new Date(),s=new Date('2026-11-27T00:00:00+01:00'),e=new Date('2026-12-01T00:00:00+01:00');
+        if(n>=s&&n<e){document.getElementById('bf-desk').style.display='block';}}catch(x){}})();
+    </script>
+  </section>
+
   <section id="rules">
     <div class="wrap">
       <div class="label">How we read the market</div>
