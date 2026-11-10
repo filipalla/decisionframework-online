@@ -164,7 +164,7 @@
     <p class="lead">A metals trader needs three things: capital to trade with, charts to read, and a trusted place to own the metal itself. This page is the short list behind the DecisionFramework desk. No paid placements: a tool is here because it does the job, not because it pays.</p>
 
     <div class="glance" aria-label="All tools at a glance">
-      <a href="#free-preview" style="border:2px solid #8fbf8a;background:linear-gradient(180deg,rgba(143,191,138,.14),rgba(143,191,138,.03))"><span class="c">&#9733; Subscriber deal</span><span class="n">Free book preview</span><span class="o">&euro;3<small>OFF</small></span><span class="w">33 languages, full book &euro;35</span><span class="g">Get the deal &darr;</span></a>
+      <a href="#desk-plans" style="border:2px solid #e2c887;background:linear-gradient(180deg,rgba(198,161,91,.2),rgba(198,161,91,.04))"><span class="c">&#10022; My own product</span><span class="n">The desk</span><span class="o">&minus;38%<small>12 MONTHS</small></span><span class="w">from &euro;27, or a month free with the book</span><span class="g">See the plans &darr;</span></a>
       <a href="#mff"><img class="logo" src="https://www.google.com/s2/favicons?domain=myfundedfutures.com&amp;sz=128" alt="My Funded Futures logo" width="46" height="46" loading="lazy" onerror="this.remove()"><span class="c">&#9733; My #1 prop firm</span><span class="n">My Funded Futures</span><span class="o">40%<small>OFF</small></span><span class="w">any plan, code CLUB</span><span class="g">See the deal &darr;</span></a>
       <a href="#copilink"><img class="logo" src="https://www.google.com/s2/favicons?domain=copilink.com&amp;sz=128" alt="Copilink logo" width="46" height="46" loading="lazy" onerror="this.remove()"><span class="c">Trade copier</span><span class="n">Copilink</span><span class="o">30%<small>OFF</small></span><span class="w">with code GDEAL</span><span class="g">See the deal &darr;</span></a>
       <a href="#ninjatrader"><img class="logo" src="https://www.google.com/s2/favicons?domain=ninjatrader.com&amp;sz=128" alt="NinjaTrader logo" width="46" height="46" loading="lazy" onerror="this.remove()"><span class="c">Futures platform</span><span class="n">NinjaTrader</span><span class="o">FREE<small>PLATFORM</small></span><span class="w">charts and simulator</span><span class="g">See the deal &darr;</span></a>
@@ -176,20 +176,46 @@
       <a href="#tradingview"><img class="logo" src="https://www.google.com/s2/favicons?domain=tradingview.com&amp;sz=128" alt="TradingView logo" width="46" height="46" loading="lazy" onerror="this.remove()"><span class="c">Charts</span><span class="n">TradingView</span><span class="o">$15<small>OFF</small></span><span class="w">your next plan</span><span class="g">See the deal &darr;</span></a>
     </div>
 
-    <div class="tool top" id="free-preview" style="margin:34px 0 10px;border:2px solid #8fbf8a">
-      <div>
-        <div class="k">Subscriber deal &middot; free</div>
-        <h3>Read The Gold Investor free, then get it for &euro;35</h3>
-        <div class="rank">&#9733; Free preview in 33 languages + &euro;3 off the full book</div>
-        <p>Subscribe to the DecisionFramework newsletter and you get the free preview of The Gold Investor in your own language, plus a personal code that takes &euro;3 off the full deal (the book + 1 month of the desk, worth &euro;65): &euro;35 instead of &euro;38. One licence, the language of your choice, three downloads.</p>
-        <div class="promo"><div class="b"><span class="big">FREE<small>PREVIEW</small></span><span class="t">in 33 languages, straight to your inbox</span></div><div class="b"><span class="big">&euro;3<small>OFF</small></span><span class="t">the full deal: <s>&euro;38</s> &euro;35 for subscribers</span></div></div>
+    <h2 id="desk-plans" style="margin-top:40px">The desk: what ties these deals together</h2>
+    <style>
+      #tk-plans .in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 22px;margin:14px 0 0;padding:0;list-style:none;color:var(--muted);font-size:15px}
+      #tk-plans .in li{position:relative;padding-left:18px}#tk-plans .in li::before{content:"\2726";position:absolute;left:0;top:3px;font-size:12px;color:var(--gold)}
+      #tk-plans .pl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
+      #tk-plans .p{position:relative;display:flex;flex-direction:column;padding:26px 18px 18px;background:var(--surface);border:1px solid var(--line);color:var(--text);text-decoration:none;transition:.2s}
+      #tk-plans .p:hover{border-color:var(--light);transform:translateY(-2px)}
+      #tk-plans .p.best{border:2px solid var(--light);background:linear-gradient(180deg,rgba(198,161,91,.16),var(--surface) 60%)}
+      #tk-plans .fl{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:4px 12px;background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font:700 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+      #tk-plans .t{font:11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--light)}
+      #tk-plans .a{font-size:40px;line-height:1;margin:10px 0 4px}#tk-plans .a s{font-size:17px;color:var(--muted);margin-left:6px}
+      #tk-plans .m{font:13px Arial,sans-serif;color:var(--light);margin-bottom:16px;flex:1}
+      #tk-plans .c{display:block;padding:12px;text-align:center;font:700 13px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--gold);color:var(--light)}
+      #tk-plans .best .c{background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border-color:#e2c887;box-shadow:0 0 0 3px rgba(212,32,47,.18)}
+      #tk-plans .nb{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:22px;padding:18px 20px;border:1px dashed var(--line);background:rgba(198,161,91,.06)}
+      #tk-plans .nb p{margin:0;color:var(--text)}
+      #tk-plans .nb a{padding:12px 18px;background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font:700 13px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+      #tk-plans .bf{display:none;margin-top:18px;padding:12px 14px;background:linear-gradient(90deg,#a50f1c,#d4202f);color:#ffe08a;font:700 14px Arial,sans-serif;text-align:center}
+      @media(max-width:700px){#tk-plans .pl,#tk-plans .in{grid-template-columns:1fr}#tk-plans .p.best{order:-1}}
+    </style>
+    <div id="tk-plans">
+      <p>Every deal on this page is a tool. The desk is where they come together: the daily read of what gold, rates and oil are doing, so you know <em>when</em> to use them.</p>
+      <ul class="in">
+        <li>Gold Pulse: Shanghai &amp; India premiums every morning</li>
+        <li>Asia Overnight: what gold and silver did while you slept</li>
+        <li>The Sunday Weather Report, in full</li>
+        <li>The Protection Map and its ETF sleeves</li>
+        <li>Metals, Risk, Softs and Rare Earths watches</li>
+        <li>Session Clock and Chart Wall for timing</li>
+      </ul>
+      <div class="bf" id="tk-bf">&#9733; BLACK FRIDAY &middot; 12 months for &euro;144 instead of &euro;199 &middot; code BLACKFRIDAY &middot; until Monday midnight</div>
+      <div class="pl">
+        <a class="p" href="https://payhip.com/buy?link=zbK9m" target="_blank" rel="noopener"><span class="t">1 month</span><span class="a">&euro;27</span><span class="m">Try it, no commitment</span><span class="c">Start with a month</span></a>
+        <a class="p best" href="https://payhip.com/buy?link=yz6ei" target="_blank" rel="noopener"><span class="fl">&#9733; Best value &middot; save 38%</span><span class="t">12 months</span><span class="a">&euro;199<s>&euro;324</s></span><span class="m">About &euro;16.58 a month</span><span class="c">&#9889; Take the year</span></a>
+        <a class="p" href="https://payhip.com/buy?link=FR6zL" target="_blank" rel="noopener"><span class="t">6 months</span><span class="a">&euro;129<s>&euro;162</s></span><span class="m">About &euro;21.50 a month &middot; save 20%</span><span class="c">Take 6 months</span></a>
       </div>
-      <div class="act">
-        <a class="go" href="/free-preview.html#signup" style="padding:20px 32px;font-size:16px;white-space:normal;text-align:center;max-width:100%">Get the free preview + &euro;3 off &rarr;</a>
-        <a class="ghost" href="/free-preview.html#languages">Pick your language first</a>
-        <span class="lab">My own product &middot; unsubscribe anytime</span>
-      </div>
+      <div class="nb"><p><strong style="color:var(--light)">New here?</strong> Your first month free with the book: the full deal, worth &euro;65, for &euro;38.</p><a href="https://payhip.com/buy?link=7GDAe" target="_blank" rel="noopener">&#9889; The full deal &middot; &euro;38</a></div>
+      <p style="margin-top:14px;font:13px Arial,sans-serif;color:var(--muted)">My own product. The License Key in your Payhip receipt opens the desk at <a href="https://desk.decisionframework.online/pulse">desk.decisionframework.online/pulse</a>.</p>
     </div>
+    <script>(function(){try{var n=new Date();if(n>=new Date('2026-11-27T00:00:00+01:00')&&n<new Date('2026-12-01T00:00:00+01:00'))document.getElementById('tk-bf').style.display='block';}catch(e){}})();</script>
 
     <h2>Trade it</h2>
     <div class="tk">
@@ -375,47 +401,6 @@
         </div>
       </div>
     </div>
-
-    <h2 id="desk-plans">The last tool in the kit: the desk</h2>
-    <style>
-      #tk-plans .in{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 22px;margin:14px 0 0;padding:0;list-style:none;color:var(--muted);font-size:15px}
-      #tk-plans .in li{position:relative;padding-left:18px}#tk-plans .in li::before{content:"\2726";position:absolute;left:0;top:3px;font-size:12px;color:var(--gold)}
-      #tk-plans .pl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:30px}
-      #tk-plans .p{position:relative;display:flex;flex-direction:column;padding:26px 18px 18px;background:var(--surface);border:1px solid var(--line);color:var(--text);text-decoration:none;transition:.2s}
-      #tk-plans .p:hover{border-color:var(--light);transform:translateY(-2px)}
-      #tk-plans .p.best{border:2px solid var(--light);background:linear-gradient(180deg,rgba(198,161,91,.16),var(--surface) 60%)}
-      #tk-plans .fl{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:4px 12px;background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font:700 11px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase}
-      #tk-plans .t{font:11px Arial,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--light)}
-      #tk-plans .a{font-size:40px;line-height:1;margin:10px 0 4px}#tk-plans .a s{font-size:17px;color:var(--muted);margin-left:6px}
-      #tk-plans .m{font:13px Arial,sans-serif;color:var(--light);margin-bottom:16px;flex:1}
-      #tk-plans .c{display:block;padding:12px;text-align:center;font:700 13px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--gold);color:var(--light)}
-      #tk-plans .best .c{background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border-color:#e2c887;box-shadow:0 0 0 3px rgba(212,32,47,.18)}
-      #tk-plans .nb{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px;margin-top:22px;padding:18px 20px;border:1px dashed var(--line);background:rgba(198,161,91,.06)}
-      #tk-plans .nb p{margin:0;color:var(--text)}
-      #tk-plans .nb a{padding:12px 18px;background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font:700 13px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
-      #tk-plans .bf{display:none;margin-top:18px;padding:12px 14px;background:linear-gradient(90deg,#a50f1c,#d4202f);color:#ffe08a;font:700 14px Arial,sans-serif;text-align:center}
-      @media(max-width:700px){#tk-plans .pl,#tk-plans .in{grid-template-columns:1fr}#tk-plans .p.best{order:-1}}
-    </style>
-    <div id="tk-plans">
-      <p>Every deal on this page is a tool. The desk is where they come together: the daily read of what gold, rates and oil are doing, so you know <em>when</em> to use them.</p>
-      <ul class="in">
-        <li>Gold Pulse: Shanghai &amp; India premiums every morning</li>
-        <li>Asia Overnight: what gold and silver did while you slept</li>
-        <li>The Sunday Weather Report, in full</li>
-        <li>The Protection Map and its ETF sleeves</li>
-        <li>Metals, Risk, Softs and Rare Earths watches</li>
-        <li>Session Clock and Chart Wall for timing</li>
-      </ul>
-      <div class="bf" id="tk-bf">&#9733; BLACK FRIDAY &middot; 12 months for &euro;144 instead of &euro;199 &middot; code BLACKFRIDAY &middot; until Monday midnight</div>
-      <div class="pl">
-        <a class="p" href="https://payhip.com/buy?link=zbK9m" target="_blank" rel="noopener"><span class="t">1 month</span><span class="a">&euro;27</span><span class="m">Try it, no commitment</span><span class="c">Start with a month</span></a>
-        <a class="p best" href="https://payhip.com/buy?link=yz6ei" target="_blank" rel="noopener"><span class="fl">&#9733; Best value &middot; save 38%</span><span class="t">12 months</span><span class="a">&euro;199<s>&euro;324</s></span><span class="m">About &euro;16.58 a month</span><span class="c">&#9889; Take the year</span></a>
-        <a class="p" href="https://payhip.com/buy?link=FR6zL" target="_blank" rel="noopener"><span class="t">6 months</span><span class="a">&euro;129<s>&euro;162</s></span><span class="m">About &euro;21.50 a month &middot; save 20%</span><span class="c">Take 6 months</span></a>
-      </div>
-      <div class="nb"><p><strong style="color:var(--light)">New here?</strong> Your first month free with the book: the full deal, worth &euro;65, for &euro;38.</p><a href="https://payhip.com/buy?link=7GDAe" target="_blank" rel="noopener">&#9889; The full deal &middot; &euro;38</a></div>
-      <p style="margin-top:14px;font:13px Arial,sans-serif;color:var(--muted)">My own product. The License Key in your Payhip receipt opens the desk at <a href="https://desk.decisionframework.online/pulse">desk.decisionframework.online/pulse</a>.</p>
-    </div>
-    <script>(function(){try{var n=new Date();if(n>=new Date('2026-11-27T00:00:00+01:00')&&n<new Date('2026-12-01T00:00:00+01:00'))document.getElementById('tk-bf').style.display='block';}catch(e){}})();</script>
 
     <h2>How the scores work</h2>
     <p>Dealers and vaults are scored on the same six questions, each out of 10: are prices shown, what does a round trip cost, how fair is the buyback, what does storage cost and how is it held, how is the company regulated and set up, and what do customers say. Sixteen dealers were scored in September 2026; BullionVault was added on 11 October 2026 on the same basis. The scores are my own judgement from published information, not paid placements, and they change when the facts do.</p>
