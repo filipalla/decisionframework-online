@@ -1,8 +1,8 @@
 /* Black Friday banner for decisionframework.online.
-   Teaser from 20 Nov, live offer 27-30 Nov 2026 (Brussels time), gone afterwards. Add ?bf=1 to any page to preview the live banner. */
+   Live offer 18-30 Nov 2026 (Brussels time), gone afterwards. Add ?bf=1 to any page to preview the live banner. */
 (function(){
   var now = Date.now(), q = /[?&]bf=1/.test(location.search);
-  var TEASE = Date.UTC(2026,10,19,23,0), START = Date.UTC(2026,10,26,23,0), END = Date.UTC(2026,10,30,23,0);
+  var TEASE = Date.UTC(2026,10,18,16,0), START = Date.UTC(2026,10,18,16,0), END = Date.UTC(2026,10,30,23,0);
   if (!q && (now < TEASE || now >= END)) return;
   var live = q || now >= START;
   var css = '#bfbar{position:relative;z-index:50;background:linear-gradient(90deg,#000,#2a2112 40%,#000);border-bottom:3px solid #e2c887;color:#f1eadb;font:15px/1.4 Arial,Helvetica,sans-serif;text-align:center;padding:14px 16px}'+
@@ -24,7 +24,7 @@
     var t = document.getElementById('bft');
     (function tick(){
       var ms = Math.max(0, END - Date.now()), d = Math.floor(ms/864e5), h = Math.floor(ms%864e5/36e5), m = Math.floor(ms%36e5/6e4);
-      t.textContent = q && Date.now() < START ? 'Preview: the offer runs Fri 27 Nov to Mon 30 Nov, Brussels time.' : 'Ends Monday 30 November, midnight Brussels: ' + d + 'd ' + h + 'h ' + m + 'm left. Enter the code at checkout.';
+      t.textContent = q && Date.now() < START ? 'Preview: the offer runs until Mon 30 Nov, Brussels time.' : 'Ends Monday 30 November, midnight Brussels: ' + d + 'd ' + h + 'h ' + m + 'm left. Enter the code at checkout.';
       setTimeout(tick, 30000);
     })();
   }
