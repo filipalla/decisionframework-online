@@ -9,9 +9,9 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="manifest" href="/site.webmanifest">
 <meta name="theme-color" content="#111214">
-<meta name="description" content="The live indicators behind The Gold Decision Framework, open to everyone for now. Readers of The Gold Investor can pre-register their licence code for founding-reader status and rate.">
+<meta name="description" content="Private Client: free with your email. Today's Asia briefing on gold and silver, the morning Shanghai and India gold premiums, one full desk note every week, and a window into the DecisionFramework desk.">
 <meta property="og:title" content="Private Client | DecisionFramework">
-<meta property="og:description" content="The desk, opened for now. Pre-register your licence code for founding-reader status.">
+<meta property="og:description" content="Free with your email: today's Asia briefing, the morning gold premiums and a window into the desk.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://decisionframework.online/private-client.html">
 <meta property="og:site_name" content="DecisionFramework">
@@ -96,154 +96,106 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
 .founder-note{margin-top:28px;padding:16px 20px;border:1px dashed var(--line);color:var(--muted);font:15px/1.55 Arial,sans-serif}.founder-note b{color:var(--light);font-weight:normal}
 .founder-note .ftag{display:inline-block;margin-right:8px;padding:2px 9px;border:1px solid var(--light);color:var(--light);font:bold 10.5px Arial;letter-spacing:.12em;text-transform:uppercase}
 @media(max-width:820px){.get{grid-template-columns:1fr}}
+
+/* Private Client (Tier 1) */
+.state{max-width:560px;margin:30px auto 0;text-align:left}
+.state .who{padding:16px 20px;border:1px solid var(--line);background:rgba(198,161,91,.07);font:15px/1.6 Arial,sans-serif;color:var(--muted);text-align:center}
+.state .who b{color:var(--text);font-weight:normal}.state .who button{margin:0 0 0 8px;padding:0;background:none;color:var(--light);font:15px Arial;letter-spacing:0;text-transform:none;text-decoration:underline}
+.state .dft-box{max-width:none;box-shadow:none}
+.h-sec{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.h-sec .when{font:12px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.today{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:20px;margin-top:20px}
+.panel{padding:26px;background:var(--surface);border:1px solid var(--hair)}
+.panel .k{font:11px Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--light)}
+.panel h3{margin:8px 0 10px;font-weight:400;font-size:1.5rem;line-height:1.25}
+.tl{list-style:none;margin:14px 0 0;padding:0}.tl li{display:grid;grid-template-columns:58px 1fr;gap:10px;padding:9px 0;border-top:1px solid var(--hair);font:15px/1.55 Arial,sans-serif;color:var(--muted)}
+.tl li span{color:var(--light);font-variant-numeric:tabular-nums}
+.more{margin-top:14px;padding:12px 14px;border:1px dashed var(--line);font:14px Arial,sans-serif;color:var(--muted)}.more a{color:var(--light)}
+.prem{display:grid;gap:14px}.prem .v{font-size:2.3rem;line-height:1.1;color:var(--text);font-variant-numeric:tabular-nums}.prem .s{font:13px Arial,sans-serif;color:var(--muted)}
+.win{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:14px;margin-top:20px}
+.wb{position:relative;display:block;padding:20px 20px 18px;background:var(--surface);border:1px solid var(--hair);text-decoration:none;color:var(--text);overflow:hidden;min-height:150px}
+.wb:hover{border-color:var(--light)}
+.wb .t{font:400 1.15rem Georgia,serif;color:var(--text)}.wb .u{font:11px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.wb .h{margin-top:10px;font:14px/1.5 Arial,sans-serif;color:var(--light)}
+.wb .blur{margin-top:10px;height:46px;border-radius:2px;background:repeating-linear-gradient(180deg,rgba(241,234,219,.22) 0 9px,transparent 9px 16px);filter:blur(3px);opacity:.7}
+.wb .lock{position:absolute;top:14px;right:14px;padding:3px 9px;border:1px solid var(--line);font:700 10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--light);background:#111214}
+.note p{color:var(--text)}.note .k{margin-bottom:4px}
+.locked{position:relative}.locked .veil{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(13,14,16,.55);backdrop-filter:blur(2px)}
+.locked .veil a{padding:14px 22px;background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font:700 14px Arial;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.cmp{width:100%;border-collapse:collapse;margin-top:20px;font:15px/1.5 Arial,sans-serif}
+.cmp th,.cmp td{padding:11px 12px;border-bottom:1px solid var(--hair);text-align:left;color:var(--muted)}
+.cmp th{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--light)}.cmp td:first-child{color:var(--text)}
+.cmp .y{color:var(--light)}
+@media(max-width:820px){.today{grid-template-columns:1fr}}
 </style>
+<script src="/tier.js?v=20261122" defer></script>
 </head>
-<body>
+<body data-tier-prompt="off">
 
 <nav class="wrap" aria-label="Main navigation">
   <a href="/" style="color:var(--text)">DecisionFramework.online</a>
-  <span class="links"><a href="/insights-and-partners.html#analyses">Insights</a><a href="https://desk.decisionframework.online/">The Desk</a><a href="/toolkit.html">Trader&rsquo;s toolkit</a><a href="https://desk.decisionframework.online/real-rates-and-the-dollar">Indicators</a><a href="/license/">Activate licence</a></span>
+  <span class="links"><a href="/insights-and-partners.html#analyses">Insights</a><a href="/private-client.html">Private Client</a><a href="https://desk.decisionframework.online/">The Desk</a><a href="/toolkit.html">Trader&rsquo;s toolkit</a><a href="/license/">Activate licence</a></span>
 </nav>
 
 <header class="wrap">
   <div class="seal" aria-hidden="true">&#10022;</div>
-  <div class="eyebrow">Private Client</div>
-  <h1>The desk, <em>for members.</em></h1>
-  <p class="sub">The live indicators and analysis behind <em>The Gold Decision Framework</em>, built for the readers of <em>The Gold Investor</em>. Some pages are open to everyone; the member pages open with a desk plan, or with the License Key from the book.</p>
-  <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:28px">
-    <a href="#desk-access" style="display:inline-block;padding:16px 30px;background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font:700 17px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 0 0 4px rgba(212,32,47,.2),0 8px 24px rgba(165,15,28,.4)">&#9889; Get the desk<small style="display:block;margin-top:3px;font:600 12px Arial,sans-serif;letter-spacing:.04em;text-transform:none;color:#ffd36a">from &euro;27 &middot; 12 months &euro;199</small></a>
-    <a href="https://payhip.com/buy?link=7GDAe" target="_blank" rel="noopener" style="display:inline-block;padding:16px 26px;background:linear-gradient(180deg,#e2c887,#c6a15b);color:#17120a;border:1px solid #f1eadb;font:700 15px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;box-shadow:0 0 0 4px rgba(226,200,135,.25)">New here? The full deal &middot; &euro;38<small style="display:block;margin-top:3px;font:600 12px Arial,sans-serif;letter-spacing:.04em;text-transform:none;color:#3a2a0c">the book + 1 month of the desk free</small></a>
-  </div>
+  <div class="eyebrow">Private Client &middot; free with your email</div>
+  <h1>A window <em>into the desk.</em></h1>
+  <p class="sub">Every morning: what gold and silver did in Asia, and the Shanghai and India premiums. Every week: one full desk note. And a clear view of everything the desk holds behind its doors.</p>
+  <div class="state" id="state"></div>
   <div class="rule"></div>
 </header>
 
 <main class="wrap">
 
-  <div class="notice" role="note">
-    <span class="dot" aria-hidden="true"></span>
-    <div>
-      <b>Most of the desk is still open.</b>
-      <p>The member pages (Gold Pulse, the live Protection Map, the Session Clock, the Chart Wall and &ldquo;Which Row&rdquo;) now need <a href="#desk-access">desk access</a>. The open indicators may follow at any moment, without announcement. Readers who pre-register their licence code become founding readers, at the founding rate.</p>
-    </div>
-  </div>
-
-
-
-  <section aria-labelledby="h-desk">
-    <h2 id="h-desk">On the desk today</h2>
-    <p class="lead">What a trader watches before gold moves: the price of money, the dollar, fuel inflation, and what each release did to the metals.</p>
-    <div class="grid">
-      <a class="card" href="https://desk.decisionframework.online/real-rates-and-the-dollar">
-        <span class="tag">Live</span>
-        <span class="k">Real rates &amp; the dollar</span>
-        <h3>The cost of holding gold</h3>
-        <p>The US 10-year real yield, gold and two commodity indexes, a live dollar index with Ichimoku and RSI, and every major currency against the dollar.</p>
-        <span class="go">Open the panel &rarr;</span>
-      </a>
-      <a class="card" href="https://desk.decisionframework.online/dollar-balance#hike-odds">
-        <span class="tag">Live</span>
-        <span class="k">The Dollar Balance</span>
-        <h3>Hike expectations and the divergence</h3>
-        <p>The odds of a Fed hike logged release by release, the 2-year against fed funds every night, and why the dollar held when the data said it shouldn't.</p>
-        <span class="go">Open the balance &rarr;</span>
-      </a>
-      <a class="card" href="https://desk.decisionframework.online/crack-spreads">
-        <span class="tag">Live</span>
-        <span class="k">Energy &amp; inflation</span>
-        <h3>Crack spreads</h3>
-        <p>Diesel and gasoline refining margins from daily closes: whether fuel inflation is still in the pipeline when crude falls.</p>
-        <span class="go">Open the spreads &rarr;</span>
-      </a>
-      <a class="card" href="https://desk.decisionframework.online/metal-ratios">
-        <span class="tag">Live</span>
-        <span class="k">Precious metals</span>
-        <h3>Metal ratios</h3>
-        <p>Gold/silver, miners against gold and juniors against majors: which part of the metals market leads, read against the week&rsquo;s calendar.</p>
-        <span class="go">Open the ratios &rarr;</span>
-      </a>
-      <a class="card" href="https://desk.decisionframework.online/hormuz-tracker">
-        <span class="tag">Member</span>
-        <span class="k">Energy &amp; geopolitics</span>
-        <h3>Hormuz Tracker</h3>
-        <p>Day of the closure, physical against paper Brent, the diesel crack and every estimate of the dark flows, side by side.</p>
-        <span class="go">Open the tracker &rarr;</span>
-      </a>
-      <a class="card" href="https://desk.decisionframework.online/levels-watch">
-        <span class="tag">Member</span>
-        <span class="k">Gold &amp; silver</span>
-        <h3>Levels Watch</h3>
-        <p>The neckline, the $4,200 line, the measured target and silver&rsquo;s $61 support, with the oil-to-Fed chain behind them. Checked every evening.</p>
-        <span class="go">Check the levels &rarr;</span>
-      </a>
-      <a class="card" href="https://desk.decisionframework.online/shanghai-premium">
-        <span class="tag">Member</span>
-        <span class="k">Physical demand</span>
-        <h3>The Shanghai and India gold premiums</h3>
-        <p>What China and India pay for physical gold against the rest of the world: the Shanghai premium every trading day with history back to 2016, and India&rsquo;s IBJA rate with the 15% import duty taken out.</p>
-        <span class="go">Open the premium &rarr;</span>
-      </a>
-      <a class="card" href="https://desk.decisionframework.online/pulse">
-        <span class="tag">New &middot; By invitation</span>
-        <span class="k">On your phone</span>
-        <h3>Gold Pulse</h3>
-        <p>Three indicators in one app: the Shanghai and India premiums in the morning, the metals chain in the evening, Hormuz when it moves. By invitation: enter your invite code once, then install it on your phone.</p>
-        <span class="go">Open Gold Pulse &rarr;</span>
-      </a>
+  <section aria-labelledby="h-today">
+    <div class="h-sec"><h2 id="h-today">Today</h2><span class="when" id="today-when"></span></div>
+    <div class="today" id="today">
+      <div class="panel locked"><div class="k">Asia Overnight</div><h3>What gold and silver did while Europe slept</h3><div class="wb" style="min-height:120px;border:0;padding:0;background:none"><div class="blur"></div><div class="blur"></div></div><div class="veil"><a href="#state">&#9889; Open free</a></div></div>
+      <div class="panel locked prem"><div class="k">Morning premiums</div><div class="v">&middot;&middot;&middot;</div><div class="s">Shanghai &middot; India (IBJA, ex-duty)</div><div class="veil"><a href="#state">&#9889; Open free</a></div></div>
     </div>
   </section>
 
-  <section aria-labelledby="h-dev">
-    <h2 id="h-dev">On the workbench</h2>
-    <p class="lead">Work in development: published as it takes shape, updated as the data comes in.</p>
-    <div class="grid">
-      <a class="card" href="https://desk.decisionframework.online/dollar-titanic-turn">
-        <span class="tag o">In development</span>
-        <span class="k">The dollar</span>
-        <h3>The Titanic Turn</h3>
-        <p>The dollar broke the lid of its 18-month range and stopped at the 50% line of the 2021&ndash;22 rally. The lights, the midterm record and the levels that decide the turn.</p>
-        <span class="go">Read the map &rarr;</span>
-      </a>
-      <a class="card" href="/prop-trading.html">
-        <span class="tag o">New</span>
-        <span class="k">Trade it</span>
-        <h3>Prop trading, explained</h3>
-        <p>Futures with a firm&rsquo;s capital: how evaluations work, the drawdown rule that fails most traders, and a calculator for gold, silver and oil.</p>
-        <span class="go">Open the guide &rarr;</span>
-      </a>
-    </div>
+  <section aria-labelledby="h-win">
+    <div class="h-sec"><h2 id="h-win">On the desk right now</h2><span class="when">Members only</span></div>
+    <p class="lead">The same boxes, in the same order, as on the desk. You see what moved; members see why, and what to do about it.</p>
+    <div class="win" id="win"></div>
+  </section>
+
+  <section aria-labelledby="h-box">
+    <div class="h-sec"><h2 id="h-box">Box of the week</h2><span class="when">Open in full &middot; changes every Monday</span></div>
+    <div class="panel note locked" id="box" style="margin-top:18px"><div class="k">From the desk</div><h3>One full desk note, every week</h3><div class="blur" style="height:80px"></div><div class="veil"><a href="#state">&#9889; Open free</a></div></div>
+  </section>
+
+  <section aria-labelledby="h-yday">
+    <div class="h-sec"><h2 id="h-yday">Yesterday on the desk</h2><span class="when">Delayed &middot; members read it live</span></div>
+    <div class="panel note locked" id="yday" style="margin-top:18px"><div class="k">US Close</div><h3>The full US session, as members read it last night</h3><div class="blur" style="height:80px"></div><div class="veil"><a href="#state">&#9889; Open free</a></div></div>
   </section>
 
   <section class="price" id="desk-access" aria-labelledby="h-price">
-    <span class="bigbadge">Desk access &middot; book add-on</span>
-    <h2 id="h-price">The doors are open. Get the desk.</h2>
-    <p class="lead">The book is the method. The desk is the method applied, every evening: which economic weather we are in, what the bonds said, and where gold stands against it.</p>
-
-    <div class="hook" id="hook">
-      <div class="hk">This week on the desk</div>
-      <p class="hv" id="hook-v">The tells lean one way. Members see which, tell by tell, every evening.</p>
-      <p class="hs" id="hook-s"></p>
-    </div>
-
-    <div class="get">
+    <span class="bigbadge">Private Client &rarr; the full desk</span>
+    <h2 id="h-price">Ready for the whole desk?</h2>
+    <table class="cmp">
+      <tr><th></th><th>Private Client &middot; free</th><th>The Desk &middot; members</th></tr>
+      <tr><td>Asia Overnight</td><td>Headline and first points</td><td class="y">In full, with levels and &ldquo;what bonds said&rdquo;</td></tr>
+      <tr><td>Shanghai &amp; India premiums</td><td>Today&rsquo;s figure</td><td class="y">History, chart and the reading</td></tr>
+      <tr><td>Europe Midday &amp; US Close</td><td>Yesterday, delayed</td><td class="y">Live, the same day</td></tr>
+      <tr><td>Protection Map, Levels Watch, Hormuz, Watches</td><td>Headlines only</td><td class="y">Everything, live</td></tr>
+      <tr><td>Sunday Weather Report</td><td>&mdash;</td><td class="y">The full PDF every week</td></tr>
+      <tr><td>Gold Pulse app &amp; Session Clock</td><td>&mdash;</td><td class="y">Included</td></tr>
+    </table>
+    <div class="get" style="margin-top:30px">
       <div>
-        <h3 class="gh">What members get</h3>
-        <ul class="gl">
-          <li><b>The Protection Map, live:</b> the economic weather read from breakevens, oil, the 2-year, credit, the gold/silver ratio and the VIX, with the ETFs for each weather.</li>
-          <li><b>Gold Pulse</b>, the installable app: the Shanghai premium every morning, the metals levels every evening, Hormuz when it moves.</li>
-          <li><b>Asia Overnight with &ldquo;What bonds said&rdquo;:</b> yesterday&rsquo;s curve verdict, the quadrant, and what to watch next.</li>
-          <li><b>Member tools:</b> the Metals Session Clock, the Chart Wall and &ldquo;Which Row Are We In?&rdquo;</li>
-          <li><b>Everything still open on the desk</b>, for as long as you are a member, whenever the doors close.</li>
-        </ul>
+        <h3 class="gh">One key opens it all</h3>
+        <p class="bn" style="font-size:15px">Your licence key arrives with the Payhip receipt. Enter it once on the desk and every page opens on that device. The book comes with one month of the desk free.</p>
       </div>
       <div class="buys">
         <a class="buy best" href="https://payhip.com/buy?link=yz6ei"><span class="flag">Save 38%</span>12 months &middot; &euro;199<small>about &euro;16.58 a month</small></a>
         <a class="buy" href="https://payhip.com/buy?link=FR6zL"><span class="flag">Save 20%</span>6 months &middot; &euro;129<small>about &euro;21.50 a month</small></a>
         <a class="buy plain" href="https://payhip.com/buy?link=zbK9m">1 month &middot; &euro;27<small>try the desk</small></a>
-        <p class="bn">Your licence key arrives with the Payhip receipt. Enter it once at <a href="https://desk.decisionframework.online/pulse">desk.decisionframework.online/pulse</a> and every member page opens on that device.</p>
+        <a class="buy plain" href="https://payhip.com/buy?link=7GDAe">New here? The book + 1 month free &middot; &euro;38<small>the full deal, worth &euro;65</small></a>
       </div>
     </div>
-
-    <div class="founder-note"><span class="ftag">Founding reader</span> Pre-registered your book&rsquo;s licence code below? Your first 12 months are <b>&euro;144 instead of &euro;199</b>. Your founding code arrives by email.</div>
   </section>
 
   <section class="reg" id="register" aria-labelledby="h-reg">
@@ -251,9 +203,7 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
       <h2 id="h-reg">Claim founding-reader status</h2>
       <p class="lead">Your licence code of <em>The Gold Investor</em> is your key. Pre-register it now and you become a founding reader.</p>
       <ol>
-        <li><b style="color:var(--text);font-weight:normal">First in.</b> When the Client Area opens, founding readers receive their invitation before anyone else.</li>
         <li><b style="color:var(--text);font-weight:normal">Founding rate.</b> Your first 12 months at &euro;144 instead of &euro;199.</li>
-        <li><b style="color:var(--text);font-weight:normal">Open now.</b> Until the doors close, every indicator on the desk stays open to you.</li>
       </ol>
       <p class="small" style="margin-top:18px">One code is one founding seat. Enter the code from your purchase email and confirm your email address when the confirmation arrives. Haven't activated your book yet? <a href="/license/">Activate it here</a> first. No code yet? <a href="/#get-the-book">Get the book</a>, or <a href="/license-order/">licence it for a team</a>.</p>
     </div>
@@ -266,13 +216,6 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
     </form>
   </section>
 
-  <section id="get-the-desk" style="text-align:center;padding:56px 0 70px;border-top:1px solid rgba(198,161,91,.45)">
-    <div style="font:12px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#e2c887">&#10022; From &euro;27 a month &middot; 12 months &euro;199</div>
-    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:22px">
-      <a href="#desk-access" style="display:inline-block;padding:20px 40px;background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font:700 20px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;box-shadow:0 0 0 4px rgba(212,32,47,.2),0 8px 24px rgba(165,15,28,.4)">&#9889; Get the desk<small style="display:block;margin-top:4px;font:600 13px Arial,sans-serif;letter-spacing:.04em;text-transform:none;color:#ffd36a">1, 6 or 12 months &middot; one click to checkout</small></a>
-      <a href="https://payhip.com/buy?link=7GDAe" target="_blank" rel="noopener" style="display:inline-block;padding:20px 32px;background:linear-gradient(180deg,#e2c887,#c6a15b);color:#17120a;border:1px solid #f1eadb;font:700 18px Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;box-shadow:0 0 0 4px rgba(226,200,135,.25),0 8px 24px rgba(198,161,91,.4)">New here? The full deal &middot; &euro;38<small style="display:block;margin-top:4px;font:600 13px Arial,sans-serif;letter-spacing:.04em;text-transform:none;color:#3a2a0c">the book + 1 month of the desk free</small></a>
-    </div>
-  </section>
 </main>
 
 <footer>
@@ -311,7 +254,7 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
       .then(function(res){
         if (res.ok && (!res.d.status || res.d.status === 'success')){
           form.querySelectorAll('input,button,label').forEach(function(x){ x.style.display = 'none'; });
-          msg.textContent = 'Your founding seat is reserved. Check your inbox and confirm your email address. No email within a few minutes? Look in your spam or junk folder, and add hello@decisionframework.online to your contacts. When the Client Area opens, your invitation and founding rate come first.';
+          msg.textContent = 'Your founding seat is reserved. Check your inbox and confirm your email address. No email within a few minutes? Look in your spam or junk folder, and add hello@decisionframework.online to your contacts. Your founding code and rate arrive by email.';
         } else {
           btn.disabled = false; btn.textContent = old; msg.className = 'msg err';
           msg.textContent = (res.d && res.d.errors && res.d.errors.messages && res.d.errors.messages.join(' ')) || 'Something went wrong. Please check your details and try again.';
@@ -322,14 +265,44 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
 })();
 </script>
 
+
 <script>
 (function(){
-  fetch('https://desk.decisionframework.online/data/bonds-daily.json',{cache:'no-store'}).then(function(r){return r.json();}).then(function(b){
-    if(!b||!b.weather_name)return;
-    var day=new Date(b.session+'T12:00:00Z').toLocaleDateString('en-GB',{weekday:'long',day:'numeric',month:'long',timeZone:'UTC'});
-    document.getElementById('hook-v').innerHTML='The tells lean: <b>'+b.weather_name+'</b>.';
-    document.getElementById('hook-s').textContent='Bonds on '+day+': a '+b.label.toLowerCase()+(b.verdict?'. '+b.verdict.split('. One session')[0]+'.':'.')+' Members see every tell, the ETFs for this weather, and what to watch next.';
-  }).catch(function(){});
+  var DESK='https://desk.decisionframework.online';
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
+  var q=new URLSearchParams(location.search);
+  var state=document.getElementById('state');
+  var BOXES=['Europe Midday','US Close','The Protection Map','The Sunday Weather Report','Hike expectations','Levels Watch','Hormuz Tracker','Metals Watch','Risk Watch','Crack Spreads','Session Clock','Gold Pulse app'];
+  function winHtml(list,signed){return list.map(function(b){return '<a class="wb" href="'+(signed?esc(b.href):'#state')+'"><span class="lock">&#128274; Desk</span><div class="t">'+esc(b.title)+'</div>'+(b.updated?'<div class="u">Updated '+esc(b.updated)+'</div>':'<div class="u">Members only</div>')+(signed&&b.hint?'<div class="h">'+esc(b.hint)+'</div>':'')+'<div class="blur"></div></a>';}).join('');}
+  document.getElementById('win').innerHTML=winHtml(BOXES.map(function(t){return {title:t};}),false);
+  function noteHtml(n,label){if(!n)return '';return '<div class="k">'+esc(label||n.kind)+(n.day?' &middot; '+esc(n.day):'')+'</div><h3>'+esc(n.title)+'</h3>'+(n.paragraphs||[]).map(function(p){return '<p>'+esc(p)+'</p>';}).join('')+(n.timeline&&n.timeline.length?'<ul class="tl">'+n.timeline.map(function(t){return '<li><span>'+esc(t.time)+'</span>'+esc(t.text)+'</li>';}).join('')+'</ul>':'');}
+  function fmt(v,p){if(v==null)return '&middot;&middot;&middot;';var s=(v>0?'+':'')+Number(v).toFixed(2);return '$'+s+(p!=null?' <span class="s">('+(p>0?'+':'')+Number(p).toFixed(2)+'%)</span>':'');}
+
+  function anon(){
+    DFClient.addCss();
+    var note=q.get('link')==='expired'?'<p class="dft-m err" style="margin:0 0 12px">That sign-in link has expired or was already used. Enter your email for a new one.</p>':'';
+    state.innerHTML='<div class="dft-box"><span class="dft-badge">Private Client &middot; free</span><div class="dft-h">Open it with <em>just your email</em></div>'+note+DFClient.formHtml()+'</div>';
+    DFClient.wire(state.querySelector('form'));
+  }
+  function signed(t){
+    var who=t.tier>=2?'You have <b>full desk access</b>. <a href="'+DESK+'/">Open the desk &rarr;</a>':'Signed in as <b>'+esc(t.email||'')+'</b> &middot; Private Client'+(q.get('welcome')?' &middot; welcome!':'');
+    state.innerHTML='<div class="who">'+who+(t.tier===1?' <button id="out">Sign out</button>':'')+'</div>';
+    var o=document.getElementById('out');
+    if(o)o.onclick=function(){fetch(DESK+'/api/client/logout',{method:'POST',credentials:'include'}).finally(function(){location.href='/private-client.html';});};
+    fetch(DESK+'/api/client/brief',{credentials:'include',cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(b){
+      if(!b)return;
+      var a=b.today, pr=b.premiums||{};
+      document.getElementById('today-when').textContent=a?a.day:'';
+      document.getElementById('today').innerHTML=
+        '<div class="panel"><div class="k">Asia Overnight</div><h3>'+esc(a?a.title:'The Asia briefing arrives by 07:00 Brussels')+'</h3>'+(a?'<p style="color:var(--text)">'+esc(a.lead)+'</p><ul class="tl">'+a.points.map(function(p){return '<li><span>'+esc(p.time)+'</span>'+esc(p.text)+'</li>';}).join('')+'</ul>'+(a.more?'<div class="more">&#128274; '+a.more+' more points, the levels to hold and &ldquo;what bonds said&rdquo; are on the desk. <a href="#desk-access">Open the full briefing &rarr;</a></div>':''):'')+'</div>'+
+        '<div class="panel prem"><div class="k">Morning premiums</div><div><div class="s">Shanghai'+(pr.shanghai?' &middot; '+esc(pr.shanghai.date):'')+'</div><div class="v">'+fmt(pr.shanghai&&pr.shanghai.usd,pr.shanghai&&pr.shanghai.pct)+'</div></div><div><div class="s">India, IBJA ex-duty'+(pr.india?' &middot; '+esc(pr.india.date):'')+'</div><div class="v">'+fmt(pr.india&&pr.india.usd,pr.india&&pr.india.pct)+'</div></div><div class="more">&#128274; The history, the chart and what the premiums say about demand are on the desk.</div></div>';
+      if(b.window)document.getElementById('win').innerHTML=winHtml(b.window,true);
+      var bx=document.getElementById('box');bx.className='panel note';bx.innerHTML=b.boxOfWeek?noteHtml(b.boxOfWeek):'<p>This week&rsquo;s note arrives soon.</p>';
+      var yd=document.getElementById('yday');yd.className='panel note';yd.innerHTML=b.yesterday?noteHtml(b.yesterday):'<p>Yesterday&rsquo;s session arrives soon.</p>';
+    }).catch(function(){});
+  }
+  function start(){ if(!window.DFClient){return setTimeout(start,50);} DFClient.me.then(function(t){ (t&&t.tier>=1)?signed(t):anon(); }); }
+  start();
 })();
 </script>
 <script src="/bf.js?v=20261118" defer></script>
