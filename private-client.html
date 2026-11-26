@@ -272,7 +272,7 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
   var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});};
   var q=new URLSearchParams(location.search);
   var state=document.getElementById('state');
-  var BOXES=['Europe Midday','US Close','The Protection Map','The Sunday Weather Report','Hike expectations','Levels Watch','Hormuz Tracker','Metals Watch','Risk Watch','Crack Spreads','Session Clock','Gold Pulse app'];
+  var BOXES=['Europe Midday','US Close','The Protection Map','The Sunday Weather Report','Hike expectations','Levels Watch','Hormuz Tracker','Metals Watch','Risk Watch','Crack Spreads','Europe Diesel Pulse','Session Clock','Gold Pulse app'];
   function winHtml(list,signed){return list.map(function(b){return '<a class="wb" href="'+(signed?esc(b.href):'#state')+'"><span class="lock">&#128274; Desk</span><div class="t">'+esc(b.title)+'</div>'+(b.updated?'<div class="u">Updated '+esc(b.updated)+'</div>':'<div class="u">Members only</div>')+(signed&&b.hint?'<div class="h">'+esc(b.hint)+'</div>':'')+'<div class="blur"></div></a>';}).join('');}
   document.getElementById('win').innerHTML=winHtml(BOXES.map(function(t){return {title:t};}),false);
   function noteHtml(n,label){if(!n)return '';return '<div class="k">'+esc(label||n.kind)+(n.day?' &middot; '+esc(n.day):'')+'</div><h3>'+esc(n.title)+'</h3>'+(n.paragraphs||[]).map(function(p){return '<p>'+esc(p)+'</p>';}).join('')+(n.timeline&&n.timeline.length?'<ul class="tl">'+n.timeline.map(function(t){return '<li><span>'+esc(t.time)+'</span>'+esc(t.text)+'</li>';}).join('')+'</ul>':'');}
