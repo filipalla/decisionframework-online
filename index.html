@@ -91,6 +91,10 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
 .vid h2{margin:10px 0 12px}.vid ul{color:var(--muted);padding-left:20px;margin:0 0 22px}.vid li{margin-bottom:6px}
 @media(max-width:900px){.vid{grid-template-columns:1fr}}@media(max-width:600px){.vplay .pb{width:56px;height:56px;margin:-28px 0 0 -28px}.vplay .pb::after{left:22px;top:17px;border-width:11px 0 11px 17px}}
 </style>
+<style>.button.alba{background:linear-gradient(180deg,#e2c887,#c6a15b);color:#17120a;border-color:#f1eadb;font-weight:700;font-size:1.05rem;padding:14px 22px;letter-spacing:.04em;box-shadow:0 0 0 3px rgba(226,200,135,.25),0 6px 18px rgba(198,161,91,.4);cursor:pointer}.button.alba .sub{display:block;font:600 12px/1.4 Arial,sans-serif;letter-spacing:.06em;color:#3a2a0c;margin-top:2px;text-transform:none}.button.alba.on{background:#17120a;color:var(--light)}.button.alba.on .sub{color:var(--muted)}
+.alba-hi{outline:3px solid var(--light);outline-offset:6px;box-shadow:0 0 0 10px rgba(226,200,135,.12),0 0 40px rgba(226,200,135,.35);transition:outline-color .3s,box-shadow .3s}
+#albaCap{position:fixed;left:50%;bottom:18px;transform:translateX(-50%);width:min(760px,calc(100% - 24px));z-index:60;display:none;align-items:center;gap:14px;padding:12px 16px;background:rgba(17,18,20,.94);border:1px solid var(--gold);box-shadow:0 8px 30px rgba(0,0,0,.5);font:15px/1.45 Arial,sans-serif;color:var(--text)}#albaCap.show{display:flex}#albaCap b{color:var(--light);font-weight:700;white-space:nowrap}#albaCap span{flex:1}#albaCap button{min-height:40px;padding:0 14px;background:transparent;border:1px solid var(--gold);color:var(--light);font:700 12px Arial,sans-serif;letter-spacing:.1em;text-transform:uppercase;cursor:pointer}
+@media (prefers-reduced-motion:reduce){.alba-hi{transition:none}}</style>
 <style>.button.lucky{background:linear-gradient(180deg,#d4202f,#a50f1c);color:#ffe08a;border:1px solid #e2c887;font-weight:700;letter-spacing:.04em;box-shadow:0 0 0 3px rgba(212,32,47,.18),0 6px 18px rgba(165,15,28,.35)}.button.lucky:hover{background:linear-gradient(180deg,#e52a3a,#b5121f);color:#fff2c4}.button.lucky .sub{display:block;font:600 12px/1.4 Arial,sans-serif;letter-spacing:.06em;color:#ffd36a;margin-top:2px}.button.lucky.big{font-size:1.05rem;padding:14px 22px}</style>
 <script src="/tier.js?v=20261122" defer></script>
 </head>
@@ -131,6 +135,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--light);outline-offs
   <div class="btns">
     <a class="button lucky big" href="/free-preview.html">&#127873; FREE BOOK PREVIEW<span class="sub">33 languages &middot; 免费试读 &middot; मुफ़्त पूर्वावलोकन</span></a>
     <a class="button lucky big" href="https://payhip.com/buy?link=7GDAe" style="background:linear-gradient(180deg,#e2c887,#c6a15b);color:#17120a;border-color:#f1eadb;box-shadow:0 0 0 3px rgba(226,200,135,.25),0 6px 18px rgba(198,161,91,.4)">&#9889; THE FULL DEAL &middot; &euro;38<span class="sub" style="color:#3a2a0c">Book + 1 month of the desk &middot; worth &euro;65 &middot; save 40%</span></a>
+    <button type="button" class="button alba" id="albaBtn">&#9654; LISTEN: A 45-SECOND TOUR<span class="sub">Alba shows you the live indicators</span></button>
     <a class="button fill" href="#latest">Latest analysis</a>
     <a class="button" href="#decisions">Start with a question</a>
     <a class="button" href="/toolkit.html">&#9733; Trader&rsquo;s Toolkit</a>
@@ -263,7 +268,7 @@ document.querySelectorAll('.vplay').forEach(function(b){b.addEventListener('clic
         <div class="ind"><p class="t">Commodities · DBC</p><div class="w" data-tv="AMEX:DBC"></div></div>
         <div class="ind"><p class="t">Commodities · BCOM (BCI)</p><div class="w" data-tv="AMEX:BCI"></div></div>
       </div>
-      <p style="margin-top:22px;display:flex;flex-wrap:wrap;gap:12px"><a class="button quiet" href="/real-rates-and-the-dollar.html">Open the full panel, with the dollar table &rarr;</a><a class="button quiet" href="/crack-spreads.html">Crack spreads: diesel &amp; gasoline margins &rarr;</a><a class="button quiet" href="/shanghai-gold-premium.html">Shanghai &amp; India gold premiums &rarr;</a><a class="button quiet" href="/dollar-balance.html">The dollar balance: dollar, curve &amp; real yield &rarr;</a><a class="button quiet" href="/metal-ratios.html">Metal ratios: gold/silver &amp; miners &rarr;</a><a class="button quiet" href="/hormuz-tracker.html">&#10022; Hormuz tracker &rarr;</a><a class="button quiet" href="https://desk.decisionframework.online/levels-watch">&#10022; Levels watch: gold &amp; silver &rarr;</a></p>
+      <p id="indLinks" style="margin-top:22px;display:flex;flex-wrap:wrap;gap:12px"><a class="button quiet" href="/real-rates-and-the-dollar.html">Open the full panel, with the dollar table &rarr;</a><a class="button quiet" href="/crack-spreads.html">Crack spreads: diesel &amp; gasoline margins &rarr;</a><a class="button quiet" href="/shanghai-gold-premium.html">Shanghai &amp; India gold premiums &rarr;</a><a class="button quiet" href="/dollar-balance.html">The dollar balance: dollar, curve &amp; real yield &rarr;</a><a class="button quiet" href="/metal-ratios.html">Metal ratios: gold/silver &amp; miners &rarr;</a><a class="button quiet" href="/hormuz-tracker.html">&#10022; Hormuz tracker &rarr;</a><a class="button quiet" href="https://desk.decisionframework.online/levels-watch">&#10022; Levels watch: gold &amp; silver &rarr;</a></p>
     </div>
   </section>
 
@@ -480,10 +485,35 @@ document.querySelectorAll('.vplay').forEach(function(b){b.addEventListener('clic
 
 </main>
 
+<div id="albaCap" role="status" aria-live="polite"><b>Alba</b><span id="albaTxt"></span><button type="button" id="albaStop">Stop</button></div>
+<audio id="albaAudio" src="/audio/alba-welcome.mp3" preload="none"></audio>
+<script>
+(function(){
+  var a=document.getElementById('albaAudio'),btn=document.getElementById('albaBtn'),cap=document.getElementById('albaCap'),txt=document.getElementById('albaTxt');
+  if(!a||!btn)return;
+  var g=function(q){return document.querySelector(q)};
+  var cues=[
+    {t:0,el:null,say:'This is The Gold Decision Framework. No hype, no predictions. Just the numbers that move gold, silver and oil, and what they mean for your next decision.'},
+    {t:11.4,el:'#indicators .wrap > h2',say:'Here is the dashboard behind the analysis.'},
+    {t:15.1,el:'#indicators .tips',say:'First, the real interest rate. It is what it costs to hold cash instead of gold. When it rises, gold normally struggles.'},
+    {t:25.5,el:'#indicators .grid3i .ind:nth-child(1)',say:'Next, gold itself, over the past twelve months.'},
+    {t:29.9,el:'#indicators .grid3i',say:'And two baskets of commodities, to see if the whole complex moves with it.'},
+    {t:35.4,el:'#indLinks',say:'Below, the full panels: crack spreads, the Shanghai and India premiums, the dollar balance, metal ratios, and the Hormuz tracker.'},
+    {t:44.4,el:'#decisions',say:'Pick one question. Decide, don\u2019t guess.'}];
+  var cur=-1,hi=null,smooth=!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function mark(i){if(i===cur)return;cur=i;var c=cues[i];txt.textContent=c.say;if(hi)hi.classList.remove('alba-hi');hi=c.el?g(c.el):null;
+    if(hi){hi.classList.add('alba-hi');hi.scrollIntoView({behavior:smooth?'smooth':'auto',block:'center'});}}
+  function end(){a.pause();cap.classList.remove('show');btn.classList.remove('on');btn.firstChild.nodeValue='\u25B6 LISTEN: A 45-SECOND TOUR';if(hi)hi.classList.remove('alba-hi');hi=null;cur=-1;}
+  a.addEventListener('timeupdate',function(){for(var i=cues.length-1;i>=0;i--){if(a.currentTime>=cues[i].t){mark(i);break;}}});
+  a.addEventListener('ended',function(){setTimeout(end,1500)});
+  btn.addEventListener('click',function(){if(!a.paused){end();return;}a.currentTime=0;var p=a.play();if(p&&p.catch)p.catch(function(){end()});cap.classList.add('show');btn.classList.add('on');btn.firstChild.nodeValue='\u25A0 STOP THE TOUR';mark(0);});
+  document.getElementById('albaStop').addEventListener('click',end);
+})();
+</script>
 <footer id="contact">
   <div class="wrap">
     <span>&copy; 2026 Filip Allaert &middot; <a href="mailto:DecisionFramework@telenet.be">DecisionFramework@telenet.be</a> &middot; <a href="https://x.com/DecisionFW" target="_blank" rel="noopener">X @DecisionFW</a> &middot; <a href="https://www.instagram.com/goldframework/" target="_blank" rel="noopener">Instagram @goldframework</a> &middot; <a href="https://stonecold886.substack.com" target="_blank" rel="noopener">Substack</a> &middot; <a href="/videos.html">YouTube channel</a> &middot; <a href="https://www.linkedin.com/in/filipallaert/" target="_blank" rel="noopener">LinkedIn</a></span>
-    <span>Educational content to support your own research and decisions. Not financial advice.</span>
+    <span>Educational content to support your own research and decisions. Not financial advice. Narration voice: Alba dataset, University of Edinburgh, <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</span>
   </div>
 <!-- risk-disclosures -->
 <div class="risk-disclosures" style="flex-basis:100%;width:100%;max-width:1100px;margin:18px auto 0;padding:14px 20px 0;border-top:1px solid rgba(128,128,128,.25);font:11.5px/1.55 Arial,sans-serif;opacity:.8;text-align:left">
