@@ -54,6 +54,7 @@ p{color:var(--muted)}
 .tag{position:absolute;top:18px;right:18px;font:10px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--bg);background:var(--light);padding:3px 8px}
 .tag.o{background:transparent;color:var(--light);border:1px solid var(--line)}
 .price{border-top:1px solid var(--line);padding-top:56px}
+.alba-back{min-height:36px;margin-left:8px;padding:0 14px;background:linear-gradient(180deg,#e2c887,#c6a15b);color:#17120a;border:1px solid #f1eadb;font:700 12px Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}.alba-back.pulse{animation:albaP 1.6s ease-in-out 3}@keyframes albaP{50%{box-shadow:0 0 0 6px rgba(226,200,135,.35)}}@media (prefers-reduced-motion:reduce){.alba-back.pulse{animation:none}}
 .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:14px;margin-top:22px}
 .tier{position:relative;display:flex;flex-direction:column;gap:4px;padding:22px 20px;background:var(--surface);border:1px solid var(--hair)}
 .tier .k{font:11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--light)}
@@ -287,6 +288,12 @@ footer{margin-top:70px;padding:28px 0;border-top:1px solid var(--line);font:13px
   function signed(t){
     var who=t.tier>=2?'You have <b>full desk access</b>. <a href="'+DESK+'/">Open the desk &rarr;</a>':'Signed in as <b>'+esc(t.email||'')+'</b> &middot; Private Client'+(q.get('welcome')?' &middot; welcome!':'');
     state.innerHTML='<div class="who">'+who+(t.tier===1?' <button id="out">Sign out</button>':'')+'</div>';
+    (function(){var w=state.querySelector('.who');if(!w)return;var a=new Audio('/audio/alba-welcome-back.mp3');
+      var b=document.createElement('button');b.type='button';b.className='alba-back';b.innerHTML='&#9654; Alba: welcome back';w.appendChild(document.createTextNode(' '));w.appendChild(b);
+      b.onclick=function(){if(a.paused){a.currentTime=0;a.play().catch(function(){});}else a.pause();};
+      var k='df_alba_back',d=new Date().toISOString().slice(0,10),seen='';try{seen=localStorage.getItem(k)||'';}catch(e){}
+      if(seen!==d){var p=a.play();if(p&&p.then)p.then(function(){try{localStorage.setItem(k,d);}catch(e){}}).catch(function(){b.classList.add('pulse');});}
+    })();
     var o=document.getElementById('out');
     if(o)o.onclick=function(){fetch(DESK+'/api/client/logout',{method:'POST',credentials:'include'}).finally(function(){location.href='/private-client.html';});};
     fetch(DESK+'/api/client/brief',{credentials:'include',cache:'no-store'}).then(function(r){return r.ok?r.json():null;}).then(function(b){
