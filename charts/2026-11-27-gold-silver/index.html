@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Gold &amp; Silver Charts, 27 November 2026 | DecisionFramework</title>
+<meta name="description" content="Gold and silver chart set for 27 November 2026: gold daily EMAs and Fibonacci, gold weekly Ichimoku, silver 1-hour inverse head and shoulders, silver daily Ichimoku and gold's 2016-2019 base.">
+<style>
+:root{--bg:#0d0b09;--panel:#16130f;--ink:#f1e9d8;--mut:#b9ab90;--gold:#e2be6e;--line:#2c261d}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Georgia,"Times New Roman",serif}
+main{max-width:1100px;margin:auto;padding:40px 20px 64px}
+.eyebrow{font:600 13px/1 system-ui,sans-serif;letter-spacing:.18em;color:var(--gold);text-transform:uppercase}
+h1{font-size:clamp(30px,4vw,44px);line-height:1.15;margin:12px 0 8px}
+.lead{color:var(--mut);max-width:65ch;margin:0 0 32px}
+figure{margin:0 0 40px;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+figure img{display:block;width:100%;height:auto;background:#fff}
+figcaption{padding:16px 18px}
+figcaption b{color:var(--gold)}
+.url{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.url input{flex:1;min-width:240px;font:14px ui-monospace,monospace;padding:9px 10px;background:#0d0b09;color:var(--ink);border:1px solid var(--line);border-radius:6px}
+.url button{font:600 14px system-ui,sans-serif;padding:9px 16px;border:0;border-radius:6px;background:var(--gold);color:#1a140c;cursor:pointer}
+footer{color:var(--mut);font-size:14px;border-top:1px solid var(--line);padding-top:18px}
+a{color:var(--gold)}
+</style>
+</head>
+<body>
+<main>
+<div class="eyebrow">DecisionFramework · Chart set</div>
+<h1>Gold &amp; Silver: The Levels That Decide the Bottom</h1>
+<p class="lead">The five charts behind the 27 November 2026 analysis of gold's rebound from a 15-month low. All charts were made with Investing.com's charting tools.</p>
+
+<figure>
+<img src="pict1-gold-daily-ema-fib-macd.png" alt="Gold futures daily chart with 9, 21, 55 and 89 EMAs, Fibonacci retracement of the November decline and MACD">
+<figcaption><b>1. Gold futures, daily.</b> Friday's bar reclaims the 9-day EMA; the 50% retracement and the 21-day EMA meet near $3,795.
+<div class="url"><input readonly value=""><button type="button">Copy URL</button></div></figcaption>
+</figure>
+
+<figure>
+<img src="pict2-gold-weekly-ichimoku.png" alt="Gold futures weekly Ichimoku chart">
+<figcaption><b>2. Gold, weekly Ichimoku.</b> Price is far below the cloud, and the lagging span runs into the $4,000 zone of 26 weeks ago.
+<div class="url"><input readonly value=""><button type="button">Copy URL</button></div></figcaption>
+</figure>
+
+<figure>
+<img src="pict3-silver-1h-inverse-hs.png" alt="Silver futures 1-hour chart with a potential inverse head and shoulders, Fibonacci levels and a descending trendline">
+<figcaption><b>3. Silver, 1-hour.</b> A potential inverse head and shoulders, with its neckline at the 50% retracement near $44.10. The measured move points to the $50.27 high.
+<div class="url"><input readonly value=""><button type="button">Copy URL</button></div></figcaption>
+</figure>
+
+<figure>
+<img src="pict4-silver-daily-ichimoku.png" alt="Silver futures daily Ichimoku chart">
+<figcaption><b>4. Silver, daily Ichimoku.</b> Friday's rally stops at the Tenkan-sen, and the lagging span points to the $49–$50 zone of 26 sessions ago.
+<div class="url"><input readonly value=""><button type="button">Copy URL</button></div></figcaption>
+</figure>
+
+<figure>
+<img src="pict5-gold-weekly-2016-2019-base.png" alt="Gold futures weekly chart 2016 to 2019 showing the August 2018 low, the May 2019 higher low and the June 2019 breakout">
+<figcaption><b>5. Gold, weekly, 2016–2019.</b> A low, a higher low, then a breakout above the cloud and the old ceiling.
+<div class="url"><input readonly value=""><button type="button">Copy URL</button></div></figcaption>
+</figure>
+
+<footer>Charts: Investing.com. Market information, not financial advice. <a href="/">decisionframework.online</a></footer>
+</main>
+<script>
+document.querySelectorAll('figure').forEach(function(f){
+  var img=f.querySelector('img'), inp=f.querySelector('input'), btn=f.querySelector('button');
+  inp.value=img.src;
+  btn.addEventListener('click',function(){
+    inp.select();
+    try{ navigator.clipboard.writeText(inp.value).then(function(){btn.textContent='Copied'},function(){document.execCommand('copy');btn.textContent='Copied'}); }
+    catch(e){ try{document.execCommand('copy');btn.textContent='Copied'}catch(e2){btn.textContent='Select and copy'} }
+    setTimeout(function(){btn.textContent='Copy URL'},1500);
+  });
+});
+</script>
+</body>
+</html>
